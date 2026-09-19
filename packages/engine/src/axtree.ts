@@ -121,6 +121,15 @@ export async function snapshotAxTree(page: PageHandle): Promise<AxSnapshot> {
     const name = str(n.name);
     const focusable = boolProp(n, "focusable");
 
+    // A StaticText node whose text is already its parent's accessible name says the
+    // same thing twice. Chrome emits a lot of these and they were roughly 40% of the
+    // rendered tree, which matters because the tree is the bulk of every model turn.
+    if (role === "StaticText" && name) {
+      const parentId = childToParent.get(n.nodeId);
+      const parentName = parentId ? str(byId.get(parentId)?.name) : "";
+      if (parentName && parentName.includes(name)) continue;
+    }
+
     // A generic container with no name and no focus is pure noise in a reading order.
     if (!name && !focusable && (role === "generic" || role === "GenericContainer")) continue;
 

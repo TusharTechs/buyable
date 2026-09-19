@@ -41,6 +41,11 @@ function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict
   const blocker =
     runs.find((r) => r.outcome === "blocked")?.blocker ?? runs.find((r) => r.blocker)?.blocker;
 
+  const blindActivations = runs.flatMap((r) => r.blindActivations);
+  const completionsWithBlindActivation = scored.filter(
+    (r) => r.completed && r.blindActivations.length > 0,
+  ).length;
+
   return {
     persona,
     attempts,
@@ -48,6 +53,8 @@ function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict
     rate: attempts === 0 ? 0 : completions / attempts,
     runs,
     blocker,
+    completionsWithBlindActivation,
+    blindActivations,
   };
 }
 
@@ -93,6 +100,12 @@ export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport
   const siteIsTheVariable =
     !!baseline && baseline.rate === 1 && constrained.some((v) => v.rate < 1);
 
+  // A persona that only got through by activating a control it could not identify
+  // did not really prove the journey is usable, it proved it is survivable.
+  const completedOnlyByGuessing = constrained.some(
+    (v) => v.completions > 0 && v.completionsWithBlindActivation === v.completions,
+  );
+
   const allRuns = verdictList.flatMap((v) => v.runs);
   const costUsd = allRuns.reduce(
     (sum, r) => sum + opts.provider.estimateCostUsd(r.inputTokens, r.outputTokens),
@@ -107,6 +120,7 @@ export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport
     verdicts,
     journeyCompletionRate,
     siteIsTheVariable,
+    completedOnlyByGuessing,
     durationMs: Date.now() - t0,
     costUsd,
   };

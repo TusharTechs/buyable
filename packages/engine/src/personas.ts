@@ -21,20 +21,20 @@ export const PERSONAS: Record<PersonaId, Persona> = {
       "Sees the rendered page and the DOM, and clicks wherever it likes. This is the control condition.",
     standsFor: "A sighted customer using a mouse, with no assistive technology.",
     perceive: { dom: true, vision: true, accessibilityTree: false, structuredData: true },
-    act: { pointer: true, keyboard: true, accessibilityNodeRef: false },
-    maxSteps: 22,
+    act: { pointer: true, keyboard: true, accessibilityNodeRef: false, quickNav: false },
+    maxSteps: 24,
   },
 
   assistive: {
     id: "assistive",
     label: "Assistive",
     description:
-      "Perceives only the accessibility tree and moves only by keyboard. No pixels, no CSS selectors, no pointer.",
+      "Perceives only the accessibility tree and moves only by keyboard, including the quick navigation a screen reader provides. No pixels, no CSS selectors, no pointer.",
     standsFor:
       "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
     perceive: { dom: false, vision: false, accessibilityTree: true, structuredData: false },
-    act: { pointer: false, keyboard: true, accessibilityNodeRef: false },
-    maxSteps: 30,
+    act: { pointer: false, keyboard: true, accessibilityNodeRef: false, quickNav: true },
+    maxSteps: 34,
   },
 
   agent: {
@@ -45,8 +45,8 @@ export const PERSONAS: Record<PersonaId, Persona> = {
     standsFor:
       "An AI shopping agent acting for a customer, which reads the same accessibility tree a screen reader does.",
     perceive: { dom: false, vision: false, accessibilityTree: true, structuredData: true },
-    act: { pointer: false, keyboard: true, accessibilityNodeRef: true },
-    maxSteps: 26,
+    act: { pointer: false, keyboard: true, accessibilityNodeRef: true, quickNav: true },
+    maxSteps: 28,
   },
 };
 
@@ -64,6 +64,9 @@ export function getPersona(id: PersonaId): Persona {
 export function allowedActions(persona: Persona): string[] {
   const actions = ["read", "press", "finish", "blocked"];
   if (persona.act.keyboard) actions.push("tab", "shift_tab", "type");
+  if (persona.act.quickNav) {
+    actions.push("next_heading", "next_button", "next_link", "next_form_field", "next_landmark");
+  }
   if (persona.act.pointer) actions.push("click_selector", "navigate");
   if (persona.act.accessibilityNodeRef) actions.push("click_node", "fill_node");
   return actions;

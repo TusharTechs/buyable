@@ -7,13 +7,21 @@
  * hallucinates success produces `false_completion` rather than a green tick.
  */
 
-import { withBrowserSession } from "./browserSession.js";
-import { snapshotAxTree } from "./axtree.js";
-import { act, checkAssertion, observe, renderObservation } from "./page.js";
+import { withBrowserSession, type PageHandle } from "./browserSession.js";
+import { isSilentControl, snapshotAxTree, type AxSnapshot } from "./axtree.js";
+import { act, checkAssertion, currentUrl, observe, renderObservation } from "./page.js";
 import { locateBlocker } from "./blocker.js";
 import { getPersona } from "./personas.js";
 import type { ReasoningProvider, ReasoningTurn } from "./reasoning.js";
-import type { Journey, PersonaId, PersonaRunResult, StepRecord } from "./types.js";
+import type {
+  Action,
+  AxNode,
+  Journey,
+  Observation,
+  PersonaId,
+  PersonaRunResult,
+  StepRecord,
+} from "./types.js";
 
 export interface RunPersonaOptions {
   region: string;
@@ -39,12 +47,64 @@ function trimHistory(history: ReasoningTurn[]): ReasoningTurn[] {
   return history.slice(history.length - MAX_HISTORY_TURNS * 2);
 }
 
+/**
+ * Which node an action is about to activate, if any.
+ *
+ * `click_node` names its target directly. A keyboard activation acts on whatever
+ * currently holds focus, which is the honest reading of pressing Enter.
+ */
+function targetedNode(action: Action, snapshot: AxSnapshot): AxNode | undefined {
+  if (action.action === "click_node" && action.ref !== undefined) {
+    return snapshot.nodes.find((n) => n.ref === action.ref);
+  }
+  if (action.action === "press" && (action.key === "Enter" || action.key === "Space")) {
+    return snapshot.nodes.find((n) => n.ref === snapshot.focusedRef);
+  }
+  return undefined;
+}
+
+async function selectorFor(page: PageHandle, node: AxNode): Promise<string | undefined> {
+  if (node.backendNodeId === undefined) return undefined;
+  try {
+    const { object } = await page.cdp.send<{ object: { objectId?: string } }>(
+      "DOM.resolveNode",
+      { backendNodeId: node.backendNodeId },
+      page.sessionId,
+    );
+    if (!object.objectId) return undefined;
+    const { result } = await page.cdp.send<{ result: { value?: string } }>(
+      "Runtime.callFunctionOn",
+      {
+        objectId: object.objectId,
+        returnByValue: true,
+        functionDeclaration:
+          "function(){ return this.id ? '#' + this.id : this.tagName.toLowerCase(); }",
+      },
+      page.sessionId,
+    );
+    return result.value;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * One line of memory per turn: where the persona was and what it was focused on.
+ * Enough to avoid repeating itself, far short of resending the tree.
+ */
+function digestObservation(observation: Observation, snapshot: AxSnapshot): string {
+  const focused = snapshot.nodes.find((n) => n.ref === observation.focusedRef);
+  const where = focused ? `focus on [${focused.ref}] ${focused.role} ${focused.name ? `"${focused.name}"` : "(no accessible name)"}` : "nothing focused";
+  return `step ${observation.step} at ${observation.url}, ${where}`;
+}
+
 export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunResult> {
   const persona = getPersona(opts.persona);
   const startedAt = new Date().toISOString();
   const t0 = Date.now();
 
   const steps: StepRecord[] = [];
+  const blindActivations: NonNullable<StepRecord["blindActivation"]>[] = [];
   let inputTokens = 0;
   let outputTokens = 0;
 
@@ -57,6 +117,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
     durationMs: 0,
     inputTokens: 0,
     outputTokens: 0,
+    blindActivations,
   };
 
   try {
@@ -106,7 +167,10 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           inputTokens += decision.inputTokens;
           outputTokens += decision.outputTokens;
 
-          history.push({ role: "user", text: observationText });
+          // History carries a digest, not the full tree. The current turn already
+          // contains the complete observation, and resending eight prior trees was
+          // most of the token bill for no decision-making benefit.
+          history.push({ role: "user", text: digestObservation(observation, snapshot) });
           history.push({
             role: "assistant",
             text: `${decision.action.action}: ${decision.action.reason}`,
@@ -134,6 +198,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
               steps,
               inputTokens,
               outputTokens,
+              blindActivations,
               durationMs: Date.now() - t0,
               finalUrl: observation.url,
               errorMessage: assertion.passed ? undefined : `Claimed success, but ${assertion.detail}`,
@@ -165,11 +230,25 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
               blocker,
               inputTokens,
               outputTokens,
+              blindActivations,
               durationMs: Date.now() - t0,
               finalUrl: observation.url,
             };
             opts.onEvent?.({ type: "finished", persona: persona.id, result });
             return result;
+          }
+
+          // Record activations of controls that announce nothing, before acting, while
+          // the snapshot that the decision was made against is still the current one.
+          const targeted = targetedNode(decision.action, snapshot);
+          if (targeted && isSilentControl(targeted)) {
+            const entry = {
+              role: targeted.role,
+              selector: await selectorFor(page, targeted),
+              inferredPurpose: decision.action.reason,
+            };
+            record.blindActivation = entry;
+            blindActivations.push(entry);
           }
 
           const actResult = await act(page, persona, snapshot, decision.action);
@@ -210,7 +289,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           persona: persona.id,
           step: persona.maxSteps,
           url: opts.journey.startUrl,
-          agentExplanation: `Ran out of steps after ${persona.maxSteps} turns without reaching the goal.`,
+          agentExplanation: `Ran out of steps after ${persona.maxSteps} turns without reaching the goal. Last URL was ${await currentUrl(page)}.`,
         });
 
         const result: PersonaRunResult = {
@@ -221,6 +300,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           blocker,
           inputTokens,
           outputTokens,
+          blindActivations,
           durationMs: Date.now() - t0,
         };
         opts.onEvent?.({ type: "finished", persona: persona.id, result });
@@ -236,6 +316,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
       steps,
       inputTokens,
       outputTokens,
+      blindActivations,
       durationMs: Date.now() - t0,
       errorMessage: err instanceof Error ? err.message : String(err),
     };

@@ -113,6 +113,14 @@ for (const persona of personas) {
   if (!v) continue;
   const pct = `${Math.round(v.rate * 100)}%`.padStart(4);
   console.log(`  ${persona.padEnd(10)} ${v.completions}/${v.attempts}  ${pct}`);
+  if (v.completionsWithBlindActivation > 0) {
+    console.log(
+      `             ${v.completionsWithBlindActivation} of those completions required activating a control it could not identify`,
+    );
+    for (const b of v.blindActivations) {
+      console.log(`               <${b.role}> ${b.selector ?? "?"}  guessed: "${b.inferredPurpose}"`);
+    }
+  }
   if (v.blocker) {
     console.log(`             blocked by: ${describeBlocker(v.blocker)}`);
     if (v.blocker.node) {
@@ -127,6 +135,7 @@ for (const persona of personas) {
 }
 console.log(`\n  Journey Completion Rate: ${Math.round(report.journeyCompletionRate * 100)}%`);
 console.log(`  Site is the variable:    ${report.siteIsTheVariable ? "YES" : "no"}`);
+console.log(`  Completed only by guess: ${report.completedOnlyByGuessing ? "YES" : "no"}`);
 console.log(`  Wall clock:              ${Math.round(report.durationMs / 1000)}s`);
 console.log(`  Model cost:              $${report.costUsd.toFixed(4)}`);
 

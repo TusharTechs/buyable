@@ -15,7 +15,7 @@ import {
   snapshotAxTree,
   type AxSnapshot,
 } from "./axtree.js";
-import type { Action, Observation, Persona, SuccessAssertion } from "./types.js";
+import type { Action, ActionName, Observation, Persona, SuccessAssertion } from "./types.js";
 
 /** Virtual key codes CDP needs for synthetic key events. */
 const KEYS: Record<string, { code: string; key: string; vk: number; text?: string }> = {
@@ -33,6 +33,80 @@ const KEYS: Record<string, { code: string; key: string; vk: number; text?: strin
 };
 
 export class ActionRefused extends Error {}
+
+/**
+ * Roles each quick-navigation key targets, mirroring NVDA and JAWS single-key
+ * navigation (H for heading, B for button, K for link, F for form field, D for
+ * landmark) and the VoiceOver rotor.
+ */
+const QUICK_NAV_ROLES: Record<string, string[]> = {
+  next_heading: ["heading"],
+  next_button: ["button"],
+  next_link: ["link"],
+  next_form_field: ["textbox", "searchbox", "combobox", "checkbox", "radio", "listbox", "spinbutton", "slider", "switch"],
+  next_landmark: ["banner", "navigation", "main", "complementary", "contentinfo", "region", "search", "form"],
+};
+
+/**
+ * Move focus to the next node of a given role class, wrapping around the document.
+ *
+ * This is a genuine capability of the assistive technology being modelled, not a
+ * shortcut for the model's benefit. Leaving it out would force a naive tab loop and
+ * make every site look worse than it is, which would be a measurement error in our
+ * favour and therefore the worst kind.
+ *
+ * It does not leak any information the persona should not have: a control with no
+ * accessible name is still reached with no accessible name.
+ */
+async function quickNav(
+  page: PageHandle,
+  snapshot: AxSnapshot,
+  action: ActionName,
+): Promise<{ ref?: number; error?: string }> {
+  const roles = QUICK_NAV_ROLES[action];
+  if (!roles) return { error: `Unsupported quick navigation: ${action}` };
+
+  const roleSet = new Set(roles);
+  const from = snapshot.focusedRef ?? -1;
+  const ordered = snapshot.nodes;
+
+  const matches = ordered.filter((n) => roleSet.has(n.role.toLowerCase()));
+  if (matches.length === 0) {
+    return { error: `No ${action.replace("next_", "")} on this page.` };
+  }
+
+  const next = matches.find((n) => n.ref > from) ?? matches[0]!;
+
+  const backendNodeId = snapshot.backendByRef.get(next.ref);
+  if (backendNodeId === undefined) {
+    return { error: `Could not move to node ${next.ref}.` };
+  }
+
+  const { object } = await page.cdp.send<{ object: { objectId?: string } }>(
+    "DOM.resolveNode",
+    { backendNodeId },
+    page.sessionId,
+  );
+  if (!object.objectId) return { error: `Could not move to node ${next.ref}.` };
+
+  await page.cdp.send(
+    "Runtime.callFunctionOn",
+    {
+      objectId: object.objectId,
+      // Headings and landmarks are not normally focusable. A screen reader can still
+      // place its cursor there, so make them focusable for the duration of the visit
+      // rather than pretending the user cannot reach them.
+      functionDeclaration: `function(){
+        this.scrollIntoView({block:'center'});
+        if (this.tabIndex < 0 && !this.hasAttribute('tabindex')) this.setAttribute('tabindex', '-1');
+        this.focus();
+      }`,
+    },
+    page.sessionId,
+  );
+
+  return { ref: next.ref };
+}
 
 async function evaluate<T>(page: PageHandle, expression: string): Promise<T | undefined> {
   const res = await page.cdp.send<{ result?: { value?: T }; exceptionDetails?: unknown }>(
@@ -179,6 +253,20 @@ export async function act(
         if (!persona.act.keyboard) return refuse("This persona cannot use the keyboard.");
         await pressKeyRaw(page, "Tab", action.action === "shift_tab" ? 8 : 0);
         await settle(page, 350);
+        break;
+      }
+
+      case "next_heading":
+      case "next_button":
+      case "next_link":
+      case "next_form_field":
+      case "next_landmark": {
+        if (!persona.act.quickNav) {
+          return refuse("This persona has no screen reader quick navigation. Use tab and shift_tab.");
+        }
+        const moved = await quickNav(page, snapshot, action.action);
+        if (moved.error) return refuse(moved.error);
+        await settle(page, 250);
         break;
       }
 

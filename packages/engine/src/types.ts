@@ -31,6 +31,14 @@ export interface ActionCapabilities {
   keyboard: boolean;
   /** Activate an element by its accessibility-tree node id, the way an agent does. */
   accessibilityNodeRef: boolean;
+  /**
+   * Screen reader quick navigation: jump to the next heading, button, link, form
+   * field or landmark. NVDA and JAWS bind these to H, B, K, F and D; VoiceOver
+   * exposes them through the rotor. Modelling them matters because a real screen
+   * reader user does not tab through a page one control at a time, and a naive tab
+   * loop would make every site look worse than it is.
+   */
+  quickNav: boolean;
 }
 
 export interface Persona {
@@ -111,6 +119,11 @@ export interface Observation {
 export type ActionName =
   | "tab"
   | "shift_tab"
+  | "next_heading"
+  | "next_button"
+  | "next_link"
+  | "next_form_field"
+  | "next_landmark"
   | "press"
   | "type"
   | "click_selector"
@@ -143,6 +156,21 @@ export interface StepRecord {
   focusedRef?: number;
   /** ms since run start */
   at: number;
+  /**
+   * Set when this step activated a control with no accessible name.
+   *
+   * A screen reader user cannot do this: not knowing what a control does is the
+   * reason they stop. An AI agent can and does, because it is willing to act on an
+   * inference drawn from surrounding context. Recording it separately matters,
+   * because "the agent finished" and "the agent finished by gambling on an
+   * unidentifiable control during payment" are very different facts about a site.
+   */
+  blindActivation?: {
+    role: string;
+    selector?: string;
+    /** The model's stated reason, which is the inference it acted on. */
+    inferredPurpose: string;
+  };
 }
 
 export type RunOutcome =
@@ -203,6 +231,8 @@ export interface PersonaRunResult {
   browserSessionId?: string;
   finalUrl?: string;
   errorMessage?: string;
+  /** Steps where the persona activated a control it could not identify. */
+  blindActivations: NonNullable<StepRecord["blindActivation"]>[];
 }
 
 /**
@@ -217,6 +247,12 @@ export interface PersonaVerdict {
   rate: number;
   runs: PersonaRunResult[];
   blocker?: Blocker;
+  /**
+   * Completions that required activating at least one unidentifiable control.
+   * A completion of this kind is reported, never quietly counted as a clean pass.
+   */
+  completionsWithBlindActivation: number;
+  blindActivations: NonNullable<StepRecord["blindActivation"]>[];
 }
 
 export interface JourneyReport {
@@ -232,6 +268,11 @@ export interface JourneyReport {
    * This is the load-bearing claim: the site is the variable, not the model.
    */
   siteIsTheVariable: boolean;
+  /**
+   * True when a persona only got through by activating a control it could not
+   * identify. The journey is technically completable and still not safely so.
+   */
+  completedOnlyByGuessing: boolean;
   durationMs: number;
   costUsd: number;
 }
