@@ -13,8 +13,15 @@ import {
   ACTION_TOOL_DESCRIPTION,
   ACTION_TOOL_NAME,
   actionToolSchema,
+  buildFixPrompt,
   buildSystemPrompt,
   coerceAction,
+  coerceFix,
+  FIX_TOOL_DESCRIPTION,
+  FIX_TOOL_NAME,
+  FIX_TOOL_SCHEMA,
+  type FixProposalRequest,
+  type FixProposalResult,
   type ReasoningProvider,
   type ReasoningRequest,
   type ReasoningResult,
@@ -94,6 +101,35 @@ export class AnthropicProvider implements ReasoningProvider {
       inputTokens: response.usage.input_tokens,
       outputTokens: response.usage.output_tokens,
       narration,
+    };
+  }
+
+  async proposeFix(request: FixProposalRequest): Promise<FixProposalResult> {
+    const response = await this.client.messages.create({
+      model: this.modelId,
+      max_tokens: 2000,
+      temperature: 0,
+      system:
+        "You repair accessibility barriers in source code. You make the smallest change that removes the barrier and nothing else.",
+      tools: [
+        {
+          name: FIX_TOOL_NAME,
+          description: FIX_TOOL_DESCRIPTION,
+          input_schema: FIX_TOOL_SCHEMA as Anthropic.Tool.InputSchema,
+        },
+      ],
+      tool_choice: { type: "tool", name: FIX_TOOL_NAME },
+      messages: [{ role: "user", content: buildFixPrompt(request) }],
+    });
+
+    const toolUse = response.content.find(
+      (b): b is Anthropic.ToolUseBlock => b.type === "tool_use",
+    );
+
+    return {
+      ...coerceFix((toolUse?.input as Record<string, unknown>) ?? {}),
+      inputTokens: response.usage.input_tokens,
+      outputTokens: response.usage.output_tokens,
     };
   }
 }

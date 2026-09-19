@@ -15,6 +15,9 @@ import * as path from "node:path";
 import { runJourney, defineJourney } from "./runJourney.js";
 import { createProvider } from "./providers/index.js";
 import { describeBlocker } from "./blocker.js";
+import { verifyFix } from "./verifyFix.js";
+import { loadInfrastructure } from "./config.js";
+import { PatchRefused } from "./patch.js";
 import { PERSONA_IDS, type PersonaId } from "./types.js";
 
 /** Load .env.local from the repo root so secrets stay out of the shell history. */
@@ -138,6 +141,92 @@ console.log(`  Site is the variable:    ${report.siteIsTheVariable ? "YES" : "no
 console.log(`  Completed only by guess: ${report.completedOnlyByGuessing ? "YES" : "no"}`);
 console.log(`  Wall clock:              ${Math.round(report.durationMs / 1000)}s`);
 console.log(`  Model cost:              $${report.costUsd.toFixed(4)}`);
+
+/* ---------------------------------------------------------------------------
+ * The fix and re-verify loop.
+ *
+ * Only runs when a constrained persona actually failed. There is nothing to prove
+ * on a journey that already completes, and generating a patch for a site that is
+ * not broken is how tools earn a reputation for noise.
+ * ------------------------------------------------------------------------- */
+if (arg("fix") !== undefined) {
+  const failing = personas
+    .map((p) => report.verdicts[p])
+    .find((v) => v && v.persona !== "baseline" && v.rate < 1 && v.blocker);
+
+  if (!failing?.blocker) {
+    console.log(`\n  Nothing to fix: no constrained persona failed with a located blocker.`);
+  } else {
+    const sourceRoot = arg("source-root");
+    if (!sourceRoot) {
+      console.error(`\n  --fix needs --source-root pointing at the site's source.`);
+      process.exit(1);
+    }
+
+    const infra = await loadInfrastructure(process.env.AWS_REGION ?? "us-west-2");
+
+    console.log(`\n${bar}`);
+    console.log(`FIX AND RE-VERIFY  (persona: ${failing.persona})`);
+    console.log(bar);
+
+    try {
+      const verification = await verifyFix({
+        region: process.env.AWS_REGION ?? "us-west-2",
+        provider,
+        journey,
+        before: failing,
+        blocker: failing.blocker,
+        sourceRoot,
+        shadowBucket: infra.shadowBucket,
+        shadowBaseUrl: infra.shadowBaseUrl,
+        reportId: report.reportId,
+        onEvent: (e) => {
+          if (e.type === "patch_proposed") {
+            console.log(`\n  Patch proposed for ${e.patch.filePath}`);
+            console.log(`  ${e.patch.rationale}`);
+            console.log(`  WCAG: ${e.patch.wcag.join(", ")}\n`);
+            console.log(
+              e.patch.diff
+                .split("\n")
+                .map((l) => `    ${l}`)
+                .join("\n"),
+            );
+          }
+          if (e.type === "shadow_published") {
+            console.log(`\n  Published ${e.fileCount} files to ${e.url}`);
+          }
+          if (e.type === "precheck") {
+            console.log(
+              `  Silent controls on the blocking page: ${e.silentControlsBefore} before, ${e.silentControlsAfter} after`,
+            );
+          }
+          if (e.type === "reverify_started") {
+            console.log(`\n  Re-running the same journey as ${e.persona} against the patched build`);
+            console.log(`  ${e.url}`);
+          }
+        },
+      });
+
+      console.log(`\n${bar}`);
+      console.log(`  ${failing.persona}: ${Math.round(verification.before.rate * 100)}% -> ${Math.round(verification.after.rate * 100)}%`);
+      console.log(`  Fix proven: ${verification.proven ? "YES" : "NO"}`);
+      if (!verification.proven) {
+        console.log(`  The patch applied but the journey still does not complete, so it is`);
+        console.log(`  reported as unproven rather than as a fix.`);
+      }
+      console.log(`  Verification cost: $${verification.costUsd.toFixed(4)}`);
+      console.log(bar);
+    } catch (err) {
+      if (err instanceof PatchRefused) {
+        console.error(`\n  Patch refused: ${err.message}`);
+        console.error(`  Refusing is the correct outcome here. A patch that applies at the`);
+        console.error(`  wrong place would read plausibly and fix nothing.`);
+      } else {
+        throw err;
+      }
+    }
+  }
+}
 
 const out = arg("out");
 if (out) {

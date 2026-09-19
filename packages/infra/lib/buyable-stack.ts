@@ -4,6 +4,7 @@ import * as path from "node:path";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import { StaticSite } from "./static-site";
+import { ShadowSite } from "./shadow-site";
 
 const repoRoot = path.resolve(__dirname, "..", "..", "..");
 
@@ -23,6 +24,15 @@ export class BuyableStack extends cdk.Stack {
       sourcePath: path.join(repoRoot, "apps", "demo-store", "public"),
       comment: "Buyable fixture store",
     });
+
+    /* ---------------------------------------------------------------------
+     * Shadow builds.
+     *
+     * A patched copy of a site, published so the same journey can be re-run
+     * against it. Proving a fix means moving the completion number, not asserting
+     * that the diff looks correct.
+     * ------------------------------------------------------------------- */
+    const shadow = new ShadowSite(this, "Shadow");
 
     /* ---------------------------------------------------------------------
      * Evidence.
@@ -69,6 +79,11 @@ export class BuyableStack extends cdk.Stack {
       value: demoStore.url,
       description: "Public URL of the fixture store under test",
     });
+    new cdk.CfnOutput(this, "ShadowBaseUrl", {
+      value: shadow.baseUrl,
+      description: "Base URL that patched builds are published under",
+    });
+    new cdk.CfnOutput(this, "ShadowBucketName", { value: shadow.bucket.bucketName });
     new cdk.CfnOutput(this, "EvidenceBucketName", { value: evidence.bucketName });
     new cdk.CfnOutput(this, "RunsTableName", { value: table.tableName });
   }

@@ -7,5 +7,8 @@ export * from "./reasoning.js";
 export * from "./providers/index.js";
 export * from "./blocker.js";
 export * from "./evidence.js";
+export * from "./patch.js";
+export * from "./shadow.js";
+export * from "./verifyFix.js";
 export * from "./runPersona.js";
 export * from "./runJourney.js";

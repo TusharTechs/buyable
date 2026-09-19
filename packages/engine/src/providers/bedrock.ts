@@ -22,8 +22,15 @@ import {
   ACTION_TOOL_DESCRIPTION,
   ACTION_TOOL_NAME,
   actionToolSchema,
+  buildFixPrompt,
   buildSystemPrompt,
   coerceAction,
+  coerceFix,
+  FIX_TOOL_DESCRIPTION,
+  FIX_TOOL_NAME,
+  FIX_TOOL_SCHEMA,
+  type FixProposalRequest,
+  type FixProposalResult,
   type ReasoningProvider,
   type ReasoningRequest,
   type ReasoningResult,
@@ -113,6 +120,42 @@ export class BedrockProvider implements ReasoningProvider {
       inputTokens: response.usage?.inputTokens ?? 0,
       outputTokens: response.usage?.outputTokens ?? 0,
       narration,
+    };
+  }
+
+  async proposeFix(request: FixProposalRequest): Promise<FixProposalResult> {
+    const response = await this.client.send(
+      new ConverseCommand({
+        modelId: this.modelId,
+        system: [
+          {
+            text: "You repair accessibility barriers in source code. You make the smallest change that removes the barrier and nothing else.",
+          },
+        ],
+        messages: [{ role: "user", content: [{ text: buildFixPrompt(request) }] }],
+        toolConfig: {
+          tools: [
+            {
+              toolSpec: {
+                name: FIX_TOOL_NAME,
+                description: FIX_TOOL_DESCRIPTION,
+                inputSchema: { json: FIX_TOOL_SCHEMA as never },
+              },
+            },
+          ],
+          toolChoice: { tool: { name: FIX_TOOL_NAME } },
+        },
+        inferenceConfig: { maxTokens: 2000, temperature: 0 },
+      }),
+    );
+
+    const blocks = response.output?.message?.content ?? [];
+    const toolUse = blocks.find((b) => "toolUse" in b && b.toolUse)?.toolUse;
+
+    return {
+      ...coerceFix((toolUse?.input as Record<string, unknown>) ?? {}),
+      inputTokens: response.usage?.inputTokens ?? 0,
+      outputTokens: response.usage?.outputTokens ?? 0,
     };
   }
 }

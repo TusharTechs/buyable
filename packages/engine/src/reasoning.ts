@@ -42,6 +42,109 @@ export interface ReasoningProvider {
   /** Cost of a run, in USD. Providers that cannot price themselves return 0. */
   estimateCostUsd(inputTokens: number, outputTokens: number): number;
   decide(request: ReasoningRequest): Promise<ReasoningResult>;
+  proposeFix(request: FixProposalRequest): Promise<FixProposalResult>;
+}
+
+export interface FixProposalRequest {
+  /** What stopped the persona, including the offending element's outer HTML. */
+  blocker: import("./types.js").Blocker;
+  /** Repo-relative path, for context in the rationale. */
+  filePath: string;
+  /** The file to change. */
+  fileContents: string;
+}
+
+export interface FixProposalResult {
+  /** Must already appear in the file exactly once. See ADR 0004. */
+  oldText: string;
+  newText: string;
+  rationale: string;
+  wcag: string[];
+  inputTokens: number;
+  outputTokens: number;
+}
+
+export const FIX_TOOL_NAME = "propose_fix";
+
+export const FIX_TOOL_DESCRIPTION =
+  "Propose the smallest source change that gives the blocking element an accessible name or the correct semantics. Anchor the change with an exact snippet from the file.";
+
+export const FIX_TOOL_SCHEMA: Record<string, unknown> = {
+  type: "object",
+  properties: {
+    oldText: {
+      type: "string",
+      description:
+        "An exact, contiguous snippet copied verbatim from the file, which must appear in it exactly once. Include enough surrounding text to be unique, and nothing more.",
+    },
+    newText: {
+      type: "string",
+      description: "What oldText should become. Change as little as possible.",
+    },
+    rationale: {
+      type: "string",
+      description:
+        "Two sentences at most: what was wrong and what the change does for someone using a screen reader.",
+    },
+    wcag: {
+      type: "array",
+      items: { type: "string" },
+      description: 'WCAG success criteria numbers this addresses, for example ["4.1.2"].',
+    },
+  },
+  required: ["oldText", "newText", "rationale", "wcag"],
+};
+
+export function buildFixPrompt(request: FixProposalRequest): string {
+  const b = request.blocker;
+  return [
+    `A journey on a live site could not be completed. You are fixing the source.`,
+    ``,
+    `WHAT STOPPED IT`,
+    `- Persona: ${b.persona}`,
+    `- Classification: ${b.kind}`,
+    `- WCAG criteria in play: ${b.wcag.join(", ") || "not classified"}`,
+    `- URL: ${b.url}`,
+    b.node ? `- Element role: ${b.node.role}` : ``,
+    b.node ? `- Accessible name: ${b.node.name ? `"${b.node.name}"` : "(empty)"}` : ``,
+    b.selector ? `- Selector: ${b.selector}` : ``,
+    ``,
+    `THE AGENT'S OWN ACCOUNT OF BEING STUCK`,
+    b.agentExplanation,
+    ``,
+    b.outerHtml ? `THE OFFENDING ELEMENT AS RENDERED
+${b.outerHtml}
+` : ``,
+    `FILE: ${request.filePath}`,
+    `\`\`\``,
+    request.fileContents,
+    `\`\`\``,
+    ``,
+    `RULES`,
+    `1. Make the smallest change that removes the barrier. Do not refactor, reformat or`,
+    `   improve anything else, however tempting.`,
+    `2. oldText must be copied character for character from the file above and must`,
+    `   appear in it exactly once. If you cannot find a unique anchor, widen it.`,
+    `3. Do not add a visual change unless the barrier requires one.`,
+    `4. Prefer the mechanism the page already uses. An icon-only control usually wants`,
+    `   an aria-label; a div behaving as a control usually wants to become a button.`,
+  ]
+    .filter((l) => l !== "")
+    .join("\n");
+}
+
+export function coerceFix(input: Record<string, unknown>): {
+  oldText: string;
+  newText: string;
+  rationale: string;
+  wcag: string[];
+} {
+  return {
+    oldText: typeof input.oldText === "string" ? input.oldText : "",
+    newText: typeof input.newText === "string" ? input.newText : "",
+    rationale: typeof input.rationale === "string" ? input.rationale : "",
+    wcag: Array.isArray(input.wcag) ? input.wcag.map(String) : [],
+  };
 }
 
 /**
