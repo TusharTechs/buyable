@@ -1,0 +1,17 @@
+{
+  "name": "buyable",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Proves a real customer can finish buying from your site, using a screen reader, a keyboard, or an AI shopping agent.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/demo-store"
+  ],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "run:local": "npm run -w @buyable/engine run:local"
+  }
+}

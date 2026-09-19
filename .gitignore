@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+cdk.out/
+*.log
+.DS_Store
+coverage/
+.aws-sam/
+scratch/
+*.tsbuildinfo
