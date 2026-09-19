@@ -1,0 +1,655 @@
+{
+  "reportId": "73f1c91f-0424-42ee-9af2-dc5796788deb",
+  "journeyId": "b334a1b5-2cc3-46f6-9883-27282717930c",
+  "journey": {
+    "journeyId": "b334a1b5-2cc3-46f6-9883-27282717930c",
+    "createdAt": "2026-09-19T20:24:43.367Z",
+    "name": "Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed.",
+    "startUrl": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+    "goal": "Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed.",
+    "assertion": {
+      "textPresent": "Order confirmed"
+    }
+  },
+  "createdAt": "2026-09-19T20:26:51.916Z",
+  "verdicts": {
+    "baseline": {
+      "persona": "baseline",
+      "attempts": 1,
+      "completions": 1,
+      "rate": 1,
+      "runs": [
+        {
+          "persona": "baseline",
+          "outcome": "completed",
+          "completed": true,
+          "steps": [
+            {
+              "step": 1,
+              "observationDigest": "STEP 1\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\nShoes built for long miles\n\nThree models, honestly described. Free returns within 30 days.\n\nAll shoes\nHarrier Trail\n\n£89.00\n\nView Harrier Trail\nFellrunner Lite\n\n£74.00\n\nView Fellrunner Lite\nMoorland Road\n\n£96.00\n",
+              "action": {
+                "action": "click_selector",
+                "reason": "I need to view the Harrier Trail shoe to select size 9 and add it to the basket.",
+                "selector": "main.wrap > ul.grid > li.card:nth-of-type(1) > a.btn.secondary"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "at": 11771
+            },
+            {
+              "step": 2,
+              "observationDigest": "STEP 2\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\n\nShop / Harrier Trail\n\nHarrier Trail\n\n£89.00\n\nA cushioned trail shoe for long distances on mixed ground. C",
+              "action": {
+                "action": "click_selector",
+                "reason": "I need to select UK size 9 for the Harrier Trail shoe.",
+                "selector": "fieldset > div.sizes > label:nth-of-type(3) > input"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "at": 17208
+            },
+            {
+              "step": 3,
+              "observationDigest": "STEP 3\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\n\nShop / Harrier Trail\n\nHarrier Trail\n\n£89.00\n\nA cushioned trail shoe for long distances on mixed ground. Cobalt blue.\n\nChoose a size (UK)\n7\n8\n9\n10\n11\nAdd to basket\n\nA fixture store for Buyable. No real orders are",
+              "action": {
+                "action": "click_selector",
+                "reason": "I need to select UK size 9 by clicking on the size 9 radio button.",
+                "selector": "fieldset > div.sizes > label:nth-of-type(3) > input"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "at": 22487
+            },
+            {
+              "step": 4,
+              "observationDigest": "STEP 4\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\n\nShop / Harrier Trail\n\nHarrier Trail\n\n£89.00\n\nA cushioned trail shoe for long distances on mixed ground. Cobalt blue.\n\nChoose a size (UK)\n7\n8\n9\n10\n11\nAdd to basket\n\nA fixture store for Buyable. No real orders are",
+              "action": {
+                "action": "click_selector",
+                "reason": "Size 9 is already selected (shown with blue border), so I need to click the \"Add to basket\" button to add the shoe to the basket.",
+                "selector": "div.detail > div:nth-of-type(2) > form > button.btn"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "at": 28268
+            },
+            {
+              "step": 5,
+              "observationDigest": "STEP 5\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\n\nShop / Harrier Trail\n\nHarrier Trail\n\n£89.00\n\nA cushioned trail shoe for long distances on mixed ground. Cobalt blue.\n\nChoose a size (UK)\n7\n8\n9\n10\n11\nAdd to basket\n\nAdded Harrier Trail, UK size 9, to your basket.",
+              "action": {
+                "action": "click_selector",
+                "reason": "The shoe has been successfully added to the basket (confirmed by the message \"Added Harrier Trail, UK size 9, to your basket\"), so I need to click on the Basket link to proceed to checkout.",
+                "selector": "nav.site > ul > li:nth-of-type(2) > a"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "at": 34274
+            },
+            {
+              "step": 6,
+              "observationDigest": "STEP 6\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\nYour basket\nItems currently in your basket\nItem\tSize\tPrice\nHarrier Trail\tUK 9\t£89.00\n\nContinue to checkout\n\nA fixture store for Buyable.",
+              "action": {
+                "action": "click_selector",
+                "reason": "I can see the Harrier Trail UK size 9 is in the basket for £89.00, so I need to click \"Continue to checkout\" to proceed with the purchase.",
+                "selector": "#to-checkout"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "at": 39858
+            },
+            {
+              "step": 7,
+              "observationDigest": "STEP 7\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\nTITLE: Checkout · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nNorthbound Running\nShop\nBasket\nCheckout\n\nStep 2 of 2. Enter your delivery details and confirm payment.\n\nDelivery address\nFull name\nAddress line 1\nTown or city\nPos",
+              "action": {
+                "action": "click_selector",
+                "reason": "All the delivery and payment details are already filled in correctly, so I need to click the payment button to complete the purchase.",
+                "selector": "#pay"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+              "at": 45667
+            }
+          ],
+          "startedAt": "2026-09-19T20:24:43.369Z",
+          "durationMs": 47451,
+          "inputTokens": 22899,
+          "outputTokens": 793,
+          "blindActivations": [],
+          "browserSessionId": "01M2XNFEXKNA0Z5GA8Q6WZ04ND",
+          "finalUrl": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html"
+        }
+      ],
+      "completionsWithBlindActivation": 0,
+      "blindActivations": []
+    },
+    "assistive": {
+      "persona": "assistive",
+      "attempts": 1,
+      "completions": 0,
+      "rate": 0,
+      "runs": [
+        {
+          "persona": "assistive",
+          "outcome": "blocked",
+          "completed": false,
+          "steps": [
+            {
+              "step": 1,
+              "observationDigest": "STEP 1\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running · Shoes built for long miles\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]  <<< FOCUS\n      [1] link \"Skip to main content\" [focu",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the Harrier Trail product page to select size 9 and purchase it. I'll start by moving to the first link to navigate the page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 0,
+              "at": 11094
+            },
+            {
+              "step": 2,
+              "observationDigest": "STEP 2\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Skip to main content\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]  <<< FOCUS\n      [2] banner\n      [3] ",
+              "action": {
+                "action": "tab",
+                "reason": "I need to navigate to the \"View Harrier Trail\" link to access the product page where I can select size 9."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 1,
+              "at": 15288
+            },
+            {
+              "step": 3,
+              "observationDigest": "STEP 3\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4",
+              "action": {
+                "action": "tab",
+                "reason": "I need to continue tabbing to reach the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 5,
+              "at": 19525
+            },
+            {
+              "step": 4,
+              "observationDigest": "STEP 4\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n",
+              "action": {
+                "action": "shift_tab",
+                "reason": "I need to go back to the \"View Harrier Trail\" link to access the product page where I can select size 9."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 32,
+              "at": 23602
+            },
+            {
+              "step": 5,
+              "observationDigest": "STEP 5\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4",
+              "action": {
+                "action": "tab",
+                "reason": "I need to continue tabbing to reach the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 5,
+              "at": 27637
+            },
+            {
+              "step": 6,
+              "observationDigest": "STEP 6\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n",
+              "action": {
+                "action": "tab",
+                "reason": "I need to continue tabbing to reach the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 32,
+              "at": 32705
+            },
+            {
+              "step": 7,
+              "observationDigest": "STEP 7\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Basket\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinf",
+              "action": {
+                "action": "shift_tab",
+                "reason": "I need to go back to the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 33,
+              "at": 37343
+            },
+            {
+              "step": 8,
+              "observationDigest": "STEP 8\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n",
+              "action": {
+                "action": "tab",
+                "reason": "I need to continue tabbing to reach the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 32,
+              "at": 41346
+            },
+            {
+              "step": 9,
+              "observationDigest": "STEP 9\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Basket\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinf",
+              "action": {
+                "action": "tab",
+                "reason": "I need to continue tabbing to reach the \"View Harrier Trail\" link to access the product page."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 33,
+              "at": 45495
+            },
+            {
+              "step": 10,
+              "observationDigest": "STEP 10\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Harrier Trail\", link\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] co",
+              "action": {
+                "action": "press",
+                "reason": "I need to activate the \"Harrier Trail\" link to access the product page where I can select size 9.",
+                "key": "Enter"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 34,
+              "at": 50235
+            },
+            {
+              "step": 11,
+              "observationDigest": "STEP 11\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\n  \"Harrier Trail · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 45 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]",
+              "action": {
+                "action": "tab",
+                "reason": "I need to tab to the \"Add to basket\" button since size 9 is already selected (checked=true)."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 0,
+              "at": 55227
+            },
+            {
+              "step": 12,
+              "observationDigest": "STEP 12\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Skip to main content\", link\n\nACCESSIBILITY TREE (reading order, 45 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]  <<< FOCUS\n      [2] banner\n      [3] main\n      [",
+              "action": {
+                "action": "next_button",
+                "reason": "I need to navigate to the \"Add to basket\" button to add the Harrier Trail shoe in size 9 to the basket."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 1,
+              "at": 59698
+            },
+            {
+              "step": 13,
+              "observationDigest": "STEP 13\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Add to basket\", button\n\nACCESSIBILITY TREE (reading order, 45 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n ",
+              "action": {
+                "action": "press",
+                "reason": "I need to press Enter on the \"Add to basket\" button to add the Harrier Trail shoe in size 9 to the basket.",
+                "key": "Enter"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 19,
+              "at": 63931
+            },
+            {
+              "step": 14,
+              "observationDigest": "STEP 14\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Add to basket\", button\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n ",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 19,
+              "at": 69367
+            },
+            {
+              "step": 15,
+              "observationDigest": "STEP 15\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5",
+              "action": {
+                "action": "tab",
+                "reason": "I need to tab to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 24,
+              "at": 73242
+            },
+            {
+              "step": 16,
+              "observationDigest": "STEP 16\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"9\", radio, checked=true\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 40,
+              "at": 77457
+            },
+            {
+              "step": 17,
+              "observationDigest": "STEP 17\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Skip to main content\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]  <<< FOCUS\n      [2] banner\n      [3] main\n      [",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 1,
+              "at": 81378
+            },
+            {
+              "step": 18,
+              "observationDigest": "STEP 18\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinf",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 5,
+              "at": 85025
+            },
+            {
+              "step": 19,
+              "observationDigest": "STEP 19\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 24,
+              "at": 89748
+            },
+            {
+              "step": 20,
+              "observationDigest": "STEP 20\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5",
+              "action": {
+                "action": "tab",
+                "reason": "I need to tab to the \"Basket\" link to proceed to checkout and complete the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 32,
+              "at": 93484
+            },
+            {
+              "step": 21,
+              "observationDigest": "STEP 21\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Basket\", link\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          ",
+              "action": {
+                "action": "press",
+                "reason": "I need to press Enter on the \"Basket\" link to proceed to checkout and complete the purchase.",
+                "key": "Enter"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 33,
+              "at": 98364
+            },
+            {
+              "step": 22,
+              "observationDigest": "STEP 22\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\n  \"Your basket · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 30 nodes, 6 focusable):\n[0] RootWebArea \"Your basket · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Continue to checkout\" link to proceed with completing the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "focusedRef": 0,
+              "at": 103243
+            },
+            {
+              "step": 23,
+              "observationDigest": "STEP 23\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Skip to main content\", link\n\nACCESSIBILITY TREE (reading order, 30 nodes, 6 focusable):\n[0] RootWebArea \"Your basket · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]  <<< FOCUS\n      [2] banner\n      [3] main\n      [4] contentinfo\n    ",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Continue to checkout\" link to proceed with completing the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "focusedRef": 1,
+              "at": 106937
+            },
+            {
+              "step": 24,
+              "observationDigest": "STEP 24\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running\", link\n\nACCESSIBILITY TREE (reading order, 30 nodes, 6 focusable):\n[0] RootWebArea \"Your basket · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5] lin",
+              "action": {
+                "action": "next_link",
+                "reason": "I need to navigate to the \"Continue to checkout\" link to proceed with completing the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "focusedRef": 5,
+              "at": 110491
+            },
+            {
+              "step": 25,
+              "observationDigest": "STEP 25\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Continue to checkout\", link\n\nACCESSIBILITY TREE (reading order, 30 nodes, 6 focusable):\n[0] RootWebArea \"Your basket · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5] l",
+              "action": {
+                "action": "press",
+                "reason": "I need to press Enter on the \"Continue to checkout\" link to proceed to the checkout page.",
+                "key": "Enter"
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "focusedRef": 18,
+              "at": 115641
+            },
+            {
+              "step": 26,
+              "observationDigest": "STEP 26\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\nTITLE: Checkout · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\n  \"Checkout · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 61 nodes, 12 focusable):\n[0] RootWebArea \"Checkout · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to",
+              "action": {
+                "action": "next_button",
+                "reason": "I need to navigate to the button to confirm the payment and complete the order."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+              "focusedRef": 0,
+              "at": 121888
+            },
+            {
+              "step": 27,
+              "observationDigest": "STEP 27\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\nTITLE: Checkout · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  (no accessible name), button\n\nACCESSIBILITY TREE (reading order, 61 nodes, 12 focusable):\n[0] RootWebArea \"Checkout · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5] li",
+              "action": {
+                "action": "blocked",
+                "reason": "",
+                "blockedExplanation": "I am focused on node [33], a button with no accessible name. The button announces nothing to a screen reader user, so I cannot determine what action it performs. I need to know what this button does (e.g., \"Confirm payment\", \"Place order\", etc.) to proceed with completing the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+              "focusedRef": 33,
+              "at": 127009
+            }
+          ],
+          "startedAt": "2026-09-19T20:24:43.372Z",
+          "durationMs": 127555,
+          "inputTokens": 67109,
+          "outputTokens": 2131,
+          "blindActivations": [],
+          "browserSessionId": "01M2XNFEY9S46BFK5QBMGPXGQP",
+          "blocker": {
+            "persona": "assistive",
+            "step": 27,
+            "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+            "node": {
+              "ref": 33,
+              "role": "button",
+              "name": "",
+              "states": [],
+              "focusable": true,
+              "depth": 6,
+              "backendNodeId": 318
+            },
+            "selector": "#pay",
+            "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+            "kind": "control-without-accessible-name",
+            "wcag": [
+              "4.1.2",
+              "2.4.6"
+            ],
+            "agentExplanation": "I am focused on node [33], a button with no accessible name. The button announces nothing to a screen reader user, so I cannot determine what action it performs. I need to know what this button does (e.g., \"Confirm payment\", \"Place order\", etc.) to proceed with completing the purchase."
+          },
+          "finalUrl": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html"
+        }
+      ],
+      "blocker": {
+        "persona": "assistive",
+        "step": 27,
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+        "node": {
+          "ref": 33,
+          "role": "button",
+          "name": "",
+          "states": [],
+          "focusable": true,
+          "depth": 6,
+          "backendNodeId": 318
+        },
+        "selector": "#pay",
+        "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+        "kind": "control-without-accessible-name",
+        "wcag": [
+          "4.1.2",
+          "2.4.6"
+        ],
+        "agentExplanation": "I am focused on node [33], a button with no accessible name. The button announces nothing to a screen reader user, so I cannot determine what action it performs. I need to know what this button does (e.g., \"Confirm payment\", \"Place order\", etc.) to proceed with completing the purchase."
+      },
+      "completionsWithBlindActivation": 0,
+      "blindActivations": []
+    },
+    "agent": {
+      "persona": "agent",
+      "attempts": 1,
+      "completions": 0,
+      "rate": 0,
+      "runs": [
+        {
+          "persona": "agent",
+          "outcome": "blocked",
+          "completed": false,
+          "steps": [
+            {
+              "step": 1,
+              "observationDigest": "STEP 1\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/index.html\nTITLE: Northbound Running · Shoes built for long miles\n\nSCREEN READER ANNOUNCED:\n  \"Northbound Running · Shoes built for long miles\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 40 nodes, 11 focusable):\n[0] RootWebArea \"Northbound Running · Shoes built for long miles\" [focusable]  <<< FOCUS\n      [1] link \"Skip to main content\" [focu",
+              "action": {
+                "action": "click_node",
+                "reason": "I need to view the Harrier Trail shoe to select UK size 9 and purchase it.",
+                "ref": 23
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+              "focusedRef": 0,
+              "at": 10273
+            },
+            {
+              "step": 2,
+              "observationDigest": "STEP 2\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\n  \"Harrier Trail · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 45 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable] ",
+              "action": {
+                "action": "read",
+                "reason": "I need to understand the current state of the page. I can see that UK size 9 is already selected (checked=true), so I should proceed to add the item to the basket."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 0,
+              "at": 16153
+            },
+            {
+              "step": 3,
+              "observationDigest": "STEP 3\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Harrier Trail · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 45 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n  ",
+              "action": {
+                "action": "click_node",
+                "reason": "UK size 9 is already selected, so I need to click the \"Add to basket\" button to proceed with the purchase.",
+                "ref": 19
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 0,
+              "at": 19896
+            },
+            {
+              "step": 4,
+              "observationDigest": "STEP 4\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Harrier Trail · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n  ",
+              "action": {
+                "action": "click_node",
+                "reason": "I can see the status message \"Added Harrier Trail, UK size 9, to your basket\" which confirms the item was added. Now I need to click the \"Add to basket\" button or navigate to the basket to complete the purchase.",
+                "ref": 19
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 0,
+              "at": 26877
+            },
+            {
+              "step": 5,
+              "observationDigest": "STEP 5\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier\nTITLE: Harrier Trail · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  \"Harrier Trail · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 46 nodes, 12 focusable):\n[0] RootWebArea \"Harrier Trail · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n  ",
+              "action": {
+                "action": "click_node",
+                "reason": "The item has been added to the basket. Now I need to click the \"Basket\" link to proceed to checkout and complete the purchase.",
+                "ref": 33
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+              "focusedRef": 0,
+              "at": 32061
+            },
+            {
+              "step": 6,
+              "observationDigest": "STEP 6\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\nTITLE: Your basket · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/cart.html\n  \"Your basket · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 34 nodes, 6 focusable):\n[0] RootWebArea \"Your basket · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to ",
+              "action": {
+                "action": "click_node",
+                "reason": "I can see the Harrier Trail UK size 9 is in the basket for £89.00. Now I need to click \"Continue to checkout\" to proceed with the purchase.",
+                "ref": 18
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+              "focusedRef": 0,
+              "at": 38117
+            },
+            {
+              "step": 7,
+              "observationDigest": "STEP 7\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\nTITLE: Checkout · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\n  \"Checkout · Northbound Running\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 64 nodes, 12 focusable):\n[0] RootWebArea \"Checkout · Northbound Running\" [focusable]  <<< FOCUS\n      [1] link \"Skip to ",
+              "action": {
+                "action": "next_button",
+                "reason": "I need to find and click the button to complete the checkout and confirm the order."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+              "focusedRef": 0,
+              "at": 43413
+            },
+            {
+              "step": 8,
+              "observationDigest": "STEP 8\nURL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html\nTITLE: Checkout · Northbound Running\n\nSCREEN READER ANNOUNCED:\n  (no accessible name), button\n\nACCESSIBILITY TREE (reading order, 64 nodes, 12 focusable):\n[0] RootWebArea \"Checkout · Northbound Running\" [focusable]\n      [1] link \"Skip to main content\" [focusable]\n      [2] banner\n      [3] main\n      [4] contentinfo\n          [5] lin",
+              "action": {
+                "action": "blocked",
+                "reason": "",
+                "blockedExplanation": "I am focused on node [33], a button with no accessible name. I cannot determine what this button does because it announces nothing to a screen reader. I need to know what this button is for (e.g., \"Confirm order\", \"Place order\", \"Submit payment\") to proceed with completing the purchase."
+              },
+              "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+              "focusedRef": 33,
+              "at": 50315
+            }
+          ],
+          "startedAt": "2026-09-19T20:24:43.373Z",
+          "durationMs": 50868,
+          "inputTokens": 19562,
+          "outputTokens": 798,
+          "blindActivations": [],
+          "browserSessionId": "01M2XNFEXQ7YCZH44TCJ7S4SPY",
+          "blocker": {
+            "persona": "agent",
+            "step": 8,
+            "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+            "node": {
+              "ref": 33,
+              "role": "button",
+              "name": "",
+              "states": [],
+              "focusable": true,
+              "depth": 6,
+              "backendNodeId": 327
+            },
+            "selector": "#pay",
+            "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+            "kind": "control-without-accessible-name",
+            "wcag": [
+              "4.1.2",
+              "2.4.6"
+            ],
+            "agentExplanation": "I am focused on node [33], a button with no accessible name. I cannot determine what this button does because it announces nothing to a screen reader. I need to know what this button is for (e.g., \"Confirm order\", \"Place order\", \"Submit payment\") to proceed with completing the purchase."
+          },
+          "finalUrl": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html"
+        }
+      ],
+      "blocker": {
+        "persona": "agent",
+        "step": 8,
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+        "node": {
+          "ref": 33,
+          "role": "button",
+          "name": "",
+          "states": [],
+          "focusable": true,
+          "depth": 6,
+          "backendNodeId": 327
+        },
+        "selector": "#pay",
+        "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+        "kind": "control-without-accessible-name",
+        "wcag": [
+          "4.1.2",
+          "2.4.6"
+        ],
+        "agentExplanation": "I am focused on node [33], a button with no accessible name. I cannot determine what this button does because it announces nothing to a screen reader. I need to know what this button is for (e.g., \"Confirm order\", \"Place order\", \"Submit payment\") to proceed with completing the purchase."
+      },
+      "completionsWithBlindActivation": 0,
+      "blindActivations": []
+    }
+  },
+  "journeyCompletionRate": 0.3333333333333333,
+  "siteIsTheVariable": true,
+  "completedOnlyByGuessing": false,
+  "durationMs": 128547,
+  "costUsd": 0.38454
+}
