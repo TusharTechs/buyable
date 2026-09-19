@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order confirmed &middot; Northbound Running</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Northbound Running</a>
+    <nav class="site" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="cart.html">Basket</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="confirm">
+    <p class="tick" role="img" aria-label="Success">&check;</p>
+    <h1>Order confirmed</h1>
+    <p>Thank you. Your order <span class="order-no" id="order-number">NB-000000</span> is on its way.</p>
+    <p id="order-detail"></p>
+    <p><a class="btn secondary" href="index.html">Continue shopping</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>A fixture store for Buyable. No real orders are placed and no payment details are collected.</p>
+  </div>
+</footer>
+
+<script src="store.js"></script>
+<script>Store.renderConfirmation();</script>
+</body>
+</html>

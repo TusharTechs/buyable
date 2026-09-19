@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout &middot; Northbound Running</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Northbound Running</a>
+    <nav class="site" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="cart.html">Basket</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <h1>Checkout</h1>
+  <p class="lede">Step 2 of 2. Enter your delivery details and confirm payment.</p>
+
+  <div class="checkout-layout">
+    <section aria-labelledby="delivery-heading">
+      <h2 id="delivery-heading">Delivery address</h2>
+
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input id="full-name" name="full-name" type="text" autocomplete="name" value="Alex Morgan">
+      </div>
+
+      <div class="field">
+        <label for="address-line-1">Address line 1</label>
+        <input id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="14 Northgate">
+      </div>
+
+      <div class="field">
+        <label for="city">Town or city</label>
+        <input id="city" name="city" type="text" autocomplete="address-level2" value="Leeds">
+      </div>
+
+      <div class="field">
+        <label for="postcode">Postcode</label>
+        <input id="postcode" name="postcode" type="text" autocomplete="postal-code" value="LS1 4AB">
+        <p class="hint" id="postcode-hint">We deliver anywhere in the United Kingdom.</p>
+      </div>
+
+      <h2 id="payment-heading">Payment</h2>
+
+      <div class="field">
+        <label for="card-number">Card number</label>
+        <input id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="off" value="4000 0000 0000 0002">
+        <p class="hint">This fixture store never transmits or stores card details.</p>
+      </div>
+
+      <div class="field">
+        <label for="card-expiry">Expiry date</label>
+        <input id="card-expiry" name="card-expiry" type="text" autocomplete="off" value="04/29">
+      </div>
+    </section>
+
+    <aside class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Order summary</h2>
+      <dl id="summary-lines"></dl>
+      <p class="total" id="summary-total">&pound;0.00</p>
+
+      <!--
+        BUYABLE FIXTURE, DELIBERATE DEFECT.
+
+        This is the only accessibility defect in the store, and it is placed on the
+        final action of the purchase on purpose.
+
+        The element below is a real <button>. It is keyboard reachable and it is
+        announced as a button. What it lacks is an accessible name, because its only
+        content is an <svg> marked aria-hidden. A screen reader therefore announces
+        it as "button" and nothing more, and an AI shopping agent reading the same
+        accessibility tree gets the same empty string.
+
+        This is how the bug happens in production: someone correctly hides a
+        decorative icon from assistive technology and forgets that the icon was the
+        button's only source of a name.
+
+        The fix is one attribute. See docs/fixture-notes.md.
+      -->
+      <button class="pay-btn" id="pay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+          <path d="M2 10h20"></path>
+        </svg>
+      </button>
+
+      <p class="hint" id="pay-status" role="status"></p>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>A fixture store for Buyable. No real orders are placed and no payment details are collected.</p>
+  </div>
+</footer>
+
+<script src="store.js"></script>
+<script>
+  Store.renderSummary();
+  document.getElementById('pay').addEventListener('click', function () {
+    Store.placeOrder();
+  });
+</script>
+</body>
+</html>

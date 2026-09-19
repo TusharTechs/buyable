@@ -1,0 +1,22 @@
+{
+  "name": "@buyable/infra",
+  "version": "0.1.0",
+  "private": true,
+  "bin": { "infra": "bin/buyable.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never",
+    "diff": "cdk diff"
+  },
+  "devDependencies": {
+    "aws-cdk": "latest",
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "latest",
+    "constructs": "^10.4.2"
+  }
+}

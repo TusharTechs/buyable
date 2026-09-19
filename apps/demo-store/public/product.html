@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harrier Trail &middot; Northbound Running</title>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Harrier Trail",
+  "description": "A cushioned trail shoe for long distances on mixed ground.",
+  "color": "Cobalt blue",
+  "sku": "NB-HAR-001",
+  "brand": { "@type": "Brand", "name": "Northbound Running" },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "GBP",
+    "price": "89.00",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Northbound Running</a>
+    <nav class="site" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="cart.html">Basket</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <nav aria-label="Breadcrumb">
+    <p><a href="index.html">Shop</a> / <span aria-current="page" id="crumb">Harrier Trail</span></p>
+  </nav>
+
+  <div class="detail">
+    <div class="swatch" id="product-image" role="img" aria-label="Harrier Trail shoe in cobalt blue"></div>
+
+    <div>
+      <h1 id="product-name">Harrier Trail</h1>
+      <p class="price" id="product-price">&pound;89.00</p>
+      <p id="product-blurb">A cushioned trail shoe for long distances on mixed ground. Cobalt blue.</p>
+
+      <form id="add-form">
+        <fieldset>
+          <legend>Choose a size (UK)</legend>
+          <div class="sizes">
+            <label><input type="radio" name="size" value="7"><span>7</span></label>
+            <label><input type="radio" name="size" value="8"><span>8</span></label>
+            <label><input type="radio" name="size" value="9" checked><span>9</span></label>
+            <label><input type="radio" name="size" value="10"><span>10</span></label>
+            <label><input type="radio" name="size" value="11"><span>11</span></label>
+          </div>
+        </fieldset>
+
+        <button class="btn" type="submit">Add to basket</button>
+      </form>
+
+      <p class="hint" id="add-status" role="status"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>A fixture store for Buyable. No real orders are placed and no payment details are collected.</p>
+  </div>
+</footer>
+
+<script src="store.js"></script>
+<script>
+  Store.hydrateProduct();
+  document.getElementById('add-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var size = new FormData(event.target).get('size');
+    Store.addToBasket(size);
+    document.getElementById('add-status').textContent =
+      'Added ' + Store.currentProduct().name + ', UK size ' + size + ', to your basket.';
+  });
+</script>
+</body>
+</html>

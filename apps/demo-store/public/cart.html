@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your basket &middot; Northbound Running</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Northbound Running</a>
+    <nav class="site" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="cart.html">Basket</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <h1>Your basket</h1>
+
+  <div id="basket-region">
+    <table class="cart" id="basket-table">
+      <caption class="hint">Items currently in your basket</caption>
+      <thead>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Size</th>
+          <th scope="col" class="num">Price</th>
+        </tr>
+      </thead>
+      <tbody id="basket-rows"></tbody>
+    </table>
+
+    <p id="basket-empty" hidden>Your basket is empty. <a href="index.html">Continue shopping</a>.</p>
+
+    <p><a class="btn" href="checkout.html" id="to-checkout">Continue to checkout</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>A fixture store for Buyable. No real orders are placed and no payment details are collected.</p>
+  </div>
+</footer>
+
+<script src="store.js"></script>
+<script>Store.renderBasket();</script>
+</body>
+</html>
