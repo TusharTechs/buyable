@@ -1,0 +1,74 @@
+URL: https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html
+nodes: 67, focusable: 12
+
+[0] RootWebArea "Checkout · Northbound Running" [focusable]  <<< FOCUS
+      [1] link "Skip to main content" [focusable]
+      [2] banner
+      [3] main
+      [4] contentinfo
+        [5] StaticText "Skip to main content"
+          [6] link "Northbound Running" [focusable]
+          [7] navigation "Main"
+        [8] heading "Checkout" {level=1}
+        [9] paragraph
+          [10] region "Delivery address"
+          [11] complementary "Order summary"
+          [12] paragraph
+            [13] StaticText "Northbound Running"
+            [14] list
+          [15] StaticText "Checkout"
+          [16] StaticText "Step 2 of 2. Enter your delivery details and confirm payment."
+            [17] heading "Delivery address" {level=2}
+              [18] LabelText
+              [19] textbox "Full name" value="Alex Morgan" [focusable]
+              [20] LabelText
+              [21] textbox "Address line 1" value="14 Northgate" [focusable]
+              [22] LabelText
+              [23] textbox "Town or city" value="Leeds" [focusable]
+              [24] LabelText
+              [25] textbox "Postcode" value="LS1 4AB" [focusable]
+              [26] paragraph
+            [27] heading "Payment" {level=2}
+              [28] LabelText
+              [29] textbox "Card number" value="4000 0000 0000 0002" [focusable]
+              [30] paragraph
+              [31] LabelText
+              [32] textbox "Expiry date" value="04/29" [focusable]
+            [33] heading "Order summary" {level=2}
+            [34] DescriptionList
+            [35] paragraph
+            [36] button (no accessible name) [focusable]
+            [37] status
+            [38] StaticText "A fixture store for Buyable. No real orders are placed and no payment details are collected."
+              [39] listitem  {level=1}
+              [40] listitem  {level=1}
+              [41] StaticText "Delivery address"
+                [42] StaticText "Full name"
+                [43] StaticText "Address line 1"
+                [44] StaticText "Town or city"
+                [45] StaticText "Postcode"
+                [46] StaticText "We deliver anywhere in the United Kingdom."
+              [47] StaticText "Payment"
+                [48] StaticText "Card number"
+                [49] StaticText "This fixture store never transmits or stores card details."
+                [50] StaticText "Expiry date"
+              [51] StaticText "Order summary"
+              [52] term "Delivery"
+              [53] definition
+              [54] StaticText "Total £0.00"
+                [55] link "Shop" [focusable]
+                [56] link "Basket" [focusable]
+                [57] StaticText "Alex Morgan"
+                [58] StaticText "14 Northgate"
+                [59] StaticText "Leeds"
+                [60] StaticText "LS1 4AB"
+                [61] StaticText "4000 0000 0000 0002"
+                [62] StaticText "04/29"
+                [63] StaticText "Delivery"
+                [64] StaticText "Free"
+                [65] StaticText "Shop"
+                [66] StaticText "Basket"
+
+--- SILENT INTERACTIVE CONTROLS: 1 ---
+  ref=36 role=button focusable=true backendNodeId=95
+  a screen reader would announce: (no accessible name), button

@@ -6,5 +6,6 @@ export * from "./page.js";
 export * from "./reasoning.js";
 export * from "./providers/index.js";
 export * from "./blocker.js";
+export * from "./evidence.js";
 export * from "./runPersona.js";
 export * from "./runJourney.js";
