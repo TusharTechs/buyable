@@ -27,6 +27,8 @@ export interface RunJourneyOptions {
   personas?: PersonaId[];
   /** Whatever decides the actions. The same instance is used for every persona. */
   provider: ReasoningProvider;
+  /** What to do about a consent dialog. Defaults to declining, never accepting. */
+  consentPolicy?: import("./consent.js").ConsentPolicy;
   /** Set false only to re-run a journey already known to be feasible. */
   preflight?: boolean;
   onPreflight?: (report: import("./feasibility.js").FeasibilityReport) => void;
@@ -168,6 +170,7 @@ export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport
             persona,
             runLabel: `${reportId.slice(0, 8)}-a${attempt}`,
             provider: opts.provider,
+            consentPolicy: opts.consentPolicy,
             onEvent: opts.onEvent,
           }),
         );

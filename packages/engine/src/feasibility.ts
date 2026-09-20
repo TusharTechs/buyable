@@ -18,6 +18,7 @@
 
 import type { PageHandle } from "./browserSession.js";
 import { snapshotAxTree } from "./axtree.js";
+import { detectConsent } from "./consent.js";
 import { currentUrl, pageText, pageTitle } from "./page.js";
 import { getPersona } from "./personas.js";
 import type { Journey, PersonaId, SuccessAssertion } from "./types.js";
@@ -208,19 +209,18 @@ export async function checkFeasibility(
     });
   }
 
-  const dialogs = snapshot.nodes.filter((n) => /dialog|alertdialog/i.test(n.role));
-  if (dialogs.length > 0) {
+  const consent = await detectConsent(page, snapshot);
+  if (consent.present) {
+    const canDecline = consent.controls.some((c) =>
+      /reject|decline|refuse|necessary only|only necessary|without accepting/i.test(c.name),
+    );
     add({
       code: "consent-dialog",
       severity: "warns",
-      message:
-        "A dialog stands in front of the page, usually a cookie or privacy notice. Buyable does not dismiss these, so the journey may spend steps on it or be unable to reach the content behind it.",
-      evidence: dialogs
-        .slice(0, 2)
-        .map((d) => `${d.role} "${d.name || "(unnamed)"}"`)
-        .join(", "),
-      suggestion:
-        "Expect the result to be less reliable than on a page without one. Consent handling is not yet implemented.",
+      message: canDecline
+        ? "A consent dialog stands in front of the page. Buyable will decline it before the journey starts, and never accepts on your behalf."
+        : "A consent dialog stands in front of the page and offers no direct way to decline, so Buyable will try to close it without expressing a preference. If it cannot, the personas will meet it as a visitor would.",
+      evidence: `${consent.evidence}${consent.platform ? ` (${consent.platform})` : ""}`,
     });
   }
 

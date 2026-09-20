@@ -86,6 +86,9 @@ let report;
 try {
   report = await runJourney({
   preflight: arg("no-preflight") === undefined,
+  // Declining is the default and acceptance must be asked for, because accepting on
+  // a stranger's site manufactures a consent record for a person who does not exist.
+  consentPolicy: (arg("consent") as "reject" | "dismiss" | "accept" | "leave" | undefined) ?? "reject",
   onPreflight: (f) => {
     console.log(`\nPREFLIGHT  ${f.tabStops} reachable controls, ${f.nodeCount} nodes, ${Math.round(f.durationMs / 1000)}s`);
     for (const finding of f.findings) {
@@ -103,6 +106,11 @@ try {
   provider,
   attempts: Number(arg("attempts", "1")),
   onEvent: (e) => {
+    if (e.type === "consent") {
+      const c = e.result;
+      console.log(`[${e.persona}] consent: ${c.outcome}${c.chose ? ` via "${c.chose}"` : ""}${c.platform ? ` (${c.platform})` : ""}`);
+      for (const f of c.findings) console.log(`[${e.persona}]   dialog issue: ${f.message}`);
+    }
     if (e.type === "session_started") {
       console.log(`\n[${e.persona}] browser session ${e.browserSessionId ?? "?"}`);
     }

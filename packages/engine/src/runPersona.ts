@@ -19,6 +19,7 @@ import {
   renderObservation,
 } from "./page.js";
 import { locateBlocker } from "./blocker.js";
+import { handleConsent, type ConsentPolicy, type ConsentResult } from "./consent.js";
 import { getPersona } from "./personas.js";
 import type { ReasoningProvider, ReasoningTurn } from "./reasoning.js";
 import type {
@@ -39,11 +40,14 @@ export interface RunPersonaOptions {
   runLabel: string;
   /** Whatever is deciding the actions. Recorded in the evidence bundle. */
   provider: ReasoningProvider;
+  /** What to do about a consent dialog. Defaults to declining. */
+  consentPolicy?: ConsentPolicy;
   onEvent?: (event: RunEvent) => void;
 }
 
 export type RunEvent =
   | { type: "session_started"; persona: PersonaId; browserSessionId?: string }
+  | { type: "consent"; persona: PersonaId; result: ConsentResult }
   | { type: "step"; persona: PersonaId; record: StepRecord; narration: string }
   | { type: "finished"; persona: PersonaId; result: PersonaRunResult };
 
@@ -145,7 +149,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
   let inputTokens = 0;
   let outputTokens = 0;
 
-  const base: PersonaRunResult = {
+  const base: PersonaRunResult & { consent?: ConsentResult } = {
     persona: persona.id,
     outcome: "error",
     completed: false,
@@ -174,6 +178,19 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
 
         await page.cdp.send("Page.navigate", { url: opts.journey.startUrl }, page.sessionId);
         await new Promise((r) => setTimeout(r, 2000));
+
+        // Deal with any consent dialog before the personas start, and by the harness
+        // rather than by a persona. A returning customer has already made this choice
+        // and does not meet the banner every visit, so testing the journey behind it
+        // is the realistic case. Letting each persona spend its own steps on it would
+        // measure the banner instead of the journey.
+        //
+        // Every session gets its own isolated browser, so this runs per persona.
+        const consent = await handleConsent(page, opts.consentPolicy ?? "reject");
+        if (consent.outcome !== "no-dialog") {
+          opts.onEvent?.({ type: "consent", persona: persona.id, result: consent });
+        }
+        base.consent = consent;
 
         const history: ReasoningTurn[] = [];
         let pendingAnnouncements: string[] = [];

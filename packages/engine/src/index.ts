@@ -13,6 +13,7 @@ export * from "./verifyFix.js";
 export * from "./renderReport.js";
 export * from "./inspect.js";
 export * from "./feasibility.js";
+export * from "./consent.js";
 export * from "./renderInspection.js";
 export * from "./config.js";
 export * from "./runPersona.js";

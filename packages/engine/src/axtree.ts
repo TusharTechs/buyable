@@ -145,10 +145,29 @@ export async function snapshotAxTree(page: PageHandle): Promise<AxSnapshot> {
     }
 
     const current = ref++;
-    const parentId = childToParent.get(n.nodeId);
+
+    // Walk up to the nearest ancestor that survived filtering.
+    //
+    // Pointing straight at the immediate parent broke the chain whenever that parent
+    // was a node we had dropped, which is most unnamed containers. On a real retail
+    // page every button inside a consent dialog came back with no parent at all, so
+    // the dialog looked empty and could not be acted on.
+    let parentRef: number | undefined;
+    let ancestorId = childToParent.get(n.nodeId);
+    let hops = 0;
+    while (ancestorId !== undefined && hops < 40) {
+      const found = refByCdpId.get(ancestorId);
+      if (found !== undefined) {
+        parentRef = found;
+        break;
+      }
+      ancestorId = childToParent.get(ancestorId);
+      hops++;
+    }
+
     const node: AxNode = {
       ref: current,
-      parentRef: parentId !== undefined ? refByCdpId.get(parentId) : undefined,
+      parentRef,
       role: role || "unknown",
       name,
       value: str(n.value) || undefined,

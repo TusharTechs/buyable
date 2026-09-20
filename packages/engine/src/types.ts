@@ -261,6 +261,14 @@ export interface PersonaRunResult {
   errorMessage?: string;
   /** Steps where the persona activated a control it could not identify. */
   blindActivations: NonNullable<StepRecord["blindActivation"]>[];
+  /**
+   * What was done about a consent dialog before the journey started.
+   *
+   * Recorded because it was done on the reader's behalf, and because the dialog is
+   * part of the journey: it is the first thing a screen reader user meets and is
+   * often the least accessible thing on the page.
+   */
+  consent?: import("./consent.js").ConsentResult;
 }
 
 /**
