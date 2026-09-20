@@ -48,6 +48,36 @@ Bad: the deployed application's model call leaves AWS. That is a real cost to th
 AWS-native story and it is stated plainly rather than hidden. Flipping back is one
 environment variable, `BUYABLE_PROVIDER=bedrock`.
 
+## What the seam has since been used for
+
+Four providers now implement it, and the exercise turned the seam from a contingency
+into the thing that keeps results honest.
+
+| Provider | Status | Why |
+| --- | --- | --- |
+| Bedrock | intended, unusable here | Account-level restriction, see above |
+| Anthropic | validated, quota exhausted | Passed the fixture; workspace spend cap reached |
+| Groq `openai/gpt-oss-120b` | **rejected** | Guessed past an unlabelled pay button |
+| Groq `qwen/qwen3.8-27b` | **rejected** | Looped on an already-selected radio |
+| Gemini | implemented, unvalidated | Awaiting a key |
+
+The rejections are the useful part. `gpt-oss-120b`, given a checkout whose only
+control was a button with no accessible name, pressed it anyway and explained that it
+was "activating the focused button to proceed with checkout". Every run on that model
+would have reported disabled shoppers completing purchases they cannot complete.
+Nothing would have looked broken.
+
+That is why `tools/validate-provider.mjs` exists and why passing it is a precondition
+for publishing anything a provider produces. Buyable's central finding is a behaviour,
+not a capability: the assistive persona stops at a control it cannot identify rather
+than guessing. That behaviour belongs to the model, so the seam cannot be treated as
+a place where components are freely interchangeable. It is a place where they must
+each earn their way in.
+
+The honest conclusion from the exercise is a product one. The deterministic free tier
+needs no model at all. The journey proof needs a capable one. That is where the line
+between the tiers sits, and it was demonstrated rather than assumed.
+
 ## Also decided here
 
 The Bedrock SDK client is pinned to HTTP/1.1 via `NodeHttpHandler`. The default

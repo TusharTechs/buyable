@@ -11,15 +11,17 @@ import type { ReasoningProvider } from "../reasoning.js";
 import { AnthropicProvider } from "./anthropic.js";
 import { BedrockProvider } from "./bedrock.js";
 import { GroqProvider } from "./groq.js";
+import { GeminiProvider } from "./gemini.js";
 
-export { AnthropicProvider, BedrockProvider, GroqProvider };
+export { AnthropicProvider, BedrockProvider, GroqProvider, GeminiProvider };
 
 export interface ProviderOptions {
   region: string;
-  /** "bedrock" | "anthropic" | "groq". Defaults to the BUYABLE_PROVIDER variable. */
+  /** "bedrock" | "anthropic" | "groq" | "gemini". Defaults to BUYABLE_PROVIDER. */
   provider?: string;
   anthropicApiKey?: string;
   groqApiKey?: string;
+  geminiApiKey?: string;
   modelId?: string;
 }
 
@@ -28,6 +30,13 @@ export function createProvider(opts: ProviderOptions): ReasoningProvider {
 
   if (choice === "bedrock") {
     return new BedrockProvider(opts.region, opts.modelId);
+  }
+
+  if (choice === "gemini") {
+    const geminiKey =
+      opts.geminiApiKey ?? process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY;
+    if (!geminiKey) throw new Error("BUYABLE_PROVIDER=gemini but GEMINI_API_KEY is not set.");
+    return new GeminiProvider(geminiKey, opts.modelId);
   }
 
   if (choice === "groq") {
@@ -39,7 +48,7 @@ export function createProvider(opts: ProviderOptions): ReasoningProvider {
   const key = opts.anthropicApiKey ?? process.env.ANTHROPIC_API_KEY;
   if (!key) {
     throw new Error(
-      "No reasoning provider available. Set ANTHROPIC_API_KEY or GROQ_API_KEY, or set BUYABLE_PROVIDER=bedrock on an account whose Bedrock access is not restricted.",
+      "No reasoning provider available. Set ANTHROPIC_API_KEY, GEMINI_API_KEY or GROQ_API_KEY, or set BUYABLE_PROVIDER=bedrock on an account whose Bedrock access is not restricted.",
     );
   }
   return new AnthropicProvider(key, opts.modelId);
