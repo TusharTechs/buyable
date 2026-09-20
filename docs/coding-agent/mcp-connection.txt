@@ -1,0 +1,12 @@
+connected to: MCP Proxy for AWS 1.7.0
+protocol:     2025-06-18
+checked at:   2026-09-20T06:26:34.548816+00:00
+tools exposed: 8
+  aws___get_presigned_url
+  aws___get_regional_availability
+  aws___get_tasks
+  aws___list_regions
+  aws___read_documentation
+  aws___retrieve_skill
+  aws___run_script
+  aws___search_documentation

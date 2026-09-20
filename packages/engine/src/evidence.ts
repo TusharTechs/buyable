@@ -270,6 +270,14 @@ export function renderSummaryMarkdown(bundle: EvidenceBundle): string {
     ``,
   ];
 
+  if (bundle.method.attemptsPerPersona < 3) {
+    lines.push(
+      `> **This run used ${bundle.method.attemptsPerPersona} attempt${bundle.method.attemptsPerPersona === 1 ? "" : "s"} per persona, so treat it as indicative rather than conclusive.**`,
+      `> Model behaviour varies between runs. We have measured the AI agent persona both stopping at an unlabelled control and guessing past it on separate attempts against an identical page. Run three attempts or more for a result worth quoting.`,
+      ``,
+    );
+  }
+
   const guessing = bundle.result.perPersona.filter((p) => p.completionsWithBlindActivation > 0);
   if (guessing.length) {
     lines.push(`## Completions that were guesses`, ``);

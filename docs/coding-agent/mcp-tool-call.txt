@@ -1,0 +1,38 @@
+AWS MCP Server tool call
+at:        2026-09-20T06:28:04.816837+00:00
+account:   756590016817
+principal: arn:aws:iam::756590016817:user/quorum-dev
+endpoint:  https://aws-mcp.us-east-1.api.aws/mcp  (SigV4)
+config:    .mcp.json in this repository
+
+Tool: aws___run_script
+Why:  reads this project's own deployed stack through the MCP server. A
+      documentation lookup would prove only that the endpoint is reachable.
+      Reading our own CloudFormation outputs proves the connection carries
+      this account's credentials and can see this account's resources.
+
+{
+  "status": "success",
+  "stdout": "",
+  "stderr": null,
+  "return_value": {
+    "stackStatus": "UPDATE_COMPLETE",
+    "outputs": {
+      "ApiUrl": "https://o62sq0ywp8.execute-api.us-west-2.amazonaws.com",
+      "WebUrl": "https://d3luufd5s1g5pn.cloudfront.net",
+      "StateMachineArn": "arn:aws:states:us-west-2:756590016817:stateMachine:PipelineRuns1176B429-g1rirP10ESBU",
+      "DemoStoreUrl": "https://d2dvlfc6rcbvw8.cloudfront.net"
+    }
+  },
+  "warning": null,
+  "api_calls": [
+    {
+      "service": "cloudformation",
+      "operation": "DescribeStacks",
+      "status": "success",
+      "n_items": {
+        "Stacks": 1
+      }
+    }
+  ]
+}

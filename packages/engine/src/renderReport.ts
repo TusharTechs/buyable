@@ -122,6 +122,30 @@ export function renderReportHtml(
         .join("")
     : `<p class="none">No persona was blocked on this journey.</p>`;
 
+  /**
+   * Confidence note.
+   *
+   * Written because of something we actually observed rather than as generic
+   * hedging. Across single attempt runs on an identical fixture the agent persona
+   * both stopped at the unlabelled control and guessed past it, on different runs.
+   * At three attempts the pattern was stable. A page reporting one attempt therefore
+   * has to say what it is and is not evidence of, or it invites exactly the
+   * overreading this project exists to argue against.
+   */
+  const lowAttempts = b.method.attemptsPerPersona < 3;
+  const confidenceNote = lowAttempts
+    ? `
+    <p class="control-note">
+      <strong>This run used ${b.method.attemptsPerPersona} attempt${b.method.attemptsPerPersona === 1 ? "" : "s"} per persona.</strong>
+      Treat it as indicative rather than conclusive. Model behaviour varies between
+      runs, and we have measured the AI agent persona both stopping at an unlabelled
+      control and guessing past it on separate attempts against an identical page.
+      The screen reader persona has been far more consistent, and a baseline that
+      completes still tells you the site rather than the model is the variable.
+      For a result worth quoting, run three attempts or more.
+    </p>`
+    : "";
+
   const guessing = b.result.perPersona.filter((p) => p.completionsWithBlindActivation > 0);
   const guessingSection = guessing.length
     ? `
@@ -237,6 +261,8 @@ export function renderReportHtml(
       </thead>
       <tbody>${rows}</tbody>
     </table>
+
+    ${confidenceNote}
 
     <p class="control-note">
       ${
