@@ -44,7 +44,8 @@
       This is a real run against a live storefront with one deliberate defect: the pay
       button is an icon-only button whose only content is an <code>aria-hidden</code>
       icon, so it has no accessible name. A rule scanner reports it as one
-      low-severity item among dozens. Measured by task completion it is total.
+      low-severity item among dozens. Measured by task completion it is total. Three
+      attempts per persona, because a single run of anything stochastic proves nothing.
     </p>
 
     <table>
@@ -59,26 +60,42 @@
       <tbody>
         <tr>
           <th scope="row">baseline<span class="blurb">A sighted customer using a mouse. This is the control.</span></th>
-          <td class="num">1 of 1</td>
+          <td class="num">3 of 3</td>
           <td><span class="pill ok">Completed</span></td>
         </tr>
         <tr>
           <th scope="row">assistive<span class="blurb">A customer using a screen reader, or anyone who cannot use a mouse.</span></th>
-          <td class="num">0 of 1</td>
+          <td class="num">0 of 3</td>
           <td><span class="pill bad">Never completed</span></td>
         </tr>
         <tr>
           <th scope="row">agent<span class="blurb">An AI shopping agent, which reads the same accessibility tree a screen reader does.</span></th>
-          <td class="num">0 of 1</td>
-          <td><span class="pill bad">Never completed</span></td>
+          <td class="num">3 of 3</td>
+          <td><span class="pill mixed">Completed by guessing</span></td>
         </tr>
       </tbody>
     </table>
 
     <p class="control-note">
-      The baseline control completed this journey every time and the constrained
-      personas never did. <strong>The site is the variable, not the model.</strong>
-      That control is what separates a measurement from an accusation.
+      The baseline control completed this journey every time. <strong>The site is the
+      variable, not the model.</strong> That control is what separates a measurement
+      from an accusation.
+    </p>
+
+    <p>
+      The two constrained personas failed in different ways, and the difference is the
+      point. The screen reader user stopped: not knowing what a control does is exactly
+      why a person stops. The AI agent did not stop. It activated the same unlabelled
+      control anyway, on all three attempts, reasoning from the surrounding order
+      summary that the button was probably the right one. It happened to be right.
+      Nothing it could perceive guaranteed that.
+    </p>
+
+    <p class="control-note">
+      Buyable records that separately as a <strong>blind activation</strong>: a step
+      that activates a control with no accessible name. <q>The agent finished</q> and
+      <q>the agent finished by gambling on an unidentifiable control during payment</q>
+      are different facts about a site, and only one of them is reassuring.
     </p>
 
     <blockquote class="quote">
@@ -92,12 +109,12 @@
     </blockquote>
 
     <p>
-      Buyable then located the element, proposed
-      <code>aria-label="Confirm payment"</code>, published a patched build, and re-ran
-      the same journey as the same persona against it. Completion moved from
-      <strong>0 percent to 100 percent</strong>. That re-run is the only thing treated
-      as proof: a patch that applies cleanly and changes nothing is reported as
-      unproven.
+      Buyable then located the element, proposed an <code>aria-label</code>, published
+      a patched build, and re-ran the same journey as the same persona against it.
+      Completion moved from <strong>0 of 3 to 3 of 3</strong>. That re-run is the only
+      thing treated as proof: a patch that applies cleanly and changes nothing is
+      reported as unproven. The whole cycle, diagnosis through verified fix, took five
+      minutes.
     </p>
   </section>
 

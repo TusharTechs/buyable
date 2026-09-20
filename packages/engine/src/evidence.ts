@@ -62,6 +62,14 @@ export interface EvidenceBundle {
       rate: number;
       outcomes: string[];
       browserSessionIds: string[];
+      /**
+       * Completions that required activating a control with no accessible name.
+       * Reported separately because a completion of this kind is not evidence that
+       * the journey is usable, only that it is survivable by something willing to
+       * act on a guess.
+       */
+      completionsWithBlindActivation: number;
+      blindActivations: Array<{ role: string; selector?: string; inferredPurpose: string }>;
     }>;
   };
 
@@ -164,6 +172,8 @@ export function buildEvidenceBundle(args: {
         rate: v.rate,
         outcomes: v.runs.map((r) => r.outcome),
         browserSessionIds: v.runs.map((r) => r.browserSessionId ?? "unknown"),
+        completionsWithBlindActivation: v.completionsWithBlindActivation,
+        blindActivations: v.blindActivations,
       })),
     },
 
@@ -259,6 +269,23 @@ export function renderSummaryMarkdown(bundle: EvidenceBundle): string {
       : `The baseline control did not complete this journey cleanly, so no claim is made about the constrained personas.`,
     ``,
   ];
+
+  const guessing = bundle.result.perPersona.filter((p) => p.completionsWithBlindActivation > 0);
+  if (guessing.length) {
+    lines.push(`## Completions that were guesses`, ``);
+    for (const p of guessing) {
+      lines.push(
+        `**${p.persona}** completed this journey ${p.completions} of ${p.attempts} times, and ${p.completionsWithBlindActivation} of those completions required activating a control with no accessible name.`,
+        ``,
+        `A screen reader user cannot do this, because not knowing what a control does is precisely why they stop. An agent can, and did, because it acts on inference. What it inferred:`,
+        ``,
+      );
+      for (const b of p.blindActivations) {
+        lines.push(`- \`<${b.role}>\`${b.selector ? ` \`${b.selector}\`` : ""}: ${b.inferredPurpose}`);
+      }
+      lines.push(``);
+    }
+  }
 
   if (bundle.findings.length) {
     lines.push(`## What stopped them`, ``);

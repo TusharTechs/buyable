@@ -5,6 +5,9 @@ import * as s3 from "aws-cdk-lib/aws-s3";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import { StaticSite } from "./static-site";
 import { ShadowSite } from "./shadow-site";
+import { Pipeline } from "./pipeline";
+import { SpendGuard } from "./budget";
+import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager";
 
 const repoRoot = path.resolve(__dirname, "..", "..", "..");
 
@@ -89,6 +92,40 @@ export class BuyableStack extends cdk.Stack {
       pointInTimeRecoverySpecification: { pointInTimeRecoveryEnabled: true },
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
+
+    /* ---------------------------------------------------------------------
+     * The reasoning provider credential.
+     *
+     * An empty secret is created here and the value is written out of band. The key
+     * never appears in the template, in an environment variable, or in this
+     * repository, and the functions read it at runtime with a scoped grant.
+     * ------------------------------------------------------------------- */
+    const providerSecret = new secretsmanager.Secret(this, "ProviderKey", {
+      description: "Buyable reasoning provider API key",
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+    });
+
+    const pipeline = new Pipeline(this, "Pipeline", {
+      table,
+      evidenceBucket: evidence,
+      webBucket: web.bucket,
+      shadowBucket: shadow.bucket,
+      shadowBaseUrl: shadow.baseUrl,
+      webBaseUrl: web.url,
+      providerSecret,
+    });
+
+    new SpendGuard(this, "SpendGuard", {
+      limitUsd: Number(this.node.tryGetContext("monthlyBudgetUsd") ?? 50),
+      alertEmail: this.node.tryGetContext("alertEmail"),
+    });
+
+    new cdk.CfnOutput(this, "ApiUrl", {
+      value: pipeline.apiUrl,
+      description: "Public API: POST /runs, GET /runs/{runId}",
+    });
+    new cdk.CfnOutput(this, "StateMachineArn", { value: pipeline.stateMachine.stateMachineArn });
+    new cdk.CfnOutput(this, "ProviderSecretArn", { value: providerSecret.secretArn });
 
     new cdk.CfnOutput(this, "WebUrl", {
       value: web.url,

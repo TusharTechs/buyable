@@ -58,6 +58,55 @@ function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict
   };
 }
 
+/**
+ * Turn raw per-persona runs into a report.
+ *
+ * Extracted so the CLI and the Step Functions aggregation share one implementation.
+ * Two callers computing "did this journey complete" separately is exactly how a tool
+ * ends up quietly reporting different verdicts through different doors.
+ */
+export function summariseRuns(args: {
+  journey: Journey;
+  reportId: string;
+  runsByPersona: Partial<Record<PersonaId, PersonaRunResult[]>>;
+  /** Defaults to now. Passed in only so a caller can keep an existing timestamp. */
+  createdAt?: string;
+  durationMs?: number;
+  costUsd?: number;
+}): JourneyReport {
+  const entries = Object.entries(args.runsByPersona) as Array<[PersonaId, PersonaRunResult[]]>;
+  const verdictList = entries.map(([persona, runs]) => toVerdict(persona, runs ?? []));
+
+  const verdicts = Object.fromEntries(verdictList.map((v) => [v.persona, v])) as Record<
+    PersonaId,
+    PersonaVerdict
+  >;
+
+  const rates = verdictList.map((v) => v.rate);
+  const journeyCompletionRate = rates.length
+    ? rates.reduce((a, b) => a + b, 0) / rates.length
+    : 0;
+
+  const baseline = verdicts.baseline;
+  const constrained = verdictList.filter((v) => v.persona !== "baseline");
+
+  return {
+    reportId: args.reportId,
+    journeyId: args.journey.journeyId,
+    journey: args.journey,
+    createdAt: args.createdAt ?? new Date().toISOString(),
+    verdicts,
+    journeyCompletionRate,
+    siteIsTheVariable:
+      !!baseline && baseline.rate === 1 && constrained.some((v) => v.rate < 1),
+    completedOnlyByGuessing: constrained.some(
+      (v) => v.completions > 0 && v.completionsWithBlindActivation === v.completions,
+    ),
+    durationMs: args.durationMs ?? 0,
+    costUsd: args.costUsd ?? 0,
+  };
+}
+
 export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport> {
   const t0 = Date.now();
   const attempts = opts.attempts ?? 3;
@@ -85,45 +134,19 @@ export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport
     }),
   );
 
-  const verdicts = Object.fromEntries(verdictList.map((v) => [v.persona, v])) as Record<
-    PersonaId,
-    PersonaVerdict
-  >;
-
-  const rates = verdictList.map((v) => v.rate);
-  const journeyCompletionRate = rates.length
-    ? rates.reduce((a, b) => a + b, 0) / rates.length
-    : 0;
-
-  const baseline = verdicts.baseline;
-  const constrained = verdictList.filter((v) => v.persona !== "baseline");
-  const siteIsTheVariable =
-    !!baseline && baseline.rate === 1 && constrained.some((v) => v.rate < 1);
-
-  // A persona that only got through by activating a control it could not identify
-  // did not really prove the journey is usable, it proved it is survivable.
-  const completedOnlyByGuessing = constrained.some(
-    (v) => v.completions > 0 && v.completionsWithBlindActivation === v.completions,
-  );
-
   const allRuns = verdictList.flatMap((v) => v.runs);
   const costUsd = allRuns.reduce(
     (sum, r) => sum + opts.provider.estimateCostUsd(r.inputTokens, r.outputTokens),
     0,
   );
 
-  return {
-    reportId,
-    journeyId: opts.journey.journeyId,
+  return summariseRuns({
     journey: opts.journey,
-    createdAt: new Date().toISOString(),
-    verdicts,
-    journeyCompletionRate,
-    siteIsTheVariable,
-    completedOnlyByGuessing,
+    reportId,
+    runsByPersona: Object.fromEntries(verdictList.map((v) => [v.persona, v.runs])),
     durationMs: Date.now() - t0,
     costUsd,
-  };
+  });
 }
 
 /** Helper for building a journey without hand-writing the boilerplate. */

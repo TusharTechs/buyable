@@ -2,7 +2,9 @@
   "name": "@buyable/infra",
   "version": "0.1.0",
   "private": true,
-  "bin": { "infra": "bin/buyable.js" },
+  "bin": {
+    "infra": "bin/buyable.js"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "synth": "cdk synth",
@@ -10,13 +12,14 @@
     "diff": "cdk diff"
   },
   "devDependencies": {
-    "aws-cdk": "latest",
     "@types/node": "^22.10.0",
+    "aws-cdk": "latest",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.0"
   },
   "dependencies": {
     "aws-cdk-lib": "latest",
-    "constructs": "^10.4.2"
+    "constructs": "^10.4.2",
+    "esbuild": "^0.28.2"
   }
 }

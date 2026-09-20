@@ -85,7 +85,9 @@ export function renderReportHtml(
           </th>
           <td class="num">${p.completions} of ${p.attempts}</td>
           <td class="num">${pct(p.rate)}</td>
-          <td><span class="pill ${p.rate === 1 ? "ok" : p.rate === 0 ? "bad" : "mixed"}">${verdictWord(p.rate)}</span></td>
+          <td><span class="pill ${p.completionsWithBlindActivation > 0 ? "mixed" : p.rate === 1 ? "ok" : p.rate === 0 ? "bad" : "mixed"}">${
+            p.completionsWithBlindActivation > 0 ? "Completed by guessing" : verdictWord(p.rate)
+          }</span></td>
         </tr>`,
     )
     .join("");
@@ -119,6 +121,43 @@ export function renderReportHtml(
         )
         .join("")
     : `<p class="none">No persona was blocked on this journey.</p>`;
+
+  const guessing = b.result.perPersona.filter((p) => p.completionsWithBlindActivation > 0);
+  const guessingSection = guessing.length
+    ? `
+    <section aria-labelledby="guessing-heading">
+      <h2 id="guessing-heading">Completions that were guesses</h2>
+      ${guessing
+        .map(
+          (p) => `
+        <p>
+          <strong>${escapeHtml(p.persona)}</strong> completed this journey
+          ${p.completions} of ${p.attempts} times, and
+          <strong>${p.completionsWithBlindActivation}</strong> of those completions
+          required activating a control with no accessible name.
+        </p>
+        <p>
+          A screen reader user cannot do this, because not knowing what a control does
+          is precisely why they stop. An agent can, and did, because it acts on
+          inference. What it inferred:
+        </p>
+        <ul>
+          ${p.blindActivations
+            .map(
+              (bl) =>
+                `<li><code>&lt;${escapeHtml(bl.role)}&gt;</code>${bl.selector ? ` <code>${escapeHtml(bl.selector)}</code>` : ""}: <q>${escapeHtml(bl.inferredPurpose)}</q></li>`,
+            )
+            .join("")}
+        </ul>`,
+        )
+        .join("")}
+      <p class="control-note">
+        Recorded separately on purpose. <q>The agent finished</q> and <q>the agent
+        finished by gambling on an unidentifiable control during payment</q> are
+        different facts about a site, and only one of them is reassuring.
+      </p>
+    </section>`
+    : "";
 
   const remediation = b.remediation
     ? `
@@ -207,6 +246,8 @@ export function renderReportHtml(
       }
     </p>
   </section>
+
+  ${guessingSection}
 
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">What stopped them</h2>
