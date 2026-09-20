@@ -1,0 +1,1202 @@
+{
+  "url": "https://www.incometax.gov.in/iec/foportal/",
+  "finalUrl": "https://www.incometax.gov.in/iec/foportal/",
+  "title": "Home | Income Tax Department",
+  "language": "en",
+  "createdAt": "2026-09-20T19:22:04.837Z",
+  "durationMs": 32746,
+  "nodeCount": 452,
+  "focusableCount": 180,
+  "findings": [
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "textbox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), textbox",
+      "selector": "div.select-wrapper > div.chosen-container.chosen-container-single > div.chosen-drop > div.chosen-search > input.chosen-search-input",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.view-content > div.ticker-main > div.view-row:nth-of-type(2) > div.scroll-marquee.slidepause > div.slidePauseP:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(1) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(2) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(3) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(4) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(5) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(6) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(7) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(8) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(9) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(10) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(11) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(12) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(13) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(14) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(15) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(16) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(17) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.field--name-field-our-service-paragraph-refe > div.field--item:nth-of-type(18) > a > div.paragraph.paragraph--type--our-services > div.field.field--name-field-title:nth-of-type(3)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "Open Search box",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Open Search box\", button",
+      "selector": "section.home-search-icon.block:nth-of-type(2) > div.field.field--name-body > div.header-search-icon-prev > a.mobilelogshow > img.desktop-search:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Emblem of Government of India",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Emblem of Government of India\", link",
+      "selector": "div.field.field--name-body > div.lastfooter.flex > p > a.india-img > img.img1:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.deadline-card.row-green:nth-of-type(1) > div.deadline-content:nth-of-type(1) > div.deadline-date.font-white > span.itr-date-icon > img.icon-bright-mode:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.deadline-card.row-orange:nth-of-type(2) > div.deadline-content:nth-of-type(1) > div.deadline-date.font-white > span.itr-date-icon > img.icon-bright-mode:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.deadline-card.row-red:nth-of-type(3) > div.deadline-content:nth-of-type(1) > div.deadline-date.font-white > span.itr-date-icon > img.icon-bright-mode:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 1 to level 3, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "About Us",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"About Us\", heading, level=3",
+      "selector": "nav.col-lg-9.col-md-9 > ul.menu.menu--footer > li.expanded.dropdown:nth-of-type(1) > span.navbar-text.dropdown-toggle > h3",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 1 to level 4, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "Form 141",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"Form 141\", heading, level=4",
+      "selector": "div.deadlines-left:nth-of-type(1) > div:nth-of-type(1) > div.deadline-card.row-green:nth-of-type(1) > div.deadline-content:nth-of-type(1) > h4.font-white",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to main content",
+      "announcement": "\"Skip to main content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Home | Income Tax Department",
+      "announcement": "\"Home | Income Tax Department\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "button",
+      "name": "Call Us button collapsed",
+      "announcement": "\"Call Us button collapsed\", button",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "textbox",
+      "name": "",
+      "announcement": "(no accessible name), textbox",
+      "silent": true
+    },
+    {
+      "position": 5,
+      "role": "button",
+      "name": "Reduce font size",
+      "announcement": "\"Reduce font size\", button",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "button",
+      "name": "Default font size",
+      "announcement": "\"Default font size\", button",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "button",
+      "name": "Increase font size",
+      "announcement": "\"Increase font size\", button",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "button",
+      "name": "Switch to dark theme",
+      "announcement": "\"Switch to dark theme\", button",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "Login",
+      "announcement": "\"Login\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Register",
+      "announcement": "\"Register\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "link",
+      "name": "Home",
+      "announcement": "\"Home\", link",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "menuitem",
+      "name": "Individual/HUF",
+      "announcement": "\"Individual/HUF\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "menuitem",
+      "name": "Company",
+      "announcement": "\"Company\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "menuitem",
+      "name": "Non-Company",
+      "announcement": "\"Non-Company\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "menuitem",
+      "name": "Tax Professionals & Others",
+      "announcement": "\"Tax Professionals & Others\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "link",
+      "name": "Downloads",
+      "announcement": "\"Downloads\", link",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "link",
+      "name": "Help",
+      "announcement": "\"Help\", link",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "Open Search box",
+      "announcement": "\"Open Search box\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "button",
+      "name": "Previous notification",
+      "announcement": "\"Previous notification\", button",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 21,
+      "role": "generic",
+      "name": "Pause button",
+      "announcement": "\"Pause button\", generic",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "button",
+      "name": "Next notification",
+      "announcement": "\"Next notification\", button",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "tab",
+      "name": "Slide 1",
+      "announcement": "\"Slide 1\", tab, selected",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "tab",
+      "name": "Slide 2",
+      "announcement": "\"Slide 2\", tab",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "tab",
+      "name": "Slide 3",
+      "announcement": "\"Slide 3\", tab",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "tab",
+      "name": "Slide 4",
+      "announcement": "\"Slide 4\", tab",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "button",
+      "name": "Previous",
+      "announcement": "\"Previous\", button, disabled",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "button",
+      "name": "Next",
+      "announcement": "\"Next\", button",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "NUDGE Campaign",
+      "announcement": "\"NUDGE Campaign\", link",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "e-Pay Tax",
+      "announcement": "\"e-Pay Tax\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "e-Verify Return",
+      "announcement": "\"e-Verify Return\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "Instant E-PAN",
+      "announcement": "\"Instant E-PAN\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "Tax Calendar",
+      "announcement": "\"Tax Calendar\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "Income Tax Calculator",
+      "announcement": "\"Income Tax Calculator\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "Know Tax Payment Status",
+      "announcement": "\"Know Tax Payment Status\", link",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "Link Aadhaar/View Status",
+      "announcement": "\"Link Aadhaar/View Status\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "Comply to Notice",
+      "announcement": "\"Comply to Notice\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "Authenticate notice/order issued by ITD",
+      "announcement": "\"Authenticate notice/order issued by ITD\", link",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 49,
+      "role": "link",
+      "name": "Verify PAN Status",
+      "announcement": "\"Verify PAN Status\", link",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 51,
+      "role": "link",
+      "name": "Verify Service Request",
+      "announcement": "\"Verify Service Request\", link",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 53,
+      "role": "link",
+      "name": "Know Your JAO",
+      "announcement": "\"Know Your JAO\", link",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 55,
+      "role": "link",
+      "name": "Know TAN Details",
+      "announcement": "\"Know TAN Details\", link",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "Download CSI File",
+      "announcement": "\"Download CSI File\", link",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "Report Account Misuse",
+      "announcement": "\"Report Account Misuse\", link",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "Submit Information on Tax Evasion or Benami Property",
+      "announcement": "\"Submit Information on Tax Evasion or Benami Property\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "Tax Information & Services",
+      "announcement": "\"Tax Information & Services\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "Click here",
+      "announcement": "\"Click here\", link",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "Read more about NewsCBDT has issued Notification No. 114/2026 [F. No. 370142/18/2026-TPL], notifying the rules and prescribed forms under the Foreign Assets of Small Taxpayers Disclosure Scheme, 2026. Click here",
+      "announcement": "\"Read more about NewsCBDT has issued Notification No. 114/2026 [F. No. 370142/18/2026-TPL], notifying the rules and prescribed forms under the Foreign Assets of Small Taxpayers Disclosure Scheme, 2026. Click here\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "Click here",
+      "announcement": "\"Click here\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "link",
+      "name": "Read more about NewsOffline utility of ITR-6 for AY 2026-27 is available now for filing. Click here",
+      "announcement": "\"Read more about NewsOffline utility of ITR-6 for AY 2026-27 is available now for filing. Click here\", link",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "link",
+      "name": "Read more about SMS Dear AAXXXXXX1R, File Early, Stay Relaxed! Your ITR for…",
+      "announcement": "\"Read more about SMS Dear AAXXXXXX1R, File Early, Stay Relaxed! Your ITR for…\", link",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "Read more about SMS Dear AAXXXXXX1R, Zero tax doesn't exempt filing of ITR…",
+      "announcement": "\"Read more about SMS Dear AAXXXXXX1R, Zero tax doesn't exempt filing of ITR…\", link",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "Read more about E-Mail File your ITR for AY 2026-27",
+      "announcement": "\"Read more about E-Mail File your ITR for AY 2026-27\", link",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "Read more about E-Mail File your ITR for AY 2026-27",
+      "announcement": "\"Read more about E-Mail File your ITR for AY 2026-27\", link",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "View All Updates",
+      "announcement": "\"View All Updates\", link",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "button",
+      "name": "Go to Aug 2026",
+      "announcement": "\"Go to Aug 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "button",
+      "name": "Go to Oct 2026",
+      "announcement": "\"Go to Oct 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "button",
+      "name": "Events on September, 7 2026",
+      "announcement": "\"Events on September, 7 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "button",
+      "name": "Events on September, 14 2026",
+      "announcement": "\"Events on September, 14 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "button",
+      "name": "Events on September, 15 2026",
+      "announcement": "\"Events on September, 15 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "button",
+      "name": "Events on September, 30 2026",
+      "announcement": "\"Events on September, 30 2026\", button",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "View Full Tax Calendar",
+      "announcement": "\"View Full Tax Calendar\", link",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "How to ...Videos selected",
+      "announcement": "\"How to ...Videos selected\", link",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "How to file Rectification Request for Tax credit mismatch correction video ",
+      "announcement": "\"How to file Rectification Request for Tax credit mismatch correction video \", link",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "How to file Rectification Request for Reprocessing the Return video ",
+      "announcement": "\"How to file Rectification Request for Reprocessing the Return video \", link",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "How to file ITR in offline mode video ",
+      "announcement": "\"How to file ITR in offline mode video \", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "Revamped e-Filing Portal, Designed with taxpayers in mind video ",
+      "announcement": "\"Revamped e-Filing Portal, Designed with taxpayers in mind video \", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "Taxpayer Voices",
+      "announcement": "\"Taxpayer Voices\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "Statistics",
+      "announcement": "\"Statistics\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "youtube",
+      "announcement": "\"youtube\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "twitter",
+      "announcement": "\"twitter\", link",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "facebook",
+      "announcement": "\"facebook\", link",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "whatsapp",
+      "announcement": "\"whatsapp\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "instagram",
+      "announcement": "\"instagram\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "About the Portal 1 of 10",
+      "announcement": "\"About the Portal 1 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "History of Direct Taxation 2 of 10",
+      "announcement": "\"History of Direct Taxation 2 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "Vision, Mission, Values 3 of 10",
+      "announcement": "\"Vision, Mission, Values 3 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "Vision, Mission, Values (Hindi) 4 of 10",
+      "announcement": "\"Vision, Mission, Values (Hindi) 4 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "Who We Are 5 of 10",
+      "announcement": "\"Who We Are 5 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "Right to Information 6 of 10",
+      "announcement": "\"Right to Information 6 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "Organization & Functions 7 of 10",
+      "announcement": "\"Organization & Functions 7 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "e-Filing Calendar 2026 8 of 10",
+      "announcement": "\"e-Filing Calendar 2026 8 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "Tax Payer Charter 9 of 10",
+      "announcement": "\"Tax Payer Charter 9 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "Tax Payer Charter (Hindi) 10 of 10",
+      "announcement": "\"Tax Payer Charter (Hindi) 10 of 10\", link",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "Helpdesk Numbers 1 of 4",
+      "announcement": "\"Helpdesk Numbers 1 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "Grievances 2 of 4",
+      "announcement": "\"Grievances 2 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 105,
+      "role": "link",
+      "name": "View Grievance 3 of 4",
+      "announcement": "\"View Grievance 3 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 106,
+      "role": "link",
+      "name": "Help 4 of 4",
+      "announcement": "\"Help 4 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 107,
+      "role": "link",
+      "name": "Website Policies 1 of 4",
+      "announcement": "\"Website Policies 1 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 108,
+      "role": "link",
+      "name": "Accessibility Statement 2 of 4",
+      "announcement": "\"Accessibility Statement 2 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 109,
+      "role": "link",
+      "name": "Site Map 3 of 4",
+      "announcement": "\"Site Map 3 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 110,
+      "role": "link",
+      "name": "Browser Support 4 of 4",
+      "announcement": "\"Browser Support 4 of 4\", link",
+      "silent": false
+    },
+    {
+      "position": 111,
+      "role": "link",
+      "name": "Income Tax India 1 of 3",
+      "announcement": "\"Income Tax India 1 of 3\", link",
+      "silent": false
+    },
+    {
+      "position": 112,
+      "role": "link",
+      "name": "Protean (previously NSDL)(link is external) 2 of 3",
+      "announcement": "\"Protean (previously NSDL)(link is external) 2 of 3\", link",
+      "silent": false
+    },
+    {
+      "position": 113,
+      "role": "link",
+      "name": "TRACES 3 of 3",
+      "announcement": "\"TRACES 3 of 3\", link",
+      "silent": false
+    },
+    {
+      "position": 114,
+      "role": "link",
+      "name": "Emblem of Government of India",
+      "announcement": "\"Emblem of Government of India\", link",
+      "silent": false
+    },
+    {
+      "position": 115,
+      "role": "button",
+      "name": "Chatbot",
+      "announcement": "\"Chatbot\", button",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 20,
+    "impairs": 5,
+    "note": 2
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

@@ -69,8 +69,10 @@ evidence.
 ## The three ways to use it
 
 **Free page inspection.** Paste a URL. Deterministic, no model, no key, no account,
-about four seconds. It reads the accessibility tree Chrome computed and shows the page
-as a screen reader hears it, stop by stop, with anything that announces nothing marked.
+It reads the accessibility tree Chrome computed and shows the page as a screen reader
+hears it, stop by stop, with anything that announces nothing marked. It waits for the
+page to finish loading first, which takes fifteen to sixty seconds depending on the
+site, because a page read early always looks worse than it is.
 
 **A journey proof.** Give it a starting URL, a goal and a way to tell that it finished.
 Three personas drive three real browsers in parallel and you watch it happen. Two to

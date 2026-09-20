@@ -22,7 +22,7 @@
 
 import type { PageHandle } from "./browserSession.js";
 import { announce, isSilentControl, snapshotAxTree, type AxSnapshot } from "./axtree.js";
-import { currentUrl, pageTitle } from "./page.js";
+import { currentUrl, pageFingerprint, pageTitle } from "./page.js";
 import type { AxNode } from "./types.js";
 
 export type FindingSeverity =
@@ -529,13 +529,87 @@ export function checkWeGotTheRealPage(
   return undefined;
 }
 
+/**
+ * Wait until the page has actually finished loading itself.
+ *
+ * Three versions of this have been wrong, all in the same direction, so the history is
+ * worth keeping.
+ *
+ * Pointed at India's Income Tax Department portal, the inspection reported five
+ * controls with no accessible name. Every one had a perfectly good `aria-label`:
+ * "Go to Aug 2026", "Reduce font size". The site was fine. We had photographed it
+ * halfway through getting dressed, and were one commit away from publishing the
+ * photograph with their name on it.
+ *
+ * The first version slept for three seconds. The second waited for two readings of the
+ * accessibility tree to agree. The third wanted three readings, two seconds, and no
+ * growth. All three returned the same wrong answer, because that page has a genuine
+ * plateau: it sits at exactly 342 nodes for several seconds before the remaining
+ * hundred arrive.
+ *
+ *   t=4s    342 nodes,  90 focusable,  5 unnamed controls
+ *   t=10s   442 nodes, 181 focusable,  0 unnamed controls
+ *
+ * No amount of staring at the tree gets past that, because the tree really has stopped
+ * changing. So this asks the page about itself instead: has the document finished
+ * loading, and has it stopped fetching things? A tree that is stable while the network
+ * is still working is not a finished tree, it is a pause.
+ *
+ * The bias is not symmetric, which is why this is worth the seconds it costs. A page
+ * read too early always looks worse than it is, never better: a control that has not
+ * been labelled yet is indistinguishable from one that never will be.
+ */
+async function waitForPageToSettle(
+  page: PageHandle,
+  { maxMs = 25000, intervalMs = 700, quietRoundsNeeded = 3 } = {},
+): Promise<AxSnapshot> {
+  const deadline = Date.now() + maxMs;
+  let quietRounds = 0;
+  let lastResourceCount = -1;
+
+  while (Date.now() < deadline) {
+    await new Promise((r) => setTimeout(r, intervalMs));
+
+    let state: { ready: boolean; resources: number };
+    try {
+      const res = await page.cdp.send<{ result?: { value?: string } }>(
+        "Runtime.evaluate",
+        {
+          expression: `JSON.stringify({
+            ready: document.readyState === "complete",
+            resources: performance.getEntriesByType("resource").length
+          })`,
+          returnByValue: true,
+        },
+        page.sessionId,
+      );
+      state = JSON.parse(res.result?.value ?? '{"ready":true,"resources":0}');
+    } catch {
+      // A page that will not answer is not a reason to hang. Measure what is there.
+      break;
+    }
+
+    // Quiet means: the document is done, and nothing new has been fetched since the
+    // last look. Several rounds of that, because one quiet moment is what fooled the
+    // previous three attempts.
+    if (state.ready && state.resources === lastResourceCount) {
+      quietRounds += 1;
+      if (quietRounds >= quietRoundsNeeded) break;
+    } else {
+      quietRounds = 0;
+    }
+    lastResourceCount = state.resources;
+  }
+
+  return await snapshotAxTree(page);
+}
+
 export async function inspectPage(page: PageHandle, requestedUrl: string): Promise<InspectionReport> {
   const startedAt = Date.now();
 
   await page.cdp.send("Page.navigate", { url: requestedUrl }, page.sessionId);
-  await new Promise((r) => setTimeout(r, 3000));
 
-  const snapshot: AxSnapshot = await snapshotAxTree(page);
+  const snapshot: AxSnapshot = await waitForPageToSettle(page);
   const [finalUrl, title] = await Promise.all([currentUrl(page), pageTitle(page)]);
   const dom = await collectDomFacts(page);
 

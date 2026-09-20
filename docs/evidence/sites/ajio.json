@@ -1,10 +1,10 @@
 {
-  "url": "https://www.myntra.com/men-tshirts",
-  "finalUrl": "https://www.myntra.com/men-tshirts",
-  "title": "Site Maintenance",
-  "createdAt": "2026-09-20T19:08:27.565Z",
-  "durationMs": 5147,
-  "nodeCount": 5,
+  "url": "https://www.ajio.com/men-tshirts/c/830216013",
+  "finalUrl": "https://www.ajio.com/men-tshirts/c/830216013",
+  "title": "Access Denied",
+  "createdAt": "2026-09-20T19:05:57.243Z",
+  "durationMs": 5436,
+  "nodeCount": 7,
   "focusableCount": 1,
   "findings": [
     {
@@ -30,7 +30,7 @@
     "Nothing here replaces testing with people who use assistive technology every day."
   ],
   "notTheRealPage": {
-    "kind": "error-page",
-    "reason": "the page title is \"Site Maintenance\""
+    "kind": "bot-protection",
+    "reason": "the page title is \"Access Denied\""
   }
 }

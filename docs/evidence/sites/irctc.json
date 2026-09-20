@@ -1,26 +1,17 @@
 {
-  "url": "https://www.myntra.com/men-tshirts",
-  "finalUrl": "https://www.myntra.com/men-tshirts",
-  "title": "Site Maintenance",
-  "createdAt": "2026-09-20T19:08:27.565Z",
-  "durationMs": 5147,
-  "nodeCount": 5,
+  "url": "https://www.irctc.co.in/nget/train-search",
+  "finalUrl": "chrome-error://chromewebdata/",
+  "title": "www.irctc.co.in",
+  "language": "en",
+  "createdAt": "2026-09-20T19:07:34.135Z",
+  "durationMs": 5965,
+  "nodeCount": 6,
   "focusableCount": 1,
-  "findings": [
-    {
-      "kind": "document-without-language",
-      "severity": "impairs",
-      "summary": "The page does not declare a language, so screen readers may pronounce it with the wrong voice.",
-      "wcag": [
-        "3.1.1"
-      ],
-      "occurrences": 1
-    }
-  ],
+  "findings": [],
   "transcript": [],
   "counts": {
     "blocks": 0,
-    "impairs": 1,
+    "impairs": 0,
     "note": 0
   },
   "limits": [
@@ -30,7 +21,7 @@
     "Nothing here replaces testing with people who use assistive technology every day."
   ],
   "notTheRealPage": {
-    "kind": "error-page",
-    "reason": "the page title is \"Site Maintenance\""
+    "kind": "interstitial",
+    "reason": "only 1 controls are reachable, which is an interstitial rather than a page"
   }
 }

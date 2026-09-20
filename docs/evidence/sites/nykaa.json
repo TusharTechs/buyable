@@ -3,10 +3,10 @@
   "finalUrl": "https://www.nykaa.com/makeup/c/10",
   "title": "",
   "language": "en",
-  "createdAt": "2026-09-20T19:03:13.449Z",
-  "durationMs": 10882,
-  "nodeCount": 60,
-  "focusableCount": 29,
+  "createdAt": "2026-09-20T19:18:02.658Z",
+  "durationMs": 25605,
+  "nodeCount": 70,
+  "focusableCount": 32,
   "findings": [
     {
       "kind": "control-without-accessible-name",
@@ -33,6 +33,20 @@
         "2.1.1"
       ],
       "accessibleName": "How may we help you",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.css-uhagyq.e1e0j9zy3:nth-of-type(2) > div.css-2o3va.e1e0j9zy2 > div.css-1tny7j1.e1ewpqpu0:nth-of-type(2) > div.css-vtwhmt.euw1lbv0:nth-of-type(1) > div.css-14tqohr:nth-of-type(2)",
       "occurrences": 1
     },
     {
@@ -159,97 +173,118 @@
     },
     {
       "position": 15,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 16,
+      "role": "textbox",
+      "name": "Mobile Number",
+      "announcement": "\"Mobile Number\", textbox, required",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "button",
+      "name": "Sign in with Mobile Number",
+      "announcement": "\"Sign in with Mobile Number\", button",
+      "silent": false
+    },
+    {
+      "position": 18,
       "role": "button",
       "name": "Shopping Bag",
       "announcement": "\"Shopping Bag\", button, hasPopup=dialog",
       "silent": false
     },
     {
-      "position": 16,
+      "position": 19,
       "role": "menuitem",
       "name": "Makeup",
       "announcement": "\"Makeup\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 17,
+      "position": 20,
       "role": "menuitem",
       "name": "Skin",
       "announcement": "\"Skin\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 18,
+      "position": 21,
       "role": "menuitem",
       "name": "Hair",
       "announcement": "\"Hair\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 19,
+      "position": 22,
       "role": "menuitem",
       "name": "Appliances",
       "announcement": "\"Appliances\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 20,
+      "position": 23,
       "role": "menuitem",
       "name": "Bath & Body",
       "announcement": "\"Bath & Body\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 21,
+      "position": 24,
       "role": "menuitem",
       "name": "Natural",
       "announcement": "\"Natural\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 22,
+      "position": 25,
       "role": "menuitem",
       "name": "Mom & Baby",
       "announcement": "\"Mom & Baby\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 23,
+      "position": 26,
       "role": "menuitem",
       "name": "Health & Wellness",
       "announcement": "\"Health & Wellness\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 24,
+      "position": 27,
       "role": "menuitem",
       "name": "Men",
       "announcement": "\"Men\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 25,
+      "position": 28,
       "role": "menuitem",
       "name": "Fragrance",
       "announcement": "\"Fragrance\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 26,
+      "position": 29,
       "role": "menuitem",
       "name": "Fashion Selects",
       "announcement": "\"Fashion Selects\", menuitem, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 27,
+      "position": 30,
       "role": "menuitem",
       "name": "Offers",
       "announcement": "\"Offers\", menuitem",
       "silent": false
     },
     {
-      "position": 28,
+      "position": 31,
       "role": "link",
       "name": "GO BACK TO HOME PAGE",
       "announcement": "\"GO BACK TO HOME PAGE\", link",
@@ -257,7 +292,7 @@
     }
   ],
   "counts": {
-    "blocks": 2,
+    "blocks": 3,
     "impairs": 2,
     "note": 0
   },

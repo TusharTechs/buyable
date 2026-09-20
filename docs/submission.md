@@ -120,44 +120,56 @@ is reported as unproven.
 On the fixture store, the assistive persona went from **0 of 3 to 3 of 3**. Diagnosis
 through verified fix took five minutes and eight cents.
 
-## Try it in four seconds, without an account
+## Try it on any URL, without an account
 
 Paste any URL into the free inspection at
 **https://d3luufd5s1g5pn.cloudfront.net**. No key, no sign-up, no model. It reads the
 accessibility tree Chrome actually computed and shows you the page as a screen reader
 hears it.
 
-Here is what it found on Nike's men's shoes listing, in 83 seconds:
+Here is what it found on India's Income Tax Department portal, the one every taxpayer
+in the country is required to use:
 
 ```
-FINDINGS  99 blocking, 72 impairing
-  [blocks]  A link has no text, so it is announced only as "link".  (99 elements)
-            WCAG 2.4.4, 4.1.2
-  [impairs] A link cannot be reached by keyboard, so it works only with a pointer.
-            announced as: "Men's Shoes", link   ·   WCAG 2.1.1
+FINDINGS  20 blocking, 5 impairing
+
+  [blocks] Keyboard focus lands on a generic that announces nothing, so a screen
+           reader user hears silence and cannot tell what they have reached.
+           WCAG 4.1.2, 2.4.3
 ```
 
-Ninety-nine links that announce nothing. A screen reader user hears "link, link,
-link". So does a shopping agent.
+Seven of those are the cards in the "our services" row:
+
+```html
+<div class="field field--name-field-title ..." tabindex="0" role="presentation">
+  <span>NUDGE Campaign</span>
+</div>
+```
+
+`tabindex="0"` makes it keyboard focusable. `role="presentation"` removes it from the
+accessibility tree. A keyboard user tabs onto it and hears silence, seven times in a
+row. Verified against the live DOM, element by element.
 
 Sixteen sites have been swept this way. A sample:
 
 | Site | Blocking | Impairing | Tab stops | Time |
 | --- | --- | --- | --- | --- |
-| Nike, men's shoes | 99 | 72 | 313 | 88s |
-| Flipkart, men's footwear | 71 | 149 | 286 | 125s |
-| Wayfair, living room | 5 | 3 | 177 | 25s |
-| **Apple, buy MacBook Air** | **0** | 1 | 125 | 9s |
-| **Airbnb, Lisbon search** | **0** | **0** | 118 | 12s |
+| Flipkart, men's footwear | 70 | 149 | 285 | 138s |
+| Wayfair, living room | 22 | 55 | 566 | 74s |
+| Income Tax Department | 20 | 5 | 180 | 33s |
+| Lenskart, eyeglasses | 18 | 21 | 142 | 45s |
+| India Post | 1 | 0 | 146 | 17s |
+| **Nike, men's shoes** | **0** | 83 | 398 | 70s |
+| **Apple, buy MacBook Air** | **0** | 1 | 142 | 14s |
 
 **The two zeroes are the most important rows in that table.** Neither is a scan that
-failed; both pages were fully served and fully read. A tool that finds problems
-everywhere is a random number generator with a WCAG citation attached, and Apple and
-Airbnb are the control on that.
+failed; both pages were fully served and fully read, at 398 and 142 tab stops. A tool
+that finds problems everywhere is a random number generator with a WCAG citation
+attached, and Nike and Apple are the control on that.
 
-Four more sites were not measured at all, and are reported as not measured rather than
-as clean: Sephora and Uniqlo refused to serve an automated client, Myntra was in
-maintenance, and Decathlon returned a 404.
+Seven more sites were not measured at all, and are reported as not measured rather than
+as clean: Ajio, Meesho, BigBasket and Sephora refused to serve an automated client,
+Myntra was in maintenance, Uniqlo served an interstitial, and Decathlon returned a 404.
 
 ## Three things that make a Buyable result mean something
 
@@ -192,11 +204,33 @@ every one blamed a real retailer for a limitation of our tool.
 | 7 | A 503 and a bot challenge were recorded as barriers | "Amazon and Target exclude disabled customers" |
 | 8 | The free inspection reported findings from a 404 template | "Decathlon has 8 accessibility problems" |
 | 9 | The provider validator condemned a model over our own network error | "This model must not be used" |
+| 10 | The free inspection read pages before they finished loading | "Nike has 99 unnamed links" |
 
-Numbers 8 and 9 were found today, after the first seven had been fixed, in the two
-parts of the system nobody had thought to check: the free page inspection, and the
-tool whose entire job is to police exactly this. The 404 page carried 54 reachable
-controls, so every "is the page empty" heuristic waved it straight through.
+Numbers 8, 9 and 10 were found after the first seven had been fixed, in the parts
+nobody had thought to check: the free page inspection, and the tool whose entire job is
+to police exactly this.
+
+Number 10 is the one worth reading. The inspection slept three seconds and then read the
+accessibility tree, which on a heavy page is a photograph of it halfway through getting
+dressed:
+
+```
+Income Tax Department portal
+  t=4s    342 nodes,  90 focusable,  5 controls with no accessible name
+  t=10s   442 nodes, 181 focusable,  0 controls with no accessible name
+```
+
+All five had perfectly good labels. So did Nike's 99. **Both numbers are retracted.**
+
+Worse: Nike's 99 had been checked by hand in a separate browser before being written
+down, and the hand check agreed at 290. Both were wrong, because both used `innerText`,
+which returns empty for `visibility: hidden` elements. They were hidden mega-menu links
+that Chrome correctly excludes from the accessibility tree. **Two methods agreeing is
+not corroboration when they share an assumption.**
+
+The fix stops staring at the tree and asks the page whether it has finished loading and
+stopped fetching. It costs 14 to 74 seconds instead of 4 to 11, which is the right
+trade for a tool whose only real product is not being wrong.
 
 Not one could have appeared against our own fixture, because the fixture is small,
 static, well-behaved and ours. They were found by pointing the tool at Amazon, Etsy,
@@ -374,8 +408,8 @@ a document whose first line is "No. Not yet."
 | A real report | https://d3luufd5s1g5pn.cloudfront.net/sample-report.html |
 | Source | https://github.com/TusharTechs/buyable |
 
-Paste any URL into the free inspection. It takes four seconds and needs nothing from
-you.
+Paste any URL into the free inspection. It needs nothing from you, and it waits for
+the page to finish loading before it reads anything.
 ````
 
 ---

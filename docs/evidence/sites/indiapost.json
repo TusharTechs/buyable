@@ -1,0 +1,898 @@
+{
+  "url": "https://www.indiapost.gov.in/",
+  "finalUrl": "https://www.indiapost.gov.in/",
+  "title": "India Post",
+  "language": "en",
+  "createdAt": "2026-09-20T19:21:25.620Z",
+  "durationMs": 17036,
+  "nodeCount": 555,
+  "focusableCount": 146,
+  "findings": [
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "section.bg-\\[\\#F1F1F1\\].lg\\:py-20:nth-of-type(4) > div.container.mx-auto > div.flex.gap-2 > div.flex.w-\\[30\\%\\]:nth-of-type(2) > a.undefined",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 1 to level 6, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "This website uses cookies to provide a better user experience.",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"This website uses cookies to provide a better user experience.\", heading, level=6",
+      "selector": "html > body.__className_66423c > div.fixed.bottom-0:nth-of-type(3) > div:nth-of-type(1) > h6.font-bold.md\\:text-left",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 2 to level 5, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "Easy Access",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"Easy Access\", heading, level=5",
+      "selector": "div.container.mx-auto > div.flex.justify-between:nth-of-type(1) > nav.flex.justify-between > div:nth-of-type(1) > h5.text-\\[\\#FFDD00\\].fw-bold",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to main content",
+      "announcement": "\"Skip to main content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "भारत सरकार - External site that opens in a new window",
+      "announcement": "\"भारत सरकार - External site that opens in a new window\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "Government of India - External site that opens in a new window",
+      "announcement": "\"Government of India - External site that opens in a new window\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "combobox",
+      "name": "Language Translator",
+      "announcement": "\"Language Translator\", combobox, hasPopup=listbox",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "button",
+      "name": "Accessibility Links",
+      "announcement": "\"Accessibility Links\", button, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "button",
+      "name": "Open login menu",
+      "announcement": "\"Open login menu\", button, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "Department of Posts, Government of India, Ministry of Communications",
+      "announcement": "\"Department of Posts, Government of India, Ministry of Communications\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "combobox",
+      "name": "Search",
+      "announcement": "\"Search\", combobox, hasPopup=listbox",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "Swachh Bharath",
+      "announcement": "\"Swachh Bharath\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Digital India",
+      "announcement": "\"Digital India\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "menuitem",
+      "name": "Home",
+      "announcement": "\"Home\", menuitem",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "menuitem",
+      "name": "Ministry",
+      "announcement": "\"Ministry\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "menuitem",
+      "name": "Online Services",
+      "announcement": "\"Online Services\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "menuitem",
+      "name": "Offerings",
+      "announcement": "\"Offerings\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "menuitem",
+      "name": "Documents",
+      "announcement": "\"Documents\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "menuitem",
+      "name": "Media",
+      "announcement": "\"Media\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "menuitem",
+      "name": "Connect",
+      "announcement": "\"Connect\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "menuitem",
+      "name": "24/48 Speed Post",
+      "announcement": "\"24/48 Speed Post\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "menuitem",
+      "name": "Customer Self Service Portal",
+      "announcement": "\"Customer Self Service Portal\", menuitem",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "button",
+      "name": "Close language selection and continue in English",
+      "announcement": "\"Close language selection and continue in English\", button",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "button",
+      "name": "English",
+      "announcement": "\"English\", button",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "button",
+      "name": "हिन्दी (Hindi)",
+      "announcement": "\"हिन्दी (Hindi)\", button",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "button",
+      "name": "Previous slide",
+      "announcement": "\"Previous slide\", button",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Go to Dak Samvaad September 2026 web banner english",
+      "announcement": "\"Go to Dak Samvaad September 2026 web banner english\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "button",
+      "name": "Next slide",
+      "announcement": "\"Next slide\", button",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "button",
+      "name": "• 1",
+      "announcement": "\"• 1\", button",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "button",
+      "name": "• 2",
+      "announcement": "\"• 2\", button",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "button",
+      "name": "• 3",
+      "announcement": "\"• 3\", button",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "button",
+      "name": "• 4",
+      "announcement": "\"• 4\", button",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "button",
+      "name": "• 5",
+      "announcement": "\"• 5\", button",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "button",
+      "name": "• 6",
+      "announcement": "\"• 6\", button",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "button",
+      "name": "Pause carousel autoplay",
+      "announcement": "\"Pause carousel autoplay\", button",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "India Post Click here to contact us for any issue related to postal services",
+      "announcement": "\"India Post Click here to contact us for any issue related to postal services\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "button",
+      "name": "Pause announcements",
+      "announcement": "\"Pause announcements\", button",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "View Events",
+      "announcement": "\"View Events\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "Our Team",
+      "announcement": "\"Our Team\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "Our Organisation",
+      "announcement": "\"Our Organisation\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "Our Performance",
+      "announcement": "\"Our Performance\", link",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "tab",
+      "name": "Track 'N' Trace View",
+      "announcement": "\"Track 'N' Trace View\", tab, selected",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "tabpanel",
+      "name": "Track 'N' Trace View",
+      "announcement": "\"Track 'N' Trace View\", tabpanel",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "tab",
+      "name": "Consignment ID",
+      "announcement": "\"Consignment ID\", tab, selected",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "tab",
+      "name": "Money Order",
+      "announcement": "\"Money Order\", tab",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "tab",
+      "name": "Complaint ID",
+      "announcement": "\"Complaint ID\", tab",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "radio",
+      "name": "Article Number",
+      "announcement": "\"Article Number\", radio, checked=true",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "radio",
+      "name": "Reference Number",
+      "announcement": "\"Reference Number\", radio",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "textbox",
+      "name": "Enter Consignment Number",
+      "announcement": "\"Enter Consignment Number\", textbox",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "button",
+      "name": "Play Audio CAPTCHA",
+      "announcement": "\"Play Audio CAPTCHA\", button",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "button",
+      "name": "Refresh CAPTCHA",
+      "announcement": "\"Refresh CAPTCHA\", button",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "textbox",
+      "name": "Enter captcha text",
+      "announcement": "\"Enter captcha text\", textbox, required",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 51,
+      "role": "tab",
+      "name": "News & updates",
+      "announcement": "\"News & updates\", tab, selected",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "button",
+      "name": "View Message from Hon’ble Minister of Communications (August,2026). Opens a verification step.",
+      "announcement": "\"View Message from Hon’ble Minister of Communications (August,2026). Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "button",
+      "name": "View Message from Hon’ble Minister of Communications (August,2026). Opens a verification step.",
+      "announcement": "\"View Message from Hon’ble Minister of Communications (August,2026). Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "button",
+      "name": "View MARKET CONSULTATION DOCUMENT - Procurement of Bulk Data SIM Services from Telecom Service Providers. Opens a verification step.",
+      "announcement": "\"View MARKET CONSULTATION DOCUMENT - Procurement of Bulk Data SIM Services from Telecom Service Providers. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "button",
+      "name": "View Public Notice – Resumption of service for Iraq, Kuwait and Lebanon. Opens a verification step.",
+      "announcement": "\"View Public Notice – Resumption of service for Iraq, Kuwait and Lebanon. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "button",
+      "name": "View Combined Graduate Level Examination 2025 - Allocation of candidates to Postal Circles. Opens a verification step.",
+      "announcement": "\"View Combined Graduate Level Examination 2025 - Allocation of candidates to Postal Circles. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 57,
+      "role": "button",
+      "name": "View Notification for Deen Dayal SPARSH Yojana 2026-27- UP CIRCLE. Opens a verification step.",
+      "announcement": "\"View Notification for Deen Dayal SPARSH Yojana 2026-27- UP CIRCLE. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "button",
+      "name": "View Maintenance Notice: Due to scheduled maintenance, the India Post website and certain applications may be temporarily unavailable on 15.08.2026 from 0600 Hrs to 1710 Hrs.. Opens a verification step.",
+      "announcement": "\"View Maintenance Notice: Due to scheduled maintenance, the India Post website and certain applications may be temporarily unavailable on 15.08.2026 from 0600 Hrs to 1710 Hrs.. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "button",
+      "name": "View Notification for Deen Dayal SPARSH Yojana 2026-27- KERALA POSTAL CIRCLE. Opens a verification step.",
+      "announcement": "\"View Notification for Deen Dayal SPARSH Yojana 2026-27- KERALA POSTAL CIRCLE. Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "button",
+      "name": "View Message from Hon’ble Minister of Communications (July,2026). Opens a verification step.",
+      "announcement": "\"View Message from Hon’ble Minister of Communications (July,2026). Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "button",
+      "name": "View Message from Hon’ble Minister of Communications (July,2026). Opens a verification step.",
+      "announcement": "\"View Message from Hon’ble Minister of Communications (July,2026). Opens a verification step.\", button",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "link",
+      "name": "Read more about News & Updates",
+      "announcement": "\"Read more about News & Updates\", link",
+      "silent": false
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "Register your complaint",
+      "announcement": "\"Register your complaint\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "button",
+      "name": "Previous",
+      "announcement": "\"Previous\", button",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "Gangajal",
+      "announcement": "\"Gangajal\", link",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "Holy Blessings",
+      "announcement": "\"Holy Blessings\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "Philately",
+      "announcement": "\"Philately\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "button",
+      "name": "Next",
+      "announcement": "\"Next\", button",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "button",
+      "name": "Pause carousel autoplay",
+      "announcement": "\"Pause carousel autoplay\", button",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "View Dashboard",
+      "announcement": "\"View Dashboard\", link",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "MeitY",
+      "announcement": "\"MeitY\", link",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "Bhashini",
+      "announcement": "\"Bhashini\", link",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "Data Gov India",
+      "announcement": "\"Data Gov India\", link",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "link",
+      "name": "India Semiconductor Mission",
+      "announcement": "\"India Semiconductor Mission\", link",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "Unique Identification Authority of India (UIDAI)",
+      "announcement": "\"Unique Identification Authority of India (UIDAI)\", link",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "link",
+      "name": "My Government",
+      "announcement": "\"My Government\", link",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "button",
+      "name": "Pause Other Government Links carousel autoplay",
+      "announcement": "\"Pause Other Government Links carousel autoplay\", button",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "link",
+      "name": "Get it on Google Play",
+      "announcement": "\"Get it on Google Play\", link",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "link",
+      "name": "Download on the App Store",
+      "announcement": "\"Download on the App Store\", link",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "India Post on Facebook",
+      "announcement": "\"India Post on Facebook\", link",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "India Post on X (Twitter)",
+      "announcement": "\"India Post on X (Twitter)\", link",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "India Post on YouTube",
+      "announcement": "\"India Post on YouTube\", link",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "India Post on Instagram",
+      "announcement": "\"India Post on Instagram\", link",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "Home",
+      "announcement": "\"Home\", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "Sitemap",
+      "announcement": "\"Sitemap\", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "Recruitments",
+      "announcement": "\"Recruitments\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "Right to Information",
+      "announcement": "\"Right to Information\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "Feedback",
+      "announcement": "\"Feedback\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "Holidays",
+      "announcement": "\"Holidays\", link",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "Website Policies",
+      "announcement": "\"Website Policies\", link",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "Tenders",
+      "announcement": "\"Tenders\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "Performance Dashboard",
+      "announcement": "\"Performance Dashboard\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "Grievance Management",
+      "announcement": "\"Grievance Management\", link",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "PLI Portal",
+      "announcement": "\"PLI Portal\", link",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "IPPB",
+      "announcement": "\"IPPB\", link",
+      "silent": false
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "Netbanking",
+      "announcement": "\"Netbanking\", link",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "DakGhar Niryat Kendra Portal (New)",
+      "announcement": "\"DakGhar Niryat Kendra Portal (New)\", link",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "DakGhar Niryat Kendra Portal (Old)",
+      "announcement": "\"DakGhar Niryat Kendra Portal (Old)\", link",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "Buy Stamps",
+      "announcement": "\"Buy Stamps\", link",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "Circle Portals",
+      "announcement": "\"Circle Portals\", link",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "Other Links",
+      "announcement": "\"Other Links\", link",
+      "silent": false
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "Internal Portal",
+      "announcement": "\"Internal Portal\", link",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "Employee Self Service Portal",
+      "announcement": "\"Employee Self Service Portal\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "Dak Karmayogi Portal",
+      "announcement": "\"Dak Karmayogi Portal\", link",
+      "silent": false
+    },
+    {
+      "position": 105,
+      "role": "link",
+      "name": "Utilities",
+      "announcement": "\"Utilities\", link",
+      "silent": false
+    },
+    {
+      "position": 106,
+      "role": "link",
+      "name": "Customer Login",
+      "announcement": "\"Customer Login\", link",
+      "silent": false
+    },
+    {
+      "position": 107,
+      "role": "link",
+      "name": "Philatelist Login",
+      "announcement": "\"Philatelist Login\", link",
+      "silent": false
+    },
+    {
+      "position": 108,
+      "role": "link",
+      "name": "Gangajal",
+      "announcement": "\"Gangajal\", link",
+      "silent": false
+    },
+    {
+      "position": 109,
+      "role": "link",
+      "name": "Holy Blessings",
+      "announcement": "\"Holy Blessings\", link",
+      "silent": false
+    },
+    {
+      "position": 110,
+      "role": "link",
+      "name": "Forms",
+      "announcement": "\"Forms\", link",
+      "silent": false
+    },
+    {
+      "position": 111,
+      "role": "link",
+      "name": "Help & FAQs",
+      "announcement": "\"Help & FAQs\", link",
+      "silent": false
+    },
+    {
+      "position": 112,
+      "role": "link",
+      "name": "The National Portal of India",
+      "announcement": "\"The National Portal of India\", link",
+      "silent": false
+    },
+    {
+      "position": 113,
+      "role": "link",
+      "name": "National Voters Service Portal",
+      "announcement": "\"National Voters Service Portal\", link",
+      "silent": false
+    },
+    {
+      "position": 114,
+      "role": "link",
+      "name": "India Code",
+      "announcement": "\"India Code\", link",
+      "silent": false
+    },
+    {
+      "position": 115,
+      "role": "link",
+      "name": "Application Security Audit Report",
+      "announcement": "\"Application Security Audit Report\", link",
+      "silent": false
+    },
+    {
+      "position": 116,
+      "role": "link",
+      "name": "Cookie Settings.",
+      "announcement": "\"Cookie Settings.\", link",
+      "silent": false
+    },
+    {
+      "position": 117,
+      "role": "link",
+      "name": "Customize Cookies",
+      "announcement": "\"Customize Cookies\", link",
+      "silent": false
+    },
+    {
+      "position": 118,
+      "role": "button",
+      "name": "Decline Optional Cookies",
+      "announcement": "\"Decline Optional Cookies\", button",
+      "silent": false
+    },
+    {
+      "position": 119,
+      "role": "button",
+      "name": "Accept All Cookies",
+      "announcement": "\"Accept All Cookies\", button",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 1,
+    "impairs": 0,
+    "note": 2
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

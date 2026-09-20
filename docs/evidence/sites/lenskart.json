@@ -1,0 +1,1490 @@
+{
+  "url": "https://www.lenskart.com/eyeglasses.html",
+  "finalUrl": "https://www.lenskart.com/en-us/eyeglasses.html",
+  "title": "Eyeglasses Online: Buy Latest Glasses Frames, Spectacles and Chashma India | Lenskart",
+  "language": "en-us",
+  "createdAt": "2026-09-20T19:19:45.763Z",
+  "durationMs": 45247,
+  "nodeCount": 616,
+  "focusableCount": 142,
+  "findings": [
+    {
+      "kind": "control-without-accessible-name",
+      "severity": "blocks",
+      "summary": "A switch announces nothing, so a screen reader user cannot tell what it does.",
+      "role": "switch",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.6"
+      ],
+      "announcement": "(no accessible name), switch",
+      "selector": "div > div.sc-dbde56a3-31.bIOidu > div.sc-dbde56a3-32.fEMchv:nth-of-type(1) > div.sc-dbde56a3-35.ekiWKr:nth-of-type(2) > button.sc-dbde56a3-37.eMYBTo",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "searchbox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), searchbox",
+      "selector": "#autocomplete-0-input",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-dbde56a3-32.fEMchv:nth-of-type(1) > div:nth-of-type(1) > div.sc-f87e30f1-25.hhBlTL > div.sc-f87e30f1-2.Mllpd > div.sc-f87e30f1-4.pJkHP:nth-of-type(2)",
+      "outerHtml": "<div class=\"sc-f87e30f1-4 pJkHP\" data-buyable-candidate=\"3\"><span class=\"sc-f87e30f1-6 kjpxRb\">Recommended</span><svg width=\"1em\" height=\"1em\" viewBox=\"0 0 10 6\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5L1 1\" stroke=\"currentColor\" stroke-width=\"0.923077\"></path></svg></div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Recommended",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(1) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"6\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">price</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; justif",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Price",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(2) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"8\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">gender</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; justi",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Gender",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(3) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"10\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">age</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; justify",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Age",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(4) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"12\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">brand</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; justi",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Brand",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-6.dwocsT:nth-of-type(1)",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"14\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">frame size</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; ",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Frame Size",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-8.geSZoF:nth-of-type(2) > div > div.sc-72a26623-13.kMOWWU:nth-of-type(1)",
+      "outerHtml": "<div class=\"sc-72a26623-13 kMOWWU\" data-buyable-candidate=\"16\"><div class=\"sc-72a26623-11 kKVwRM\" style=\"flex-direction: column;\"><div class=\"sc-72a26623-12 hPFZbj\"><div class=\"sc-72a26623-15 Yqran\" style=\"align-items: flex-start;\"><div class=\"sc-72a26623-9 doigxN\"><div class=\"sc-72a26623-36 eFKwGf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "XS\n57",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-8.geSZoF:nth-of-type(2) > div > div.sc-72a26623-13.imcVRn:nth-of-type(2)",
+      "outerHtml": "<div class=\"sc-72a26623-13 imcVRn\" data-buyable-candidate=\"23\"><div class=\"sc-72a26623-11 kKVwRM\" style=\"flex-direction: column;\"><div class=\"sc-72a26623-12 hPFZbj\"><div class=\"sc-72a26623-15 Yqran\" style=\"align-items: flex-start;\"><div class=\"sc-72a26623-9 doigxN\"><div class=\"sc-72a26623-36 eFKwGf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "S\n151",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-8.geSZoF:nth-of-type(2) > div > div.sc-72a26623-13.imcVRn:nth-of-type(3)",
+      "outerHtml": "<div class=\"sc-72a26623-13 imcVRn\" data-buyable-candidate=\"30\"><div class=\"sc-72a26623-11 kKVwRM\" style=\"flex-direction: column;\"><div class=\"sc-72a26623-12 hPFZbj\"><div class=\"sc-72a26623-15 Yqran\" style=\"align-items: flex-start;\"><div class=\"sc-72a26623-9 doigxN\"><div class=\"sc-72a26623-36 eFKwGf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "M\n424",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-8.geSZoF:nth-of-type(2) > div > div.sc-72a26623-13.imcVRn:nth-of-type(4)",
+      "outerHtml": "<div class=\"sc-72a26623-13 imcVRn\" data-buyable-candidate=\"37\"><div class=\"sc-72a26623-11 kKVwRM\" style=\"flex-direction: column;\"><div class=\"sc-72a26623-12 hPFZbj\"><div class=\"sc-72a26623-15 Yqran\" style=\"align-items: flex-start;\"><div class=\"sc-72a26623-9 doigxN\"><div class=\"sc-72a26623-36 eFKwGf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "L\n415",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-8.geSZoF:nth-of-type(2) > div > div.sc-72a26623-13.imcVRn:nth-of-type(5)",
+      "outerHtml": "<div class=\"sc-72a26623-13 imcVRn\" data-buyable-candidate=\"44\"><div class=\"sc-72a26623-11 kKVwRM\" style=\"flex-direction: column;\"><div class=\"sc-72a26623-12 hPFZbj\"><div class=\"sc-72a26623-15 Yqran\" style=\"align-items: flex-start;\"><div class=\"sc-72a26623-9 doigxN\"><div class=\"sc-72a26623-36 eFKwGf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "XL\n128",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(6) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"51\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">frame color</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center;",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Frame Color",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(7) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"53\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">shape &amp; style</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: c",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Shape & Style",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(8) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"55\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">frame type</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; ",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Frame Type",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.sc-72a26623-29.gkPdRk > div.sc-72a26623-0.bFfYgV:nth-of-type(2) > div.sc-72a26623-1.cAImoz > div.sc-72a26623-5.iFrJoG:nth-of-type(9) > div.sc-72a26623-6.dwocsT",
+      "outerHtml": "<div class=\"sc-72a26623-6 dwocsT\" style=\"cursor: pointer;\" data-buyable-candidate=\"57\"><div data-cy=\"plpTitleTypography-M\" class=\"sc-84016674-0 pnxUW\">material</div><div class=\"sc-72a26623-22 kNikAK\"><span class=\"sc-72a26623-23 bmajgb\"></span><div style=\"display: inline-flex; align-items: center; ju",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Material",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "#Similar_Products",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div > div.sc-72a26623-29.gkPdRk > div.sc-72a26623-40.jaqPlb:nth-of-type(1) > div.sc-72a26623-41.gEKMZp > img.sc-72a26623-44.ciugUb",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.sc-f87e30f1-25.hhBlTL > div.sc-f87e30f1-2.Mllpd > div.sc-f87e30f1-4.pJkHP:nth-of-type(2) > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "impairs",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), combobox, expanded, hasPopup=listbox",
+      "selector": "div.sc-53a42e28-6.fagQrS:nth-of-type(2) > div.search-page.ltr:nth-of-type(1) > div.aa-input-search-box:nth-of-type(1) > div:nth-of-type(1) > div.aa-Autocomplete",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A combobox cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "(no accessible name), combobox, expanded, hasPopup=listbox",
+      "selector": "div.sc-53a42e28-6.fagQrS:nth-of-type(2) > div.search-page.ltr:nth-of-type(1) > div.aa-input-search-box:nth-of-type(1) > div:nth-of-type(1) > div.aa-Autocomplete",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(1) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(2) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(3) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(4) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iWHDEe:nth-of-type(5) > div.sc-72a26623-6.dwocsT:nth-of-type(1) > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(6) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(7) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(8) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.sc-72a26623-5.iFrJoG:nth-of-type(9) > div.sc-72a26623-6.dwocsT > div.sc-72a26623-22.kNikAK:nth-of-type(2) > div > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "impairs",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "listbox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), listbox",
+      "selector": "#autocomplete-0-0-list",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A listbox cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "listbox",
+      "accessibleName": "",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "(no accessible name), listbox",
+      "selector": "#autocomplete-0-0-list",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(1) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-1.hSDNaf:nth-of-type(1) > img.sc-3546da39-5.kpnLBk",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(2) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-1.hSDNaf:nth-of-type(1) > img.sc-3546da39-5.kpnLBk",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(3) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-1.hSDNaf:nth-of-type(1) > img.sc-3546da39-5.kpnLBk",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(1) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-2.eqRcYa:nth-of-type(2) > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(2) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-2.eqRcYa:nth-of-type(2) > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "ul.aa-List > li.aa-Item:nth-of-type(3) > div.sc-3546da39-0.jsfJRN:nth-of-type(1) > div.sc-3546da39-2.eqRcYa:nth-of-type(2) > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 2 to level 4, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "Services",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"Services\", heading, level=4",
+      "selector": "footer.sc-8c3e8a0a-0.RIoMH > div.sc-8c3e8a0a-1.jgCGWd:nth-of-type(1) > div.sc-8c3e8a0a-2.eTlqqv:nth-of-type(1) > div.sc-8c3e8a0a-6.bLHiwH:nth-of-type(1) > h4.sc-8c3e8a0a-3.hLIhTZ",
+      "occurrences": 1
+    },
+    {
+      "kind": "heading-level-skipped",
+      "severity": "note",
+      "summary": "A heading jumps from level 2 to level 4, which breaks the outline people use to navigate by structure.",
+      "role": "heading",
+      "accessibleName": "Latest Eyeglasses Online",
+      "wcag": [
+        "1.3.1"
+      ],
+      "announcement": "\"Latest Eyeglasses Online\", heading, level=4",
+      "selector": "table > tbody > tr:nth-of-type(1) > td:nth-of-type(1) > h4",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to content",
+      "announcement": "\"Skip to content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Lenskart logo",
+      "announcement": "\"Lenskart logo\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "New Arrivals New Arrivals",
+      "announcement": "\"New Arrivals New Arrivals\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "Eyeglasses Eyeglasses",
+      "announcement": "\"Eyeglasses Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "Computer Eyeglasses Computer Eyeglasses",
+      "announcement": "\"Computer Eyeglasses Computer Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Sunglasses Sunglasses",
+      "announcement": "\"Sunglasses Sunglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "Prescription Sunglasses Prescription Sunglasses",
+      "announcement": "\"Prescription Sunglasses Prescription Sunglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "Kids Eyeglasses Kids Eyeglasses",
+      "announcement": "\"Kids Eyeglasses Kids Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "searchbox",
+      "name": "",
+      "announcement": "(no accessible name), searchbox",
+      "silent": true
+    },
+    {
+      "position": 10,
+      "role": "button",
+      "name": "View wishlist",
+      "announcement": "\"View wishlist\", button",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "button",
+      "name": "View cart",
+      "announcement": "\"View cart\", button",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "button",
+      "name": "User menu",
+      "announcement": "\"User menu\", button",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "switch",
+      "name": "",
+      "announcement": "(no accessible name), switch",
+      "silent": true
+    },
+    {
+      "position": 14,
+      "role": "link",
+      "name": "Eyewear",
+      "announcement": "\"Eyewear\", link",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 16,
+      "role": "button",
+      "name": "Go back",
+      "announcement": "\"Go back\", button",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "button",
+      "name": "Close modal",
+      "announcement": "\"Close modal\", button",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "4.8 Hustlr - Dark Night 1 2 3 4 5 6 7 8 color-207671 color-212971 + 4 Hustlr - Dark Night Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Dark Night 1 2 3 4 5 6 7 8 color-207671 color-212971 + 4 Hustlr - Dark Night Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "button",
+      "name": "7",
+      "announcement": "\"7\", button",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "button",
+      "name": "8",
+      "announcement": "\"8\", button",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "link",
+      "name": "4.8 Hustlr - Dark Night 1 2 3 4 5 6 color-215922 color-212971 + 4 Hustlr - Dark Night Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Dark Night 1 2 3 4 5 6 color-215922 color-212971 + 4 Hustlr - Dark Night Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "4.8 Hustlr - Blue Sky 1 2 3 4 5 color-207481 color-212971 + 4 Hustlr - Blue Sky Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Blue Sky 1 2 3 4 5 color-207481 color-212971 + 4 Hustlr - Blue Sky Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "4.8 Hustlr - Navy 1 2 3 4 5 color-208951 color-212971 + 4 Hustlr - Navy Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Navy 1 2 3 4 5 color-208951 color-212971 + 4 Hustlr - Navy Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "4.9 Vincent Chase Polarized 1 2 3 4 5 6 7 color-147043 color-147042 Vincent Chase Polarized Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.9 Vincent Chase Polarized 1 2 3 4 5 6 7 color-147043 color-147042 Vincent Chase Polarized Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 51,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "button",
+      "name": "7",
+      "announcement": "\"7\", button",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "link",
+      "name": "4.8 Lenskart -Air Pop 1 2 3 4 5 6 color-137974 color-137975 + 2 Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Lenskart -Air Pop 1 2 3 4 5 6 color-137974 color-137975 + 2 Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 57,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "4.8 Hustlr - Military Green 1 2 3 4 5 + 4 Hustlr - Military Green Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Military Green 1 2 3 4 5 + 4 Hustlr - Military Green Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 63,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "4.75 Lenskart Blu Screen Glasses 1 2 3 4 5 6 7 + 1 Lenskart Blu Screen Glasses Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.75 Lenskart Blu Screen Glasses 1 2 3 4 5 6 7 + 1 Lenskart Blu Screen Glasses Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "button",
+      "name": "7",
+      "announcement": "\"7\", button",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "4.85 Lenskart Readers 1 2 3 4 5 6 7 + 8 Lenskart Readers Size Size $ 16",
+      "announcement": "\"4.85 Lenskart Readers 1 2 3 4 5 6 7 + 8 Lenskart Readers Size Size $ 16\", link",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "button",
+      "name": "1",
+      "announcement": "\"1\", button",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "button",
+      "name": "2",
+      "announcement": "\"2\", button",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "button",
+      "name": "3",
+      "announcement": "\"3\", button",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "button",
+      "name": "4",
+      "announcement": "\"4\", button",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "button",
+      "name": "5",
+      "announcement": "\"5\", button",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "button",
+      "name": "6",
+      "announcement": "\"6\", button",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "button",
+      "name": "7",
+      "announcement": "\"7\", button",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "4.85 Lenskart -Air Pop Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.85 Lenskart -Air Pop Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "4.8 Vincent Chase Vincent Chase Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Vincent Chase Vincent Chase Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "4.85 Lenskart Studio Lenskart Studio Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.85 Lenskart Studio Lenskart Studio Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "4.8 Hustlr - Blue Sky + 4 Hustlr - Blue Sky Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Hustlr - Blue Sky + 4 Hustlr - Blue Sky Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "4.8 Lenskart -Air Switch Lenskart -Air Switch Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.8 Lenskart -Air Switch Lenskart -Air Switch Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "4.85 Lenskart -Air Pop Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD",
+      "announcement": "\"4.85 Lenskart -Air Pop Lenskart -Air Pop Size Size $ 59 offer-icon Buy 1 Get 1 Free with GOLD\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "pairs of branded spectacles",
+      "announcement": "\"pairs of branded spectacles\", link",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "different colours",
+      "announcement": "\"different colours\", link",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "styles",
+      "announcement": "\"styles\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "shapes",
+      "announcement": "\"shapes\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "Black Full Rim Rectangle Shape Vincent Chase Eyeglasses",
+      "announcement": "\"Black Full Rim Rectangle Shape Vincent Chase Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "Gunmetal Grey Aviator Shape Vincent Chase WEESTRO Eyeglasses",
+      "announcement": "\"Gunmetal Grey Aviator Shape Vincent Chase WEESTRO Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "Matte Black Red Half Rim Rectangle Vincent Chase Fiber Steel Eyeglasses",
+      "announcement": "\"Matte Black Red Half Rim Rectangle Vincent Chase Fiber Steel Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "Black Full Rim Cat Eye Vincent Chase Vagabond Eyeglasses",
+      "announcement": "\"Black Full Rim Cat Eye Vincent Chase Vagabond Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "Black Grey Transparent Cat Eye Vincent Chase Evil Eye  Eyeglasses",
+      "announcement": "\"Black Grey Transparent Cat Eye Vincent Chase Evil Eye  Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "Blue Rimless Rectangle Vincent Chase RIMSTEEL Eyeglasses",
+      "announcement": "\"Blue Rimless Rectangle Vincent Chase RIMSTEEL Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "Tortoise Square Shape John Jacobs Eyeglasses",
+      "announcement": "\"Tortoise Square Shape John Jacobs Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "Ray-Ban Rx7047 Black Eyeglasses",
+      "announcement": "\"Ray-Ban Rx7047 Black Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "Ray-Ban Rx6303 Eyeglasses",
+      "announcement": "\"Ray-Ban Rx6303 Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "Purple Cat Eye Mask OPTIMUS Eyeglasses",
+      "announcement": "\"Purple Cat Eye Mask OPTIMUS Eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "branded eyeglasses",
+      "announcement": "\"branded eyeglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "eyeglasses online for women",
+      "announcement": "\"eyeglasses online for women\", link",
+      "silent": false
+    },
+    {
+      "position": 105,
+      "role": "link",
+      "name": "Mens Glasses",
+      "announcement": "\"Mens Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 106,
+      "role": "link",
+      "name": "Glasses for Women",
+      "announcement": "\"Glasses for Women\", link",
+      "silent": false
+    },
+    {
+      "position": 107,
+      "role": "link",
+      "name": "Glasses for Kids",
+      "announcement": "\"Glasses for Kids\", link",
+      "silent": false
+    },
+    {
+      "position": 108,
+      "role": "link",
+      "name": "Round Frame Glasses",
+      "announcement": "\"Round Frame Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 109,
+      "role": "link",
+      "name": "Rectangle Glasses",
+      "announcement": "\"Rectangle Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 110,
+      "role": "link",
+      "name": "Cat Eye Glasses",
+      "announcement": "\"Cat Eye Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 111,
+      "role": "link",
+      "name": "Oval Glasses",
+      "announcement": "\"Oval Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 112,
+      "role": "link",
+      "name": "Hexagonal Glasses",
+      "announcement": "\"Hexagonal Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 113,
+      "role": "link",
+      "name": "Square Glasses",
+      "announcement": "\"Square Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 114,
+      "role": "link",
+      "name": "Half Rim Frames",
+      "announcement": "\"Half Rim Frames\", link",
+      "silent": false
+    },
+    {
+      "position": 115,
+      "role": "link",
+      "name": "Rimless Frames",
+      "announcement": "\"Rimless Frames\", link",
+      "silent": false
+    },
+    {
+      "position": 116,
+      "role": "link",
+      "name": "Reading Glasses",
+      "announcement": "\"Reading Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 117,
+      "role": "link",
+      "name": "Transparent Glasses",
+      "announcement": "\"Transparent Glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 118,
+      "role": "link",
+      "name": "Squash glasses",
+      "announcement": "\"Squash glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 119,
+      "role": "link",
+      "name": "Snooker glasses",
+      "announcement": "\"Snooker glasses\", link",
+      "silent": false
+    },
+    {
+      "position": 120,
+      "role": "link",
+      "name": "Sports eyewear",
+      "announcement": "\"Sports eyewear\", link",
+      "silent": false
+    },
+    {
+      "position": 121,
+      "role": "link",
+      "name": "Visit Refund & Exchange page",
+      "announcement": "\"Visit Refund & Exchange page\", link",
+      "silent": false
+    },
+    {
+      "position": 122,
+      "role": "link",
+      "name": "Visit Download App page",
+      "announcement": "\"Visit Download App page\", link",
+      "silent": false
+    },
+    {
+      "position": 123,
+      "role": "link",
+      "name": "Visit Email: support@lenskart.us page",
+      "announcement": "\"Visit Email: support@lenskart.us page\", link",
+      "silent": false
+    },
+    {
+      "position": 124,
+      "role": "link",
+      "name": "Visit About us page",
+      "announcement": "\"Visit About us page\", link",
+      "silent": false
+    },
+    {
+      "position": 125,
+      "role": "link",
+      "name": "google-play app icon",
+      "announcement": "\"google-play app icon\", link",
+      "silent": false
+    },
+    {
+      "position": 126,
+      "role": "link",
+      "name": "app-store app icon",
+      "announcement": "\"app-store app icon\", link",
+      "silent": false
+    },
+    {
+      "position": 127,
+      "role": "link",
+      "name": "Visit T & C page",
+      "announcement": "\"Visit T & C page\", link",
+      "silent": false
+    },
+    {
+      "position": 128,
+      "role": "link",
+      "name": "Visit Privacy page",
+      "announcement": "\"Visit Privacy page\", link",
+      "silent": false
+    },
+    {
+      "position": 129,
+      "role": "link",
+      "name": "Visit Accessibility page",
+      "announcement": "\"Visit Accessibility page\", link",
+      "silent": false
+    },
+    {
+      "position": 130,
+      "role": "link",
+      "name": "facebook",
+      "announcement": "\"facebook\", link",
+      "silent": false
+    },
+    {
+      "position": 131,
+      "role": "link",
+      "name": "instagram",
+      "announcement": "\"instagram\", link",
+      "silent": false
+    },
+    {
+      "position": 132,
+      "role": "link",
+      "name": "twitter",
+      "announcement": "\"twitter\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 18,
+    "impairs": 21,
+    "note": 2
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

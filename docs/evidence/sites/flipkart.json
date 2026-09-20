@@ -3,24 +3,11 @@
   "finalUrl": "https://www.flipkart.com/mens-footwear/pr?sid=osp,cil",
   "title": "Men's Footwear - Buy Shoes, Sandals, Sneakers and more on Flipkart",
   "language": "en",
-  "createdAt": "2026-09-20T18:58:49.462Z",
-  "durationMs": 124686,
-  "nodeCount": 1284,
-  "focusableCount": 286,
+  "createdAt": "2026-09-20T19:25:33.186Z",
+  "durationMs": 137557,
+  "nodeCount": 1277,
+  "focusableCount": 285,
   "findings": [
-    {
-      "kind": "non-semantic-interactive-element",
-      "severity": "blocks",
-      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
-      "selector": "div.col.x_CUu6 > div.row:nth-of-type(2) > div.G4PxIA > div > span.Mp5ZZJ",
-      "outerHtml": "<span class=\"Mp5ZZJ\" data-buyable-candidate=\"46\"><span>Read full review</span></span>",
-      "wcag": [
-        "4.1.2",
-        "2.1.1"
-      ],
-      "accessibleName": "Read full review",
-      "occurrences": 2
-    },
     {
       "kind": "empty-link",
       "severity": "blocks",
@@ -725,12 +712,12 @@
       "severity": "blocks",
       "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
       "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(2) > div.kMXMaw:nth-of-type(2) > div.GN2Hca.rQQNAD:nth-of-type(2)",
-      "outerHtml": "<div class=\"GN2Hca rQQNAD\" data-buyable-candidate=\"15\"><span>4083 MORE</span></div>",
+      "outerHtml": "<div class=\"GN2Hca rQQNAD\" data-buyable-candidate=\"15\"><span>4041 MORE</span></div>",
       "wcag": [
         "4.1.2",
         "2.1.1"
       ],
-      "accessibleName": "4083 MORE",
+      "accessibleName": "4041 MORE",
       "occurrences": 1
     },
     {
@@ -968,6 +955,19 @@
       "occurrences": 1
     },
     {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(2) > div.IKaoWD.IYf0Ck > div.s0NCCf:nth-of-type(2) > div.sXs98a:nth-of-type(2) > div.col:nth-of-type(2)",
+      "outerHtml": "<div class=\"col\" data-buyable-candidate=\"46\"><div class=\"col x_CUu6 i6yOcs\"><div class=\"row\"><div class=\"MKiFS6 ojKpP6\">5<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy4",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "5\n\nAwesome\n\nNice looking for shoes 👟👟\n\nsuraj kumar\n\nCertif",
+      "occurrences": 1
+    },
+    {
       "kind": "image-without-alt",
       "severity": "impairs",
       "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
@@ -978,7 +978,7 @@
       ],
       "announcement": "(no accessible name), image",
       "selector": "div.bLCLBY.nr15la > a.CIaYa1 > div.SJekt1._PHN4S:nth-of-type(3) > div.JiknFv > svg.rE8OAo",
-      "occurrences": 38
+      "occurrences": 40
     },
     {
       "kind": "image-without-alt",
@@ -1003,8 +1003,8 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
-      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.ojKpP6 > img.PZfbSE",
-      "occurrences": 8
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
+      "occurrences": 7
     },
     {
       "kind": "image-without-alt",
@@ -1016,8 +1016,8 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
-      "occurrences": 7
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.ojKpP6 > img.PZfbSE",
+      "occurrences": 6
     },
     {
       "kind": "image-without-alt",
@@ -1081,8 +1081,47 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
+      "occurrences": 5
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
       "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
       "occurrences": 5
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.pnieuf > img.PZfbSE",
+      "occurrences": 3
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
+      "occurrences": 3
     },
     {
       "kind": "image-without-alt",
@@ -1122,71 +1161,6 @@
       "announcement": "(no accessible name), image",
       "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
       "occurrences": 3
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
-      "occurrences": 2
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
-      "occurrences": 2
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
-      "occurrences": 2
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
-      "occurrences": 2
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div.bLCLBY.nr15la > a.CIaYa1 > div.SJekt1._PHN4S:nth-of-type(4) > div.JiknFv > svg.rE8OAo",
-      "occurrences": 2
     },
     {
       "kind": "image-without-alt",
@@ -1458,19 +1432,6 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
-      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.pnieuf > img.PZfbSE",
-      "occurrences": 1
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
       "selector": "div.yZCQWU:nth-of-type(2) > form.rcHWnF.header-form-search > div.col-12-12.kdPmDK > button.bJtikv > svg",
       "occurrences": 1
     },
@@ -1640,6 +1601,19 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
       "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
       "occurrences": 1
     },
@@ -1653,20 +1627,7 @@
         "1.1.1"
       ],
       "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
-      "occurrences": 1
-    },
-    {
-      "kind": "image-without-alt",
-      "severity": "impairs",
-      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
-      "role": "image",
-      "accessibleName": "",
-      "wcag": [
-        "1.1.1"
-      ],
-      "announcement": "(no accessible name), image",
-      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
+      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
       "occurrences": 1
     },
     {
@@ -1874,15 +1835,15 @@
     {
       "position": 24,
       "role": "link",
-      "name": "Trekking shoes high neck boots for men anti skid trekki...",
-      "announcement": "\"Trekking shoes high neck boots for men anti skid trekki...\", link",
+      "name": "Sneakers For Men",
+      "announcement": "\"Sneakers For Men\", link",
       "silent": false
     },
     {
       "position": 25,
       "role": "link",
-      "name": "₹1,639 ₹4,899 66% off",
-      "announcement": "\"₹1,639 ₹4,899 66% off\", link",
+      "name": "₹448 ₹2,499 82% off",
+      "announcement": "\"₹448 ₹2,499 82% off\", link",
       "silent": false
     },
     {
@@ -1895,15 +1856,15 @@
     {
       "position": 27,
       "role": "link",
-      "name": "Trial king Men High Grip Lightweight Breathable Shoes O...",
-      "announcement": "\"Trial king Men High Grip Lightweight Breathable Shoes O...\", link",
+      "name": "Premium Handmade Chelsea |Soft Cushioned Insole |Slip-R...",
+      "announcement": "\"Premium Handmade Chelsea |Soft Cushioned Insole |Slip-R...\", link",
       "silent": false
     },
     {
       "position": 28,
       "role": "link",
-      "name": "₹1,509 ₹3,899 61% off",
-      "announcement": "\"₹1,509 ₹3,899 61% off\", link",
+      "name": "₹489 ₹1,999 75% off",
+      "announcement": "\"₹489 ₹1,999 75% off\", link",
       "silent": false
     },
     {
@@ -1916,15 +1877,15 @@
     {
       "position": 30,
       "role": "link",
-      "name": "Lite Casual Shoes Sneakers For Men",
-      "announcement": "\"Lite Casual Shoes Sneakers For Men\", link",
+      "name": "Men Men's Athletic Sports Sandals|Lightweight|Comfortab...",
+      "announcement": "\"Men Men's Athletic Sports Sandals|Lightweight|Comfortab...\", link",
       "silent": false
     },
     {
       "position": 31,
       "role": "link",
-      "name": "₹478 ₹2,499 80% off",
-      "announcement": "\"₹478 ₹2,499 80% off\", link",
+      "name": "₹699 ₹1,999 65% off",
+      "announcement": "\"₹699 ₹1,999 65% off\", link",
       "silent": false
     },
     {
@@ -1937,15 +1898,15 @@
     {
       "position": 33,
       "role": "link",
-      "name": "ESGRPEP Sneakers For Men",
-      "announcement": "\"ESGRPEP Sneakers For Men\", link",
+      "name": "Avero 1524 Shoe Lace",
+      "announcement": "\"Avero 1524 Shoe Lace\", link",
       "silent": false
     },
     {
       "position": 34,
       "role": "link",
-      "name": "₹457 ₹1,999 77% off",
-      "announcement": "\"₹457 ₹1,999 77% off\", link",
+      "name": "₹92 ₹399 76% off",
+      "announcement": "\"₹92 ₹399 76% off\", link",
       "silent": false
     },
     {
@@ -1958,15 +1919,15 @@
     {
       "position": 36,
       "role": "link",
-      "name": "Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...",
-      "announcement": "\"Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...\", link",
+      "name": "Men & boys stylish comfortable attractive leather forma...",
+      "announcement": "\"Men & boys stylish comfortable attractive leather forma...\", link",
       "silent": false
     },
     {
       "position": 37,
       "role": "link",
-      "name": "₹998 ₹4,998 80% off",
-      "announcement": "\"₹998 ₹4,998 80% off\", link",
+      "name": "₹486 ₹2,499 80% off",
+      "announcement": "\"₹486 ₹2,499 80% off\", link",
       "silent": false
     },
     {
@@ -1979,15 +1940,15 @@
     {
       "position": 39,
       "role": "link",
-      "name": "SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...",
-      "announcement": "\"SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...\", link",
+      "name": "Migolite Stylish Checked Soft Sole Casual Comfort Men F...",
+      "announcement": "\"Migolite Stylish Checked Soft Sole Casual Comfort Men F...\", link",
       "silent": false
     },
     {
       "position": 40,
       "role": "link",
-      "name": "₹920 ₹3,600 74% off",
-      "announcement": "\"₹920 ₹3,600 74% off\", link",
+      "name": "₹154 ₹999 84% off",
+      "announcement": "\"₹154 ₹999 84% off\", link",
       "silent": false
     },
     {
@@ -2000,15 +1961,15 @@
     {
       "position": 42,
       "role": "link",
-      "name": "Avero 1524 Shoe Lace",
-      "announcement": "\"Avero 1524 Shoe Lace\", link",
+      "name": "KEE universal shoes repair rivets replacement button fo...",
+      "announcement": "\"KEE universal shoes repair rivets replacement button fo...\", link",
       "silent": false
     },
     {
       "position": 43,
       "role": "link",
-      "name": "₹92 ₹399 76% off",
-      "announcement": "\"₹92 ₹399 76% off\", link",
+      "name": "₹82 ₹699 88% off",
+      "announcement": "\"₹82 ₹699 88% off\", link",
       "silent": false
     },
     {
@@ -2021,15 +1982,15 @@
     {
       "position": 45,
       "role": "link",
-      "name": "Shoes, Lightweight Moccasin for Office & Casual, Waterp...",
-      "announcement": "\"Shoes, Lightweight Moccasin for Office & Casual, Waterp...\", link",
+      "name": "VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...",
+      "announcement": "\"VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...\", link",
       "silent": false
     },
     {
       "position": 46,
       "role": "link",
-      "name": "₹296 ₹999 70% off",
-      "announcement": "\"₹296 ₹999 70% off\", link",
+      "name": "₹255 ₹599 57% off",
+      "announcement": "\"₹255 ₹599 57% off\", link",
       "silent": false
     },
     {
@@ -2042,15 +2003,15 @@
     {
       "position": 48,
       "role": "link",
-      "name": "Men Lightweight with Arch Support Durable Anti-Skid & S...",
-      "announcement": "\"Men Lightweight with Arch Support Durable Anti-Skid & S...\", link",
+      "name": "BOOT-M Sneakers For Men",
+      "announcement": "\"BOOT-M Sneakers For Men\", link",
       "silent": false
     },
     {
       "position": 49,
       "role": "link",
-      "name": "₹603 ₹1,399 56% off",
-      "announcement": "\"₹603 ₹1,399 56% off\", link",
+      "name": "₹556 ₹1,999 72% off",
+      "announcement": "\"₹556 ₹1,999 72% off\", link",
       "silent": false
     },
     {
@@ -2063,15 +2024,15 @@
     {
       "position": 51,
       "role": "link",
-      "name": "Adilette Aqua Unisex Slides",
-      "announcement": "\"Adilette Aqua Unisex Slides\", link",
+      "name": "Men Clogs Sandal",
+      "announcement": "\"Men Clogs Sandal\", link",
       "silent": false
     },
     {
       "position": 52,
       "role": "link",
-      "name": "₹899 ₹1,999 55% off",
-      "announcement": "\"₹899 ₹1,999 55% off\", link",
+      "name": "₹389 ₹1,299 70% off",
+      "announcement": "\"₹389 ₹1,299 70% off\", link",
       "silent": false
     },
     {
@@ -2084,15 +2045,15 @@
     {
       "position": 54,
       "role": "link",
-      "name": "JOOTIYAPA PREMIUM TRENDY SPORTS SHOES FOR MEN Casuals F...",
-      "announcement": "\"JOOTIYAPA PREMIUM TRENDY SPORTS SHOES FOR MEN Casuals F...\", link",
+      "name": "FLYLITE AXTON Running Shoes For Men",
+      "announcement": "\"FLYLITE AXTON Running Shoes For Men\", link",
       "silent": false
     },
     {
       "position": 55,
       "role": "link",
-      "name": "₹480 ₹999 51% off",
-      "announcement": "\"₹480 ₹999 51% off\", link",
+      "name": "₹1,529 ₹2,999 49% off",
+      "announcement": "\"₹1,529 ₹2,999 49% off\", link",
       "silent": false
     },
     {
@@ -2105,15 +2066,15 @@
     {
       "position": 57,
       "role": "link",
-      "name": "Men Sandal",
-      "announcement": "\"Men Sandal\", link",
+      "name": "Men Clogs Sandal",
+      "announcement": "\"Men Clogs Sandal\", link",
       "silent": false
     },
     {
       "position": 58,
       "role": "link",
-      "name": "₹912 ₹4,200 78% off",
-      "announcement": "\"₹912 ₹4,200 78% off\", link",
+      "name": "₹640 ₹4,999 87% off",
+      "announcement": "\"₹640 ₹4,999 87% off\", link",
       "silent": false
     },
     {
@@ -2147,15 +2108,15 @@
     {
       "position": 63,
       "role": "link",
-      "name": "VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...",
-      "announcement": "\"VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...\", link",
+      "name": "ADILETTE AQUA Unisex Slides",
+      "announcement": "\"ADILETTE AQUA Unisex Slides\", link",
       "silent": false
     },
     {
       "position": 64,
       "role": "link",
-      "name": "₹255 ₹599 57% off",
-      "announcement": "\"₹255 ₹599 57% off\", link",
+      "name": "₹899 ₹1,999 55% off",
+      "announcement": "\"₹899 ₹1,999 55% off\", link",
       "silent": false
     },
     {
@@ -2168,15 +2129,15 @@
     {
       "position": 66,
       "role": "link",
-      "name": "RAFAEL Walking Shoes For Men",
-      "announcement": "\"RAFAEL Walking Shoes For Men\", link",
+      "name": "Men Black Formal Loafer & Party Wear Comfortable Office...",
+      "announcement": "\"Men Black Formal Loafer & Party Wear Comfortable Office...\", link",
       "silent": false
     },
     {
       "position": 67,
       "role": "link",
-      "name": "₹969 ₹2,699 64% off",
-      "announcement": "\"₹969 ₹2,699 64% off\", link",
+      "name": "₹538 ₹1,699 68% off",
+      "announcement": "\"₹538 ₹1,699 68% off\", link",
       "silent": false
     },
     {
@@ -2189,15 +2150,15 @@
     {
       "position": 69,
       "role": "link",
-      "name": "Men Clogs Sandal",
-      "announcement": "\"Men Clogs Sandal\", link",
+      "name": "DIGISM SHOES CLEANER Cleaner & Conditioner",
+      "announcement": "\"DIGISM SHOES CLEANER Cleaner & Conditioner\", link",
       "silent": false
     },
     {
       "position": 70,
       "role": "link",
-      "name": "₹389 ₹1,299 70% off",
-      "announcement": "\"₹389 ₹1,299 70% off\", link",
+      "name": "₹186 ₹599 68% off",
+      "announcement": "\"₹186 ₹599 68% off\", link",
       "silent": false
     },
     {
@@ -2210,15 +2171,15 @@
     {
       "position": 72,
       "role": "link",
-      "name": "Men Klunys Sneakers for Men | Casual Stylish Shoes|Prem...",
-      "announcement": "\"Men Klunys Sneakers for Men | Casual Stylish Shoes|Prem...\", link",
+      "name": "Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...",
+      "announcement": "\"Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...\", link",
       "silent": false
     },
     {
       "position": 73,
       "role": "link",
-      "name": "₹1,379 ₹3,949 65% off",
-      "announcement": "\"₹1,379 ₹3,949 65% off\", link",
+      "name": "₹998 ₹4,999 80% off",
+      "announcement": "\"₹998 ₹4,999 80% off\", link",
       "silent": false
     },
     {
@@ -2231,15 +2192,15 @@
     {
       "position": 75,
       "role": "link",
-      "name": "SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...",
-      "announcement": "\"SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...\", link",
+      "name": "SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...",
+      "announcement": "\"SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...\", link",
       "silent": false
     },
     {
       "position": 76,
       "role": "link",
-      "name": "₹138 ₹250 44% off",
-      "announcement": "\"₹138 ₹250 44% off\", link",
+      "name": "₹920 ₹3,600 74% off",
+      "announcement": "\"₹920 ₹3,600 74% off\", link",
       "silent": false
     },
     {
@@ -2252,15 +2213,15 @@
     {
       "position": 78,
       "role": "link",
-      "name": "KEE universal shoes repair rivets replacement button fo...",
-      "announcement": "\"KEE universal shoes repair rivets replacement button fo...\", link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
       "silent": false
     },
     {
       "position": 79,
       "role": "link",
-      "name": "₹82 ₹699 88% off",
-      "announcement": "\"₹82 ₹699 88% off\", link",
+      "name": "₹178 ₹599 70% off",
+      "announcement": "\"₹178 ₹599 70% off\", link",
       "silent": false
     },
     {
@@ -2273,15 +2234,15 @@
     {
       "position": 81,
       "role": "link",
-      "name": "premiumblack deer loafer for men Casuals For Men",
-      "announcement": "\"premiumblack deer loafer for men Casuals For Men\", link",
+      "name": "Embroider party Wedding Ethnic Shoes For Men Jutis For ...",
+      "announcement": "\"Embroider party Wedding Ethnic Shoes For Men Jutis For ...\", link",
       "silent": false
     },
     {
       "position": 82,
       "role": "link",
-      "name": "₹361 ₹999 63% off",
-      "announcement": "\"₹361 ₹999 63% off\", link",
+      "name": "₹497 ₹1,999 75% off",
+      "announcement": "\"₹497 ₹1,999 75% off\", link",
       "silent": false
     },
     {
@@ -2294,15 +2255,15 @@
     {
       "position": 84,
       "role": "link",
-      "name": "MALFOY Casuals For Men",
-      "announcement": "\"MALFOY Casuals For Men\", link",
+      "name": "Genuine leather formal oxford service shoes police shoe...",
+      "announcement": "\"Genuine leather formal oxford service shoes police shoe...\", link",
       "silent": false
     },
     {
       "position": 85,
       "role": "link",
-      "name": "₹869 ₹2,599 66% off",
-      "announcement": "\"₹869 ₹2,599 66% off\", link",
+      "name": "₹761 ₹1,999 61% off",
+      "announcement": "\"₹761 ₹1,999 61% off\", link",
       "silent": false
     },
     {
@@ -2315,15 +2276,15 @@
     {
       "position": 87,
       "role": "link",
-      "name": "Athleo WALKER-101 Breathable Flexible Lightweight Comfo...",
-      "announcement": "\"Athleo WALKER-101 Breathable Flexible Lightweight Comfo...\", link",
+      "name": "chelsea boots men Boots For Men",
+      "announcement": "\"chelsea boots men Boots For Men\", link",
       "silent": false
     },
     {
       "position": 88,
       "role": "link",
-      "name": "₹579 ₹1,699 65% off",
-      "announcement": "\"₹579 ₹1,699 65% off\", link",
+      "name": "₹707 ₹1,999 64% off",
+      "announcement": "\"₹707 ₹1,999 64% off\", link",
       "silent": false
     },
     {
@@ -2336,15 +2297,15 @@
     {
       "position": 90,
       "role": "link",
-      "name": "DIGISM SHOES CLEANER Cleaner & Conditioner",
-      "announcement": "\"DIGISM SHOES CLEANER Cleaner & Conditioner\", link",
+      "name": "laceexp Flat Athletic Shoe Laces For All Sneaker Types ...",
+      "announcement": "\"laceexp Flat Athletic Shoe Laces For All Sneaker Types ...\", link",
       "silent": false
     },
     {
       "position": 91,
       "role": "link",
-      "name": "₹186 ₹599 68% off",
-      "announcement": "\"₹186 ₹599 68% off\", link",
+      "name": "₹97 ₹289 66% off",
+      "announcement": "\"₹97 ₹289 66% off\", link",
       "silent": false
     },
     {
@@ -2357,15 +2318,15 @@
     {
       "position": 93,
       "role": "link",
-      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
-      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "name": "valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...",
+      "announcement": "\"valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...\", link",
       "silent": false
     },
     {
       "position": 94,
       "role": "link",
-      "name": "₹178 ₹599 70% off",
-      "announcement": "\"₹178 ₹599 70% off\", link",
+      "name": "₹141 ₹699 79% off",
+      "announcement": "\"₹141 ₹699 79% off\", link",
       "silent": false
     },
     {
@@ -2378,15 +2339,15 @@
     {
       "position": 96,
       "role": "link",
-      "name": "Trendy Silicon Multi Coloured shoe Running Shoes For Me...",
-      "announcement": "\"Trendy Silicon Multi Coloured shoe Running Shoes For Me...\", link",
+      "name": "AAESHU Men’s Stylish Leather Slip-On Shoes | Casual & F...",
+      "announcement": "\"AAESHU Men’s Stylish Leather Slip-On Shoes | Casual & F...\", link",
       "silent": false
     },
     {
       "position": 97,
       "role": "link",
-      "name": "₹1,029 ₹3,199 67% off",
-      "announcement": "\"₹1,029 ₹3,199 67% off\", link",
+      "name": "₹463 ₹3,000 84% off",
+      "announcement": "\"₹463 ₹3,000 84% off\", link",
       "silent": false
     },
     {
@@ -2399,15 +2360,15 @@
     {
       "position": 99,
       "role": "link",
-      "name": "Embroider party Wedding Ethnic Shoes For Men Jutis For ...",
-      "announcement": "\"Embroider party Wedding Ethnic Shoes For Men Jutis For ...\", link",
+      "name": "Sneakers For Men",
+      "announcement": "\"Sneakers For Men\", link",
       "silent": false
     },
     {
       "position": 100,
       "role": "link",
-      "name": "₹497 ₹1,999 75% off",
-      "announcement": "\"₹497 ₹1,999 75% off\", link",
+      "name": "₹455 ₹2,499 81% off",
+      "announcement": "\"₹455 ₹2,499 81% off\", link",
       "silent": false
     },
     {
@@ -2420,15 +2381,15 @@
     {
       "position": 102,
       "role": "link",
-      "name": "Smash Pro Badminton shoes for men anti skid non marking...",
-      "announcement": "\"Smash Pro Badminton shoes for men anti skid non marking...\", link",
+      "name": "Lite Casual Shoes Sneakers For Men",
+      "announcement": "\"Lite Casual Shoes Sneakers For Men\", link",
       "silent": false
     },
     {
       "position": 103,
       "role": "link",
-      "name": "₹999 ₹2,399 58% off",
-      "announcement": "\"₹999 ₹2,399 58% off\", link",
+      "name": "₹478 ₹2,499 80% off",
+      "announcement": "\"₹478 ₹2,499 80% off\", link",
       "silent": false
     },
     {
@@ -2441,15 +2402,15 @@
     {
       "position": 105,
       "role": "link",
-      "name": "Classic Cushion Slippers with Adjustable Buckle Strap A...",
-      "announcement": "\"Classic Cushion Slippers with Adjustable Buckle Strap A...\", link",
+      "name": "DURAMO SPEED Outdoors For Men",
+      "announcement": "\"DURAMO SPEED Outdoors For Men\", link",
       "silent": false
     },
     {
       "position": 106,
       "role": "link",
-      "name": "₹699 ₹1,799 61% off",
-      "announcement": "\"₹699 ₹1,799 61% off\", link",
+      "name": "₹4,289 ₹8,999 52% off",
+      "announcement": "\"₹4,289 ₹8,999 52% off\", link",
       "silent": false
     },
     {
@@ -2462,15 +2423,15 @@
     {
       "position": 108,
       "role": "link",
-      "name": "laceexp Flat Athletic Shoe Laces For All Sneaker Types ...",
-      "announcement": "\"laceexp Flat Athletic Shoe Laces For All Sneaker Types ...\", link",
+      "name": "DEVINO Shoe Laces Light Grey Flat 90cm shoe laces for c...",
+      "announcement": "\"DEVINO Shoe Laces Light Grey Flat 90cm shoe laces for c...\", link",
       "silent": false
     },
     {
       "position": 109,
       "role": "link",
-      "name": "₹97 ₹289 66% off",
-      "announcement": "\"₹97 ₹289 66% off\", link",
+      "name": "₹133 ₹249 46% off",
+      "announcement": "\"₹133 ₹249 46% off\", link",
       "silent": false
     },
     {
@@ -2483,15 +2444,15 @@
     {
       "position": 111,
       "role": "link",
-      "name": "valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...",
-      "announcement": "\"valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...\", link",
+      "name": "Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...",
+      "announcement": "\"Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...\", link",
       "silent": false
     },
     {
       "position": 112,
       "role": "link",
-      "name": "₹141 ₹699 79% off",
-      "announcement": "\"₹141 ₹699 79% off\", link",
+      "name": "₹504 ₹999 49% off",
+      "announcement": "\"₹504 ₹999 49% off\", link",
       "silent": false
     },
     {
@@ -2504,15 +2465,15 @@
     {
       "position": 114,
       "role": "link",
-      "name": "Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D...",
-      "announcement": "\"Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D...\", link",
+      "name": "chelsea boots men Boots For Men",
+      "announcement": "\"chelsea boots men Boots For Men\", link",
       "silent": false
     },
     {
       "position": 115,
       "role": "link",
-      "name": "₹172 ₹999 82% off",
-      "announcement": "\"₹172 ₹999 82% off\", link",
+      "name": "₹621 ₹999 37% off",
+      "announcement": "\"₹621 ₹999 37% off\", link",
       "silent": false
     },
     {
@@ -2525,15 +2486,15 @@
     {
       "position": 117,
       "role": "link",
-      "name": "HELIXX Running Shoes For Men",
-      "announcement": "\"HELIXX Running Shoes For Men\", link",
+      "name": "EVA Double Strap Sandals|Adjustable Buckle|Lightweight ...",
+      "announcement": "\"EVA Double Strap Sandals|Adjustable Buckle|Lightweight ...\", link",
       "silent": false
     },
     {
       "position": 118,
       "role": "link",
-      "name": "₹909 ₹2,399 62% off",
-      "announcement": "\"₹909 ₹2,399 62% off\", link",
+      "name": "₹599 ₹2,499 76% off",
+      "announcement": "\"₹599 ₹2,499 76% off\", link",
       "silent": false
     },
     {
@@ -2546,15 +2507,15 @@
     {
       "position": 120,
       "role": "link",
-      "name": "Rungryp Sneakers For Men",
-      "announcement": "\"Rungryp Sneakers For Men\", link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
       "silent": false
     },
     {
       "position": 121,
       "role": "link",
-      "name": "₹1,599 ₹4,999 68% off",
-      "announcement": "\"₹1,599 ₹4,999 68% off\", link",
+      "name": "₹301 ₹1,199 74% off",
+      "announcement": "\"₹301 ₹1,199 74% off\", link",
       "silent": false
     },
     {
@@ -2567,15 +2528,15 @@
     {
       "position": 123,
       "role": "link",
-      "name": "Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...",
-      "announcement": "\"Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...\", link",
+      "name": "VRPRIME Foam Sneaker Cleaning Kit Cleaner",
+      "announcement": "\"VRPRIME Foam Sneaker Cleaning Kit Cleaner\", link",
       "silent": false
     },
     {
       "position": 124,
       "role": "link",
-      "name": "₹504 ₹999 49% off",
-      "announcement": "\"₹504 ₹999 49% off\", link",
+      "name": "₹264 ₹999 73% off",
+      "announcement": "\"₹264 ₹999 73% off\", link",
       "silent": false
     },
     {
@@ -2588,15 +2549,15 @@
     {
       "position": 126,
       "role": "link",
-      "name": "Royal24kt Shoe Care Combo | Wax Shoe Polish + Liquid Po...",
-      "announcement": "\"Royal24kt Shoe Care Combo | Wax Shoe Polish + Liquid Po...\", link",
+      "name": "SHOESHINE Flat shoe laces for Sports & sneaker shoes Sh...",
+      "announcement": "\"SHOESHINE Flat shoe laces for Sports & sneaker shoes Sh...\", link",
       "silent": false
     },
     {
       "position": 127,
       "role": "link",
-      "name": "₹178 ₹251 29% off",
-      "announcement": "\"₹178 ₹251 29% off\", link",
+      "name": "₹128 ₹250 48% off",
+      "announcement": "\"₹128 ₹250 48% off\", link",
       "silent": false
     },
     {
@@ -2609,15 +2570,15 @@
     {
       "position": 129,
       "role": "link",
-      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
-      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "name": "Grab Kart Quick Foam Cleaner & Medium Bristle Brush Cle...",
+      "announcement": "\"Grab Kart Quick Foam Cleaner & Medium Bristle Brush Cle...\", link",
       "silent": false
     },
     {
       "position": 130,
       "role": "link",
-      "name": "₹301 ₹1,199 74% off",
-      "announcement": "\"₹301 ₹1,199 74% off\", link",
+      "name": "₹185 ₹599 69% off",
+      "announcement": "\"₹185 ₹599 69% off\", link",
       "silent": false
     },
     {
@@ -2630,15 +2591,15 @@
     {
       "position": 132,
       "role": "link",
-      "name": "Athleo BULLET-405 Stylish Lightweight Comfortable Trend...",
-      "announcement": "\"Athleo BULLET-405 Stylish Lightweight Comfortable Trend...\", link",
+      "name": "Men Lightweight with Arch Support Durable Anti-Skid & S...",
+      "announcement": "\"Men Lightweight with Arch Support Durable Anti-Skid & S...\", link",
       "silent": false
     },
     {
       "position": 133,
       "role": "link",
-      "name": "₹969 ₹2,699 64% off",
-      "announcement": "\"₹969 ₹2,699 64% off\", link",
+      "name": "₹603 ₹1,399 56% off",
+      "announcement": "\"₹603 ₹1,399 56% off\", link",
       "silent": false
     },
     {
@@ -2651,15 +2612,15 @@
     {
       "position": 135,
       "role": "link",
-      "name": "Royal24kt Royal 24kt Liquid Shoe Polish Black + Black S...",
-      "announcement": "\"Royal24kt Royal 24kt Liquid Shoe Polish Black + Black S...\", link",
+      "name": "SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...",
+      "announcement": "\"SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...\", link",
       "silent": false
     },
     {
       "position": 136,
       "role": "link",
-      "name": "₹170 ₹279 39% off",
-      "announcement": "\"₹170 ₹279 39% off\", link",
+      "name": "₹138 ₹250 44% off",
+      "announcement": "\"₹138 ₹250 44% off\", link",
       "silent": false
     },
     {
@@ -2672,15 +2633,15 @@
     {
       "position": 138,
       "role": "link",
-      "name": "Stylish Comfortable Lightweight Sports Running shoes Sn...",
-      "announcement": "\"Stylish Comfortable Lightweight Sports Running shoes Sn...\", link",
+      "name": "Casual Sneakers For Men Sneakers For Men",
+      "announcement": "\"Casual Sneakers For Men Sneakers For Men\", link",
       "silent": false
     },
     {
       "position": 139,
       "role": "link",
-      "name": "₹522 ₹2,499 79% off",
-      "announcement": "\"₹522 ₹2,499 79% off\", link",
+      "name": "₹476 ₹2,400 80% off",
+      "announcement": "\"₹476 ₹2,400 80% off\", link",
       "silent": false
     },
     {
@@ -2693,15 +2654,15 @@
     {
       "position": 141,
       "role": "link",
-      "name": "VRPRIME Foam Sneaker Cleaning Kit Cleaner",
-      "announcement": "\"VRPRIME Foam Sneaker Cleaning Kit Cleaner\", link",
+      "name": "Color Zebra Leather Shoe Polish Kit | Wax Polish (40g) ...",
+      "announcement": "\"Color Zebra Leather Shoe Polish Kit | Wax Polish (40g) ...\", link",
       "silent": false
     },
     {
       "position": 142,
       "role": "link",
-      "name": "₹264 ₹999 73% off",
-      "announcement": "\"₹264 ₹999 73% off\", link",
+      "name": "₹198 ₹899 77% off",
+      "announcement": "\"₹198 ₹899 77% off\", link",
       "silent": false
     },
     {
@@ -2784,106 +2745,106 @@
     {
       "position": 154,
       "role": "link",
-      "name": "1. jootiyapa JOOTIYAPA PREMIUM... 3.9 3,036 Ratings&163 Reviews ₹480 51% off",
-      "announcement": "\"1. jootiyapa JOOTIYAPA PREMIUM... 3.9 3,036 Ratings&163 Reviews ₹480 51% off\", link",
+      "name": "1. BERSACHE Premium Sports ,Gy... 4 14,639 Ratings&798 Reviews ₹998 80% off",
+      "announcement": "\"1. BERSACHE Premium Sports ,Gy... 4 14,639 Ratings&798 Reviews ₹998 80% off\", link",
       "silent": false
     },
     {
       "position": 155,
       "role": "link",
-      "name": "2. BOLDFIT Trial king Men High... 4.3 533 Ratings&91 Reviews ₹1,509 61% off",
-      "announcement": "\"2. BOLDFIT Trial king Men High... 4.3 533 Ratings&91 Reviews ₹1,509 61% off\", link",
+      "name": "2. Aaeshu AAESHU Men’s Stylish... 3.5 124 Ratings&9 Reviews ₹463 84% off",
+      "announcement": "\"2. Aaeshu AAESHU Men’s Stylish... 3.5 124 Ratings&9 Reviews ₹463 84% off\", link",
       "silent": false
     },
     {
       "position": 156,
       "role": "link",
-      "name": "3. PUMA Rungryp Sneakers For M... 4.1 74,342 Ratings&4,820 Reviews ₹1,599 68% off",
-      "announcement": "\"3. PUMA Rungryp Sneakers For M... 4.1 74,342 Ratings&4,820 Reviews ₹1,599 68% off\", link",
+      "name": "3. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off",
+      "announcement": "\"3. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off\", link",
       "silent": false
     },
     {
       "position": 157,
       "role": "link",
-      "name": "4. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off",
-      "announcement": "\"4. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off\", link",
+      "name": "4. Aaeshu Men & boys stylish c... 4 387 Ratings&21 Reviews ₹486 80% off",
+      "announcement": "\"4. Aaeshu Men & boys stylish c... 4 387 Ratings&21 Reviews ₹486 80% off\", link",
       "silent": false
     },
     {
       "position": 158,
       "role": "link",
-      "name": "5. BOLDFIT Smash Pro Badminton... 4.1 1,007 Ratings&111 Reviews ₹999 58% off",
-      "announcement": "\"5. BOLDFIT Smash Pro Badminton... 4.1 1,007 Ratings&111 Reviews ₹999 58% off\", link",
+      "name": "5. WELCOME Lightweight with Ar... 4 1,871 Ratings&103 Reviews ₹603 56% off",
+      "announcement": "\"5. WELCOME Lightweight with Ar... 4 1,871 Ratings&103 Reviews ₹603 56% off\", link",
       "silent": false
     },
     {
       "position": 159,
       "role": "link",
-      "name": "ADIDAS Unisex Adilette Aqua Slides",
-      "announcement": "\"ADIDAS Unisex Adilette Aqua Slides\", link",
+      "name": "SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelace (120cm) 4mm Thick TAN Shoe Lace",
+      "announcement": "\"SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelace (120cm) 4mm Thick TAN Shoe Lace\", link",
       "silent": false
     },
     {
       "position": 160,
       "role": "link",
-      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
-      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "name": "Layasa chelsea boots men Boots For Men",
+      "announcement": "\"Layasa chelsea boots men Boots For Men\", link",
       "silent": false
     },
     {
       "position": 161,
       "role": "link",
-      "name": "Abros MALFOY Casuals For Men",
-      "announcement": "\"Abros MALFOY Casuals For Men\", link",
+      "name": "Doctor Health Super Soft Men's Athletic Sports Sandals|Lightweight|Comfortable|Non-Slip Outdoor Footwear Men Sports Sandals",
+      "announcement": "\"Doctor Health Super Soft Men's Athletic Sports Sandals|Lightweight|Comfortable|Non-Slip Outdoor Footwear Men Sports Sandals\", link",
       "silent": false
     },
     {
       "position": 162,
       "role": "link",
-      "name": "Abros HELIXX Running Shoes For Men",
-      "announcement": "\"Abros HELIXX Running Shoes For Men\", link",
+      "name": "Color Zebra Leather Shoe Polish Kit | Wax Polish (40g) with Shoe Brush & Instant Shoe Shiner Leather Shoe Wax Polish",
+      "announcement": "\"Color Zebra Leather Shoe Polish Kit | Wax Polish (40g) with Shoe Brush & Instant Shoe Shiner Leather Shoe Wax Polish\", link",
       "silent": false
     },
     {
       "position": 163,
       "role": "link",
-      "name": "Royal24kt Royal 24kt Liquid Shoe Polish Black + Black Shoe Polish Combo Leather, Patent Leather, Synthetic Leather Shoe Liquid Polish",
-      "announcement": "\"Royal24kt Royal 24kt Liquid Shoe Polish Black + Black Shoe Polish Combo Leather, Patent Leather, Synthetic Leather Shoe Liquid Polish\", link",
+      "name": "Big Liner Premium Handmade Chelsea |Soft Cushioned Insole |Slip-Resistance Boots For Men",
+      "announcement": "\"Big Liner Premium Handmade Chelsea |Soft Cushioned Insole |Slip-Resistance Boots For Men\", link",
       "silent": false
     },
     {
       "position": 164,
       "role": "link",
-      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
-      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "name": "VRPRIME Foam Sneaker Cleaning Kit Cleaner",
+      "announcement": "\"VRPRIME Foam Sneaker Cleaning Kit Cleaner\", link",
       "silent": false
     },
     {
       "position": 165,
       "role": "link",
-      "name": "BOLDFIT Men Klunys Sneakers for Men | Casual Stylish Shoes|Premium PU Leather|TPR Sole Sneakers For Men",
-      "announcement": "\"BOLDFIT Men Klunys Sneakers for Men | Casual Stylish Shoes|Premium PU Leather|TPR Sole Sneakers For Men\", link",
+      "name": "Doctor Health Super Soft Men EVA Double Strap Sandals|Adjustable Buckle|Lightweight Anti-Slip Slippers Slides",
+      "announcement": "\"Doctor Health Super Soft Men EVA Double Strap Sandals|Adjustable Buckle|Lightweight Anti-Slip Slippers Slides\", link",
       "silent": false
     },
     {
       "position": 166,
       "role": "link",
-      "name": "WELCOME Lightweight with Arch Support Durable Anti-Skid & Stylish Dailywear| Men Sandals",
-      "announcement": "\"WELCOME Lightweight with Arch Support Durable Anti-Skid & Stylish Dailywear| Men Sandals\", link",
+      "name": "VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sneaker & Sports Shoe Cleaner Cleaner",
+      "announcement": "\"VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sneaker & Sports Shoe Cleaner Cleaner\", link",
       "silent": false
     },
     {
       "position": 167,
       "role": "link",
-      "name": "Abros RAFAEL Walking Shoes For Men",
-      "announcement": "\"Abros RAFAEL Walking Shoes For Men\", link",
+      "name": "EVICTA Embroider party Wedding Ethnic Shoes For Men Jutis For Men partywear shoes Party Wear For Men",
+      "announcement": "\"EVICTA Embroider party Wedding Ethnic Shoes For Men Jutis For Men partywear shoes Party Wear For Men\", link",
       "silent": false
     },
     {
       "position": 168,
       "role": "link",
-      "name": "Adbee Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D Cushion For Men & Women Form Full Length Regular, Sports, Orthotic Shoe Insole",
-      "announcement": "\"Adbee Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D Cushion For Men & Women Form Full Length Regular, Sports, Orthotic Shoe Insole\", link",
+      "name": "Layasa chelsea boots men Boots For Men",
+      "announcement": "\"Layasa chelsea boots men Boots For Men\", link",
       "silent": false
     },
     {
@@ -3616,7 +3577,7 @@
     }
   ],
   "counts": {
-    "blocks": 71,
+    "blocks": 70,
     "impairs": 149,
     "note": 0
   },

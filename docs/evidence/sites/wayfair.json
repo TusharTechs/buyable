@@ -3,11 +3,25 @@
   "finalUrl": "https://www.wayfair.com/furniture/sb0/sofas-c413892.html",
   "title": "Sofas & Couches | Living Room Furniture & Living Room Furniture Sets",
   "language": "en",
-  "createdAt": "2026-09-20T19:00:15.112Z",
-  "durationMs": 25439,
-  "nodeCount": 740,
-  "focusableCount": 177,
+  "createdAt": "2026-09-20T19:17:31.118Z",
+  "durationMs": 73933,
+  "nodeCount": 2891,
+  "focusableCount": 566,
   "findings": [
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div:nth-of-type(1) > div.ad-container.ad_banner:nth-of-type(1) > div.tagg-reset.tagg-balloons-wrapper > div.tagg-reset.tagg-balloon > div.tagg-reset.tagg-txt:nth-of-type(2)",
+      "occurrences": 17
+    },
     {
       "kind": "control-without-accessible-name",
       "severity": "blocks",
@@ -80,6 +94,32 @@
       "occurrences": 1
     },
     {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "Save",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Save\", button",
+      "selector": "div._16fu6t1ad._16fu6t1s3 > a._1d0yv060._1d0yv061 > div._16fu6t119a._16fu6t1ix > div._1v89k3v0._1v89k3v1:nth-of-type(3) > div._277bgb0._277bgb1",
+      "occurrences": 48
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "Save",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Save\", button",
+      "selector": "div._16fu6t1ad._16fu6t1s3 > a._1d0yv060._1d0yv061 > div._16fu6t114b._16fu6t1ix > div._1v89k3v0._1v89k3v1:nth-of-type(2) > div._277bgb0._277bgb1",
+      "occurrences": 3
+    },
+    {
       "kind": "form-field-without-label",
       "severity": "impairs",
       "summary": "A form field has no label, so its purpose is never announced.",
@@ -104,6 +144,19 @@
         "2.1.1"
       ],
       "announcement": "(no accessible name), combobox, hasPopup=listbox",
+      "selector": "div > div._1we177d0 > div._16fu6t11t._16fu6t12f > div.kmvn862.gsqsd2s:nth-of-type(1) > div.kmvn86g",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A combobox cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "combobox",
+      "accessibleName": "Search: Brand",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Search: Brand\", combobox, hasPopup=listbox",
       "selector": "div > div._1we177d0 > div._16fu6t11t._16fu6t12f > div.kmvn862.gsqsd2s:nth-of-type(1) > div.kmvn86g",
       "occurrences": 1
     },
@@ -229,1121 +282,3851 @@
     },
     {
       "position": 16,
+      "role": "button",
+      "name": "Cart",
+      "announcement": "\"Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 17,
       "role": "link",
       "name": "Verified",
       "announcement": "\"Verified\", link",
       "silent": false
     },
     {
-      "position": 17,
+      "position": 18,
       "role": "button",
       "name": "Open Verified Menu Dropdown",
       "announcement": "\"Open Verified Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 18,
+      "position": 19,
       "role": "link",
       "name": "New Arrivals",
       "announcement": "\"New Arrivals\", link",
       "silent": false
     },
     {
-      "position": 19,
+      "position": 20,
       "role": "link",
       "name": "Best Sellers",
       "announcement": "\"Best Sellers\", link",
       "silent": false
     },
     {
-      "position": 20,
+      "position": 21,
       "role": "button",
       "name": "Trending",
       "announcement": "\"Trending\", button",
       "silent": false
     },
     {
-      "position": 21,
+      "position": 22,
       "role": "button",
       "name": "Open Trending Menu Dropdown",
       "announcement": "\"Open Trending Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 22,
+      "position": 23,
       "role": "button",
       "name": "Collaborations",
       "announcement": "\"Collaborations\", button",
       "silent": false
     },
     {
-      "position": 23,
+      "position": 24,
       "role": "button",
       "name": "Open Collaborations Menu Dropdown",
       "announcement": "\"Open Collaborations Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 24,
+      "position": 25,
       "role": "link",
       "name": "Shop by Room",
       "announcement": "\"Shop by Room\", link",
       "silent": false
     },
     {
-      "position": 25,
+      "position": 26,
       "role": "button",
       "name": "Open Shop by Room Menu Dropdown",
       "announcement": "\"Open Shop by Room Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 26,
+      "position": 27,
       "role": "link",
       "name": "Inspiration",
       "announcement": "\"Inspiration\", link",
       "silent": false
     },
     {
-      "position": 27,
+      "position": 28,
       "role": "button",
       "name": "Services",
       "announcement": "\"Services\", button",
       "silent": false
     },
     {
-      "position": 28,
+      "position": 29,
       "role": "button",
       "name": "Open Services Menu Dropdown",
       "announcement": "\"Open Services Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 29,
+      "position": 30,
       "role": "link",
       "name": "Furniture",
       "announcement": "\"Furniture\", link",
       "silent": false
     },
     {
-      "position": 30,
+      "position": 31,
       "role": "button",
       "name": "Open Furniture Menu Dropdown",
       "announcement": "\"Open Furniture Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 31,
+      "position": 32,
       "role": "link",
       "name": "Outdoor",
       "announcement": "\"Outdoor\", link",
       "silent": false
     },
     {
-      "position": 32,
+      "position": 33,
       "role": "button",
       "name": "Open Outdoor Menu Dropdown",
       "announcement": "\"Open Outdoor Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 33,
+      "position": 34,
       "role": "link",
       "name": "Bedding & Bath",
       "announcement": "\"Bedding & Bath\", link",
       "silent": false
     },
     {
-      "position": 34,
+      "position": 35,
       "role": "button",
       "name": "Open Bedding & Bath Menu Dropdown",
       "announcement": "\"Open Bedding & Bath Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 35,
+      "position": 36,
       "role": "link",
       "name": "Mattresses",
       "announcement": "\"Mattresses\", link",
       "silent": false
     },
     {
-      "position": 36,
+      "position": 37,
       "role": "button",
       "name": "Open Mattresses Menu Dropdown",
       "announcement": "\"Open Mattresses Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 37,
+      "position": 38,
       "role": "link",
       "name": "Rugs",
       "announcement": "\"Rugs\", link",
       "silent": false
     },
     {
-      "position": 38,
+      "position": 39,
       "role": "button",
       "name": "Open Rugs Menu Dropdown",
       "announcement": "\"Open Rugs Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 39,
+      "position": 40,
       "role": "link",
       "name": "Decor & Pillows",
       "announcement": "\"Decor & Pillows\", link",
       "silent": false
     },
     {
-      "position": 40,
+      "position": 41,
       "role": "button",
       "name": "Open Decor & Pillows Menu Dropdown",
       "announcement": "\"Open Decor & Pillows Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 41,
+      "position": 42,
       "role": "link",
       "name": "Lighting",
       "announcement": "\"Lighting\", link",
       "silent": false
     },
     {
-      "position": 42,
+      "position": 43,
       "role": "button",
       "name": "Open Lighting Menu Dropdown",
       "announcement": "\"Open Lighting Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 43,
+      "position": 44,
       "role": "link",
       "name": "Organization",
       "announcement": "\"Organization\", link",
       "silent": false
     },
     {
-      "position": 44,
+      "position": 45,
       "role": "button",
       "name": "Open Organization Menu Dropdown",
       "announcement": "\"Open Organization Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 45,
+      "position": 46,
       "role": "link",
       "name": "Kitchen",
       "announcement": "\"Kitchen\", link",
       "silent": false
     },
     {
-      "position": 46,
+      "position": 47,
       "role": "button",
       "name": "Open Kitchen Menu Dropdown",
       "announcement": "\"Open Kitchen Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 47,
+      "position": 48,
       "role": "link",
       "name": "Baby & Kids",
       "announcement": "\"Baby & Kids\", link",
       "silent": false
     },
     {
-      "position": 48,
+      "position": 49,
       "role": "button",
       "name": "Open Baby & Kids Menu Dropdown",
       "announcement": "\"Open Baby & Kids Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 49,
+      "position": 50,
       "role": "link",
       "name": "Home Improvement",
       "announcement": "\"Home Improvement\", link",
       "silent": false
     },
     {
-      "position": 50,
+      "position": 51,
       "role": "button",
       "name": "Open Home Improvement Menu Dropdown",
       "announcement": "\"Open Home Improvement Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 51,
+      "position": 52,
       "role": "link",
       "name": "Appliances",
       "announcement": "\"Appliances\", link",
       "silent": false
     },
     {
-      "position": 52,
+      "position": 53,
       "role": "button",
       "name": "Open Appliances Menu Dropdown",
       "announcement": "\"Open Appliances Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 53,
+      "position": 54,
       "role": "link",
       "name": "Pet",
       "announcement": "\"Pet\", link",
       "silent": false
     },
     {
-      "position": 54,
+      "position": 55,
       "role": "button",
       "name": "Open Pet Menu Dropdown",
       "announcement": "\"Open Pet Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 55,
+      "position": 56,
       "role": "link",
       "name": "Holiday",
       "announcement": "\"Holiday\", link",
       "silent": false
     },
     {
-      "position": 56,
+      "position": 57,
       "role": "button",
       "name": "Open Holiday Menu Dropdown",
       "announcement": "\"Open Holiday Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 57,
+      "position": 58,
       "role": "link",
       "name": "Sale",
       "announcement": "\"Sale\", link",
       "silent": false
     },
     {
-      "position": 58,
+      "position": 59,
       "role": "button",
       "name": "Open Sale Menu Dropdown",
       "announcement": "\"Open Sale Menu Dropdown\", button",
       "silent": false
     },
     {
-      "position": 59,
+      "position": 60,
       "role": "link",
       "name": "EPIC FALL SALE FEAT. DELTA | UP TO 70% OFF ENDS TOMORROW",
       "announcement": "\"EPIC FALL SALE FEAT. DELTA | UP TO 70% OFF ENDS TOMORROW\", link",
       "silent": false
     },
     {
-      "position": 60,
+      "position": 61,
       "role": "link",
       "name": "24-HOUR FLASH DEALS",
       "announcement": "\"24-HOUR FLASH DEALS\", link",
       "silent": false
     },
     {
-      "position": 61,
+      "position": 62,
       "role": "link",
       "name": "UP TO 60% OFF LIVING ROOM SEATING",
       "announcement": "\"UP TO 60% OFF LIVING ROOM SEATING\", link",
       "silent": false
     },
     {
-      "position": 62,
+      "position": 63,
       "role": "button",
       "name": "Close Menu",
       "announcement": "\"Close Menu\", button",
       "silent": false
     },
     {
-      "position": 63,
+      "position": 64,
       "role": "paragraph",
       "name": "",
       "announcement": "(no accessible name), paragraph",
       "silent": true
     },
     {
-      "position": 64,
+      "position": 65,
       "role": "link",
       "name": "Living Room Furniture",
       "announcement": "\"Living Room Furniture\", link",
       "silent": false
     },
     {
-      "position": 65,
+      "position": 66,
       "role": "link",
       "name": "Sectionals",
       "announcement": "\"Sectionals\", link",
       "silent": false
     },
     {
-      "position": 66,
+      "position": 67,
       "role": "link",
       "name": "Living Room Sets",
       "announcement": "\"Living Room Sets\", link",
       "silent": false
     },
     {
-      "position": 67,
+      "position": 68,
       "role": "link",
       "name": "Chairs & Seating",
       "announcement": "\"Chairs & Seating\", link",
       "silent": false
     },
     {
-      "position": 68,
+      "position": 69,
       "role": "button",
       "name": "Show More",
       "announcement": "\"Show More\", button",
       "silent": false
     },
     {
-      "position": 69,
+      "position": 70,
       "role": "checkbox",
       "name": "Sale",
       "announcement": "\"Sale\", checkbox",
       "silent": false
     },
     {
-      "position": 70,
+      "position": 71,
       "role": "checkbox",
       "name": "",
       "announcement": "(no accessible name), checkbox",
       "silent": true
     },
     {
-      "position": 71,
+      "position": 72,
       "role": "button",
       "name": "Update Zip Code 97818",
       "announcement": "\"Update Zip Code 97818\", button",
       "silent": false
     },
     {
-      "position": 72,
+      "position": 73,
       "role": "checkbox",
       "name": "Wayfair Verified",
       "announcement": "\"Wayfair Verified\", checkbox",
       "silent": false
     },
     {
-      "position": 73,
+      "position": 74,
       "role": "checkbox",
       "name": "Sunbrella®",
       "announcement": "\"Sunbrella®\", checkbox",
       "silent": false
     },
     {
-      "position": 74,
+      "position": 75,
       "role": "checkbox",
       "name": "Crypton®",
       "announcement": "\"Crypton®\", checkbox",
       "silent": false
     },
     {
-      "position": 75,
+      "position": 76,
       "role": "checkbox",
       "name": "Revolution Performance Fabrics®",
       "announcement": "\"Revolution Performance Fabrics®\", checkbox",
       "silent": false
     },
     {
-      "position": 76,
+      "position": 77,
       "role": "checkbox",
       "name": "Other Performance Fabrics",
       "announcement": "\"Other Performance Fabrics\", checkbox",
       "silent": false
     },
     {
-      "position": 77,
+      "position": 78,
       "role": "checkbox",
       "name": "Sustain®",
       "announcement": "\"Sustain®\", checkbox",
       "silent": false
     },
     {
-      "position": 78,
+      "position": 79,
       "role": "checkbox",
       "name": "Top Grain Leather Premium quality, durable, smooth and lightly buffed (or refined)",
       "announcement": "\"Top Grain Leather Premium quality, durable, smooth and lightly buffed (or refined)\", checkbox",
       "silent": false
     },
     {
-      "position": 79,
+      "position": 80,
       "role": "checkbox",
       "name": "Full Grain Leather Premium quality, durable, natural with unique markings",
       "announcement": "\"Full Grain Leather Premium quality, durable, natural with unique markings\", checkbox",
       "silent": false
     },
     {
-      "position": 80,
+      "position": 81,
       "role": "checkbox",
       "name": "Genuine Leather All leather made from real animal hides",
       "announcement": "\"Genuine Leather All leather made from real animal hides\", checkbox",
       "silent": false
     },
     {
-      "position": 81,
+      "position": 82,
       "role": "checkbox",
       "name": "Faux Leather Mimics real leather look and feel, including vegan",
       "announcement": "\"Faux Leather Mimics real leather look and feel, including vegan\", checkbox",
       "silent": false
     },
     {
-      "position": 82,
+      "position": 83,
       "role": "checkbox",
       "name": "All Leather Options",
       "announcement": "\"All Leather Options\", checkbox",
       "silent": false
     },
     {
-      "position": 83,
+      "position": 84,
       "role": "checkbox",
       "name": "Cotton / Cotton Blend",
       "announcement": "\"Cotton / Cotton Blend\", checkbox",
       "silent": false
     },
     {
-      "position": 84,
+      "position": 85,
       "role": "checkbox",
       "name": "Chenille",
       "announcement": "\"Chenille\", checkbox",
       "silent": false
     },
     {
-      "position": 85,
+      "position": 86,
       "role": "checkbox",
       "name": "Linen / Linen Blend",
       "announcement": "\"Linen / Linen Blend\", checkbox",
       "silent": false
     },
     {
-      "position": 86,
+      "position": 87,
       "role": "checkbox",
       "name": "Velvet",
       "announcement": "\"Velvet\", checkbox",
       "silent": false
     },
     {
-      "position": 87,
+      "position": 88,
       "role": "checkbox",
       "name": "Microfiber / Microsuede",
       "announcement": "\"Microfiber / Microsuede\", checkbox",
       "silent": false
     },
     {
-      "position": 88,
+      "position": 89,
       "role": "checkbox",
       "name": "Corduroy",
       "announcement": "\"Corduroy\", checkbox",
       "silent": false
     },
     {
-      "position": 89,
+      "position": 90,
       "role": "checkbox",
       "name": "Polyester / Polyester Blend",
       "announcement": "\"Polyester / Polyester Blend\", checkbox",
       "silent": false
     },
     {
-      "position": 90,
+      "position": 91,
       "role": "button",
       "name": "Show More",
       "announcement": "\"Show More\", button",
       "silent": false
     },
     {
-      "position": 91,
+      "position": 92,
       "role": "textbox",
       "name": "",
       "announcement": "(no accessible name), textbox",
       "silent": true
     },
     {
-      "position": 92,
+      "position": 93,
       "role": "checkbox",
       "name": "Beige",
       "announcement": "\"Beige\", checkbox",
       "silent": false
     },
     {
-      "position": 93,
+      "position": 94,
       "role": "checkbox",
       "name": "Cream",
       "announcement": "\"Cream\", checkbox",
       "silent": false
     },
     {
-      "position": 94,
+      "position": 95,
       "role": "checkbox",
       "name": "Brown",
       "announcement": "\"Brown\", checkbox",
       "silent": false
     },
     {
-      "position": 95,
+      "position": 96,
       "role": "checkbox",
       "name": "Gray",
       "announcement": "\"Gray\", checkbox",
       "silent": false
     },
     {
-      "position": 96,
+      "position": 97,
       "role": "checkbox",
       "name": "Green",
       "announcement": "\"Green\", checkbox",
       "silent": false
     },
     {
-      "position": 97,
+      "position": 98,
       "role": "checkbox",
       "name": "Blue",
       "announcement": "\"Blue\", checkbox",
       "silent": false
     },
     {
-      "position": 98,
+      "position": 99,
       "role": "checkbox",
       "name": "Black",
       "announcement": "\"Black\", checkbox",
       "silent": false
     },
     {
-      "position": 99,
+      "position": 100,
       "role": "button",
       "name": "Show More",
       "announcement": "\"Show More\", button",
       "silent": false
     },
     {
-      "position": 100,
+      "position": 101,
       "role": "checkbox",
       "name": "Brown",
       "announcement": "\"Brown\", checkbox",
       "silent": false
     },
     {
-      "position": 101,
+      "position": 102,
       "role": "checkbox",
       "name": "Black",
       "announcement": "\"Black\", checkbox",
       "silent": false
     },
     {
-      "position": 102,
+      "position": 103,
       "role": "checkbox",
       "name": "Gray",
       "announcement": "\"Gray\", checkbox",
       "silent": false
     },
     {
-      "position": 103,
+      "position": 104,
       "role": "checkbox",
       "name": "Beige",
       "announcement": "\"Beige\", checkbox",
       "silent": false
     },
     {
-      "position": 104,
+      "position": 105,
       "role": "checkbox",
       "name": "White",
       "announcement": "\"White\", checkbox",
       "silent": false
     },
     {
-      "position": 105,
+      "position": 106,
       "role": "checkbox",
       "name": "Gold",
       "announcement": "\"Gold\", checkbox",
       "silent": false
     },
     {
-      "position": 106,
+      "position": 107,
       "role": "checkbox",
       "name": "Blue",
       "announcement": "\"Blue\", checkbox",
       "silent": false
     },
     {
-      "position": 107,
+      "position": 108,
       "role": "button",
       "name": "Show More",
       "announcement": "\"Show More\", button",
       "silent": false
     },
     {
-      "position": 108,
+      "position": 109,
       "role": "checkbox",
       "name": "Medium Wood",
       "announcement": "\"Medium Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 109,
+      "position": 110,
       "role": "checkbox",
       "name": "Espresso Wood",
       "announcement": "\"Espresso Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 110,
+      "position": 111,
       "role": "checkbox",
       "name": "Light Wood",
       "announcement": "\"Light Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 111,
+      "position": 112,
       "role": "checkbox",
       "name": "Red Wood",
       "announcement": "\"Red Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 112,
+      "position": 113,
       "role": "checkbox",
       "name": "White Wood",
       "announcement": "\"White Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 113,
+      "position": 114,
       "role": "checkbox",
       "name": "Gray Wood",
       "announcement": "\"Gray Wood\", checkbox",
       "silent": false
     },
     {
-      "position": 114,
+      "position": 115,
       "role": "spinbutton",
       "name": "Minimum",
       "announcement": "\"Minimum\", spinbutton, value \"0\", required",
       "silent": false
     },
     {
-      "position": 115,
+      "position": 116,
       "role": "spinbutton",
       "name": "Maximum",
       "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
       "silent": false
     },
     {
-      "position": 116,
+      "position": 117,
       "role": "checkbox",
       "name": "Under $500",
       "announcement": "\"Under $500\", checkbox",
       "silent": false
     },
     {
-      "position": 117,
+      "position": 118,
       "role": "checkbox",
       "name": "$500 to $1,000",
       "announcement": "\"$500 to $1,000\", checkbox",
       "silent": false
     },
     {
-      "position": 118,
+      "position": 119,
       "role": "checkbox",
       "name": "$1,000 to $2,000",
       "announcement": "\"$1,000 to $2,000\", checkbox",
       "silent": false
     },
     {
-      "position": 119,
+      "position": 120,
       "role": "checkbox",
       "name": "$2,000 to $3,000",
       "announcement": "\"$2,000 to $3,000\", checkbox",
       "silent": false
     },
     {
-      "position": 120,
+      "position": 121,
       "role": "checkbox",
       "name": "$3,000 to $4,000",
       "announcement": "\"$3,000 to $4,000\", checkbox",
       "silent": false
     },
     {
-      "position": 121,
+      "position": 122,
       "role": "checkbox",
       "name": "$4,000 & Above",
       "announcement": "\"$4,000 & Above\", checkbox",
       "silent": false
     },
     {
-      "position": 122,
+      "position": 123,
       "role": "checkbox",
       "name": "Standard (71\" - 86\") Sofas for average sized living rooms",
       "announcement": "\"Standard (71\" - 86\") Sofas for average sized living rooms\", checkbox",
       "silent": false
     },
     {
-      "position": 123,
+      "position": 124,
       "role": "checkbox",
       "name": "Small (Under 70\") Good for small spaces",
       "announcement": "\"Small (Under 70\") Good for small spaces\", checkbox",
       "silent": false
     },
     {
-      "position": 124,
+      "position": 125,
       "role": "checkbox",
       "name": "Long (87\" - 100\") Sofas for larger rooms suitable for a family",
       "announcement": "\"Long (87\" - 100\") Sofas for larger rooms suitable for a family\", checkbox",
       "silent": false
     },
     {
-      "position": 125,
+      "position": 126,
       "role": "checkbox",
       "name": "Extra Long (Over 100\") Sofas to fit in a big space",
       "announcement": "\"Extra Long (Over 100\") Sofas to fit in a big space\", checkbox",
       "silent": false
     },
     {
-      "position": 126,
+      "position": 127,
       "role": "spinbutton",
       "name": "Minimum",
       "announcement": "\"Minimum\", spinbutton, value \"0\", required",
       "silent": false
     },
     {
-      "position": 127,
+      "position": 128,
       "role": "spinbutton",
       "name": "Maximum",
       "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
       "silent": false
     },
     {
-      "position": 128,
+      "position": 129,
       "role": "checkbox",
       "name": "Deep (29\"-35\") More space to sit back",
       "announcement": "\"Deep (29\"-35\") More space to sit back\", checkbox",
       "silent": false
     },
     {
-      "position": 129,
+      "position": 130,
       "role": "checkbox",
       "name": "Standard (21\"-28\") Upright seating with some space to sit back",
       "announcement": "\"Standard (21\"-28\") Upright seating with some space to sit back\", checkbox",
       "silent": false
     },
     {
-      "position": 130,
+      "position": 131,
       "role": "checkbox",
       "name": "Extra Deep (over 35\") Extra space for relaxed deep seating",
       "announcement": "\"Extra Deep (over 35\") Extra space for relaxed deep seating\", checkbox",
       "silent": false
     },
     {
-      "position": 131,
+      "position": 132,
       "role": "checkbox",
       "name": "Shallow (Under 21\") Upright seating for smaller spaces",
       "announcement": "\"Shallow (Under 21\") Upright seating for smaller spaces\", checkbox",
       "silent": false
     },
     {
-      "position": 132,
+      "position": 133,
       "role": "spinbutton",
       "name": "Minimum",
       "announcement": "\"Minimum\", spinbutton, value \"0\", required",
-      "silent": false
-    },
-    {
-      "position": 133,
-      "role": "spinbutton",
-      "name": "Maximum",
-      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
       "silent": false
     },
     {
       "position": 134,
       "role": "spinbutton",
+      "name": "Maximum",
+      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
+      "silent": false
+    },
+    {
+      "position": 135,
+      "role": "spinbutton",
       "name": "Minimum",
       "announcement": "\"Minimum\", spinbutton, value \"0\", required",
       "silent": false
     },
     {
-      "position": 135,
+      "position": 136,
       "role": "spinbutton",
       "name": "Maximum",
       "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
       "silent": false
     },
     {
-      "position": 136,
-      "role": "button",
-      "name": "Show More Filters",
-      "announcement": "\"Show More Filters\", button",
+      "position": 137,
+      "role": "checkbox",
+      "name": "Seats 3",
+      "announcement": "\"Seats 3\", checkbox",
       "silent": false
     },
     {
-      "position": 137,
+      "position": 138,
+      "role": "checkbox",
+      "name": "Seats 2",
+      "announcement": "\"Seats 2\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 139,
+      "role": "checkbox",
+      "name": "Seats 4",
+      "announcement": "\"Seats 4\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 140,
+      "role": "checkbox",
+      "name": "Seats 5",
+      "announcement": "\"Seats 5\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 141,
+      "role": "checkbox",
+      "name": "Seats 6",
+      "announcement": "\"Seats 6\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 142,
+      "role": "checkbox",
+      "name": "Seats 1",
+      "announcement": "\"Seats 1\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 143,
+      "role": "checkbox",
+      "name": "Modern",
+      "announcement": "\"Modern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 144,
+      "role": "checkbox",
+      "name": "Retro",
+      "announcement": "\"Retro\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 145,
+      "role": "checkbox",
+      "name": "Traditional",
+      "announcement": "\"Traditional\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 146,
+      "role": "checkbox",
+      "name": "Mid-Century Modern",
+      "announcement": "\"Mid-Century Modern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 147,
+      "role": "checkbox",
+      "name": "Country / Farmhouse",
+      "announcement": "\"Country / Farmhouse\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 148,
+      "role": "checkbox",
+      "name": "Scandinavian",
+      "announcement": "\"Scandinavian\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 149,
+      "role": "checkbox",
+      "name": "Ultra-Modern",
+      "announcement": "\"Ultra-Modern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 150,
+      "role": "checkbox",
+      "name": "Transitional Modern",
+      "announcement": "\"Transitional Modern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 151,
+      "role": "checkbox",
+      "name": "Classic Farmhouse",
+      "announcement": "\"Classic Farmhouse\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 152,
+      "role": "checkbox",
+      "name": "French Country",
+      "announcement": "\"French Country\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 153,
+      "role": "checkbox",
+      "name": "American Traditional",
+      "announcement": "\"American Traditional\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 154,
+      "role": "checkbox",
+      "name": "Transitional Traditional",
+      "announcement": "\"Transitional Traditional\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 155,
+      "role": "checkbox",
+      "name": "Ornate Traditional",
+      "announcement": "\"Ornate Traditional\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 156,
+      "role": "button",
+      "name": "Show More",
+      "announcement": "\"Show More\", button",
+      "silent": false
+    },
+    {
+      "position": 157,
+      "role": "checkbox",
+      "name": "Rated 4 out of 5 stars. & Up",
+      "announcement": "\"Rated 4 out of 5 stars. & Up\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 158,
+      "role": "checkbox",
+      "name": "Rated 5 out of 5 stars.",
+      "announcement": "\"Rated 5 out of 5 stars.\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 159,
+      "role": "checkbox",
+      "name": "Rated 3 out of 5 stars. & Up",
+      "announcement": "\"Rated 3 out of 5 stars. & Up\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 160,
+      "role": "checkbox",
+      "name": "All Reviewed Products",
+      "announcement": "\"All Reviewed Products\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 161,
+      "role": "checkbox",
+      "name": "Sleeper",
+      "announcement": "\"Sleeper\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 162,
+      "role": "checkbox",
+      "name": "Standard",
+      "announcement": "\"Standard\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 163,
+      "role": "checkbox",
+      "name": "Modular",
+      "announcement": "\"Modular\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 164,
+      "role": "checkbox",
+      "name": "Convertible",
+      "announcement": "\"Convertible\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 165,
+      "role": "checkbox",
+      "name": "Reclining",
+      "announcement": "\"Reclining\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 166,
+      "role": "checkbox",
+      "name": "Curved",
+      "announcement": "\"Curved\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 167,
+      "role": "checkbox",
+      "name": "Chesterfield Sofa",
+      "announcement": "\"Chesterfield Sofa\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 168,
+      "role": "checkbox",
+      "name": "Sofa Chaise",
+      "announcement": "\"Sofa Chaise\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 169,
+      "role": "checkbox",
+      "name": "Sofa",
+      "announcement": "\"Sofa\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 170,
+      "role": "checkbox",
+      "name": "Sofa Bed",
+      "announcement": "\"Sofa Bed\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 171,
+      "role": "checkbox",
+      "name": "Loveseat",
+      "announcement": "\"Loveseat\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 172,
+      "role": "checkbox",
+      "name": "Settee",
+      "announcement": "\"Settee\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 173,
+      "role": "checkbox",
+      "name": "Power Recline",
+      "announcement": "\"Power Recline\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 174,
+      "role": "checkbox",
+      "name": "Manual Recline",
+      "announcement": "\"Manual Recline\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 175,
+      "role": "checkbox",
+      "name": "Push Button",
+      "announcement": "\"Push Button\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 176,
+      "role": "checkbox",
+      "name": "Handle / Lever",
+      "announcement": "\"Handle / Lever\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 177,
+      "role": "checkbox",
+      "name": "Push Back",
+      "announcement": "\"Push Back\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 178,
+      "role": "checkbox",
+      "name": "Remote Control",
+      "announcement": "\"Remote Control\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 179,
+      "role": "checkbox",
+      "name": "P4 Independent headrest & leg rest, adjustable lumbar support, heat/massage",
+      "announcement": "\"P4 Independent headrest & leg rest, adjustable lumbar support, heat/massage\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 180,
+      "role": "checkbox",
+      "name": "P3 Independent headrest & leg rest, adjustable lumbar support",
+      "announcement": "\"P3 Independent headrest & leg rest, adjustable lumbar support\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 181,
+      "role": "checkbox",
+      "name": "P2 Independent headrest & leg rest",
+      "announcement": "\"P2 Independent headrest & leg rest\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 182,
+      "role": "checkbox",
+      "name": "P1 Synchronized headrest & leg rest",
+      "announcement": "\"P1 Synchronized headrest & leg rest\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 183,
+      "role": "checkbox",
+      "name": "Independent Foot & Back Movement",
+      "announcement": "\"Independent Foot & Back Movement\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 184,
+      "role": "checkbox",
+      "name": "Medium Balance of softness and support",
+      "announcement": "\"Medium Balance of softness and support\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 185,
+      "role": "checkbox",
+      "name": "Soft Maximum give and 'sink in' feeling",
+      "announcement": "\"Soft Maximum give and 'sink in' feeling\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 186,
+      "role": "checkbox",
+      "name": "Firm Sturdy and supportive with minimal give",
+      "announcement": "\"Firm Sturdy and supportive with minimal give\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 187,
+      "role": "checkbox",
+      "name": "In Stock Only",
+      "announcement": "\"In Stock Only\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 188,
+      "role": "checkbox",
+      "name": "Ottoman Included",
+      "announcement": "\"Ottoman Included\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 189,
+      "role": "checkbox",
+      "name": "Slipcovered",
+      "announcement": "\"Slipcovered\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 190,
+      "role": "checkbox",
+      "name": "Position Lock",
+      "announcement": "\"Position Lock\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 191,
+      "role": "checkbox",
+      "name": "Independent Foot / Back Movement",
+      "announcement": "\"Independent Foot / Back Movement\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 192,
+      "role": "checkbox",
+      "name": "Custom Sofas",
+      "announcement": "\"Custom Sofas\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 193,
+      "role": "checkbox",
+      "name": "Boneless No rigid internal frame, often ships vacuum-compressed",
+      "announcement": "\"Boneless No rigid internal frame, often ships vacuum-compressed\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 194,
+      "role": "checkbox",
+      "name": "Built-in USB Port",
+      "announcement": "\"Built-in USB Port\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 195,
+      "role": "checkbox",
+      "name": "Storage",
+      "announcement": "\"Storage\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 196,
+      "role": "checkbox",
+      "name": "Kid/Pet Friendly",
+      "announcement": "\"Kid/Pet Friendly\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 197,
+      "role": "checkbox",
+      "name": "Stain Resistant",
+      "announcement": "\"Stain Resistant\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 198,
+      "role": "checkbox",
+      "name": "Nailheads",
+      "announcement": "\"Nailheads\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 199,
+      "role": "checkbox",
+      "name": "Single Cushion Seat",
+      "announcement": "\"Single Cushion Seat\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 200,
+      "role": "checkbox",
+      "name": "Down Fill Cushions Soft and plush sink-in seats",
+      "announcement": "\"Down Fill Cushions Soft and plush sink-in seats\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 201,
+      "role": "checkbox",
+      "name": "Tufted Cushions",
+      "announcement": "\"Tufted Cushions\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 202,
+      "role": "checkbox",
+      "name": "Lifetime Warranty",
+      "announcement": "\"Lifetime Warranty\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 203,
+      "role": "textbox",
+      "name": "Search: Brand Search: Brand",
+      "announcement": "\"Search: Brand Search: Brand\", textbox",
+      "silent": false
+    },
+    {
+      "position": 204,
+      "role": "checkbox",
+      "name": "AllModern",
+      "announcement": "\"AllModern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 205,
+      "role": "checkbox",
+      "name": "Mercury Row",
+      "announcement": "\"Mercury Row\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 206,
+      "role": "checkbox",
+      "name": "Wade Logan",
+      "announcement": "\"Wade Logan\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 207,
+      "role": "checkbox",
+      "name": "Steelside™",
+      "announcement": "\"Steelside™\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 208,
+      "role": "checkbox",
+      "name": "Zipcode Design™",
+      "announcement": "\"Zipcode Design™\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 209,
+      "role": "checkbox",
+      "name": "Lark Manor",
+      "announcement": "\"Lark Manor\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 210,
+      "role": "checkbox",
+      "name": "Willa Arlo™ Interiors",
+      "announcement": "\"Willa Arlo™ Interiors\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 211,
+      "role": "checkbox",
+      "name": "Etta Avenue™",
+      "announcement": "\"Etta Avenue™\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 212,
+      "role": "checkbox",
+      "name": "Open Box",
+      "announcement": "\"Open Box\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 213,
+      "role": "checkbox",
+      "name": "Closeout",
+      "announcement": "\"Closeout\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 214,
+      "role": "checkbox",
+      "name": "New Arrivals",
+      "announcement": "\"New Arrivals\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 215,
+      "role": "checkbox",
+      "name": "Fully Assembled No assembly needed",
+      "announcement": "\"Fully Assembled No assembly needed\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 216,
+      "role": "checkbox",
+      "name": "Assembly Required Level of assembly may vary by product",
+      "announcement": "\"Assembly Required Level of assembly may vary by product\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 217,
+      "role": "checkbox",
+      "name": "Contract Grade",
+      "announcement": "\"Contract Grade\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 218,
+      "role": "checkbox",
+      "name": "Solid",
+      "announcement": "\"Solid\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 219,
+      "role": "checkbox",
+      "name": "Pattern",
+      "announcement": "\"Pattern\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 220,
+      "role": "checkbox",
+      "name": "Floral",
+      "announcement": "\"Floral\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 221,
+      "role": "checkbox",
+      "name": "Patchwork",
+      "announcement": "\"Patchwork\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 222,
+      "role": "checkbox",
+      "name": "Heavy Duty 15,000-30,000 double rubs",
+      "announcement": "\"Heavy Duty 15,000-30,000 double rubs\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 223,
+      "role": "checkbox",
+      "name": "Extra Heavy Duty 30,000+ double rubs",
+      "announcement": "\"Extra Heavy Duty 30,000+ double rubs\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 224,
+      "role": "checkbox",
+      "name": "Medium Duty 9,000-15,000 double rubs",
+      "announcement": "\"Medium Duty 9,000-15,000 double rubs\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 225,
+      "role": "checkbox",
+      "name": "Light Duty 3,000-9,000 double rubs",
+      "announcement": "\"Light Duty 3,000-9,000 double rubs\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 226,
+      "role": "checkbox",
+      "name": "Delicate Duty Less than 3,000 double rubs",
+      "announcement": "\"Delicate Duty Less than 3,000 double rubs\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 227,
+      "role": "checkbox",
+      "name": "Nontoxic",
+      "announcement": "\"Nontoxic\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 228,
+      "role": "checkbox",
+      "name": "All Sustainable Products",
+      "announcement": "\"All Sustainable Products\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 229,
+      "role": "checkbox",
+      "name": "GREENGUARD Certified",
+      "announcement": "\"GREENGUARD Certified\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 230,
+      "role": "checkbox",
+      "name": "Sustainable Wood",
+      "announcement": "\"Sustainable Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 231,
+      "role": "checkbox",
+      "name": "Yes",
+      "announcement": "\"Yes\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 232,
+      "role": "checkbox",
+      "name": "Green Velvet",
+      "announcement": "\"Green Velvet\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 233,
+      "role": "checkbox",
+      "name": "Genuine Leather Loveseat",
+      "announcement": "\"Genuine Leather Loveseat\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 234,
+      "role": "checkbox",
+      "name": "Brown Chesterfield",
+      "announcement": "\"Brown Chesterfield\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 235,
+      "role": "checkbox",
+      "name": "White Loveseat",
+      "announcement": "\"White Loveseat\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 236,
+      "role": "checkbox",
+      "name": "White Boucle",
+      "announcement": "\"White Boucle\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 237,
+      "role": "checkbox",
+      "name": "Blue Settee",
+      "announcement": "\"Blue Settee\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 238,
+      "role": "checkbox",
+      "name": "Commercial Warranty",
+      "announcement": "\"Commercial Warranty\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 239,
+      "role": "checkbox",
+      "name": "Samples Available",
+      "announcement": "\"Samples Available\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 240,
+      "role": "checkbox",
+      "name": "Surplus Sale",
+      "announcement": "\"Surplus Sale\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 241,
+      "role": "checkbox",
+      "name": "No",
+      "announcement": "\"No\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 242,
+      "role": "checkbox",
+      "name": "Yes",
+      "announcement": "\"Yes\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 243,
+      "role": "checkbox",
+      "name": "Rolled / Round Arms",
+      "announcement": "\"Rolled / Round Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 244,
+      "role": "checkbox",
+      "name": "Square Arms",
+      "announcement": "\"Square Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 245,
+      "role": "checkbox",
+      "name": "Pillow Top Arms",
+      "announcement": "\"Pillow Top Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 246,
+      "role": "checkbox",
+      "name": "Tuxedo Arms",
+      "announcement": "\"Tuxedo Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 247,
+      "role": "checkbox",
+      "name": "Recessed Arms",
+      "announcement": "\"Recessed Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 248,
+      "role": "checkbox",
+      "name": "Charles of London",
+      "announcement": "\"Charles of London\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 249,
+      "role": "checkbox",
+      "name": "Flared Arms",
+      "announcement": "\"Flared Arms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 250,
+      "role": "checkbox",
+      "name": "Armless",
+      "announcement": "\"Armless\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 251,
+      "role": "checkbox",
+      "name": "Tight Back Single Back Cushion",
+      "announcement": "\"Tight Back Single Back Cushion\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 252,
+      "role": "checkbox",
+      "name": "Tufted Back Fabric gathered with buttons to make a 3D effect",
+      "announcement": "\"Tufted Back Fabric gathered with buttons to make a 3D effect\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 253,
+      "role": "checkbox",
+      "name": "Camel Back Sofa comes up in a hump at the back",
+      "announcement": "\"Camel Back Sofa comes up in a hump at the back\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 254,
       "role": "link",
       "name": "Furniture",
       "announcement": "\"Furniture\", link",
       "silent": false
     },
     {
-      "position": 138,
+      "position": 255,
       "role": "link",
       "name": "Living Room Furniture",
       "announcement": "\"Living Room Furniture\", link",
       "silent": false
     },
     {
-      "position": 139,
+      "position": 256,
       "role": "link",
       "name": "Sofas",
       "announcement": "\"Sofas\", link",
       "silent": false
     },
     {
-      "position": 140,
+      "position": 257,
       "role": "button",
       "name": "Next Slide",
       "announcement": "\"Next Slide\", button",
       "silent": false
     },
     {
-      "position": 141,
+      "position": 258,
       "role": "link",
       "name": "Sponsored Shop Banner Looks You'll Love Chic & Comfy Sofas Shop Now Sponsored",
       "announcement": "\"Sponsored Shop Banner Looks You'll Love Chic & Comfy Sofas Shop Now Sponsored\", link",
       "silent": false
     },
     {
-      "position": 142,
+      "position": 259,
       "role": "link",
-      "name": "Wayfair Verified Carmelinda 62.6'' Corduroy Sofa Save",
-      "announcement": "\"Wayfair Verified Carmelinda 62.6'' Corduroy Sofa Save\", link",
+      "name": "Bentura Oversized Upholstered Light Brown Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save",
+      "announcement": "\"Bentura Oversized Upholstered Light Brown Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save\", link",
       "silent": false
     },
     {
-      "position": 143,
-      "role": "link",
-      "name": "Bundle & Save Wayfair Verified Carmelinda 62.6'' Corduroy Loveseat Save",
-      "announcement": "\"Bundle & Save Wayfair Verified Carmelinda 62.6'' Corduroy Loveseat Save\", link",
+      "position": 260,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
       "silent": false
     },
     {
-      "position": 144,
+      "position": 261,
       "role": "link",
-      "name": "Bentura Oversized Upholstered White Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save",
-      "announcement": "\"Bentura Oversized Upholstered White Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save\", link",
+      "name": "Upholstered L-Shape Beige Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage Save",
+      "announcement": "\"Upholstered L-Shape Beige Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage Save\", link",
       "silent": false
     },
     {
-      "position": 145,
+      "position": 262,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 263,
+      "role": "link",
+      "name": "Wayfair Verified Bentura Modular Corduroy Sleeper Sofa Save",
+      "announcement": "\"Wayfair Verified Bentura Modular Corduroy Sleeper Sofa Save\", link",
+      "silent": false
+    },
+    {
+      "position": 264,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 265,
       "role": "button",
       "name": "Sort By",
       "announcement": "\"Sort By\", button, hasPopup=menu",
       "silent": false
     },
     {
-      "position": 146,
+      "position": 266,
       "role": "link",
-      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
-      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
+      "name": "Oliver Upholstered Sofa",
+      "announcement": "\"Oliver Upholstered Sofa\", link",
       "silent": false
     },
     {
-      "position": 147,
-      "role": "link",
-      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
-      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
-      "silent": false
-    },
-    {
-      "position": 148,
+      "position": 267,
       "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
       "silent": false
     },
     {
-      "position": 149,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 150,
-      "role": "link",
-      "name": "George 76.8\" Chenille Modular Sectional Sofa",
-      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
-      "silent": false
-    },
-    {
-      "position": 151,
-      "role": "link",
-      "name": "George 76.8\" Chenille Modular Sectional Sofa",
-      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
-      "silent": false
-    },
-    {
-      "position": 152,
-      "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
-      "silent": false
-    },
-    {
-      "position": 153,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 154,
-      "role": "link",
-      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
-      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
-      "silent": false
-    },
-    {
-      "position": 155,
-      "role": "link",
-      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
-      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
-      "silent": false
-    },
-    {
-      "position": 156,
-      "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
-      "silent": false
-    },
-    {
-      "position": 157,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 158,
-      "role": "link",
-      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
-      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
-      "silent": false
-    },
-    {
-      "position": 159,
-      "role": "link",
-      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
-      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
-      "silent": false
-    },
-    {
-      "position": 160,
-      "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
-      "silent": false
-    },
-    {
-      "position": 161,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 162,
-      "role": "link",
-      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
-      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
-      "silent": false
-    },
-    {
-      "position": 163,
-      "role": "link",
-      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
-      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
-      "silent": false
-    },
-    {
-      "position": 164,
-      "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
-      "silent": false
-    },
-    {
-      "position": 165,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 166,
-      "role": "link",
-      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
-      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
-      "silent": false
-    },
-    {
-      "position": 167,
-      "role": "link",
-      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
-      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
-      "silent": false
-    },
-    {
-      "position": 168,
-      "role": "button",
-      "name": "Quickview",
-      "announcement": "\"Quickview\", button",
-      "silent": false
-    },
-    {
-      "position": 169,
-      "role": "button",
-      "name": "Add to Cart",
-      "announcement": "\"Add to Cart\", button",
-      "silent": false
-    },
-    {
-      "position": 170,
+      "position": 268,
       "role": "generic",
       "name": "",
       "announcement": "(no accessible name), generic",
       "silent": true
     },
     {
-      "position": 171,
+      "position": 269,
+      "role": "link",
+      "name": "Oliver Upholstered Sofa",
+      "announcement": "\"Oliver Upholstered Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 270,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 271,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 272,
+      "role": "link",
+      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
+      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 273,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 274,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 275,
+      "role": "link",
+      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
+      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 276,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 277,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 278,
+      "role": "link",
+      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
+      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
+      "silent": false
+    },
+    {
+      "position": 279,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 280,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 281,
+      "role": "link",
+      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
+      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
+      "silent": false
+    },
+    {
+      "position": 282,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 283,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 284,
+      "role": "link",
+      "name": "Carmencita 65\" Linen Upholstered Square Arm Loveseat",
+      "announcement": "\"Carmencita 65\" Linen Upholstered Square Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 285,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 286,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 287,
+      "role": "link",
+      "name": "Carmencita 65\" Linen Upholstered Square Arm Loveseat",
+      "announcement": "\"Carmencita 65\" Linen Upholstered Square Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 288,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 289,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 290,
+      "role": "link",
+      "name": "83\" W 3 Seater Upholstered Sofa Faux Leather Rolled Arms Couch Mid Century Modern",
+      "announcement": "\"83\" W 3 Seater Upholstered Sofa Faux Leather Rolled Arms Couch Mid Century Modern\", link",
+      "silent": false
+    },
+    {
+      "position": 291,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 292,
+      "role": "link",
+      "name": "83\" W 3 Seater Upholstered Sofa Faux Leather Rolled Arms Couch Mid Century Modern",
+      "announcement": "\"83\" W 3 Seater Upholstered Sofa Faux Leather Rolled Arms Couch Mid Century Modern\", link",
+      "silent": false
+    },
+    {
+      "position": 293,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 294,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 295,
+      "role": "link",
+      "name": "Tabitha 80.3\" W Velvet Tufted Upholstred Tufted Square Arm Sofa",
+      "announcement": "\"Tabitha 80.3\" W Velvet Tufted Upholstred Tufted Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 296,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 297,
+      "role": "link",
+      "name": "Tabitha 80.3\" W Velvet Tufted Upholstred Tufted Square Arm Sofa",
+      "announcement": "\"Tabitha 80.3\" W Velvet Tufted Upholstred Tufted Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 298,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 299,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 300,
+      "role": "link",
+      "name": "Bridgeview Leather Mid Century Modern Upholstered Square Arm Sofa or Loveseat",
+      "announcement": "\"Bridgeview Leather Mid Century Modern Upholstered Square Arm Sofa or Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 301,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 302,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 303,
+      "role": "link",
+      "name": "Bridgeview Leather Mid Century Modern Upholstered Square Arm Sofa or Loveseat",
+      "announcement": "\"Bridgeview Leather Mid Century Modern Upholstered Square Arm Sofa or Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 304,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 305,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 306,
+      "role": "link",
+      "name": "Traditional Upholstered Standard Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Traditional Upholstered Standard Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 307,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 308,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 309,
+      "role": "link",
+      "name": "Traditional Upholstered Standard Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Traditional Upholstered Standard Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 310,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 311,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 312,
+      "role": "link",
+      "name": "Cattaleya 78\" Mid Century Modern Linen Upholstered Square Arms Sofa",
+      "announcement": "\"Cattaleya 78\" Mid Century Modern Linen Upholstered Square Arms Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 313,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 314,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 315,
+      "role": "link",
+      "name": "Cattaleya 78\" Mid Century Modern Linen Upholstered Square Arms Sofa",
+      "announcement": "\"Cattaleya 78\" Mid Century Modern Linen Upholstered Square Arms Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 316,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 317,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 318,
+      "role": "link",
+      "name": "83\" Convertible Sectional Sleeper Sofa with Pull Out Couch Bed, 4-in-1 Corduroy Cloud Couch with Storage Chaise and USB Charging, Green",
+      "announcement": "\"83\" Convertible Sectional Sleeper Sofa with Pull Out Couch Bed, 4-in-1 Corduroy Cloud Couch with Storage Chaise and USB Charging, Green\", link",
+      "silent": false
+    },
+    {
+      "position": 319,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 320,
+      "role": "link",
+      "name": "83\" Convertible Sectional Sleeper Sofa with Pull Out Couch Bed, 4-in-1 Corduroy Cloud Couch with Storage Chaise and USB Charging, Green",
+      "announcement": "\"83\" Convertible Sectional Sleeper Sofa with Pull Out Couch Bed, 4-in-1 Corduroy Cloud Couch with Storage Chaise and USB Charging, Green\", link",
+      "silent": false
+    },
+    {
+      "position": 321,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 322,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 323,
+      "role": "link",
+      "name": "93'' W Faux Leather 3-Seater Sofa, Deep Seat Couch with Spring Cushion, Removable Cover, Sturdy Frame, Easy Assembly for Office, Living Room, Bedroom, and Small Space, Brown",
+      "announcement": "\"93'' W Faux Leather 3-Seater Sofa, Deep Seat Couch with Spring Cushion, Removable Cover, Sturdy Frame, Easy Assembly for Office, Living Room, Bedroom, and Small Space, Brown\", link",
+      "silent": false
+    },
+    {
+      "position": 324,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 325,
+      "role": "link",
+      "name": "93'' W Faux Leather 3-Seater Sofa, Deep Seat Couch with Spring Cushion, Removable Cover, Sturdy Frame, Easy Assembly for Office, Living Room, Bedroom, and Small Space, Brown",
+      "announcement": "\"93'' W Faux Leather 3-Seater Sofa, Deep Seat Couch with Spring Cushion, Removable Cover, Sturdy Frame, Easy Assembly for Office, Living Room, Bedroom, and Small Space, Brown\", link",
+      "silent": false
+    },
+    {
+      "position": 326,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 327,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 328,
+      "role": "link",
+      "name": "Barton 80.31'' Faux Leather Square Arm Sofa",
+      "announcement": "\"Barton 80.31'' Faux Leather Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 329,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 330,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 331,
+      "role": "link",
+      "name": "Barton 80.31'' Faux Leather Square Arm Sofa",
+      "announcement": "\"Barton 80.31'' Faux Leather Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 332,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 333,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 334,
+      "role": "link",
+      "name": "Lagoa 84'' Square Arm Upholstered Standard Sofa",
+      "announcement": "\"Lagoa 84'' Square Arm Upholstered Standard Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 335,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 336,
+      "role": "link",
+      "name": "Lagoa 84'' Square Arm Upholstered Standard Sofa",
+      "announcement": "\"Lagoa 84'' Square Arm Upholstered Standard Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 337,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 338,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 339,
+      "role": "link",
+      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
+      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
+      "silent": false
+    },
+    {
+      "position": 340,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 341,
+      "role": "link",
+      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
+      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
+      "silent": false
+    },
+    {
+      "position": 342,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 343,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 344,
+      "role": "link",
+      "name": "83” Modern Boucle Sofa, Minimalist Style Comfy Loveseat With 2 Pillows, Luxury 2 Seater Couch With Curved Armrest& Wooden Leg, Contemporary Home Sofa For Living Room Bedroom",
+      "announcement": "\"83” Modern Boucle Sofa, Minimalist Style Comfy Loveseat With 2 Pillows, Luxury 2 Seater Couch With Curved Armrest& Wooden Leg, Contemporary Home Sofa For Living Room Bedroom\", link",
+      "silent": false
+    },
+    {
+      "position": 345,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 346,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 347,
+      "role": "link",
+      "name": "83” Modern Boucle Sofa, Minimalist Style Comfy Loveseat With 2 Pillows, Luxury 2 Seater Couch With Curved Armrest& Wooden Leg, Contemporary Home Sofa For Living Room Bedroom",
+      "announcement": "\"83” Modern Boucle Sofa, Minimalist Style Comfy Loveseat With 2 Pillows, Luxury 2 Seater Couch With Curved Armrest& Wooden Leg, Contemporary Home Sofa For Living Room Bedroom\", link",
+      "silent": false
+    },
+    {
+      "position": 348,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 349,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 350,
+      "role": "link",
+      "name": "64\" Settee Futon with 2-Position Recline & Side Cup Holders",
+      "announcement": "\"64\" Settee Futon with 2-Position Recline & Side Cup Holders\", link",
+      "silent": false
+    },
+    {
+      "position": 351,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 352,
+      "role": "link",
+      "name": "64\" Settee Futon with 2-Position Recline & Side Cup Holders",
+      "announcement": "\"64\" Settee Futon with 2-Position Recline & Side Cup Holders\", link",
+      "silent": false
+    },
+    {
+      "position": 353,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 354,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 355,
+      "role": "link",
+      "name": "67.7\" Mid-Century Modern Tufted Loveseat Sofa With Solid Wood Legs, Polyester Upholstery, 2-Seat Couch For Small Apartments, Living Room, Office",
+      "announcement": "\"67.7\" Mid-Century Modern Tufted Loveseat Sofa With Solid Wood Legs, Polyester Upholstery, 2-Seat Couch For Small Apartments, Living Room, Office\", link",
+      "silent": false
+    },
+    {
+      "position": 356,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 357,
+      "role": "link",
+      "name": "67.7\" Mid-Century Modern Tufted Loveseat Sofa With Solid Wood Legs, Polyester Upholstery, 2-Seat Couch For Small Apartments, Living Room, Office",
+      "announcement": "\"67.7\" Mid-Century Modern Tufted Loveseat Sofa With Solid Wood Legs, Polyester Upholstery, 2-Seat Couch For Small Apartments, Living Room, Office\", link",
+      "silent": false
+    },
+    {
+      "position": 358,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 359,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 360,
+      "role": "link",
+      "name": "Jadier 66\" Upholstered Loveseat Square Sofa",
+      "announcement": "\"Jadier 66\" Upholstered Loveseat Square Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 361,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 362,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 363,
+      "role": "link",
+      "name": "Jadier 66\" Upholstered Loveseat Square Sofa",
+      "announcement": "\"Jadier 66\" Upholstered Loveseat Square Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 364,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 365,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 366,
+      "role": "link",
+      "name": "Upholstered L-Shape Green Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage",
+      "announcement": "\"Upholstered L-Shape Green Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage\", link",
+      "silent": false
+    },
+    {
+      "position": 367,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 368,
+      "role": "link",
+      "name": "Upholstered L-Shape Green Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage",
+      "announcement": "\"Upholstered L-Shape Green Corduroy Space-Saving Sleeper Pull-Out Sofa With Hidden Storage\", link",
+      "silent": false
+    },
+    {
+      "position": 369,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 370,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 371,
+      "role": "link",
+      "name": "Kaveri Convertible Sofa Bed - Foldable Floor Couch - Modular Sectional for Living Room, Bedroom, Studio - Compression Sofa in Box",
+      "announcement": "\"Kaveri Convertible Sofa Bed - Foldable Floor Couch - Modular Sectional for Living Room, Bedroom, Studio - Compression Sofa in Box\", link",
+      "silent": false
+    },
+    {
+      "position": 372,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 373,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 374,
+      "role": "link",
+      "name": "Kaveri Convertible Sofa Bed - Foldable Floor Couch - Modular Sectional for Living Room, Bedroom, Studio - Compression Sofa in Box",
+      "announcement": "\"Kaveri Convertible Sofa Bed - Foldable Floor Couch - Modular Sectional for Living Room, Bedroom, Studio - Compression Sofa in Box\", link",
+      "silent": false
+    },
+    {
+      "position": 375,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 376,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 377,
+      "role": "link",
+      "name": "Zada 57.28\" Wide Modern Corduroy Upholstered Sofa With Solid Wood Legs",
+      "announcement": "\"Zada 57.28\" Wide Modern Corduroy Upholstered Sofa With Solid Wood Legs\", link",
+      "silent": false
+    },
+    {
+      "position": 378,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 379,
+      "role": "link",
+      "name": "Zada 57.28\" Wide Modern Corduroy Upholstered Sofa With Solid Wood Legs",
+      "announcement": "\"Zada 57.28\" Wide Modern Corduroy Upholstered Sofa With Solid Wood Legs\", link",
+      "silent": false
+    },
+    {
+      "position": 380,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 381,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 382,
+      "role": "link",
+      "name": "Amarius 80\" Wide Rolled Arm Sofa",
+      "announcement": "\"Amarius 80\" Wide Rolled Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 383,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 384,
+      "role": "link",
+      "name": "Amarius 80\" Wide Rolled Arm Sofa",
+      "announcement": "\"Amarius 80\" Wide Rolled Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 385,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 386,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 387,
+      "role": "link",
+      "name": "Croley Upholstered 80.31'' Sofa",
+      "announcement": "\"Croley Upholstered 80.31'' Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 388,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 389,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 390,
+      "role": "link",
+      "name": "Croley Upholstered 80.31'' Sofa",
+      "announcement": "\"Croley Upholstered 80.31'' Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 391,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 392,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 393,
+      "role": "link",
+      "name": "Firoz 81”Mid Century Modern 3-Seater Chesterfield Faux Leather Sofa with Rolled Arm",
+      "announcement": "\"Firoz 81”Mid Century Modern 3-Seater Chesterfield Faux Leather Sofa with Rolled Arm\", link",
+      "silent": false
+    },
+    {
+      "position": 394,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 395,
+      "role": "link",
+      "name": "Firoz 81”Mid Century Modern 3-Seater Chesterfield Faux Leather Sofa with Rolled Arm",
+      "announcement": "\"Firoz 81”Mid Century Modern 3-Seater Chesterfield Faux Leather Sofa with Rolled Arm\", link",
+      "silent": false
+    },
+    {
+      "position": 396,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 397,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 398,
+      "role": "link",
+      "name": "73.2\" Queen Convertible Sleeper Sofa Bed, 3-in-1 Pull Out Loveseat, Multi-functional Velvet Sofa Bed For Living Room，blue",
+      "announcement": "\"73.2\" Queen Convertible Sleeper Sofa Bed, 3-in-1 Pull Out Loveseat, Multi-functional Velvet Sofa Bed For Living Room，blue\", link",
+      "silent": false
+    },
+    {
+      "position": 399,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 400,
+      "role": "link",
+      "name": "73.2\" Queen Convertible Sleeper Sofa Bed, 3-in-1 Pull Out Loveseat, Multi-functional Velvet Sofa Bed For Living Room，blue",
+      "announcement": "\"73.2\" Queen Convertible Sleeper Sofa Bed, 3-in-1 Pull Out Loveseat, Multi-functional Velvet Sofa Bed For Living Room，blue\", link",
+      "silent": false
+    },
+    {
+      "position": 401,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 402,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 403,
+      "role": "link",
+      "name": "87” Chenille Fabric 2-seater Sofa, Comfy Deep Seat Sofa, Modern Large Loveseat Couch With Wide Armrest& Pillows, Wood Frame Home Sofa Couch For Living Room Apartment",
+      "announcement": "\"87” Chenille Fabric 2-seater Sofa, Comfy Deep Seat Sofa, Modern Large Loveseat Couch With Wide Armrest& Pillows, Wood Frame Home Sofa Couch For Living Room Apartment\", link",
+      "silent": false
+    },
+    {
+      "position": 404,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 405,
+      "role": "link",
+      "name": "87” Chenille Fabric 2-seater Sofa, Comfy Deep Seat Sofa, Modern Large Loveseat Couch With Wide Armrest& Pillows, Wood Frame Home Sofa Couch For Living Room Apartment",
+      "announcement": "\"87” Chenille Fabric 2-seater Sofa, Comfy Deep Seat Sofa, Modern Large Loveseat Couch With Wide Armrest& Pillows, Wood Frame Home Sofa Couch For Living Room Apartment\", link",
+      "silent": false
+    },
+    {
+      "position": 406,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 407,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 408,
+      "role": "link",
+      "name": "Reuben 58'' Upholstered Pillow Top Arm Loveseat",
+      "announcement": "\"Reuben 58'' Upholstered Pillow Top Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 409,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 410,
+      "role": "link",
+      "name": "Reuben 58'' Upholstered Pillow Top Arm Loveseat",
+      "announcement": "\"Reuben 58'' Upholstered Pillow Top Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 411,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 412,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 413,
+      "role": "link",
+      "name": "84\" Modern Upholstered Loveseat, Linen Fabric 2-Seater Sofa for Living Room and Small Spaces",
+      "announcement": "\"84\" Modern Upholstered Loveseat, Linen Fabric 2-Seater Sofa for Living Room and Small Spaces\", link",
+      "silent": false
+    },
+    {
+      "position": 414,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 415,
+      "role": "link",
+      "name": "84\" Modern Upholstered Loveseat, Linen Fabric 2-Seater Sofa for Living Room and Small Spaces",
+      "announcement": "\"84\" Modern Upholstered Loveseat, Linen Fabric 2-Seater Sofa for Living Room and Small Spaces\", link",
+      "silent": false
+    },
+    {
+      "position": 416,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 417,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 418,
+      "role": "link",
+      "name": "Luelle 82.7\" W Chenille Rolled Arm Sofa Faux Leather Couch",
+      "announcement": "\"Luelle 82.7\" W Chenille Rolled Arm Sofa Faux Leather Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 419,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 420,
+      "role": "link",
+      "name": "Luelle 82.7\" W Chenille Rolled Arm Sofa Faux Leather Couch",
+      "announcement": "\"Luelle 82.7\" W Chenille Rolled Arm Sofa Faux Leather Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 421,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 422,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 423,
+      "role": "link",
+      "name": "Boneless 104\" Modular Sectional Sofa with Deep Seat, Comfortable Upholstery L Shaped Cloud Couch for Living Room, 3-Seater Boneless Sofa with Movable Ottoman, Removable Cover, No Assembly Required",
+      "announcement": "\"Boneless 104\" Modular Sectional Sofa with Deep Seat, Comfortable Upholstery L Shaped Cloud Couch for Living Room, 3-Seater Boneless Sofa with Movable Ottoman, Removable Cover, No Assembly Required\", link",
+      "silent": false
+    },
+    {
+      "position": 424,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 425,
+      "role": "link",
+      "name": "Boneless 104\" Modular Sectional Sofa with Deep Seat, Comfortable Upholstery L Shaped Cloud Couch for Living Room, 3-Seater Boneless Sofa with Movable Ottoman, Removable Cover, No Assembly Required",
+      "announcement": "\"Boneless 104\" Modular Sectional Sofa with Deep Seat, Comfortable Upholstery L Shaped Cloud Couch for Living Room, 3-Seater Boneless Sofa with Movable Ottoman, Removable Cover, No Assembly Required\", link",
+      "silent": false
+    },
+    {
+      "position": 426,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 427,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 428,
+      "role": "link",
+      "name": "63\" 2-Seater Upholstered Square Arm Sofa",
+      "announcement": "\"63\" 2-Seater Upholstered Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 429,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 430,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 431,
+      "role": "link",
+      "name": "63\" 2-Seater Upholstered Square Arm Sofa",
+      "announcement": "\"63\" 2-Seater Upholstered Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 432,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 433,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 434,
+      "role": "link",
+      "name": "Cloud Sectional Couch，L Shaped Modular Sofa, 2 Seater Boneless Couch with Deep Seat Movable Ottoman， No Assembly, Brown",
+      "announcement": "\"Cloud Sectional Couch，L Shaped Modular Sofa, 2 Seater Boneless Couch with Deep Seat Movable Ottoman， No Assembly, Brown\", link",
+      "silent": false
+    },
+    {
+      "position": 435,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 436,
+      "role": "link",
+      "name": "Cloud Sectional Couch，L Shaped Modular Sofa, 2 Seater Boneless Couch with Deep Seat Movable Ottoman， No Assembly, Brown",
+      "announcement": "\"Cloud Sectional Couch，L Shaped Modular Sofa, 2 Seater Boneless Couch with Deep Seat Movable Ottoman， No Assembly, Brown\", link",
+      "silent": false
+    },
+    {
+      "position": 437,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 438,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 439,
+      "role": "link",
+      "name": "Dereon Square Arm Polyester Sofa",
+      "announcement": "\"Dereon Square Arm Polyester Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 440,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 441,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 442,
+      "role": "link",
+      "name": "Dereon Square Arm Polyester Sofa",
+      "announcement": "\"Dereon Square Arm Polyester Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 443,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 444,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 445,
+      "role": "link",
+      "name": "George 76.8\" Chenille Modular Sectional Sofa",
+      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 446,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 447,
+      "role": "link",
+      "name": "George 76.8\" Chenille Modular Sectional Sofa",
+      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 448,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 449,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 450,
+      "role": "link",
+      "name": "Estes Inayat 84'' Upholstered Sofa",
+      "announcement": "\"Estes Inayat 84'' Upholstered Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 451,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 452,
+      "role": "link",
+      "name": "Estes Inayat 84'' Upholstered Sofa",
+      "announcement": "\"Estes Inayat 84'' Upholstered Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 453,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 454,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 455,
+      "role": "link",
+      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
+      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 456,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 457,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 458,
+      "role": "link",
+      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
+      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 459,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 460,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 461,
+      "role": "link",
+      "name": "Lagoa 60\" W Modern Upholstered Square Arm Loveseat",
+      "announcement": "\"Lagoa 60\" W Modern Upholstered Square Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 462,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 463,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 464,
+      "role": "link",
+      "name": "Lagoa 60\" W Modern Upholstered Square Arm Loveseat",
+      "announcement": "\"Lagoa 60\" W Modern Upholstered Square Arm Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 465,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 466,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 467,
+      "role": "link",
+      "name": "Velvet Boneless Modular Sectional Couch for Living Room No Assembly Required",
+      "announcement": "\"Velvet Boneless Modular Sectional Couch for Living Room No Assembly Required\", link",
+      "silent": false
+    },
+    {
+      "position": 468,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 469,
+      "role": "link",
+      "name": "Velvet Boneless Modular Sectional Couch for Living Room No Assembly Required",
+      "announcement": "\"Velvet Boneless Modular Sectional Couch for Living Room No Assembly Required\", link",
+      "silent": false
+    },
+    {
+      "position": 470,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 471,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 472,
+      "role": "link",
+      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 473,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 474,
+      "role": "link",
+      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 475,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 476,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 477,
+      "role": "link",
+      "name": "91\" Lawson 3-Seater Sofa with Deep Seats",
+      "announcement": "\"91\" Lawson 3-Seater Sofa with Deep Seats\", link",
+      "silent": false
+    },
+    {
+      "position": 478,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 479,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 480,
+      "role": "link",
+      "name": "91\" Lawson 3-Seater Sofa with Deep Seats",
+      "announcement": "\"91\" Lawson 3-Seater Sofa with Deep Seats\", link",
+      "silent": false
+    },
+    {
+      "position": 481,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 482,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 483,
+      "role": "link",
+      "name": "Arnitra 88\" W Adjustable Back Height Upholstered Sofa",
+      "announcement": "\"Arnitra 88\" W Adjustable Back Height Upholstered Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 484,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 485,
+      "role": "link",
+      "name": "Arnitra 88\" W Adjustable Back Height Upholstered Sofa",
+      "announcement": "\"Arnitra 88\" W Adjustable Back Height Upholstered Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 486,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 487,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 488,
+      "role": "link",
+      "name": "91.73'' Faux Leather Square Arm Sofa Brown Chenille",
+      "announcement": "\"91.73'' Faux Leather Square Arm Sofa Brown Chenille\", link",
+      "silent": false
+    },
+    {
+      "position": 489,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 490,
+      "role": "link",
+      "name": "91.73'' Faux Leather Square Arm Sofa Brown Chenille",
+      "announcement": "\"91.73'' Faux Leather Square Arm Sofa Brown Chenille\", link",
+      "silent": false
+    },
+    {
+      "position": 491,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 492,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 493,
+      "role": "link",
+      "name": "123'' Cloud Modular Couch Sofa, Oversized 3 Seat Comfy Sofa For Living Room, Sectional Couches With Ottoman, Detachable Seat Cushion & Backrest Cover, Chenille Fabric Beige",
+      "announcement": "\"123'' Cloud Modular Couch Sofa, Oversized 3 Seat Comfy Sofa For Living Room, Sectional Couches With Ottoman, Detachable Seat Cushion & Backrest Cover, Chenille Fabric Beige\", link",
+      "silent": false
+    },
+    {
+      "position": 494,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 495,
+      "role": "link",
+      "name": "123'' Cloud Modular Couch Sofa, Oversized 3 Seat Comfy Sofa For Living Room, Sectional Couches With Ottoman, Detachable Seat Cushion & Backrest Cover, Chenille Fabric Beige",
+      "announcement": "\"123'' Cloud Modular Couch Sofa, Oversized 3 Seat Comfy Sofa For Living Room, Sectional Couches With Ottoman, Detachable Seat Cushion & Backrest Cover, Chenille Fabric Beige\", link",
+      "silent": false
+    },
+    {
+      "position": 496,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 497,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 498,
+      "role": "link",
+      "name": "Reeves 84'' Vegan Leather Sofa",
+      "announcement": "\"Reeves 84'' Vegan Leather Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 499,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 500,
+      "role": "link",
+      "name": "Reeves 84'' Vegan Leather Sofa",
+      "announcement": "\"Reeves 84'' Vegan Leather Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 501,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 502,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 503,
+      "role": "link",
+      "name": "Hana 78\" Square Arm Sofa",
+      "announcement": "\"Hana 78\" Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 504,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 505,
+      "role": "link",
+      "name": "Hana 78\" Square Arm Sofa",
+      "announcement": "\"Hana 78\" Square Arm Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 506,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 507,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 508,
+      "role": "link",
+      "name": "Castera 66'' Upholstered Loveseat",
+      "announcement": "\"Castera 66'' Upholstered Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 509,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 510,
+      "role": "link",
+      "name": "Castera 66'' Upholstered Loveseat",
+      "announcement": "\"Castera 66'' Upholstered Loveseat\", link",
+      "silent": false
+    },
+    {
+      "position": 511,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 512,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 513,
+      "role": "link",
+      "name": "Seliana 80.71\" W Chenille Upholstered Square Arm Sofa with Accent Pillows",
+      "announcement": "\"Seliana 80.71\" W Chenille Upholstered Square Arm Sofa with Accent Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 514,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 515,
+      "role": "link",
+      "name": "Seliana 80.71\" W Chenille Upholstered Square Arm Sofa with Accent Pillows",
+      "announcement": "\"Seliana 80.71\" W Chenille Upholstered Square Arm Sofa with Accent Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 516,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 517,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 518,
+      "role": "link",
+      "name": "84.6'' Wide Vegan Leather Manual Reclining Sofa, 3-Seater Recliner Couch With Pillow Top Arm",
+      "announcement": "\"84.6'' Wide Vegan Leather Manual Reclining Sofa, 3-Seater Recliner Couch With Pillow Top Arm\", link",
+      "silent": false
+    },
+    {
+      "position": 519,
+      "role": "button",
+      "name": "Save item to board",
+      "announcement": "\"Save item to board\", button",
+      "silent": false
+    },
+    {
+      "position": 520,
+      "role": "link",
+      "name": "84.6'' Wide Vegan Leather Manual Reclining Sofa, 3-Seater Recliner Couch With Pillow Top Arm",
+      "announcement": "\"84.6'' Wide Vegan Leather Manual Reclining Sofa, 3-Seater Recliner Couch With Pillow Top Arm\", link",
+      "silent": false
+    },
+    {
+      "position": 521,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 522,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 523,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 524,
       "role": "link",
       "name": "Page 2",
       "announcement": "\"Page 2\", link",
       "silent": false
     },
     {
-      "position": 172,
+      "position": 525,
       "role": "link",
       "name": "Page 3",
       "announcement": "\"Page 3\", link",
       "silent": false
     },
     {
-      "position": 173,
+      "position": 526,
       "role": "link",
       "name": "Page 4",
       "announcement": "\"Page 4\", link",
       "silent": false
     },
     {
-      "position": 174,
+      "position": 527,
       "role": "link",
       "name": "Next",
       "announcement": "\"Next\", link",
       "silent": false
+    },
+    {
+      "position": 528,
+      "role": "link",
+      "name": "Scan to download Wayfair app for app-exclusive deals and perks, download the app.",
+      "announcement": "\"Scan to download Wayfair app for app-exclusive deals and perks, download the app.\", link",
+      "silent": false
+    },
+    {
+      "position": 529,
+      "role": "link",
+      "name": "About Wayfair",
+      "announcement": "\"About Wayfair\", link",
+      "silent": false
+    },
+    {
+      "position": 530,
+      "role": "link",
+      "name": "Wayfair Rewards",
+      "announcement": "\"Wayfair Rewards\", link",
+      "silent": false
+    },
+    {
+      "position": 531,
+      "role": "link",
+      "name": "Wayfair Professional",
+      "announcement": "\"Wayfair Professional\", link",
+      "silent": false
+    },
+    {
+      "position": 532,
+      "role": "link",
+      "name": "Design Services",
+      "announcement": "\"Design Services\", link",
+      "silent": false
+    },
+    {
+      "position": 533,
+      "role": "link",
+      "name": "Gift Cards",
+      "announcement": "\"Gift Cards\", link",
+      "silent": false
+    },
+    {
+      "position": 534,
+      "role": "link",
+      "name": "Wayfair Cash Registry",
+      "announcement": "\"Wayfair Cash Registry\", link",
+      "silent": false
+    },
+    {
+      "position": 535,
+      "role": "link",
+      "name": "Wayfair Credit Card",
+      "announcement": "\"Wayfair Credit Card\", link",
+      "silent": false
+    },
+    {
+      "position": 536,
+      "role": "link",
+      "name": "Pay Over Time",
+      "announcement": "\"Pay Over Time\", link",
+      "silent": false
+    },
+    {
+      "position": 537,
+      "role": "link",
+      "name": "Product Collections",
+      "announcement": "\"Product Collections\", link",
+      "silent": false
+    },
+    {
+      "position": 538,
+      "role": "link",
+      "name": "Careers",
+      "announcement": "\"Careers\", link",
+      "silent": false
+    },
+    {
+      "position": 539,
+      "role": "link",
+      "name": "Sell on Wayfair",
+      "announcement": "\"Sell on Wayfair\", link",
+      "silent": false
+    },
+    {
+      "position": 540,
+      "role": "link",
+      "name": "Creators",
+      "announcement": "\"Creators\", link",
+      "silent": false
+    },
+    {
+      "position": 541,
+      "role": "link",
+      "name": "Investor Relations",
+      "announcement": "\"Investor Relations\", link",
+      "silent": false
+    },
+    {
+      "position": 542,
+      "role": "link",
+      "name": "Advertise With Us",
+      "announcement": "\"Advertise With Us\", link",
+      "silent": false
+    },
+    {
+      "position": 543,
+      "role": "link",
+      "name": "Locations",
+      "announcement": "\"Locations\", link",
+      "silent": false
+    },
+    {
+      "position": 544,
+      "role": "link",
+      "name": "My Orders",
+      "announcement": "\"My Orders\", link",
+      "silent": false
+    },
+    {
+      "position": 545,
+      "role": "link",
+      "name": "My Account",
+      "announcement": "\"My Account\", link",
+      "silent": false
+    },
+    {
+      "position": 546,
+      "role": "link",
+      "name": "Track My Order",
+      "announcement": "\"Track My Order\", link",
+      "silent": false
+    },
+    {
+      "position": 547,
+      "role": "link",
+      "name": "Wayfair Accessibility Statement",
+      "announcement": "\"Wayfair Accessibility Statement\", link",
+      "silent": false
+    },
+    {
+      "position": 548,
+      "role": "link",
+      "name": "Return Policy",
+      "announcement": "\"Return Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 549,
+      "role": "link",
+      "name": "Help Center",
+      "announcement": "\"Help Center\", link",
+      "silent": false
+    },
+    {
+      "position": 550,
+      "role": "link",
+      "name": "Ideas & Advice",
+      "announcement": "\"Ideas & Advice\", link",
+      "silent": false
+    },
+    {
+      "position": 551,
+      "role": "link",
+      "name": "Product Recalls",
+      "announcement": "\"Product Recalls\", link",
+      "silent": false
+    },
+    {
+      "position": 552,
+      "role": "button",
+      "name": "Quick Help",
+      "announcement": "\"Quick Help\", button",
+      "silent": false
+    },
+    {
+      "position": 553,
+      "role": "button",
+      "name": "Call Us Call Us",
+      "announcement": "\"Call Us Call Us\", button",
+      "silent": false
+    },
+    {
+      "position": 554,
+      "role": "link",
+      "name": "Joss and Main Logo",
+      "announcement": "\"Joss and Main Logo\", link",
+      "silent": false
+    },
+    {
+      "position": 555,
+      "role": "link",
+      "name": "All Modern Logo",
+      "announcement": "\"All Modern Logo\", link",
+      "silent": false
+    },
+    {
+      "position": 556,
+      "role": "link",
+      "name": "Birch Lane Logo",
+      "announcement": "\"Birch Lane Logo\", link",
+      "silent": false
+    },
+    {
+      "position": 557,
+      "role": "link",
+      "name": "Facebook Icon",
+      "announcement": "\"Facebook Icon\", link",
+      "silent": false
+    },
+    {
+      "position": 558,
+      "role": "link",
+      "name": "Pinterest Icon",
+      "announcement": "\"Pinterest Icon\", link",
+      "silent": false
+    },
+    {
+      "position": 559,
+      "role": "link",
+      "name": "Instagram Icon",
+      "announcement": "\"Instagram Icon\", link",
+      "silent": false
+    },
+    {
+      "position": 560,
+      "role": "link",
+      "name": "TikTok",
+      "announcement": "\"TikTok\", link",
+      "silent": false
+    },
+    {
+      "position": 561,
+      "role": "link",
+      "name": "YouTube",
+      "announcement": "\"YouTube\", link",
+      "silent": false
+    },
+    {
+      "position": 562,
+      "role": "link",
+      "name": "Terms of Use",
+      "announcement": "\"Terms of Use\", link",
+      "silent": false
+    },
+    {
+      "position": 563,
+      "role": "link",
+      "name": "Privacy Policy",
+      "announcement": "\"Privacy Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 564,
+      "role": "link",
+      "name": "Your Privacy Rights & Choices",
+      "announcement": "\"Your Privacy Rights & Choices\", link",
+      "silent": false
     }
   ],
   "counts": {
-    "blocks": 5,
-    "impairs": 3,
+    "blocks": 22,
+    "impairs": 55,
     "note": 0
   },
   "limits": [

@@ -73,85 +73,165 @@ asking Chrome for the listeners actually attached, rather than inferred from sty
 wider sample. That matters as much as the findings: a tool that reports problems
 everywhere is not measuring anything.
 
-## A second sweep, 2026-09-21
+## A second sweep, 2026-09-21, and the retraction that came with it
 
-Ten more sites, chosen to widen the sample rather than to flatter it, including three
-of the largest Indian retailers. Same free inspection: one page load, no model, no key.
+Ten more sites. The first run of this sweep produced numbers that were wrong, and the
+correction is more useful than the results, so it comes first.
 
-| Site | Page | Result | Blocking | Impairing | Tab stops | Time |
-| --- | --- | --- | --- | --- | --- | --- |
-| Nike | men's shoes listing | worked | 99 | 72 | 313 | 88s |
-| Flipkart | men's footwear listing | worked | 71 | 149 | 286 | 125s |
-| Wayfair | living room furniture | worked | 5 | 3 | 177 | 25s |
-| Nykaa | makeup category | worked | 2 | 2 | 29 | 11s |
-| Apple | buy MacBook Air | worked | **0** | 1 | 125 | 9s |
-| Airbnb | Lisbon search results | worked | **0** | **0** | 118 | 12s |
-| Decathlon | shoes | not the real page, a 404 | | | 54 | 14s |
-| Myntra | men's t-shirts | not the real page, "Site Maintenance" | | | 1 | 5s |
-| Sephora | makeup | not the real page, "Access Denied" | | | 1 | 5s |
-| Uniqlo | men's tops | not the real page, an interstitial | | | 1 | 5s |
+### What the first run said, and what was actually true
 
-### The two clean results are the most important rows
+| Site | First run | After the fix | |
+| --- | --- | --- | --- |
+| Nike, men's shoes | 99 blocking, 313 tab stops | **0 blocking**, 398 tab stops | retracted |
+| Wayfair, living room | 5 blocking, 177 tab stops | 22 blocking, 566 tab stops | was under-reported |
+| JioMart, groceries | 0 blocking, 48 tab stops | 9 blocking, 49 tab stops | was under-reported |
+| Airbnb, Lisbon search | 0 blocking, 118 tab stops | 1 blocking, 181 tab stops | |
+| Income Tax Department | 5 blocking, 90 tab stops | 20 blocking, 180 tab stops | different findings entirely |
 
-**Apple returned zero blocking findings across 125 tab stops. Airbnb returned zero of
-either across 118.** Neither is a scan that failed: both pages were fully served and
-fully read.
+Every number in the first column was taken from a page that had not finished loading.
 
-That is the row that makes the rest of the table mean something. A tool that finds
-problems everywhere is a random number generator with a WCAG citation attached, and
-these two are the control on that. Apple's single impairing finding is one decorative
-SVG with no text alternative.
-
-### Flipkart, verified by hand
-
-India's largest retailer, on the men's footwear listing: **71 blocking and 149
-impairing findings.** The blocking ones are mostly product links with no accessible
-name.
-
-Checked independently in a separate browser before writing it down, because three
-false-positive classes had to be removed before any of these numbers were worth
-anything:
+**The inspection slept for three seconds and then read the accessibility tree.** That is
+enough for a small page and nowhere near enough for a heavy one. Measured on the Income
+Tax Department portal:
 
 ```
-267 links on the page
- 44 visible links with no accessible name, no aria-label, no title, no image alt
-    <a class="CIaYa1" href="/bruton-lite-casual-shoe...">
-    <a class="CIaYa1" href="/boldfit-trial-king-men-...">
+t=4s    342 nodes,  90 focusable,  5 controls with no accessible name
+t=10s   442 nodes, 181 focusable,  0 controls with no accessible name
 ```
 
-Each one goes to a product page. A customer tabbing through those search results with
-a screen reader hears "link, link, link" with no way to tell which shoe is which. So
-does a shopping agent.
+Those five were real elements with perfectly good labels: `aria-label="Go to Aug 2026"`,
+`aria-label="Reduce font size"`. Chrome confirms it directly:
 
-### Nike
+```
+Accessibility.queryAXTree #prev-month
+  role=button  name="Go to Aug 2026"  ignored=false
+```
 
-**99 blocking findings**, nearly all of them links in the global navigation with no
-accessible name, plus seven product links reachable only with a pointer. Also verified
-by hand in a separate browser.
+The site was fine. We had photographed it halfway through getting dressed, and were one
+commit away from publishing the photograph with the Income Tax Department's name on it.
+
+**The bias is one-directional, which is what makes it dangerous.** A page read too early
+always looks worse than it is, never better: a control that has not been labelled yet is
+indistinguishable from one that never will be.
+
+### Three attempts to fix it, two of which did not
+
+1. Sleep three seconds. Wrong, as above.
+2. Wait for two readings of the accessibility tree to agree. Still wrong.
+3. Wait for three readings, two seconds apart, with no growth in the tree. Still wrong.
+
+All three failed for the same reason: that page has a genuine plateau. It sits at
+exactly 342 nodes for several seconds before the remaining hundred arrive. No amount of
+staring at the tree gets past that, because the tree really has stopped changing.
+
+The fix asks the page about itself instead: has the document finished loading, and has
+it stopped fetching things? A tree that is stable while the network is still working is
+not a finished tree, it is a pause.
+
+**This costs real time.** The inspection now takes 14 to 74 seconds rather than 4 to 11.
+That is the correct trade, and the claim of "about five seconds" that was on the landing
+page was measuring the wrong thing anyway.
+
+### A second retraction: the hand check was broken too
+
+Nike's 99 was checked by hand before being written down, in a separate browser, and the
+hand check agreed: 290 links with no accessible name. Both were wrong, and for a
+related reason.
+
+```
+textContent: "college fan gear"     it has text
+innerText:   ""                     empty, because it is visibility: hidden
+visibility:  hidden                 and so is its ancestor
+```
+
+They are hidden mega-menu links. Chrome excludes them from the accessibility tree
+because they are not reachable, which is correct, and the DOM heuristic counted them
+because `innerText` returns empty for anything not rendered.
+
+So the tool was right and the verification was wrong. That is worth sitting with: the
+check written to catch the tool's mistakes made a mistake of its own, in the same
+direction, and the two agreed with each other. **Two methods agreeing is not
+corroboration when they share an assumption.**
+
+It is also a small argument for the accessibility tree over DOM heuristics. What Chrome
+computes is what a screen reader consumes; what a querySelector sweep finds is a guess
+that looks similar and is not.
+
+### The corrected results
+
+| Site | Page | Blocking | Impairing | Tab stops | Time |
+| --- | --- | --- | --- | --- | --- |
+| Flipkart (India) | men's footwear | 70 | 149 | 285 | 138s |
+| Income Tax Department (India) | home | 20 | 5 | 180 | 33s |
+| Wayfair | living room furniture | 22 | 55 | 566 | 74s |
+| Lenskart (India) | eyeglasses | 18 | 21 | 142 | 45s |
+| JioMart (India) | groceries | 9 | 5 | 49 | 44s |
+| Nykaa (India) | makeup | 3 | 2 | 32 | 26s |
+| India Post | home | 1 | 0 | 146 | 17s |
+| Airbnb | Lisbon search | 1 | 1 | 181 | 27s |
+| Tata CLiQ (India) | men's t-shirts | 0 | 4 | 49 | 19s |
+| Nike | men's shoes | 0 | 83 | 398 | 70s |
+| Apple | buy MacBook Air | 0 | 1 | 142 | 14s |
+
+Not served at all, and reported as not served rather than as clean: Ajio, Meesho,
+BigBasket and Sephora returned "Access Denied", Myntra was in maintenance, Uniqlo served
+an interstitial, and Decathlon returned a 404.
+
+### How much to trust each of those rows
+
+Not equally, and the difference is worth stating.
+
+**Verified against the live DOM after the fix:** the Income Tax Department finding,
+below. Read element by element rather than counted.
+
+**Measured twice, consistently, but not independently verified:** Flipkart. It returned
+71 blocking before the load fix and 70 after, with 285 tab stops both times, which is
+the opposite behaviour to Nike's collapse from 99 to 0. The breakdown is 44 links with
+no text, 23 elements that respond to clicks but not to the keyboard, 2 unlabelled form
+fields. The hand check could not be completed: the page is heavy enough that the second
+browser timed out on it twice. Two runs of the same method agreeing is weaker evidence
+than one independent check, and after today that distinction is not a technicality.
+
+**Measured once, post-fix, not verified:** everything else in the table.
+
+None of these are audits. A number in that table is a starting point for someone who
+owns the site and can check it in thirty seconds, which is the only use it was ever
+good for.
+
+### The one finding checked all the way down
+
+India's Income Tax Department portal, on the "our services" cards:
+
+```html
+<div class="field field--name-field-title ..." tabindex="0" role="presentation">
+  <span>NUDGE Campaign</span>
+</div>
+```
+
+`tabindex="0"` makes it keyboard focusable. `role="presentation"` removes it from the
+accessibility tree. A keyboard user tabs onto it and hears silence, seven times in a
+row, on the portal every Indian taxpayer is required to use. WCAG 4.1.2 and 2.4.3.
+
+That one was verified against the live DOM after the fix, by reading the element rather
+than by counting things that looked like it.
 
 ### What this sweep found in Buyable itself
 
-The Decathlon row is why this section exists. The first run of that URL reported
-**"0 blocking, 8 impairing"** for Decathlon. It was their 404 page.
+Two defects, both of the family this project keeps finding in itself: reporting
+something that is not true about the site.
 
-Every one of those findings belonged to a 404 template, and the report said nothing
-about that. It would have gone into a document with their name on it.
+**The free inspection had no "is this actually the page" check.** Pointed at a URL that
+no longer existed, it reported "0 blocking, 8 impairing" for Decathlon. It was their 404
+template. The journey runner had grown that check during the preflight work and it was
+never carried across. `inspectPage` now returns `notTheRealPage`, and the detail that
+matters is that the 404 carried 54 reachable controls: every "is the page empty"
+heuristic waved it through, including the batch runner's own.
 
-This is the same mistake the journey runner spent a day learning not to make, sitting
-undetected in the one part of the system that had never been checked for it: describing
-something that is not the site as though it were the site. The free inspection had no
-equivalent of the preflight's "is this actually the page" check, because that check had
-been written for journeys and never carried across.
+**The inspection read pages before they finished loading**, described above.
 
-Fixed. `inspectPage` now returns `notTheRealPage` when it was served an error page, a
-maintenance notice, an anti-bot screen or an interstitial, and both the CLI and the
-batch runner lead with it instead of printing findings under it.
-
-The detail that matters: **that 404 page had 54 reachable controls.** Any check based
-on "is the page nearly empty" would have waved it through, and the batch runner's own
-five-control heuristic did exactly that. `packages/engine/test/real-page.test.mjs`
-pins it, along with the opposite error: a shop selling a camera called the 500D, or a
-box set called "Trial and Error", must not be condemned for its title.
+`packages/engine/test/real-page.test.mjs` pins the first. The second is pinned by the
+Income Tax Department portal itself, which is in the evidence directory with both the
+before and after.
 
 ### What it cannot do
 

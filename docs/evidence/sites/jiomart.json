@@ -1,0 +1,552 @@
+{
+  "url": "https://www.jiomart.com/c/groceries/2",
+  "finalUrl": "https://www.jiomart.com/c/groceries/2",
+  "title": "JioMart: India's online shopping",
+  "language": "en-US",
+  "createdAt": "2026-09-20T19:20:36.554Z",
+  "durationMs": 43600,
+  "nodeCount": 202,
+  "focusableCount": 49,
+  "findings": [
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.header__headerrow > div.header__headerUserNavigationContainer:nth-of-type(2) > div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(1) > a.UtilitySection__utilityLink",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.header__headerrow > div.header__headerUserNavigationContainer:nth-of-type(2) > div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(2) > a.UtilitySection__utilityLink",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.header__headerrow > div.header__headerUserNavigationContainer:nth-of-type(2) > div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(3) > a.UtilitySection__utilityLink",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "textbox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), textbox",
+      "selector": "div.header__headerUserNavigationContainer:nth-of-type(2) > div.SearchSection__searchSection:nth-of-type(1) > div.SearchInput__searchInputWrapper.SearchSection__searchContainer > div.SearchInput__inputWrapper:nth-of-type(2) > input.SearchInput__searchInput.SearchSection__searchInput",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "header.header__headerContainer.web-header > div.header__headerContainerInner > div.header__headerrow > div.header__headerLogoNavigationContainer.header__show:nth-of-type(1) > div.DeliverySection__deliverySection:nth-of-type(3)",
+      "outerHtml": "<div class=\"DeliverySection__deliverySection \" data-buyable-candidate=\"0\" style=\"cursor: pointer;\"><svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" class=\"DeliverySection__flashIcon\"><path d=\"M5.59 12.18l7.7-9.62A1.48 1.48 0 0115.83 4l-2 5.48h2.67a2 2 0 ",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Location\nMUMBAI, MAHARASHTRA, 400001, INDIA",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.DeliverySection__deliverySection:nth-of-type(3) > div.DeliverySection__addressCntAndDropdown > div.DeliverySection__deliveryContent:nth-of-type(1) > div.DeliverySection__deliveryHeader:nth-of-type(1) > div.j-JDSIcon-container.hasFocus",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.header__headerUserNavigationContainer:nth-of-type(2) > div.SearchSection__searchSection:nth-of-type(1) > div.SearchInput__searchInputWrapper.SearchSection__searchContainer > div.SearchInput__searchIcon.SearchSection__searchIcon:nth-of-type(1) > div.j-JDSIcon-container.hasFocus",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.header__headerrow > div.header__headerUserNavigationContainer:nth-of-type(2) > div.header__userAvatar:nth-of-type(3) > a > div.j-JDSIcon-container.hasFocus",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.fdk-theme-header:nth-of-type(3) > div.AllowLocation__container:nth-of-type(2) > div.AllowLocation__header:nth-of-type(1) > button.AllowLocation__close > div.j-JDSIcon-container.hasFocus",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.header__headerContainerInner > div.header__headerrow > div.header__headerLogoNavigationContainer.header__show:nth-of-type(1) > div.header__logoContainer:nth-of-type(1) > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.header__headerContainerInner > div.header__headerrow > div.header__headerLogoNavigationContainer.header__show:nth-of-type(1) > div.DeliverySection__deliverySection:nth-of-type(3) > svg.DeliverySection__flashIcon",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(1) > a.UtilitySection__utilityLink > div.UtilitySection__iconContainer > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(2) > a.UtilitySection__utilityLink > div.UtilitySection__iconContainer > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.UtilitySection__utilitySection:nth-of-type(2) > div.UtilitySection__utilityItem:nth-of-type(3) > a.UtilitySection__utilityLink > div.UtilitySection__iconContainer > svg",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 2,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 3,
+      "role": "textbox",
+      "name": "",
+      "announcement": "(no accessible name), textbox",
+      "silent": true
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "user icon",
+      "announcement": "\"user icon\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 9,
+      "role": "button",
+      "name": "Close",
+      "announcement": "\"Close\", button",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 11,
+      "role": "button",
+      "name": "Enable Location",
+      "announcement": "\"Enable Location\", button",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "button",
+      "name": "Select Location Manually",
+      "announcement": "\"Select Location Manually\", button",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "button",
+      "name": "Back to Homepage",
+      "announcement": "\"Back to Homepage\", button",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "link",
+      "name": "Grocery",
+      "announcement": "\"Grocery\", link",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "link",
+      "name": "Electronics",
+      "announcement": "\"Electronics\", link",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "link",
+      "name": "Fashion",
+      "announcement": "\"Fashion\", link",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "link",
+      "name": "Beauty",
+      "announcement": "\"Beauty\", link",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "Home & Kitchen",
+      "announcement": "\"Home & Kitchen\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "link",
+      "name": "Premium Fruits",
+      "announcement": "\"Premium Fruits\", link",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "link",
+      "name": "Books",
+      "announcement": "\"Books\", link",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "link",
+      "name": "Furniture",
+      "announcement": "\"Furniture\", link",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "link",
+      "name": "Fresh",
+      "announcement": "\"Fresh\", link",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "link",
+      "name": "Biscuits Drinks & Packaged Foods",
+      "announcement": "\"Biscuits Drinks & Packaged Foods\", link",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Cooking Essentials",
+      "announcement": "\"Cooking Essentials\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "link",
+      "name": "Personal Care",
+      "announcement": "\"Personal Care\", link",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "Beauty",
+      "announcement": "\"Beauty\", link",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "link",
+      "name": "Home",
+      "announcement": "\"Home\", link",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "Kitchenware",
+      "announcement": "\"Kitchenware\", link",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "Tableware",
+      "announcement": "\"Tableware\", link",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "link",
+      "name": "School, Office & Stationery",
+      "announcement": "\"School, Office & Stationery\", link",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "Disposables",
+      "announcement": "\"Disposables\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "My Account",
+      "announcement": "\"My Account\", link",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "My Orders",
+      "announcement": "\"My Orders\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "Wishlist",
+      "announcement": "\"Wishlist\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "Delivery Addresses",
+      "announcement": "\"Delivery Addresses\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "JioMart Wallet",
+      "announcement": "\"JioMart Wallet\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "About Us",
+      "announcement": "\"About Us\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "FAQ",
+      "announcement": "\"FAQ\", link",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "Terms & Conditions",
+      "announcement": "\"Terms & Conditions\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "Privacy Policy",
+      "announcement": "\"Privacy Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "E-waste Policy",
+      "announcement": "\"E-waste Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "Cancellation & Return Policy",
+      "announcement": "\"Cancellation & Return Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "Shipping & Delivery Policy",
+      "announcement": "\"Shipping & Delivery Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "AC Installation by resQ",
+      "announcement": "\"AC Installation by resQ\", link",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "70003 70003",
+      "announcement": "\"70003 70003\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "1800 890 1222",
+      "announcement": "\"1800 890 1222\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "Get it on Google Play - JioMart App",
+      "announcement": "\"Get it on Google Play - JioMart App\", link",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "Download on the App Store - JioMart App",
+      "announcement": "\"Download on the App Store - JioMart App\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 9,
+    "impairs": 5,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

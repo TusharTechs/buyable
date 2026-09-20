@@ -1,0 +1,413 @@
+{
+  "url": "https://www.tatacliq.com/mens-t-shirt/c-msh1100004",
+  "finalUrl": "https://www.tatacliq.com/error/error-page-plp",
+  "title": "Online Shopping Site in India - Upto 60% Off On Mobiles, Electronics & Fashion at Tata CLiQ",
+  "language": "en",
+  "createdAt": "2026-09-20T19:21:02.682Z",
+  "durationMs": 19459,
+  "nodeCount": 74,
+  "focusableCount": 49,
+  "findings": [
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "Track Orders",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Track Orders\", button",
+      "selector": "div.DesktopHeader__headerFunctionality:nth-of-type(2) > div.DesktopHeader__upperHeader:nth-of-type(1) > div.DesktopHeader__loginAndTrackTab > a:nth-of-type(1) > div.DesktopHeader__loginTab",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "CLiQ Care",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"CLiQ Care\", button",
+      "selector": "div.DesktopHeader__headerFunctionality:nth-of-type(2) > div.DesktopHeader__upperHeader:nth-of-type(1) > div.DesktopHeader__loginAndTrackTab > a:nth-of-type(2) > div.DesktopHeader__loginTab",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "Gift Card",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Gift Card\", button",
+      "selector": "div.DesktopHeader__headerFunctionality:nth-of-type(2) > div.DesktopHeader__upperHeader:nth-of-type(1) > div.DesktopHeader__loginAndTrackTab > a:nth-of-type(3) > div.DesktopHeader__loginTab",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A button cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "button",
+      "accessibleName": "CLiQ Cash",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"CLiQ Cash\", button",
+      "selector": "div.DesktopHeader__headerFunctionality:nth-of-type(2) > div.DesktopHeader__upperHeader:nth-of-type(1) > div.DesktopHeader__loginAndTrackTab > a:nth-of-type(4) > div.DesktopHeader__loginTab",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "alert",
+      "name": "Subscribe To Notifications Now & Unlock Your Deal!",
+      "announcement": "\"Subscribe To Notifications Now & Unlock Your Deal!\", alert",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "button",
+      "name": "No, Thanks",
+      "announcement": "\"No, Thanks\", button",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "button",
+      "name": "Subscribe",
+      "announcement": "\"Subscribe\", button",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "Tata CLiQ Luxury",
+      "announcement": "\"Tata CLiQ Luxury\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "button",
+      "name": "Sign in / Sign Up",
+      "announcement": "\"Sign in / Sign Up\", button",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Track Orders",
+      "announcement": "\"Track Orders\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "CLiQ Care",
+      "announcement": "\"CLiQ Care\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "Gift Card",
+      "announcement": "\"Gift Card\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "CLiQ Cash",
+      "announcement": "\"CLiQ Cash\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "button",
+      "name": "Categories",
+      "announcement": "\"Categories\", button",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "button",
+      "name": "Brands",
+      "announcement": "\"Brands\", button",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "button",
+      "name": "search",
+      "announcement": "\"search\", button",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "searchbox",
+      "name": " Search for Products, Brands, Categories and more...",
+      "announcement": "\" Search for Products, Brands, Categories and more...\", searchbox",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "button",
+      "name": "Alerts and Coupons",
+      "announcement": "\"Alerts and Coupons\", button",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "button",
+      "name": "Go to Wishlist}",
+      "announcement": "\"Go to Wishlist}\", button",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "button",
+      "name": "Go to Cart ",
+      "announcement": "\"Go to Cart \", button",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "link",
+      "name": "image",
+      "announcement": "\"image\", link",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "image",
+      "announcement": "\"image\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "link",
+      "name": "image",
+      "announcement": "\"image\", link",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "link",
+      "name": "About Us",
+      "announcement": "\"About Us\", link",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "link",
+      "name": "Careers",
+      "announcement": "\"Careers\", link",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "link",
+      "name": "Terms of Use",
+      "announcement": "\"Terms of Use\", link",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "link",
+      "name": "Privacy Policy",
+      "announcement": "\"Privacy Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Affiliates",
+      "announcement": "\"Affiliates\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "link",
+      "name": "Sitemap",
+      "announcement": "\"Sitemap\", link",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "Blog",
+      "announcement": "\"Blog\", link",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "link",
+      "name": "Shopping",
+      "announcement": "\"Shopping\", link",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "Offers & Promotions",
+      "announcement": "\"Offers & Promotions\", link",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "Payments",
+      "announcement": "\"Payments\", link",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "link",
+      "name": "Cancellation",
+      "announcement": "\"Cancellation\", link",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "Returns & Refunds",
+      "announcement": "\"Returns & Refunds\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "Returns Policy",
+      "announcement": "\"Returns Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "Electronics Return Policy",
+      "announcement": "\"Electronics Return Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "Contact Us",
+      "announcement": "\"Contact Us\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "Reviews Guidelines",
+      "announcement": "\"Reviews Guidelines\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "Home & Furniture Return Policy",
+      "announcement": "\"Home & Furniture Return Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "Replacement Policy",
+      "announcement": "\"Replacement Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "My Account",
+      "announcement": "\"My Account\", link",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "My Orders",
+      "announcement": "\"My Orders\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "My Shopping Bag",
+      "announcement": "\"My Shopping Bag\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "My Wishlist",
+      "announcement": "\"My Wishlist\", link",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "Download App",
+      "announcement": "\"Download App\", link",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "Download App",
+      "announcement": "\"Download App\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "Social Media Links",
+      "announcement": "\"Social Media Links\", link",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "Social Media Links",
+      "announcement": "\"Social Media Links\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "Social Media Links",
+      "announcement": "\"Social Media Links\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "Social Media Links",
+      "announcement": "\"Social Media Links\", link",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "Social Media Links",
+      "announcement": "\"Social Media Links\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 0,
+    "impairs": 4,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}
