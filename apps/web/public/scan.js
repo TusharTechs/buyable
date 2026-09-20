@@ -32,6 +32,7 @@
   var statusLine = document.getElementById("scan-status-line");
   var progress = document.getElementById("scan-progress");
   var result = document.getElementById("scan-result");
+  var keyBox = document.getElementById("scan-key");
 
   if (!form) return;
 
@@ -66,6 +67,10 @@
     statusLine.textContent = message;
   }
 
+  var activityBox = document.getElementById("scan-activity");
+  /** The live activity strip, created fresh for each run. */
+  var activity = null;
+
   /** Personas this run was started with, so lanes appear before any event arrives. */
   var running = [];
   /**
@@ -88,6 +93,7 @@
    * own accessibility failure, in a live region on a page arguing about exactly that.
    */
   function renderRun(events, startedAt) {
+    if (activity) activity.fromEvents(events);
     if (!window.BuyableRunView) return;
     var sentence = window.BuyableRunView.render(
       progress,
@@ -135,7 +141,7 @@
    */
   function showKeyNotice(data) {
     if (!data.reportUrl) return;
-    var box = document.getElementById("scan-key");
+    var box = keyBox;
     if (!box) return;
 
     var expires = data.reportExpiresAt
@@ -183,6 +189,7 @@
         if (data.status === "complete") {
           setBusy(false);
           lastSpoken = "";
+          if (activity) activity.settled("Finished", "the report is ready");
           say("Finished. The report is ready.");
           result.hidden = false;
           result.innerHTML = "";
@@ -201,6 +208,7 @@
 
         if (data.status === "failed") {
           setBusy(false);
+          if (activity) activity.stalled("The run did not finish", data.error || "");
           say("The run did not finish.");
           showError(data.error || "Something went wrong during the run.");
           return;
@@ -209,6 +217,7 @@
         var elapsed = Date.now() - startedAt;
         if (elapsed > MAX_POLL_MS) {
           setBusy(false);
+          if (activity) activity.stalled("Stopped watching", "the run may still finish");
           say("This is taking longer than expected.");
           showError(
             "Buyable stopped watching this run after twelve minutes. It may still finish: the report link will work once it does."
@@ -263,7 +272,29 @@
     result.hidden = true;
     progress.innerHTML = "";
     progress.hidden = true;
-    say("Starting.");
+    if (keyBox) keyBox.hidden = true;
+
+    /*
+     * Start narrating immediately.
+     *
+     * POST /runs does not return until the preflight has finished, which is between
+     * three and twenty seconds, and for all of that time the page previously said
+     * "Starting." and nothing else. The strip walks the real sequence of checks
+     * instead. Only the phase is announced, because a new sentence every second for
+     * three minutes is the failure this product exists to find.
+     */
+    if (window.BuyableActivity && activityBox) {
+      if (activity) activity.stop();
+      activity = window.BuyableActivity.create(activityBox);
+      activity.onPhaseChange(function (phase) {
+        lastSpoken = phase;
+        say(phase);
+      });
+      activity.start();
+      activity.preflight();
+    } else {
+      say("Starting.");
+    }
     status.focus();
 
     /*
@@ -290,6 +321,8 @@
         });
       })
       .then(function (payload) {
+        if (activity) activity.stopPreflight();
+
         if (!payload.ok) {
           setBusy(false);
 
@@ -298,11 +331,18 @@
           // them into one line, because "could not scan this site" tells nobody
           // anything and invites them to retry the same thing.
           if (payload.data.canRun === false) {
+            if (activity) {
+              activity.stalled(
+                "This journey will not run",
+                "refused in " + (payload.data.checkedIn || "a few seconds") + ", before anything was spent"
+              );
+            }
             say("Buyable will not start this journey. Here is why.");
             renderRefusal(payload.data);
             return;
           }
 
+          if (activity) activity.stalled("That run was refused", "");
           say("That run was refused.");
           showError(payload.data.error || "That run was refused.");
           return;
@@ -315,13 +355,16 @@
         reportLink = payload.data.reportUrl || "";
         showKeyNotice(payload.data);
         var startedAt = Date.now();
+        if (activity) {
+          activity.phase("Running the journey, " + running.length + " browsers at once");
+          activity.detail("each persona is driving its own browser, under its own constraints");
+        }
         renderRun([], startedAt);
-        say("Started. This usually takes two to four minutes.");
-        lastSpoken = "";
         poll(payload.data.runId, startedAt);
       })
       .catch(function () {
         setBusy(false);
+        if (activity) activity.stalled("Could not reach Buyable", "");
         say("Could not reach Buyable.");
         showError("Could not reach the Buyable API. Check your connection and try again.");
       });

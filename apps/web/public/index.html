@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buyable, proof that a customer can actually finish</title>
 <meta name="description" content="Buyable attempts a real purchase as a screen reader user, as an AI shopping agent, and as a baseline control, reports whether each one could finish, and opens the pull request that fixes it when they cannot.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/report.css">
 <link rel="stylesheet" href="/home.css">
 <link rel="stylesheet" href="/run.css">
@@ -15,14 +16,20 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="/">Buyable</a>
+    <a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="currentColor"></rect><g stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"><path d="M8 12h9" opacity=".95"></path><path d="M8 20h13"></path></g><rect x="19.6" y="10.6" width="2.8" height="2.8" rx=".6" fill="#fff" opacity=".55"></rect><path d="M20.5 17.2 23.8 20l-3.3 2.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg><span>Buyable</span></a>
     <p class="tagline">Proof that a customer can finish</p>
-    <p class="account-bar"><a href="/account/" id="account-link">Your journeys</a></p>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#replay-heading">See a run</a>
+      <a href="#scan-heading">Scan a site</a>
+      <a href="#ci-heading">CI check</a>
+      <a href="/account/">Your journeys</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
   <section class="hero wrap" aria-labelledby="hero-heading">
+    <p class="badge"><span class="tag">Live</span> Deployed on AWS, running against real storefronts</p>
     <h1 id="hero-heading">Every tool tells you how many rules your site breaks. None of them tell you whether anyone can actually buy.</h1>
 
     <p class="lede">
@@ -35,12 +42,58 @@
     </p>
 
     <p class="cta-row">
-      <a class="btn" href="#scan-heading">Run it on your own site</a>
+      <a class="btn" href="#scan-heading" data-guide-to="try-it" data-guide-focus="scan-url">Run it on your own site</a>
       <a class="btn secondary" href="/sample-report.html">Read a real report</a>
     </p>
   </section>
 
-  <section class="wrap wide" aria-labelledby="replay-heading">
+  <section class="wrap section" aria-labelledby="start-heading">
+    <p class="eyebrow">Start here</p>
+    <h2 id="start-heading">Three ways to try it, in the order that makes sense</h2>
+    <p>
+      Nothing below needs an account and the first two cost nothing at all. Each one
+      takes you to the thing you use next.
+    </p>
+
+    <ol class="guide">
+      <li>
+        <a href="#replay-heading" data-guide-to="see-it">
+          <span class="step-n" aria-hidden="true">1</span>
+          <span class="step-title">Watch a run that already happened</span>
+          <span class="step-body">
+            A real checkout, three personas, recorded. Watch the control finish and the
+            screen reader user stop at the pay button.
+          </span>
+          <span class="step-cost">Instant, nothing to set up</span>
+        </a>
+      </li>
+      <li>
+        <a href="#free-heading" data-guide-to="check-a-page" data-guide-focus="free-url">
+          <span class="step-n" aria-hidden="true">2</span>
+          <span class="step-title">Hear any page the way a screen reader does</span>
+          <span class="step-body">
+            Paste a URL. It reads the accessibility tree Chrome computed and marks
+            anything that announces nothing. No model, no key, no account.
+          </span>
+          <span class="step-cost">About 5 seconds, free</span>
+        </a>
+      </li>
+      <li>
+        <a href="#scan-heading" data-guide-to="try-it" data-guide-focus="scan-url">
+          <span class="step-n" aria-hidden="true">3</span>
+          <span class="step-title">Prove someone can finish, on a site you choose</span>
+          <span class="step-body">
+            Three personas drive three real browsers through a journey you describe.
+            Watch it happen, then read the report.
+          </span>
+          <span class="step-cost">2 to 4 minutes</span>
+        </a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap section" id="see-it" aria-labelledby="replay-heading">
+    <p class="eyebrow">Recorded run</p>
     <h2 id="replay-heading">This is a real run. Watch where the lanes separate.</h2>
 
     <p>
@@ -50,7 +103,7 @@
       below was recorded by the deployed system against a live storefront.
     </p>
 
-    <div id="replay" class="theatre" hidden></div>
+    <div id="replay" class="theatre breakout" hidden></div>
 
     <p class="replay-controls">
       <button class="btn secondary" type="button" id="replay-play" aria-pressed="false" hidden>
@@ -60,7 +113,10 @@
     </p>
   </section>
 
-  <section class="wrap scan" aria-labelledby="free-heading">
+  <hr class="rule">
+
+  <section class="wrap scan section" id="check-a-page" aria-labelledby="free-heading">
+    <p class="eyebrow">Free, no account</p>
     <h2 id="free-heading">Free, instant, no account</h2>
 
     <p>
@@ -100,7 +156,10 @@
     </p>
   </section>
 
-  <section class="wrap scan" aria-labelledby="scan-heading">
+  <hr class="rule">
+
+  <section class="wrap scan section" id="try-it" aria-labelledby="scan-heading">
+    <p class="eyebrow">Your site</p>
     <h2 id="scan-heading">Prove someone can finish, on a site you choose</h2>
 
     <p>
@@ -108,6 +167,13 @@
       Give Buyable a starting URL, what you want done, and a way to tell that it
       finished. It will attempt the journey for real and publish a report.
     </p>
+
+    <p>
+      <button type="button" class="example-fill" id="fill-example">
+        Fill in an example that is known to work
+      </button>
+    </p>
+    <p class="hint" id="fill-note" hidden></p>
 
     <form id="scan-form" novalidate>
       <div class="field">
@@ -174,7 +240,7 @@
     <p role="alert" id="scan-error" class="scan-error" hidden></p>
 
     <section
-      id="scan-status" class="scan-status" hidden tabindex="-1"
+      id="scan-status" class="scan-status breakout" hidden tabindex="-1"
       aria-labelledby="scan-status-heading" aria-busy="false">
       <h3 id="scan-status-heading">Progress</h3>
       <!--
@@ -187,7 +253,13 @@
         on a subtree is not reliably implemented, so the region is scoped to the
         sentence instead. The lanes are detail, reachable on demand.
       -->
-      <p id="scan-status-line" aria-live="polite">Starting.</p>
+      <p id="scan-status-line" class="sr-only" aria-live="polite">Starting.</p>
+      <!--
+        The activity strip. Every line in it describes something the system is
+        actually doing at that moment; see activity.js for why that was worth the
+        extra work over some words on a timer.
+      -->
+      <div id="scan-activity" class="activity" hidden></div>
       <div id="scan-key" class="key-notice" hidden></div>
       <div id="scan-progress" class="theatre" hidden></div>
       <p id="scan-result" hidden></p>
@@ -204,7 +276,10 @@
     </noscript>
   </section>
 
-  <section class="wrap" aria-labelledby="result-heading">
+  <hr class="rule">
+
+  <section class="wrap section" aria-labelledby="result-heading">
+    <p class="eyebrow">Worked example</p>
     <h2 id="result-heading">A worked example</h2>
 
     <p>
@@ -288,7 +363,10 @@
     </p>
   </section>
 
-  <section class="wrap" aria-labelledby="why-heading">
+  <hr class="rule">
+
+  <section class="wrap section" aria-labelledby="why-heading">
+    <p class="eyebrow">Why it matters</p>
     <h2 id="why-heading">Why this is two problems, not one</h2>
 
     <div class="cards">
@@ -330,7 +408,10 @@
     </p>
   </section>
 
-  <section class="wrap" aria-labelledby="how-heading">
+  <hr class="rule">
+
+  <section class="wrap section" aria-labelledby="how-heading">
+    <p class="eyebrow">How it works</p>
     <h2 id="how-heading">How it works</h2>
 
     <!--
@@ -377,7 +458,10 @@
     </ol>
   </section>
 
-  <section class="wrap" aria-labelledby="ci-heading">
+  <hr class="rule">
+
+  <section class="wrap section" aria-labelledby="ci-heading">
+    <p class="eyebrow">Ship it</p>
     <h2 id="ci-heading">Where this actually belongs: on the pull request</h2>
 
     <p>
@@ -423,7 +507,10 @@
     </p>
   </section>
 
-  <section class="wrap" aria-labelledby="stack-heading">
+  <hr class="rule">
+
+  <section class="wrap section" aria-labelledby="stack-heading">
+    <p class="eyebrow">Built on</p>
     <h2 id="stack-heading">Built on</h2>
     <p>
       Amazon Bedrock AgentCore Browser gives every persona its own sandboxed, isolated
@@ -451,6 +538,8 @@
 <script src="/auth.js"></script>
 <script src="/run-view.js"></script>
 <script src="/replay.js"></script>
+<script src="/guide.js"></script>
+<script src="/activity.js"></script>
 <script src="/scan.js"></script>
 <script src="/free.js"></script>
 </body>

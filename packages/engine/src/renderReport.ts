@@ -14,6 +14,7 @@
  */
 
 import type { EvidenceBundle } from "./evidence.js";
+import { BRAND_MARK } from "./brand.js";
 
 function escapeHtml(value: string): string {
   return value
@@ -236,7 +237,7 @@ export function renderReportHtml(
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="${escapeHtml(opts.siteUrl ?? "/")}">Buyable</a>
+    <a class="brand" href="${escapeHtml(opts.siteUrl ?? "/")}">${BRAND_MARK}<span>Buyable</span></a>
     <p class="tagline">Proof that a customer can finish</p>
   </div>
 </header>

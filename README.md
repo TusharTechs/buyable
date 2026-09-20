@@ -15,6 +15,7 @@ Built for the AWS Zero to Shipped 2026 hackathon on Amazon Bedrock AgentCore Bro
 | | |
 | --- | --- |
 | Try it | https://d3luufd5s1g5pn.cloudfront.net |
+| **How it works, end to end** | **[docs/architecture.md](docs/architecture.md)** |
 | Add it to your pipeline | [docs/ci.md](docs/ci.md) |
 | Is it ready for real users | [docs/production-readiness.md](docs/production-readiness.md) |
 | Who can read a report | [docs/report-access.md](docs/report-access.md) |
@@ -94,11 +95,38 @@ request, from your repository, with your token.
 
 ## How it is built
 
+A URL and a sentence go in. A dated document saying whether a customer could finish
+comes out, and when they could not, a patch that has been shown to change the number.
+
+```mermaid
+flowchart LR
+    Q["Start URL<br/>Goal<br/>Proof it finished"] --> PRE["Preflight<br/>no model, seconds"]
+    PRE -->|"not worth running"| STOP["Refused, with<br/>the specific reason"]
+    PRE --> FAN["Step Functions<br/>parallel"]
+    FAN --> B["BASELINE<br/>page + mouse<br/><i>the control</i>"]
+    FAN --> A["ASSISTIVE<br/>tree + keyboard"]
+    FAN --> G["AGENT<br/>tree + data"]
+    B & A & G --> ACB["AgentCore Browser<br/>one session each, over CDP"]
+    ACB --> CHECK["Assert against the LIVE page,<br/>never the model's claim"]
+    CHECK --> V{"Control finished,<br/>constrained persona<br/>did not?"}
+    V -->|"no"| PASS["Everyone finished,<br/>or nothing attributable"]
+    V -->|"yes"| FIX["Locate it, patch it,<br/>publish a shadow build,<br/>re-run the same journey"]
+    FIX --> PROOF["Proven only when<br/>the number moves"]
+
+    style B fill:#e8edfd,stroke:#1d43c8,color:#1d43c8
+    style CHECK fill:#e8edfd,stroke:#1d43c8,color:#1d43c8
+    style PROOF fill:#e2f5ec,stroke:#0a5c39,color:#0a5c39
+    style STOP fill:#fdf3e2,stroke:#7a4d05,color:#7a4d05
+```
+
 Amazon Bedrock AgentCore Browser gives every persona its own sandboxed, isolated browser
 session, driven over the Chrome DevTools Protocol so the accessibility tree arrives with
 full fidelity. Step Functions fans the personas out in parallel, Lambda runs each
 attempt, DynamoDB holds run state and the live step stream, and every report is written
 to S3 with Object Lock so a record cannot be quietly rewritten later.
+
+**[The full architecture, with the persona constraint model and the attribution rules,
+is in docs/architecture.md](docs/architecture.md).**
 
 ```
 packages/engine      the perception, actuation and verdict logic, and the CI entry point

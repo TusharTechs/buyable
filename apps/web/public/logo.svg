@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Buyable">
+  <!--
+    Two customers, the same journey.
+
+    The lower path runs the whole way and arrives. The upper one sets out identically
+    and stops at a barrier it cannot get past. That gap is the entire product, and it
+    is the one thing worth putting in a mark.
+  -->
+  <rect width="32" height="32" rx="8" fill="currentColor"/>
+  <g stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M8 12h9" opacity="0.95"/>
+    <path d="M8 20h13"/>
+  </g>
+  <!-- The stop: a square full stop rather than an arrowhead, so the two ends do not
+       read as the same thing at small sizes. -->
+  <rect x="19.6" y="10.6" width="2.8" height="2.8" rx="0.6" fill="#fff" opacity="0.55"/>
+  <path d="M20.5 17.2 23.8 20l-3.3 2.8" stroke="#fff" stroke-width="2.4"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

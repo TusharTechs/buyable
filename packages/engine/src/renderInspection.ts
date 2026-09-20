@@ -9,6 +9,7 @@
  */
 
 import type { InspectionReport } from "./inspect.js";
+import { BRAND_MARK } from "./brand.js";
 
 function esc(v: string): string {
   return v
@@ -68,7 +69,7 @@ export function renderInspectionHtml(r: InspectionReport, opts: { siteUrl?: stri
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="${esc(opts.siteUrl ?? "/")}">Buyable</a>
+    <a class="brand" href="${esc(opts.siteUrl ?? "/")}">${BRAND_MARK}<span>Buyable</span></a>
     <p class="tagline">Proof that a customer can finish</p>
   </div>
 </header>

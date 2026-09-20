@@ -1,167 +1,440 @@
-/* Landing page only. Shared primitives live in report.css. */
+/* Landing page only. Tokens and shared primitives live in report.css. */
 
-main { padding: 0 0 72px; }
+/* ---------------------------------------------------------------------------
+   Hero.
 
-.hero { padding: 56px 20px 40px; }
-.hero h1 {
-  font-size: clamp(28px, 5vw, 42px);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  max-width: 22ch;
-  margin: 0 0 20px;
+   One idea, set large, with the claim that the whole product rests on directly
+   underneath it. The backdrop is a single soft wash rather than anything with a
+   pattern: this page is trying to look like an instrument, not a launch.
+   --------------------------------------------------------------------------- */
+
+main { padding: 0 0 var(--s9); }
+
+.hero { padding: var(--s9) var(--s5) var(--s8); }
+
+/*
+ * The wash sits on the body rather than on the hero.
+ *
+ * On the hero it was clipped to the prose column, which made it a grey rectangle with
+ * hard edges instead of a wash, and a negative z-index inside a positioned section put
+ * it behind the page background on some paint orders. Fixed to the body it covers the
+ * full width, is painted above the canvas background, and cannot be clipped by
+ * anything.
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 620px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 420px at 15% -8%, var(--accent-soft) 0%, transparent 60%),
+    radial-gradient(700px 340px at 88% -4%, var(--panel) 0%, transparent 62%);
 }
-.lede { font-size: clamp(17px, 2.2vw, 19px); color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
 
-.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 0; }
+.hero h1 {
+  font-size: clamp(34px, 5.6vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.038em;
+  max-width: 19ch;
+  margin: 0 0 var(--s5);
+  text-wrap: balance;
+}
+
+.lede {
+  font-size: clamp(17px, 2vw, 19.5px);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 0 var(--s6);
+}
+
+/* A live badge above the headline. It states what this is, which on a page making a
+   large claim is worth more than a slogan. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: 0 0 var(--s5);
+  padding: 5px var(--s3) 5px var(--s2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
+  font-size: 13px;
+  font-weight: 560;
+  color: var(--ink-soft);
+}
+.badge .tag {
+  padding: 1px var(--s2);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 11px;
+  font-weight: 680;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons.
+   --------------------------------------------------------------------------- */
+
+.cta-row { display: flex; gap: var(--s3); flex-wrap: wrap; margin: 0; max-width: none; }
+
 .btn {
-  display: inline-block;
-  padding: 11px 20px;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  padding: 11px var(--s5);
+  border-radius: var(--radius);
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: var(--bg);
+  color: var(--accent-ink);
+  font: inherit;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
 }
-.btn:hover { text-decoration: underline; }
-.btn.secondary { background: transparent; color: var(--accent); }
+.btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--accent-ink);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn:active { transform: translateY(0); }
+.btn.secondary {
+  background: var(--bg);
+  color: var(--accent);
+  border-color: var(--line-strong);
+}
+.btn.secondary:hover { background: var(--panel); border-color: var(--accent); color: var(--accent); }
+.btn[disabled] { opacity: 0.6; cursor: progress; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn:hover, .btn:active { transition: none; transform: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   Section rhythm.
+
+   An eyebrow, a heading, then the content. Applied consistently so the page reads as
+   a sequence of arguments rather than a stack of boxes.
+   --------------------------------------------------------------------------- */
+
+.section { padding-top: var(--s7); }
+.section > h2 { margin-top: 0; }
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: var(--s8) auto 0;
+  max-width: 1180px;
+}
 
 .quote {
-  margin: 24px 0;
-  padding: 18px 22px;
+  margin: var(--s5) 0;
+  padding: var(--s5) var(--s6);
   background: var(--panel);
   border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  max-width: var(--measure);
 }
-.quote p { margin: 0 0 10px; }
-.quote footer { color: var(--muted); font-size: 14px; }
+.quote p { margin: 0 0 var(--s3); font-size: 16px; }
+.quote footer { color: var(--muted); font-size: 13.5px; }
+
+/* ---------------------------------------------------------------------------
+   Evidence cards.
+   --------------------------------------------------------------------------- */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 16px;
-  margin: 20px 0 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--s4);
+  margin: var(--s5) 0 var(--s5);
 }
 .card {
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  padding: var(--s5);
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
 }
-.card h3 { margin: 0 0 10px; font-size: 16px; }
-.card p { margin: 0 0 10px; font-size: 15px; }
-.card .src { color: var(--muted); font-size: 13px; margin: 0; }
+.card h3 { margin: 0 0 var(--s3); font-size: 15.5px; }
+.card p { margin: 0 0 var(--s3); font-size: 14.5px; color: var(--ink-soft); max-width: none; }
+.card .src {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  margin: 0;
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+}
 
-/* list-style: none removes list semantics in Safari with VoiceOver, so the markup
-   restates role="list". See the comment in index.html. */
-.steps { counter-reset: step; list-style: none; padding: 0; margin: 20px 0 0; }
+/* ---------------------------------------------------------------------------
+   Numbered steps.
+
+   list-style: none removes list semantics in Safari with VoiceOver, so the markup
+   restates role="list". See the comment in index.html.
+   --------------------------------------------------------------------------- */
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: var(--s5) 0 0;
+  display: grid;
+  gap: var(--s5);
+}
 .steps li {
   counter-increment: step;
   position: relative;
-  padding-left: 46px;
-  margin-bottom: 26px;
+  padding-left: var(--s8);
 }
 .steps li::before {
   content: counter(step);
   position: absolute;
   left: 0;
-  top: 1px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  color: var(--ink);
+  top: -2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-variant-numeric: tabular-nums;
-  font-weight: 650;
+  font-weight: 680;
   display: grid;
   place-items: center;
   font-size: 14px;
 }
-.steps h3 { margin: 0 0 6px; font-size: 16px; }
-.steps p { margin: 0; color: var(--muted); }
+.steps h3 { margin: 0 0 var(--s2); font-size: 16.5px; }
+.steps p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
 
 /* ---------------------------------------------------------------------------
-   The scan form.
+   Forms.
 
    Every input has a visible, persistent label. Placeholders are examples, never
-   labels: a placeholder disappears the moment someone types, which strands anyone
+   labels: a placeholder disappears the moment somebody types, which strands anyone
    relying on it, and it is not reliably announced in the first place.
 
-   Hints are wired with aria-describedby rather than sitting loose next to the field,
-   so they are announced when focus arrives instead of being discovered by accident.
+   Hints are wired with aria-describedby rather than sitting loose beside the field,
+   so they are announced when focus arrives instead of being found by accident.
    --------------------------------------------------------------------------- */
-
-.scan { padding-top: 8px; }
 
 .scan form {
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin: 20px 0 0;
+  border-radius: var(--radius-lg);
+  padding: var(--s6);
+  margin: var(--s5) 0 0;
   background: var(--panel);
+  box-shadow: var(--shadow-sm);
+  max-width: 720px;
+}
+@media (max-width: 560px) {
+  .scan form { padding: var(--s5) var(--s4); }
 }
 
-.scan .field { margin-bottom: 20px; }
-.scan label { display: block; font-weight: 620; margin-bottom: 6px; }
+.scan .field { margin-bottom: var(--s5); }
+.scan label { display: block; font-weight: 620; font-size: 14.5px; margin-bottom: var(--s2); }
 
 .scan input[type="url"],
 .scan input[type="text"] {
   width: 100%;
-  padding: 11px 13px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  padding: 11px var(--s4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
   font: inherit;
+  font-size: 15px;
   background: var(--bg);
   color: var(--ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.scan input[type="url"]:hover,
+.scan input[type="text"]:hover { border-color: var(--muted); }
+.scan input[type="url"]:focus,
+.scan input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 .scan input::placeholder { color: var(--muted); opacity: 1; }
 
-.scan .hint { color: var(--muted); font-size: 13.5px; margin: 6px 0 0; }
+.scan .hint { color: var(--muted); font-size: 13px; line-height: 1.5; margin: var(--s2) 0 0; max-width: none; }
 
 .scan fieldset {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin: 0 0 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5) var(--s5);
+  margin: 0 0 var(--s5);
+  background: var(--bg);
 }
-.scan legend { font-weight: 620; padding: 0 6px; }
-.scan .checks { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
-.scan .checks label { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; }
-.scan .checks input { width: 18px; height: 18px; }
+.scan legend { font-weight: 620; font-size: 14.5px; padding: 0 var(--s2); }
+.scan .checks { display: flex; gap: var(--s5); flex-wrap: wrap; margin-top: var(--s3); }
+.scan .checks label {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-weight: 450;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+.scan .checks input { width: 17px; height: 17px; accent-color: var(--accent); }
 
-.scan button[type="submit"] { border: 1px solid var(--accent); }
-.scan button[disabled] { opacity: 0.65; cursor: progress; }
+.scan button[type="submit"] { width: 100%; padding: 13px var(--s5); font-size: 15.5px; }
 
 .scan-error {
-  margin: 16px 0 0;
-  padding: 13px 16px;
-  border-radius: 8px;
+  margin: var(--s4) 0 0;
+  padding: var(--s4) var(--s5);
+  border-radius: var(--radius);
   background: var(--bad-bg);
   color: var(--bad-ink);
   border-left: 3px solid currentColor;
+  max-width: 720px;
 }
 
 .scan-status {
-  margin: 20px 0 0;
-  padding: 18px 22px;
+  margin: var(--s5) 0 0;
+  padding: var(--s5) var(--s6);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
 }
-.scan-status h3 { margin: 0 0 8px; font-size: 16px; }
+.scan-status h3 { margin: 0 0 var(--s3); font-size: 15px; }
 
-.progress { list-style: none; padding: 0; margin: 12px 0 0; }
-.progress li {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 9px 0;
-  border-bottom: 1px solid var(--line);
-}
-.progress li:last-child { border-bottom: 0; }
-.progress .persona { font-weight: 600; }
-.progress .state { color: var(--muted); font-variant-numeric: tabular-nums; }
-
-.transcript { margin: 10px 0 16px; padding-left: 26px; }
-.transcript li { margin-bottom: 4px; }
+.transcript { margin: var(--s3) 0 var(--s4); padding-left: var(--s6); }
+.transcript li { margin-bottom: var(--s1); }
 .transcript .warn { color: var(--bad-ink); }
-#free-result h4 { margin: 18px 0 6px; font-size: 15px; }
+#free-result h4 { margin: var(--s5) 0 var(--s2); font-size: 15px; }
+#free-result table { font-size: 14px; }
+
+/* ---------------------------------------------------------------------------
+   The guide.
+
+   Three ways to try this, in the order they make sense, with how long each takes and
+   what it costs. Somebody landing here has no idea which of the things on this page
+   they are supposed to do first, and a page that makes a large claim and then leaves
+   the reader to work out the entry point wastes the claim.
+
+   Each step is a real link to a real section. Following one moves focus to the thing
+   you are meant to use next, which is the part that matters: a page that scrolls
+   somewhere and leaves a keyboard user at the top is worse than one that does
+   nothing.
+   --------------------------------------------------------------------------- */
+
+.guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--s4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide li { margin: 0; }
+
+.guide a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  height: 100%;
+  padding: var(--s5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.guide a:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.guide .step-n {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.guide .step-title { font-weight: 640; font-size: 16px; letter-spacing: -0.012em; }
+.guide .step-body { color: var(--ink-soft); font-size: 14px; line-height: 1.5; margin: 0; max-width: none; }
+.guide .step-cost {
+  margin-top: auto;
+  padding-top: var(--s3);
+  color: var(--muted);
+  font-size: 12.5px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+/* The arrow nudges on hover, which is the cheapest possible way to say "this goes
+   somewhere" without writing it out three times. */
+.guide .step-cost::after {
+  content: "\2192";
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 15px;
+  transition: transform 0.15s ease;
+}
+.guide a:hover .step-cost::after { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .guide a, .guide a:hover, .guide .step-cost::after { transition: none; transform: none; }
+}
+
+/*
+ * Where the guide sent you.
+ *
+ * Scrolling somebody to a section and then leaving them to find the difference is a
+ * poor handoff, so the destination says so for a moment. The ring is removed after a
+ * few seconds because a permanent highlight on a page you are now reading is noise.
+ */
+.landed {
+  animation: landing 2.4s ease-out;
+  border-radius: var(--radius-lg);
+}
+@keyframes landing {
+  0% { box-shadow: 0 0 0 4px var(--accent-soft), 0 0 0 5px var(--accent); }
+  70% { box-shadow: 0 0 0 4px var(--accent-soft), 0 0 0 5px var(--accent); }
+  100% { box-shadow: 0 0 0 4px transparent, 0 0 0 5px transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landed { animation: none; }
+}
+
+/* A one click way to fill the form with a journey that is known to work, because
+   the fastest way to lose somebody at a three field form is to make them invent an
+   example before they have seen the thing work once. */
+.example-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: 0 0 var(--s5);
+  padding: 7px var(--s4);
+  border: 1px dashed var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 560;
+  cursor: pointer;
+}
+.example-fill:hover { border-color: var(--accent); background: var(--accent-soft); }

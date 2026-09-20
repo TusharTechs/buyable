@@ -10,6 +10,7 @@ export * from "./evidence.js";
 export * from "./patch.js";
 export * from "./shadow.js";
 export * from "./verifyFix.js";
+export * from "./brand.js";
 export * from "./renderReport.js";
 export * from "./reportAccess.js";
 export * from "./inspect.js";
