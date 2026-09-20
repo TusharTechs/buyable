@@ -132,6 +132,21 @@ belief that the connection existed was confident, reasonable, and wrong, and the
 thing that settled it was going and looking. Buyable exists because "the checkout
 works" is a belief of exactly that kind.
 
+**Update, later the same day.** The server is connected and the agent is using it. The
+check that settled it was the same one: a real call rather than an assertion that it
+works.
+
+```
+DescribeStacks  us-west-2  StackName=Buyable
+  -> UPDATE_COMPLETE, last updated 2026-09-20T17:10:59Z, 10 outputs
+```
+
+That is the deployed Buyable stack, read through the AWS MCP Server, at the timestamp
+of the deployment described in this repository. Both halves of the correction are left
+standing: it genuinely was not connected while most of this was built, and it genuinely
+is now. Deleting the first half once the second became true would be the same kind of
+tidying up this project exists to argue against.
+
 ## What the agent actually did
 
 The honest version, which is more useful than a list of superlatives.
