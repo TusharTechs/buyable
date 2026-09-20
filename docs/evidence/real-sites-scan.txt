@@ -1,0 +1,19 @@
+✨  Total time: 79.14s
+
+wikipedia         5 blocking  2 impairing  0 notes | 686 stops |  4.1s | Accessibility - Wikipedia
+bbc               0 blocking  2 impairing  0 notes |   0 stops |  5.9s | Home - BBC News
+nhs               0 blocking  0 impairing  0 notes |  53 stops |  3.7s | NHS website for England - NHS
+github            0 blocking  0 impairing  1 notes | 102 stops |  4.9s | GitHub · Change is constant. GitHub keeps 
+ikea              1 blocking  0 impairing  0 notes |  40 stops |  4.1s | Affordable Furniture And Home Inspiration 
+etsy              0 blocking  1 impairing  0 notes | 143 stops |  7.1s | Etsy - Shop for handmade, vintage, custom,
+gov-uk            0 blocking  0 impairing  0 notes |  88 stops |  3.5s | Welcome to GOV.UK
+mands             0 blocking  0 impairing  0 notes | 126 stops |  4.0s | M&S | Marks & Spencer | Fashion, Home, Bea
+vercel-store      1 blocking  0 impairing  0 notes |  34 stops |  3.6s | Acme Store
+mozilla           0 blocking  3 impairing  1 notes |  94 stops |  3.5s | MDN Web Docs
+wordpress         0 blocking  0 impairing  0 notes |  64 stops |  3.7s | Blog Tool, Publishing Platform, and CMS – 
+stackoverflow     0 blocking  1 impairing  1 notes | 176 stops |  4.8s | Newest Questions - Stack Overflow
+booking           2 blocking  0 impairing  1 notes |  54 stops |  7.8s | Booking.com | Official site | The best hot
+buyable           0 blocking  0 impairing  0 notes |  13 stops |  3.3s | Buyable, proof that a customer can actuall
+fixture-checkout  1 blocking  0 impairing  0 notes |  11 stops |  3.4s | Checkout · Northbound Running
+
+[exited with code 0]

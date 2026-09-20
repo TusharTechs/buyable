@@ -108,6 +108,8 @@ export async function snapshotAxTree(page: PageHandle): Promise<AxSnapshot> {
   };
 
   const nodes: AxNode[] = [];
+  /** CDP node id to our ref, so a node can point at its parent. */
+  const refByCdpId = new Map<string, number>();
   const backendByRef = new Map<number, number>();
   const tabOrder: number[] = [];
   let focusedRef: number | undefined;
@@ -143,8 +145,10 @@ export async function snapshotAxTree(page: PageHandle): Promise<AxSnapshot> {
     }
 
     const current = ref++;
+    const parentId = childToParent.get(n.nodeId);
     const node: AxNode = {
       ref: current,
+      parentRef: parentId !== undefined ? refByCdpId.get(parentId) : undefined,
       role: role || "unknown",
       name,
       value: str(n.value) || undefined,
@@ -154,6 +158,7 @@ export async function snapshotAxTree(page: PageHandle): Promise<AxSnapshot> {
       backendNodeId: n.backendDOMNodeId,
     };
     nodes.push(node);
+    refByCdpId.set(n.nodeId, current);
     if (n.backendDOMNodeId !== undefined) backendByRef.set(current, n.backendDOMNodeId);
     if (focusable) tabOrder.push(current);
     if (boolProp(n, "focused")) focusedRef = current;

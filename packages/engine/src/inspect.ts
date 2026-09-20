@@ -142,8 +142,8 @@ const FIELD_ROLES = new Set(["textbox", "searchbox", "combobox", "listbox", "spi
 /** Facts only the DOM can answer. */
 interface DomFacts {
   language?: string;
-  /** Elements that behave like controls but are not exposed as any role. */
-  fakeControls: Array<{ selector: string; outerHtml: string; text: string }>;
+  /** Candidates, before their listeners have been confirmed. */
+  fakeControls: Array<{ index: number; selector: string; outerHtml: string; text: string }>;
 }
 
 /**
@@ -272,6 +272,59 @@ async function realTabOrder(page: PageHandle, focusableBackendIds: Set<number>):
   return sequence.map((s) => s.backendNodeId);
 }
 
+/**
+ * Confirm a candidate really is a control, by asking Chrome what listeners it has.
+ *
+ * `cursor: pointer` was never evidence. It is inherited, it is used decoratively, and
+ * it produced enough noise on real commercial pages to saturate the result cap twice
+ * over. `DOMDebugger.getEventListeners` is ground truth: it reports the listeners
+ * actually attached to the element.
+ *
+ * The check that survives is a sharper claim than the one it replaces. An element
+ * with a click listener and no keyboard listener, exposed as no role, is operable
+ * with a mouse and by nothing else. That is a barrier, and it is verifiable rather
+ * than inferred.
+ */
+async function confirmFakeControls(
+  page: PageHandle,
+  candidates: Array<{ selector: string; outerHtml: string; text: string; backendNodeId?: number }>,
+): Promise<Array<{ selector: string; outerHtml: string; text: string }>> {
+  const checked = await Promise.all(
+    candidates.map(async (candidate) => {
+      if (candidate.backendNodeId === undefined) return undefined;
+      try {
+        const { object } = await page.cdp.send<{ object: { objectId?: string } }>(
+          "DOM.resolveNode",
+          { backendNodeId: candidate.backendNodeId },
+          page.sessionId,
+        );
+        if (!object.objectId) return undefined;
+
+        const { listeners } = await page.cdp.send<{ listeners: Array<{ type: string }> }>(
+          "DOMDebugger.getEventListeners",
+          { objectId: object.objectId, depth: 0 },
+          page.sessionId,
+        );
+
+        const types = new Set(listeners.map((l) => l.type));
+        const pointerOnly =
+          (types.has("click") || types.has("mousedown") || types.has("mouseup")) &&
+          !types.has("keydown") &&
+          !types.has("keypress") &&
+          !types.has("keyup");
+
+        return pointerOnly ? candidate : undefined;
+      } catch {
+        // getEventListeners is unavailable on some nodes. Silence is not evidence of
+        // a barrier, so a candidate we cannot confirm is dropped, not reported.
+        return undefined;
+      }
+    }),
+  );
+
+  return checked.filter((c): c is NonNullable<typeof c> => c !== undefined);
+}
+
 async function collectDomFacts(page: PageHandle): Promise<DomFacts> {
   const { result } = await page.cdp.send<{ result: { value?: DomFacts } }>(
     "Runtime.evaluate",
@@ -298,8 +351,14 @@ async function collectDomFacts(page: PageHandle): Promise<DomFacts> {
           return parts.join(' > ');
         };
 
-        const INTERACTIVE = 'a,button,input,select,textarea,summary,[role=button],[role=link],[role=menuitem],[role=tab],[role=checkbox],[role=radio],[contenteditable]';
+        // label belongs here. <label><span>Adults</span><input></label> is the
+        // correct, accessible pattern, and without label in this list the span was
+        // reported as an unreachable control. That single omission produced
+        // twenty-five false findings on one real travel booking page.
+        const INTERACTIVE = 'a,button,input,select,textarea,summary,label,[role=button],[role=link],[role=menuitem],[role=tab],[role=checkbox],[role=radio],[role=option],[contenteditable],[onclick]';
 
+        // Mark candidates so they can be resolved to nodes and their real listeners
+        // inspected. Narrowing here is only to keep that second pass small.
         const fakeControls = Array.from(document.querySelectorAll('div,span'))
           .filter(el => {
             if (el.getAttribute('role')) return false;
@@ -318,20 +377,28 @@ async function collectDomFacts(page: PageHandle): Promise<DomFacts> {
 
             // An onclick property is unambiguous. A pointer cursor on its own is not,
             // so it only counts alongside text worth clicking.
-            const hasHandler = typeof el.onclick === 'function';
-            const looksClickable = getComputedStyle(el).cursor === 'pointer';
+            // A cheap pre-filter only. Whether this is really a control is settled
+            // afterwards by asking Chrome for its listeners.
+            const looksClickable =
+              typeof el.onclick === 'function' || getComputedStyle(el).cursor === 'pointer';
+            if (!looksClickable) return false;
+
             const text = (el.innerText || '').trim();
-            if (!hasHandler && !(looksClickable && text.length > 0 && text.length < 60)) return false;
+            if (!text || text.length > 80) return false;
 
             const r = el.getBoundingClientRect();
             return r.width > 0 && r.height > 0;
           })
-          .slice(0, 25)
-          .map(el => ({
-            selector: sel(el),
-            outerHtml: (el.outerHTML || '').slice(0, 300),
-            text: (el.innerText || '').trim().slice(0, 60)
-          }));
+          .slice(0, 60)
+          .map((el, i) => {
+            el.setAttribute('data-buyable-candidate', String(i));
+            return {
+              index: i,
+              selector: sel(el),
+              outerHtml: (el.outerHTML || '').slice(0, 300),
+              text: (el.innerText || '').trim().slice(0, 60)
+            };
+          });
 
         return {
           language: document.documentElement.getAttribute('lang') || undefined,
@@ -357,6 +424,18 @@ function dedupe(findings: InspectionFinding[]): InspectionFinding[] {
   return [...byKey.values()].sort(
     (a, b) => order[a.severity] - order[b.severity] || (b.occurrences ?? 1) - (a.occurrences ?? 1),
   );
+}
+
+/** Walks up the accessibility tree looking for a control that already has a name. */
+function insideNamedControl(node: AxNode, byRef: Map<number, AxNode>): boolean {
+  let current = node.parentRef !== undefined ? byRef.get(node.parentRef) : undefined;
+  let hops = 0;
+  while (current && hops < 4) {
+    if (INTERACTIVE_ROLES.has(current.role.toLowerCase()) && current.name.trim()) return true;
+    current = current.parentRef !== undefined ? byRef.get(current.parentRef) : undefined;
+    hops++;
+  }
+  return false;
 }
 
 function describe(kind: FindingKind, node?: AxNode): string {
@@ -400,6 +479,42 @@ export async function inspectPage(page: PageHandle, requestedUrl: string): Promi
   const [finalUrl, title] = await Promise.all([currentUrl(page), pageTitle(page)]);
   const dom = await collectDomFacts(page);
 
+  // Resolve the marked candidates to nodes so their listeners can be inspected.
+  const { root } = await page.cdp.send<{ root: { nodeId: number } }>(
+    "DOM.getDocument",
+    { depth: 1 },
+    page.sessionId,
+  );
+  // Resolved concurrently. Sequentially this was three round trips per candidate and
+  // took forty-five seconds on a busy travel page, which is not "instant" by any
+  // reading of the word.
+  const withNodes = (
+    await Promise.all(
+      dom.fakeControls.map(async (candidate) => {
+        try {
+          const { nodeId } = await page.cdp.send<{ nodeId: number }>(
+            "DOM.querySelector",
+            { nodeId: root.nodeId, selector: `[data-buyable-candidate="${candidate.index}"]` },
+            page.sessionId,
+          );
+          if (!nodeId) return undefined;
+          const { node } = await page.cdp.send<{ node: { backendNodeId?: number } }>(
+            "DOM.describeNode",
+            { nodeId },
+            page.sessionId,
+          );
+          return { ...candidate, backendNodeId: node.backendNodeId };
+        } catch {
+          // A candidate we cannot resolve is dropped rather than assumed guilty.
+          return undefined;
+        }
+      }),
+    )
+  ).filter((c): c is NonNullable<typeof c> => c !== undefined);
+
+  const confirmedFakeControls = await confirmFakeControls(page, withNodes);
+
+  const byRef = new Map(snapshot.nodes.map((n) => [n.ref, n]));
   const findings: InspectionFinding[] = [];
   /** Nodes that produced a finding, so only these pay for selector resolution. */
   const needsSelector: Array<{ finding: InspectionFinding; node: AxNode }> = [];
@@ -427,23 +542,35 @@ export async function inspectPage(page: PageHandle, requestedUrl: string): Promi
     // control on a real retail home page.
     const disabled = node.states.includes("disabled");
 
-    if (role === "link" && !named) add("empty-link", "blocks", node);
-    else if (FIELD_ROLES.has(role) && !named) add("form-field-without-label", "blocks", node);
-    else if (isSilentControl(node)) add("control-without-accessible-name", "blocks", node);
+    // Severity follows reachability. A control nobody can reach announces nothing to
+    // nobody, which is worth knowing and is not the same as blocking a person who is
+    // standing on it. Reporting both at the same weight overstated the case on a real
+    // encyclopaedia page, where five unreachable empty anchors read as five barriers.
+    const reachable = node.focusable && !disabled;
+    const weight: FindingSeverity = reachable ? "blocks" : "impairs";
+
+    if (role === "link" && !named) add("empty-link", weight, node);
+    else if (FIELD_ROLES.has(role) && !named) add("form-field-without-label", weight, node);
+    else if (isSilentControl(node)) add("control-without-accessible-name", weight, node);
 
     if (INTERACTIVE_ROLES.has(role) && !node.focusable && !disabled) {
-      add("unreachable-by-keyboard", "blocks", node);
+      add("unreachable-by-keyboard", "impairs", node);
     }
-    if ((role === "image" || role === "img") && !named) {
+
+    // An unlabelled image inside a control that already has a name is decorative, and
+    // hiding it from assistive technology is the correct thing to have done. Flagging
+    // it told people to break working code.
+    if ((role === "image" || role === "img") && !named && !insideNamedControl(node, byRef)) {
       add("image-without-alt", "impairs", node);
     }
   }
 
-  for (const fake of dom.fakeControls) {
+  for (const fake of confirmedFakeControls) {
     findings.push({
       kind: "non-semantic-interactive-element",
       severity: "blocks",
-      summary: describe("non-semantic-interactive-element"),
+        summary:
+        "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
       selector: fake.selector,
       outerHtml: fake.outerHtml,
       wcag: WCAG["non-semantic-interactive-element"],

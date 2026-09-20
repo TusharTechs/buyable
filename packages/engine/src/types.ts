@@ -93,6 +93,15 @@ export interface AxNode {
   depth: number;
   /** CDP backend node id, used to resolve back to the DOM for clicks and for patching. */
   backendNodeId?: number;
+  /**
+   * The ref of the nearest ancestor that survived filtering.
+   *
+   * Needed to answer questions about context rather than about a node alone. An
+   * unlabelled icon inside a button that already has a name is decorative and
+   * correct; the identical icon standing on its own is a barrier. Only the ancestry
+   * distinguishes them.
+   */
+  parentRef?: number;
 }
 
 /** What the model receives on each turn, shaped by the persona's perception limits. */

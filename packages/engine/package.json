@@ -25,6 +25,7 @@
     "@aws-sdk/signature-v4": "^3.374.0",
     "@smithy/node-http-handler": "^4.12.1",
     "@types/mime-types": "^3.0.1",
+    "groq-sdk": "^1.6.0",
     "mime-types": "^3.0.2",
     "ws": "^8.18.0"
   },
