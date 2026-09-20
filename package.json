@@ -8,10 +8,13 @@
     "packages/*",
     "apps/demo-store"
   ],
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "run:local": "npm run -w @buyable/engine run:local"
+    "run:local": "npm run -w @buyable/engine run:local",
+    "validate:provider": "node tools/validate-provider.mjs"
   }
 }

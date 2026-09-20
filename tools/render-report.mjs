@@ -41,7 +41,7 @@ const attempts = Math.max(
 
 const bundle = bundleFromReport({
   report,
-  providerId: process.env.BUYABLE_PROVIDER_ID ?? "anthropic:claude-sonnet-4-5-20250929",
+  providerId: process.env.BUYABLE_PROVIDER_ID ?? "gemini:gemini-3.8-flash",
   attemptsPerPersona: attempts,
   fix,
 });

@@ -60,36 +60,24 @@ export async function getProvider(): Promise<ReasoningProvider> {
   const secret = await secrets.send(new GetSecretValueCommand({ SecretId: secretArn }));
   const raw = (secret.SecretString ?? "").trim();
 
-  // The secret holds JSON with one entry per provider, so switching providers is an
-  // environment variable rather than a redeployment of credentials. A bare string is
-  // still accepted, because that is what a person pastes when they are in a hurry.
+  // The secret holds JSON so a future provider can be added without changing the
+  // shape. A bare string is still accepted, because that is what a person pastes when
+  // they are in a hurry.
   let keys: Record<string, string> = {};
   if (raw.startsWith("{")) {
     keys = JSON.parse(raw) as Record<string, string>;
   } else if (raw) {
-    keys = { ANTHROPIC_API_KEY: raw };
+    keys = { GEMINI_API_KEY: raw };
   }
 
-  const keyFor: Record<string, string | undefined> = {
-    anthropic: keys.ANTHROPIC_API_KEY ?? keys.anthropic,
-    gemini: keys.GEMINI_API_KEY ?? keys.gemini,
-    groq: keys.GROQ_API_KEY ?? keys.groq,
-  };
-
-  const apiKey = keyFor[choice];
+  const apiKey = keys.GEMINI_API_KEY ?? keys.gemini;
   if (!apiKey) {
     throw new Error(
       `BUYABLE_PROVIDER is "${choice}" but the provider secret holds no key for it.`,
     );
   }
 
-  cachedProvider = createProvider({
-    region: REGION,
-    provider: choice,
-    anthropicApiKey: choice === "anthropic" ? apiKey : undefined,
-    geminiApiKey: choice === "gemini" ? apiKey : undefined,
-    groqApiKey: choice === "groq" ? apiKey : undefined,
-  });
+  cachedProvider = createProvider({ region: REGION, provider: choice, geminiApiKey: apiKey });
   return cachedProvider;
 }
 

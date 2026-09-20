@@ -6,16 +6,18 @@
  * to the model, so swapping the model can invalidate every number the system
  * produces without anything appearing to break.
  *
- * This is not hypothetical. The first Groq model tried, openai/gpt-oss-120b, was
- * given a checkout page whose only control was a button with no accessible name and
- * chose to press it anyway, reasoning "activate the focused button to proceed with
- * checkout". A run on that model would have reported disabled shoppers completing
- * purchases they cannot complete. qwen/qwen3.8-27b refused and explained why.
+ * This is not hypothetical. Four models have been measured against this fixture and
+ * two were rejected. One, given a checkout page whose only control was a button with
+ * no accessible name, pressed it anyway and reasoned that it was "activating the
+ * focused button to proceed with checkout". A run on that model would have reported
+ * disabled shoppers completing purchases they cannot complete, and nothing about it
+ * would have looked broken. Another looped on an already-selected radio button.
  *
  * So: any provider must pass this before its output is published.
  *
- *   node tools/validate-provider.mjs            # whatever BUYABLE_PROVIDER names
- *   node tools/validate-provider.mjs groq       # a specific one
+ *   node tools/validate-provider.mjs                    # whatever BUYABLE_PROVIDER names
+ *   node tools/validate-provider.mjs gemini             # a specific provider
+ *   node tools/validate-provider.mjs gemini <model-id>  # a specific model
  */
 import { readFileSync, existsSync } from "node:fs";
 import * as path from "node:path";
