@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <!--
+    Authored square because the renderer pads a non-square SVG to a square and
+    rescales it, which crops the artwork. The 1200x675 cover is the centre band,
+    y=262 to y=937.
+
+    The wash covers the whole canvas rather than just the band. When it was drawn only
+    behind the content it stopped short of the crop line and left a white strip across
+    the top of the finished image.
+  -->
+  <defs>
+    <radialGradient id="a" cx="16%" cy="20%" r="78%">
+      <stop offset="0%" stop-color="#dfe7fd"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </radialGradient>
+    <radialGradient id="b" cx="88%" cy="16%" r="62%">
+      <stop offset="0%" stop-color="#eef2f8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <rect width="1200" height="1200" fill="url(#a)"/>
+  <rect width="1200" height="1200" fill="url(#b)"/>
+
+  <g transform="translate(0,262)">
+    <g transform="translate(72,58)">
+      <rect width="54" height="54" rx="14" fill="#1d43c8"/>
+      <g stroke="#fff" stroke-width="4.4" stroke-linecap="round" fill="none">
+        <path d="M13.5 20.5h15.2"/>
+        <path d="M13.5 34h21.8"/>
+      </g>
+      <rect x="33" y="18" width="4.8" height="4.8" rx="1" fill="#fff" opacity=".55"/>
+      <path d="M34.5 29 40.2 34l-5.7 4.7" stroke="#fff" stroke-width="4.4"
+            stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="74" y="38" font-family="Helvetica,Arial,sans-serif" font-size="31"
+            font-weight="700" fill="#0d1117" letter-spacing="-0.8">Buyable</text>
+    </g>
+
+    <text x="72" y="248" font-family="Helvetica,Arial,sans-serif" font-size="60"
+          font-weight="700" fill="#0d1117" letter-spacing="-2.2">Can anyone actually</text>
+    <text x="72" y="318" font-family="Helvetica,Arial,sans-serif" font-size="60"
+          font-weight="700" fill="#0d1117" letter-spacing="-2.2">finish buying from your site?</text>
+
+    <text x="72" y="378" font-family="Helvetica,Arial,sans-serif" font-size="24"
+          fill="#313b49">Three customers attempt the same checkout. One has a mouse. Two do not.</text>
+
+    <g transform="translate(72,428)">
+      <rect width="332" height="104" rx="14" fill="#e2f5ec" stroke="#0a5c39" stroke-width="1.5"/>
+      <text x="22" y="37" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0a5c39">BASELINE CONTROL</text>
+      <text x="22" y="75" font-family="Helvetica,Arial,sans-serif" font-size="29" font-weight="700" fill="#0a5c39">Completed 2 of 2</text>
+
+      <rect x="360" width="332" height="104" rx="14" fill="#fdecea" stroke="#9a2320" stroke-width="1.5"/>
+      <text x="382" y="37" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#9a2320">SCREEN READER USER</text>
+      <text x="382" y="75" font-family="Helvetica,Arial,sans-serif" font-size="29" font-weight="700" fill="#9a2320">0 of 3</text>
+
+      <rect x="720" width="332" height="104" rx="14" fill="#fdecea" stroke="#9a2320" stroke-width="1.5"/>
+      <text x="742" y="37" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#9a2320">AI SHOPPING AGENT</text>
+      <text x="742" y="75" font-family="Helvetica,Arial,sans-serif" font-size="29" font-weight="700" fill="#9a2320">0 of 3</text>
+    </g>
+
+    <text x="72" y="592" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#5b6676">
+      One missing attribute. Two revenue channels closed. Built on Amazon Bedrock AgentCore Browser.
+    </text>
+  </g>
+</svg>

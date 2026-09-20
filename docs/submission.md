@@ -66,7 +66,13 @@ a notebook that exists to look thorough costs credibility.
 
 ## Cover image
 
-`docs/submission-cover.png`, 1200 by 675, 387 KB. Under the 2 MB limit.
+`docs/submission-cover.png`, 1200 by 675, 623 KB. Under the 2 MB limit.
+
+The source is [assets/cover.svg](assets/cover.svg), authored square because the
+renderer pads a non-square SVG and rescales it, which crops the artwork. The cover is
+the centre band. The wash covers the whole canvas rather than only the band, because
+when it was drawn behind the content alone it stopped short of the crop line and left
+a white strip across the top of the finished image.
 
 ---
 
