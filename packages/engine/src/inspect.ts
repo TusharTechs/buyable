@@ -92,6 +92,19 @@ export interface InspectionReport {
   counts: Record<FindingSeverity, number>;
   /** Stated on every report. See the note at the top of this file. */
   limits: string[];
+  /**
+   * Set when the page we were served is not the page that was asked for.
+   *
+   * An error page, an anti-bot interstitial or a maintenance notice has its own
+   * accessibility defects, and reporting them as findings about the site is the same
+   * mistake the journey runner spent a day learning not to make. Pointed at a wrong
+   * URL, this reported "0 blocking, 8 impairing" for a retailer, and every one of
+   * those findings belonged to their 404 template.
+   */
+  notTheRealPage?: {
+    kind: "error-page" | "bot-protection" | "interstitial";
+    reason: string;
+  };
 }
 
 /**
@@ -469,6 +482,53 @@ function describe(kind: FindingKind, node?: AxNode): string {
  * Deterministic end to end, which is why it can be free and instant: the only cost is
  * a few seconds of managed browser time.
  */
+/** Titles a site serves when it has decided you are a robot, or when it has fallen over. */
+const NOT_THE_PAGE =
+  /\b(404|403|500|502|503)\b|not found|access denied|forbidden|error page|page unavailable|site maintenance|under maintenance|are you a robot|just a moment|attention required|captcha|security check|verify you are human|pardon our interruption|request rejected/i;
+
+/**
+ * Were we served the page that was asked for?
+ *
+ * Checked before anything is reported, because findings about somebody's 404 template
+ * are not findings about their shop, and a report that does not say which it is
+ * looking at is worse than no report.
+ */
+export function checkWeGotTheRealPage(
+  title: string,
+  finalUrl: string,
+  focusableCount: number,
+): InspectionReport["notTheRealPage"] {
+  if (NOT_THE_PAGE.test(title)) {
+    return {
+      kind: /404|not found|500|502|503|maintenance/i.test(title) ? "error-page" : "bot-protection",
+      reason: `the page title is "${title.trim()}"`,
+    };
+  }
+
+  // A title that is just the hostname, with almost nothing reachable, is what a site
+  // returns when it has decided the visitor is automated.
+  try {
+    const host = new URL(finalUrl).hostname.replace(/^www\d?\./, "");
+    const cleaned = title.trim().toLowerCase();
+    if (focusableCount < 5 && (cleaned === host || cleaned === `www.${host}`)) {
+      return {
+        kind: "bot-protection",
+        reason: `the title is just the domain name and only ${focusableCount} controls are reachable`,
+      };
+    }
+  } catch {
+    /* an unparseable URL is not evidence of anything */
+  }
+
+  if (focusableCount > 0 && focusableCount < 5) {
+    return {
+      kind: "interstitial",
+      reason: `only ${focusableCount} controls are reachable, which is an interstitial rather than a page`,
+    };
+  }
+  return undefined;
+}
+
 export async function inspectPage(page: PageHandle, requestedUrl: string): Promise<InspectionReport> {
   const startedAt = Date.now();
 
@@ -651,5 +711,6 @@ export async function inspectPage(page: PageHandle, requestedUrl: string): Promi
     transcript,
     counts,
     limits: INSPECTION_LIMITS,
+    notTheRealPage: checkWeGotTheRealPage(title, finalUrl, snapshot.tabOrder.length),
   };
 }

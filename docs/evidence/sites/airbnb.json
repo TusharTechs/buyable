@@ -1,0 +1,675 @@
+{
+  "url": "https://www.airbnb.com/s/Lisbon--Portugal/homes",
+  "finalUrl": "https://www.airbnb.com/s/Lisbon--Portugal/homes",
+  "title": "Airbnb | Lisbon - Vacation Rentals & Places to Stay - Lisbon",
+  "language": "en",
+  "createdAt": "2026-09-20T19:01:04.736Z",
+  "durationMs": 11532,
+  "nodeCount": 471,
+  "focusableCount": 118,
+  "findings": [],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to content",
+      "announcement": "\"Skip to content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Airbnb homepage",
+      "announcement": "\"Airbnb homepage\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "button",
+      "name": "Location Homes in Lisbon",
+      "announcement": "\"Location Homes in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "button",
+      "name": "Check in / Check out Any week",
+      "announcement": "\"Check in / Check out Any week\", button",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "button",
+      "name": "Guests Add guests",
+      "announcement": "\"Guests Add guests\", button",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "button",
+      "name": "Filters",
+      "announcement": "\"Filters\", button",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "checkbox",
+      "name": "Washer",
+      "announcement": "\"Washer\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "checkbox",
+      "name": "Wifi",
+      "announcement": "\"Wifi\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "checkbox",
+      "name": "Free parking",
+      "announcement": "\"Free parking\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "checkbox",
+      "name": "Instant Book",
+      "announcement": "\"Instant Book\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "checkbox",
+      "name": "Air conditioning",
+      "announcement": "\"Air conditioning\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "checkbox",
+      "name": "Kitchen",
+      "announcement": "\"Kitchen\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "checkbox",
+      "name": "Self check-in",
+      "announcement": "\"Self check-in\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "checkbox",
+      "name": "Allows pets",
+      "announcement": "\"Allows pets\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "checkbox",
+      "name": "TV",
+      "announcement": "\"TV\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "checkbox",
+      "name": "1+ bathrooms",
+      "announcement": "\"1+ bathrooms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "button",
+      "name": "Descriptions are based on details hosts provide",
+      "announcement": "\"Descriptions are based on details hosts provide\", button",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "button",
+      "name": "Next",
+      "announcement": "\"Next\", button",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "Search hotels",
+      "announcement": "\"Search hotels\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "Home in Lisbon",
+      "announcement": "\"Home in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "button",
+      "name": "Next photo: Home in Lisbon",
+      "announcement": "\"Next photo: Home in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "Condo in Lisbon",
+      "announcement": "\"Condo in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "button",
+      "name": "Next photo: Condo in Lisbon",
+      "announcement": "\"Next photo: Condo in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 51,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "link",
+      "name": "Apartment in Lisbon",
+      "announcement": "\"Apartment in Lisbon\", link",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "button",
+      "name": "Next photo: Apartment in Lisbon",
+      "announcement": "\"Next photo: Apartment in Lisbon\", button",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "link",
+      "name": "Page 2 of 15",
+      "announcement": "\"Page 2 of 15\", link",
+      "silent": false
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "Page 3 of 15",
+      "announcement": "\"Page 3 of 15\", link",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "link",
+      "name": "Page 4 of 15",
+      "announcement": "\"Page 4 of 15\", link",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "Last page, page 15",
+      "announcement": "\"Last page, page 15\", link",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "link",
+      "name": "Next",
+      "announcement": "\"Next\", link",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "Help Center",
+      "announcement": "\"Help Center\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "link",
+      "name": "Get help with a safety issue",
+      "announcement": "\"Get help with a safety issue\", link",
+      "silent": false
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "AirCover",
+      "announcement": "\"AirCover\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "link",
+      "name": "Travel insurance",
+      "announcement": "\"Travel insurance\", link",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "Anti-discrimination",
+      "announcement": "\"Anti-discrimination\", link",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "Disability support",
+      "announcement": "\"Disability support\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "Cancellation options",
+      "announcement": "\"Cancellation options\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "link",
+      "name": "Report neighborhood concern",
+      "announcement": "\"Report neighborhood concern\", link",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "link",
+      "name": "Airbnb your home",
+      "announcement": "\"Airbnb your home\", link",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "Airbnb your experience",
+      "announcement": "\"Airbnb your experience\", link",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "Airbnb your service",
+      "announcement": "\"Airbnb your service\", link",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "AirCover for Hosts",
+      "announcement": "\"AirCover for Hosts\", link",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "Hosting resources",
+      "announcement": "\"Hosting resources\", link",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "link",
+      "name": "Community forum",
+      "announcement": "\"Community forum\", link",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "Hosting responsibly",
+      "announcement": "\"Hosting responsibly\", link",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "link",
+      "name": "Airbnb-friendly apartments",
+      "announcement": "\"Airbnb-friendly apartments\", link",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "link",
+      "name": "Join a free hosting class",
+      "announcement": "\"Join a free hosting class\", link",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "link",
+      "name": "Find a co‑host",
+      "announcement": "\"Find a co‑host\", link",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "link",
+      "name": "Refer a host",
+      "announcement": "\"Refer a host\", link",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "2026 Summer Release",
+      "announcement": "\"2026 Summer Release\", link",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "Newsroom",
+      "announcement": "\"Newsroom\", link",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "Careers",
+      "announcement": "\"Careers\", link",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "Investors",
+      "announcement": "\"Investors\", link",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "Gift cards",
+      "announcement": "\"Gift cards\", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "Airbnb.org emergency stays",
+      "announcement": "\"Airbnb.org emergency stays\", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "Privacy",
+      "announcement": "\"Privacy\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "Terms",
+      "announcement": "\"Terms\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "Your Privacy Choices",
+      "announcement": "\"Your Privacy Choices\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "button",
+      "name": "Choose a language",
+      "announcement": "\"Choose a language\", button",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "button",
+      "name": "Choose a currency",
+      "announcement": "\"Choose a currency\", button",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "Navigate to Facebook",
+      "announcement": "\"Navigate to Facebook\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "Navigate to Twitter",
+      "announcement": "\"Navigate to Twitter\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "Navigate to Instagram",
+      "announcement": "\"Navigate to Instagram\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 0,
+    "impairs": 0,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

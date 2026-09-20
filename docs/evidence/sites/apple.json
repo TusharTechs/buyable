@@ -1,0 +1,766 @@
+{
+  "url": "https://www.apple.com/shop/buy-mac/macbook-air",
+  "finalUrl": "https://www.apple.com/shop/buy-mac/macbook-air",
+  "title": "Buy MacBook Air - Apple",
+  "language": "en-US",
+  "createdAt": "2026-09-20T18:59:32.206Z",
+  "durationMs": 8655,
+  "nodeCount": 553,
+  "focusableCount": 125,
+  "findings": [
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "html.en-us.amr > body.macbook-air > div:nth-of-type(2) > div:nth-of-type(2) > svg",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Apple",
+      "announcement": "\"Apple\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Store",
+      "announcement": "\"Store\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "Mac",
+      "announcement": "\"Mac\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "iPad",
+      "announcement": "\"iPad\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "iPhone",
+      "announcement": "\"iPhone\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Watch",
+      "announcement": "\"Watch\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "Vision",
+      "announcement": "\"Vision\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "AirPods",
+      "announcement": "\"AirPods\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "TV and Home",
+      "announcement": "\"TV and Home\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Entertainment",
+      "announcement": "\"Entertainment\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "link",
+      "name": "Accessories",
+      "announcement": "\"Accessories\", link",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "link",
+      "name": "Support",
+      "announcement": "\"Support\", link",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "button",
+      "name": "Search apple.com",
+      "announcement": "\"Search apple.com\", button",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "button",
+      "name": "Shopping Bag",
+      "announcement": "\"Shopping Bag\", button",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "button",
+      "name": "Learn more",
+      "announcement": "\"Learn more\", button",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "radio",
+      "name": "13-inch Footnote  1 Buy from $1299 or $108.25  per month for 12 months  Footnote  # Lease from $24.99 per month for 36 months  Footnote  ¶",
+      "announcement": "\"13-inch Footnote  1 Buy from $1299 or $108.25  per month for 12 months  Footnote  # Lease from $24.99 per month for 36 months  Footnote  ¶\", radio",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "radio",
+      "name": "15-inch Footnote  1 Buy from $1499 or $124.91  per month for 12 months  Footnote  # Lease from $28.99 per month for 36 months  Footnote  ¶",
+      "announcement": "\"15-inch Footnote  1 Buy from $1499 or $124.91  per month for 12 months  Footnote  # Lease from $28.99 per month for 36 months  Footnote  ¶\", radio",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "Ask a Mac Specialist (Opens in a new window)",
+      "announcement": "\"Ask a Mac Specialist (Opens in a new window)\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "button",
+      "name": "Learn more about Personal Setup",
+      "announcement": "\"Learn more about Personal Setup\", button, hasPopup=dialog",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "link",
+      "name": "Shop now Students and educators — save on a new Mac.",
+      "announcement": "\"Shop now Students and educators — save on a new Mac.\", link",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "button",
+      "name": "Frequently Asked Questions",
+      "announcement": "\"Frequently Asked Questions\", button, expanded",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "button",
+      "name": "I’m switching from a PC to a Mac. Is it easy to set up my new Mac and transfer my files?",
+      "announcement": "\"I’m switching from a PC to a Mac. Is it easy to set up my new Mac and transfer my files?\", button",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "button",
+      "name": "Does Apple offer any special discounts or promotions to higher education students, parents, and teachers?",
+      "announcement": "\"Does Apple offer any special discounts or promotions to higher education students, parents, and teachers?\", button",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "button",
+      "name": "What’s the fastest way to get my order, and what are my delivery options?",
+      "announcement": "\"What’s the fastest way to get my order, and what are my delivery options?\", button",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "button",
+      "name": "Can I connect my Mac to additional displays?",
+      "announcement": "\"Can I connect my Mac to additional displays?\", button",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "button",
+      "name": "How can I pay for my new Mac?",
+      "announcement": "\"How can I pay for my new Mac?\", button",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "button",
+      "name": "How does Apple Upgrade work?",
+      "announcement": "\"How does Apple Upgrade work?\", button",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "button",
+      "name": "How does Apple Trade In work?",
+      "announcement": "\"How does Apple Trade In work?\", button",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "button",
+      "name": "What protection does AppleCare offer?",
+      "announcement": "\"What protection does AppleCare offer?\", button",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "button",
+      "name": "Can I return or exchange my Mac?",
+      "announcement": "\"Can I return or exchange my Mac?\", button",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "Apple",
+      "announcement": "\"Apple\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "Mac",
+      "announcement": "\"Mac\", link",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "MacBook Air",
+      "announcement": "\"MacBook Air\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "Store",
+      "announcement": "\"Store\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "Mac",
+      "announcement": "\"Mac\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "iPad",
+      "announcement": "\"iPad\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "iPhone",
+      "announcement": "\"iPhone\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "Watch",
+      "announcement": "\"Watch\", link",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "Vision",
+      "announcement": "\"Vision\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "AirPods",
+      "announcement": "\"AirPods\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "TV & Home",
+      "announcement": "\"TV & Home\", link",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "AirTag",
+      "announcement": "\"AirTag\", link",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "Accessories",
+      "announcement": "\"Accessories\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "Gift Cards",
+      "announcement": "\"Gift Cards\", link",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "Wallet",
+      "announcement": "\"Wallet\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "Apple Card",
+      "announcement": "\"Apple Card\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "Apple Pay",
+      "announcement": "\"Apple Pay\", link",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "Apple Cash",
+      "announcement": "\"Apple Cash\", link",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "link",
+      "name": "Manage Your Apple Account",
+      "announcement": "\"Manage Your Apple Account\", link",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "link",
+      "name": "Apple Store Account",
+      "announcement": "\"Apple Store Account\", link",
+      "silent": false
+    },
+    {
+      "position": 51,
+      "role": "link",
+      "name": "iCloud.com",
+      "announcement": "\"iCloud.com\", link",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "link",
+      "name": "Apple One",
+      "announcement": "\"Apple One\", link",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "link",
+      "name": "Apple TV",
+      "announcement": "\"Apple TV\", link",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "link",
+      "name": "Apple Music",
+      "announcement": "\"Apple Music\", link",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "link",
+      "name": "Apple Arcade",
+      "announcement": "\"Apple Arcade\", link",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "link",
+      "name": "Apple Fitness+",
+      "announcement": "\"Apple Fitness+\", link",
+      "silent": false
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "Apple News+",
+      "announcement": "\"Apple News+\", link",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "link",
+      "name": "Apple Podcasts",
+      "announcement": "\"Apple Podcasts\", link",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "Apple Books",
+      "announcement": "\"Apple Books\", link",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "link",
+      "name": "App Store",
+      "announcement": "\"App Store\", link",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "Find a Store",
+      "announcement": "\"Find a Store\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "link",
+      "name": "Genius Bar",
+      "announcement": "\"Genius Bar\", link",
+      "silent": false
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "Today at Apple",
+      "announcement": "\"Today at Apple\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "link",
+      "name": "Apple Camp",
+      "announcement": "\"Apple Camp\", link",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "Apple Store App",
+      "announcement": "\"Apple Store App\", link",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "Certified Refurbished",
+      "announcement": "\"Certified Refurbished\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "Apple Upgrade",
+      "announcement": "\"Apple Upgrade\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "link",
+      "name": "Apple Trade In",
+      "announcement": "\"Apple Trade In\", link",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "link",
+      "name": "Financing",
+      "announcement": "\"Financing\", link",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "Carrier Deals at Apple",
+      "announcement": "\"Carrier Deals at Apple\", link",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "Order Status",
+      "announcement": "\"Order Status\", link",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "Shopping Help",
+      "announcement": "\"Shopping Help\", link",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "Apple and Business",
+      "announcement": "\"Apple and Business\", link",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "link",
+      "name": "Shop for Business",
+      "announcement": "\"Shop for Business\", link",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "Apple and Education",
+      "announcement": "\"Apple and Education\", link",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "link",
+      "name": "Shop for K-12",
+      "announcement": "\"Shop for K-12\", link",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "link",
+      "name": "Shop for College",
+      "announcement": "\"Shop for College\", link",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "link",
+      "name": "Apple in Healthcare",
+      "announcement": "\"Apple in Healthcare\", link",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "link",
+      "name": "Health on Apple Watch",
+      "announcement": "\"Health on Apple Watch\", link",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "Health Records on iPhone",
+      "announcement": "\"Health Records on iPhone\", link",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "Shop for Government",
+      "announcement": "\"Shop for Government\", link",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "Shop for Veterans and Military",
+      "announcement": "\"Shop for Veterans and Military\", link",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "Accessibility",
+      "announcement": "\"Accessibility\", link",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "Education",
+      "announcement": "\"Education\", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "Environment",
+      "announcement": "\"Environment\", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "Inclusion and Diversity",
+      "announcement": "\"Inclusion and Diversity\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "Privacy",
+      "announcement": "\"Privacy\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "Racial Equity and Justice",
+      "announcement": "\"Racial Equity and Justice\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "Supply Chain",
+      "announcement": "\"Supply Chain\", link",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "Newsroom",
+      "announcement": "\"Newsroom\", link",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "Apple Leadership",
+      "announcement": "\"Apple Leadership\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "Career Opportunities",
+      "announcement": "\"Career Opportunities\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "Investors",
+      "announcement": "\"Investors\", link",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "Ethics & Compliance",
+      "announcement": "\"Ethics & Compliance\", link",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "Events",
+      "announcement": "\"Events\", link",
+      "silent": false
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "Contact Apple",
+      "announcement": "\"Contact Apple\", link",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "Find an Apple Store",
+      "announcement": "\"Find an Apple Store\", link",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "other retailer",
+      "announcement": "\"other retailer\", link",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "Privacy Policy",
+      "announcement": "\"Privacy Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "Terms of Use",
+      "announcement": "\"Terms of Use\", link",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "Sales and Refunds",
+      "announcement": "\"Sales and Refunds\", link",
+      "silent": false
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "Legal",
+      "announcement": "\"Legal\", link",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "Site Map",
+      "announcement": "\"Site Map\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "United States",
+      "announcement": "\"United States\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 0,
+    "impairs": 1,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

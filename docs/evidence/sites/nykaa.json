@@ -1,0 +1,270 @@
+{
+  "url": "https://www.nykaa.com/makeup/c/10",
+  "finalUrl": "https://www.nykaa.com/makeup/c/10",
+  "title": "",
+  "language": "en",
+  "createdAt": "2026-09-20T19:03:13.449Z",
+  "durationMs": 10882,
+  "nodeCount": 60,
+  "focusableCount": 29,
+  "findings": [
+    {
+      "kind": "control-without-accessible-name",
+      "severity": "blocks",
+      "summary": "A button announces nothing, so a screen reader user cannot tell what it does.",
+      "role": "button",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.6"
+      ],
+      "announcement": "(no accessible name), button",
+      "selector": "div.css-1deqp08 > div.css-1q0ywzx:nth-of-type(2) > div.css-17yggf0 > div.css-roythe > button.css-12yctey",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "html > body > div:nth-of-type(1) > div.css-15c8g2n:nth-of-type(2)",
+      "outerHtml": "<div class=\"css-15c8g2n\" data-buyable-candidate=\"0\"><div class=\"css-a5xpxg\"></div><div class=\"css-w161wl\">How may we help you</div></div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "How may we help you",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.css-1q0ywzx:nth-of-type(2) > div.css-17yggf0 > div.css-roythe > button.css-12yctey > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "document-without-title",
+      "severity": "impairs",
+      "summary": "The page has no title, so it cannot be identified in a list of tabs or windows.",
+      "wcag": [
+        "2.4.2"
+      ],
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Shaadi glow starts with the right beauty picks",
+      "announcement": "\"Shaadi glow starts with the right beauty picks\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "mobile icon Get App",
+      "announcement": "\"mobile icon Get App\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "address icon Store & Events",
+      "announcement": "\"address icon Store & Events\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "giftcard icon Gift Card",
+      "announcement": "\"giftcard icon Gift Card\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "help icon Help",
+      "announcement": "\"help icon Help\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Nykaa Logo",
+      "announcement": "\"Nykaa Logo\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "Categories",
+      "announcement": "\"Categories\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "Brands",
+      "announcement": "\"Brands\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "Luxe",
+      "announcement": "\"Luxe\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Nykaa Fashion",
+      "announcement": "\"Nykaa Fashion\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "link",
+      "name": "Beauty Advice",
+      "announcement": "\"Beauty Advice\", link",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "button",
+      "name": "",
+      "announcement": "(no accessible name), button",
+      "silent": true
+    },
+    {
+      "position": 13,
+      "role": "textbox",
+      "name": "Search on Nykaa",
+      "announcement": "\"Search on Nykaa\", textbox",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "button",
+      "name": "Sign in",
+      "announcement": "\"Sign in\", button",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "button",
+      "name": "Shopping Bag",
+      "announcement": "\"Shopping Bag\", button, hasPopup=dialog",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "menuitem",
+      "name": "Makeup",
+      "announcement": "\"Makeup\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "menuitem",
+      "name": "Skin",
+      "announcement": "\"Skin\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "menuitem",
+      "name": "Hair",
+      "announcement": "\"Hair\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "menuitem",
+      "name": "Appliances",
+      "announcement": "\"Appliances\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "menuitem",
+      "name": "Bath & Body",
+      "announcement": "\"Bath & Body\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "menuitem",
+      "name": "Natural",
+      "announcement": "\"Natural\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "menuitem",
+      "name": "Mom & Baby",
+      "announcement": "\"Mom & Baby\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "menuitem",
+      "name": "Health & Wellness",
+      "announcement": "\"Health & Wellness\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "menuitem",
+      "name": "Men",
+      "announcement": "\"Men\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "menuitem",
+      "name": "Fragrance",
+      "announcement": "\"Fragrance\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "menuitem",
+      "name": "Fashion Selects",
+      "announcement": "\"Fashion Selects\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "menuitem",
+      "name": "Offers",
+      "announcement": "\"Offers\", menuitem",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "GO BACK TO HOME PAGE",
+      "announcement": "\"GO BACK TO HOME PAGE\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 2,
+    "impairs": 2,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

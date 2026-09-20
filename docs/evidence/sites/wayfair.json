@@ -1,0 +1,1355 @@
+{
+  "url": "https://www.wayfair.com/furniture/cat/living-room-furniture-c413892.html",
+  "finalUrl": "https://www.wayfair.com/furniture/sb0/sofas-c413892.html",
+  "title": "Sofas & Couches | Living Room Furniture & Living Room Furniture Sets",
+  "language": "en",
+  "createdAt": "2026-09-20T19:00:15.112Z",
+  "durationMs": 25439,
+  "nodeCount": 740,
+  "focusableCount": 177,
+  "findings": [
+    {
+      "kind": "control-without-accessible-name",
+      "severity": "blocks",
+      "summary": "A checkbox announces nothing, so a screen reader user cannot tell what it does.",
+      "role": "checkbox",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.6"
+      ],
+      "announcement": "(no accessible name), checkbox",
+      "selector": "div._16fu6t117._16fu6t131 > div:nth-of-type(1) > div._18w5sy6a._18w5sy66 > label._18w5sy6f._18w5sy6g > input.ar2tc50",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "textbox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), textbox",
+      "selector": "#Upholstery\\ Color-search-input",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div.vb7wlv2:nth-of-type(2) > div._1nlquxi3 > form._1nlquxi0 > div._1nlquxi1 > span._1thsbfh0",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a paragraph that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "paragraph",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), paragraph",
+      "selector": "div._16fu6t149._16fu6t113e:nth-of-type(2) > div.fbdrir0:nth-of-type(1) > div._16fu6t11t._16fu6t12f:nth-of-type(1) > div > p._16fu6t1bl._16fu6t116t",
+      "occurrences": 1
+    },
+    {
+      "kind": "focusable-without-accessible-name",
+      "severity": "blocks",
+      "summary": "Keyboard focus lands on a generic that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.",
+      "role": "generic",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.3"
+      ],
+      "announcement": "(no accessible name), generic",
+      "selector": "div._16fu6t1lz._16fu6t1e1:nth-of-type(2) > div._16fu6t143._16fu6t149:nth-of-type(4) > div > nav.zosqd80 > span.zosqd85.zosqd89:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "impairs",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), combobox, hasPopup=listbox",
+      "selector": "div > div._1we177d0 > div._16fu6t11t._16fu6t12f > div.kmvn862.gsqsd2s:nth-of-type(1) > div.kmvn86g",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A combobox cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "(no accessible name), combobox, hasPopup=listbox",
+      "selector": "div > div._1we177d0 > div._16fu6t11t._16fu6t12f > div.kmvn862.gsqsd2s:nth-of-type(1) > div.kmvn86g",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div._18w5sy6a._18w5sy66 > label._18w5sy6f._18w5sy6g > span._18w5sy6b._18w5sy6d > div._16fu6t113e._16fu6t1165 > svg",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to Main Content",
+      "announcement": "\"Skip to Main Content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "AllModern",
+      "announcement": "\"AllModern\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "Birch Lane",
+      "announcement": "\"Birch Lane\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "Joss & Main",
+      "announcement": "\"Joss & Main\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "Perigold",
+      "announcement": "\"Perigold\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Rewards",
+      "announcement": "\"Rewards\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "|Financing",
+      "announcement": "\"|Financing\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "|Professional",
+      "announcement": "\"|Professional\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "button",
+      "name": "Fast & Free Shipping Over $35*",
+      "announcement": "\"Fast & Free Shipping Over $35*\", button, hasPopup=dialog",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Wayfair",
+      "announcement": "\"Wayfair\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "combobox",
+      "name": "Search",
+      "announcement": "\"Search\", combobox, required, hasPopup=listbox",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "button",
+      "name": "Search",
+      "announcement": "\"Search\", button",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 14,
+      "role": "link",
+      "name": "Sign In",
+      "announcement": "\"Sign In\", link",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "button",
+      "name": "Open Account Dropdown",
+      "announcement": "\"Open Account Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "link",
+      "name": "Verified",
+      "announcement": "\"Verified\", link",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "button",
+      "name": "Open Verified Menu Dropdown",
+      "announcement": "\"Open Verified Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "link",
+      "name": "New Arrivals",
+      "announcement": "\"New Arrivals\", link",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "link",
+      "name": "Best Sellers",
+      "announcement": "\"Best Sellers\", link",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "button",
+      "name": "Trending",
+      "announcement": "\"Trending\", button",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "button",
+      "name": "Open Trending Menu Dropdown",
+      "announcement": "\"Open Trending Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "button",
+      "name": "Collaborations",
+      "announcement": "\"Collaborations\", button",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "button",
+      "name": "Open Collaborations Menu Dropdown",
+      "announcement": "\"Open Collaborations Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Shop by Room",
+      "announcement": "\"Shop by Room\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "button",
+      "name": "Open Shop by Room Menu Dropdown",
+      "announcement": "\"Open Shop by Room Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "Inspiration",
+      "announcement": "\"Inspiration\", link",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "button",
+      "name": "Services",
+      "announcement": "\"Services\", button",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "button",
+      "name": "Open Services Menu Dropdown",
+      "announcement": "\"Open Services Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "Furniture",
+      "announcement": "\"Furniture\", link",
+      "silent": false
+    },
+    {
+      "position": 30,
+      "role": "button",
+      "name": "Open Furniture Menu Dropdown",
+      "announcement": "\"Open Furniture Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "Outdoor",
+      "announcement": "\"Outdoor\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "button",
+      "name": "Open Outdoor Menu Dropdown",
+      "announcement": "\"Open Outdoor Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "Bedding & Bath",
+      "announcement": "\"Bedding & Bath\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "button",
+      "name": "Open Bedding & Bath Menu Dropdown",
+      "announcement": "\"Open Bedding & Bath Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "Mattresses",
+      "announcement": "\"Mattresses\", link",
+      "silent": false
+    },
+    {
+      "position": 36,
+      "role": "button",
+      "name": "Open Mattresses Menu Dropdown",
+      "announcement": "\"Open Mattresses Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "Rugs",
+      "announcement": "\"Rugs\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "button",
+      "name": "Open Rugs Menu Dropdown",
+      "announcement": "\"Open Rugs Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "Decor & Pillows",
+      "announcement": "\"Decor & Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "button",
+      "name": "Open Decor & Pillows Menu Dropdown",
+      "announcement": "\"Open Decor & Pillows Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "Lighting",
+      "announcement": "\"Lighting\", link",
+      "silent": false
+    },
+    {
+      "position": 42,
+      "role": "button",
+      "name": "Open Lighting Menu Dropdown",
+      "announcement": "\"Open Lighting Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "Organization",
+      "announcement": "\"Organization\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "button",
+      "name": "Open Organization Menu Dropdown",
+      "announcement": "\"Open Organization Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "Kitchen",
+      "announcement": "\"Kitchen\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "button",
+      "name": "Open Kitchen Menu Dropdown",
+      "announcement": "\"Open Kitchen Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "Baby & Kids",
+      "announcement": "\"Baby & Kids\", link",
+      "silent": false
+    },
+    {
+      "position": 48,
+      "role": "button",
+      "name": "Open Baby & Kids Menu Dropdown",
+      "announcement": "\"Open Baby & Kids Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "link",
+      "name": "Home Improvement",
+      "announcement": "\"Home Improvement\", link",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "button",
+      "name": "Open Home Improvement Menu Dropdown",
+      "announcement": "\"Open Home Improvement Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 51,
+      "role": "link",
+      "name": "Appliances",
+      "announcement": "\"Appliances\", link",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "button",
+      "name": "Open Appliances Menu Dropdown",
+      "announcement": "\"Open Appliances Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "link",
+      "name": "Pet",
+      "announcement": "\"Pet\", link",
+      "silent": false
+    },
+    {
+      "position": 54,
+      "role": "button",
+      "name": "Open Pet Menu Dropdown",
+      "announcement": "\"Open Pet Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "link",
+      "name": "Holiday",
+      "announcement": "\"Holiday\", link",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "button",
+      "name": "Open Holiday Menu Dropdown",
+      "announcement": "\"Open Holiday Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "Sale",
+      "announcement": "\"Sale\", link",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "button",
+      "name": "Open Sale Menu Dropdown",
+      "announcement": "\"Open Sale Menu Dropdown\", button",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "EPIC FALL SALE FEAT. DELTA | UP TO 70% OFF ENDS TOMORROW",
+      "announcement": "\"EPIC FALL SALE FEAT. DELTA | UP TO 70% OFF ENDS TOMORROW\", link",
+      "silent": false
+    },
+    {
+      "position": 60,
+      "role": "link",
+      "name": "24-HOUR FLASH DEALS",
+      "announcement": "\"24-HOUR FLASH DEALS\", link",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "UP TO 60% OFF LIVING ROOM SEATING",
+      "announcement": "\"UP TO 60% OFF LIVING ROOM SEATING\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "button",
+      "name": "Close Menu",
+      "announcement": "\"Close Menu\", button",
+      "silent": false
+    },
+    {
+      "position": 63,
+      "role": "paragraph",
+      "name": "",
+      "announcement": "(no accessible name), paragraph",
+      "silent": true
+    },
+    {
+      "position": 64,
+      "role": "link",
+      "name": "Living Room Furniture",
+      "announcement": "\"Living Room Furniture\", link",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "Sectionals",
+      "announcement": "\"Sectionals\", link",
+      "silent": false
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "Living Room Sets",
+      "announcement": "\"Living Room Sets\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "Chairs & Seating",
+      "announcement": "\"Chairs & Seating\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "button",
+      "name": "Show More",
+      "announcement": "\"Show More\", button",
+      "silent": false
+    },
+    {
+      "position": 69,
+      "role": "checkbox",
+      "name": "Sale",
+      "announcement": "\"Sale\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "checkbox",
+      "name": "",
+      "announcement": "(no accessible name), checkbox",
+      "silent": true
+    },
+    {
+      "position": 71,
+      "role": "button",
+      "name": "Update Zip Code 97818",
+      "announcement": "\"Update Zip Code 97818\", button",
+      "silent": false
+    },
+    {
+      "position": 72,
+      "role": "checkbox",
+      "name": "Wayfair Verified",
+      "announcement": "\"Wayfair Verified\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "checkbox",
+      "name": "Sunbrella®",
+      "announcement": "\"Sunbrella®\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "checkbox",
+      "name": "Crypton®",
+      "announcement": "\"Crypton®\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "checkbox",
+      "name": "Revolution Performance Fabrics®",
+      "announcement": "\"Revolution Performance Fabrics®\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "checkbox",
+      "name": "Other Performance Fabrics",
+      "announcement": "\"Other Performance Fabrics\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "checkbox",
+      "name": "Sustain®",
+      "announcement": "\"Sustain®\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 78,
+      "role": "checkbox",
+      "name": "Top Grain Leather Premium quality, durable, smooth and lightly buffed (or refined)",
+      "announcement": "\"Top Grain Leather Premium quality, durable, smooth and lightly buffed (or refined)\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "checkbox",
+      "name": "Full Grain Leather Premium quality, durable, natural with unique markings",
+      "announcement": "\"Full Grain Leather Premium quality, durable, natural with unique markings\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "checkbox",
+      "name": "Genuine Leather All leather made from real animal hides",
+      "announcement": "\"Genuine Leather All leather made from real animal hides\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "checkbox",
+      "name": "Faux Leather Mimics real leather look and feel, including vegan",
+      "announcement": "\"Faux Leather Mimics real leather look and feel, including vegan\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "checkbox",
+      "name": "All Leather Options",
+      "announcement": "\"All Leather Options\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "checkbox",
+      "name": "Cotton / Cotton Blend",
+      "announcement": "\"Cotton / Cotton Blend\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 84,
+      "role": "checkbox",
+      "name": "Chenille",
+      "announcement": "\"Chenille\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "checkbox",
+      "name": "Linen / Linen Blend",
+      "announcement": "\"Linen / Linen Blend\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "checkbox",
+      "name": "Velvet",
+      "announcement": "\"Velvet\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "checkbox",
+      "name": "Microfiber / Microsuede",
+      "announcement": "\"Microfiber / Microsuede\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "checkbox",
+      "name": "Corduroy",
+      "announcement": "\"Corduroy\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "checkbox",
+      "name": "Polyester / Polyester Blend",
+      "announcement": "\"Polyester / Polyester Blend\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 90,
+      "role": "button",
+      "name": "Show More",
+      "announcement": "\"Show More\", button",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "textbox",
+      "name": "",
+      "announcement": "(no accessible name), textbox",
+      "silent": true
+    },
+    {
+      "position": 92,
+      "role": "checkbox",
+      "name": "Beige",
+      "announcement": "\"Beige\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "checkbox",
+      "name": "Cream",
+      "announcement": "\"Cream\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "checkbox",
+      "name": "Brown",
+      "announcement": "\"Brown\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "checkbox",
+      "name": "Gray",
+      "announcement": "\"Gray\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 96,
+      "role": "checkbox",
+      "name": "Green",
+      "announcement": "\"Green\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "checkbox",
+      "name": "Blue",
+      "announcement": "\"Blue\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "checkbox",
+      "name": "Black",
+      "announcement": "\"Black\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "button",
+      "name": "Show More",
+      "announcement": "\"Show More\", button",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "checkbox",
+      "name": "Brown",
+      "announcement": "\"Brown\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "checkbox",
+      "name": "Black",
+      "announcement": "\"Black\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 102,
+      "role": "checkbox",
+      "name": "Gray",
+      "announcement": "\"Gray\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "checkbox",
+      "name": "Beige",
+      "announcement": "\"Beige\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "checkbox",
+      "name": "White",
+      "announcement": "\"White\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 105,
+      "role": "checkbox",
+      "name": "Gold",
+      "announcement": "\"Gold\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 106,
+      "role": "checkbox",
+      "name": "Blue",
+      "announcement": "\"Blue\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 107,
+      "role": "button",
+      "name": "Show More",
+      "announcement": "\"Show More\", button",
+      "silent": false
+    },
+    {
+      "position": 108,
+      "role": "checkbox",
+      "name": "Medium Wood",
+      "announcement": "\"Medium Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 109,
+      "role": "checkbox",
+      "name": "Espresso Wood",
+      "announcement": "\"Espresso Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 110,
+      "role": "checkbox",
+      "name": "Light Wood",
+      "announcement": "\"Light Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 111,
+      "role": "checkbox",
+      "name": "Red Wood",
+      "announcement": "\"Red Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 112,
+      "role": "checkbox",
+      "name": "White Wood",
+      "announcement": "\"White Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 113,
+      "role": "checkbox",
+      "name": "Gray Wood",
+      "announcement": "\"Gray Wood\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 114,
+      "role": "spinbutton",
+      "name": "Minimum",
+      "announcement": "\"Minimum\", spinbutton, value \"0\", required",
+      "silent": false
+    },
+    {
+      "position": 115,
+      "role": "spinbutton",
+      "name": "Maximum",
+      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
+      "silent": false
+    },
+    {
+      "position": 116,
+      "role": "checkbox",
+      "name": "Under $500",
+      "announcement": "\"Under $500\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 117,
+      "role": "checkbox",
+      "name": "$500 to $1,000",
+      "announcement": "\"$500 to $1,000\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 118,
+      "role": "checkbox",
+      "name": "$1,000 to $2,000",
+      "announcement": "\"$1,000 to $2,000\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 119,
+      "role": "checkbox",
+      "name": "$2,000 to $3,000",
+      "announcement": "\"$2,000 to $3,000\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 120,
+      "role": "checkbox",
+      "name": "$3,000 to $4,000",
+      "announcement": "\"$3,000 to $4,000\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 121,
+      "role": "checkbox",
+      "name": "$4,000 & Above",
+      "announcement": "\"$4,000 & Above\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 122,
+      "role": "checkbox",
+      "name": "Standard (71\" - 86\") Sofas for average sized living rooms",
+      "announcement": "\"Standard (71\" - 86\") Sofas for average sized living rooms\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 123,
+      "role": "checkbox",
+      "name": "Small (Under 70\") Good for small spaces",
+      "announcement": "\"Small (Under 70\") Good for small spaces\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 124,
+      "role": "checkbox",
+      "name": "Long (87\" - 100\") Sofas for larger rooms suitable for a family",
+      "announcement": "\"Long (87\" - 100\") Sofas for larger rooms suitable for a family\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 125,
+      "role": "checkbox",
+      "name": "Extra Long (Over 100\") Sofas to fit in a big space",
+      "announcement": "\"Extra Long (Over 100\") Sofas to fit in a big space\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 126,
+      "role": "spinbutton",
+      "name": "Minimum",
+      "announcement": "\"Minimum\", spinbutton, value \"0\", required",
+      "silent": false
+    },
+    {
+      "position": 127,
+      "role": "spinbutton",
+      "name": "Maximum",
+      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
+      "silent": false
+    },
+    {
+      "position": 128,
+      "role": "checkbox",
+      "name": "Deep (29\"-35\") More space to sit back",
+      "announcement": "\"Deep (29\"-35\") More space to sit back\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 129,
+      "role": "checkbox",
+      "name": "Standard (21\"-28\") Upright seating with some space to sit back",
+      "announcement": "\"Standard (21\"-28\") Upright seating with some space to sit back\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 130,
+      "role": "checkbox",
+      "name": "Extra Deep (over 35\") Extra space for relaxed deep seating",
+      "announcement": "\"Extra Deep (over 35\") Extra space for relaxed deep seating\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 131,
+      "role": "checkbox",
+      "name": "Shallow (Under 21\") Upright seating for smaller spaces",
+      "announcement": "\"Shallow (Under 21\") Upright seating for smaller spaces\", checkbox",
+      "silent": false
+    },
+    {
+      "position": 132,
+      "role": "spinbutton",
+      "name": "Minimum",
+      "announcement": "\"Minimum\", spinbutton, value \"0\", required",
+      "silent": false
+    },
+    {
+      "position": 133,
+      "role": "spinbutton",
+      "name": "Maximum",
+      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
+      "silent": false
+    },
+    {
+      "position": 134,
+      "role": "spinbutton",
+      "name": "Minimum",
+      "announcement": "\"Minimum\", spinbutton, value \"0\", required",
+      "silent": false
+    },
+    {
+      "position": 135,
+      "role": "spinbutton",
+      "name": "Maximum",
+      "announcement": "\"Maximum\", spinbutton, value \"1000000\", required",
+      "silent": false
+    },
+    {
+      "position": 136,
+      "role": "button",
+      "name": "Show More Filters",
+      "announcement": "\"Show More Filters\", button",
+      "silent": false
+    },
+    {
+      "position": 137,
+      "role": "link",
+      "name": "Furniture",
+      "announcement": "\"Furniture\", link",
+      "silent": false
+    },
+    {
+      "position": 138,
+      "role": "link",
+      "name": "Living Room Furniture",
+      "announcement": "\"Living Room Furniture\", link",
+      "silent": false
+    },
+    {
+      "position": 139,
+      "role": "link",
+      "name": "Sofas",
+      "announcement": "\"Sofas\", link",
+      "silent": false
+    },
+    {
+      "position": 140,
+      "role": "button",
+      "name": "Next Slide",
+      "announcement": "\"Next Slide\", button",
+      "silent": false
+    },
+    {
+      "position": 141,
+      "role": "link",
+      "name": "Sponsored Shop Banner Looks You'll Love Chic & Comfy Sofas Shop Now Sponsored",
+      "announcement": "\"Sponsored Shop Banner Looks You'll Love Chic & Comfy Sofas Shop Now Sponsored\", link",
+      "silent": false
+    },
+    {
+      "position": 142,
+      "role": "link",
+      "name": "Wayfair Verified Carmelinda 62.6'' Corduroy Sofa Save",
+      "announcement": "\"Wayfair Verified Carmelinda 62.6'' Corduroy Sofa Save\", link",
+      "silent": false
+    },
+    {
+      "position": 143,
+      "role": "link",
+      "name": "Bundle & Save Wayfair Verified Carmelinda 62.6'' Corduroy Loveseat Save",
+      "announcement": "\"Bundle & Save Wayfair Verified Carmelinda 62.6'' Corduroy Loveseat Save\", link",
+      "silent": false
+    },
+    {
+      "position": 144,
+      "role": "link",
+      "name": "Bentura Oversized Upholstered White Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save",
+      "announcement": "\"Bentura Oversized Upholstered White Faux Rabbit Fur Flannel Sleeper Sofa Bed Lounge sofa with Armrests & Throw Pillows Save\", link",
+      "silent": false
+    },
+    {
+      "position": 145,
+      "role": "button",
+      "name": "Sort By",
+      "announcement": "\"Sort By\", button, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 146,
+      "role": "link",
+      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
+      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
+      "silent": false
+    },
+    {
+      "position": 147,
+      "role": "link",
+      "name": "79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray",
+      "announcement": "\"79'' W Modern Loveseat Sofa, Comfy Velvet Couch with Spring Cushion, Removable Cover, Sturdy Frame, Deep Seat, Easy Assembly for Living Room, Bedroom, Office, and Small Space, Gray\", link",
+      "silent": false
+    },
+    {
+      "position": 148,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 149,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 150,
+      "role": "link",
+      "name": "George 76.8\" Chenille Modular Sectional Sofa",
+      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 151,
+      "role": "link",
+      "name": "George 76.8\" Chenille Modular Sectional Sofa",
+      "announcement": "\"George 76.8\" Chenille Modular Sectional Sofa\", link",
+      "silent": false
+    },
+    {
+      "position": 152,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 153,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 154,
+      "role": "link",
+      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
+      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 155,
+      "role": "link",
+      "name": "80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch",
+      "announcement": "\"80\"W Corduroy Sofa with Cup Holders, Storage Pockets and USB Ports - Black Couch\", link",
+      "silent": false
+    },
+    {
+      "position": 156,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 157,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 158,
+      "role": "link",
+      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 159,
+      "role": "link",
+      "name": "Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows",
+      "announcement": "\"Karlita 3-Seater 89'' Modern Upholstered Sofa with Square Armrests and 2 Throw Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 160,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 161,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 162,
+      "role": "link",
+      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
+      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 163,
+      "role": "link",
+      "name": "52\" Chenille Upholstered Loveseat Sofa with 2 Pillows",
+      "announcement": "\"52\" Chenille Upholstered Loveseat Sofa with 2 Pillows\", link",
+      "silent": false
+    },
+    {
+      "position": 164,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 165,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 166,
+      "role": "link",
+      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
+      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
+      "silent": false
+    },
+    {
+      "position": 167,
+      "role": "link",
+      "name": "59.8'' W Modern Upholstery Loveseat Boucle",
+      "announcement": "\"59.8'' W Modern Upholstery Loveseat Boucle\", link",
+      "silent": false
+    },
+    {
+      "position": 168,
+      "role": "button",
+      "name": "Quickview",
+      "announcement": "\"Quickview\", button",
+      "silent": false
+    },
+    {
+      "position": 169,
+      "role": "button",
+      "name": "Add to Cart",
+      "announcement": "\"Add to Cart\", button",
+      "silent": false
+    },
+    {
+      "position": 170,
+      "role": "generic",
+      "name": "",
+      "announcement": "(no accessible name), generic",
+      "silent": true
+    },
+    {
+      "position": 171,
+      "role": "link",
+      "name": "Page 2",
+      "announcement": "\"Page 2\", link",
+      "silent": false
+    },
+    {
+      "position": 172,
+      "role": "link",
+      "name": "Page 3",
+      "announcement": "\"Page 3\", link",
+      "silent": false
+    },
+    {
+      "position": 173,
+      "role": "link",
+      "name": "Page 4",
+      "announcement": "\"Page 4\", link",
+      "silent": false
+    },
+    {
+      "position": 174,
+      "role": "link",
+      "name": "Next",
+      "announcement": "\"Next\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 5,
+    "impairs": 3,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

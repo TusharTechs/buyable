@@ -140,6 +140,25 @@ FINDINGS  99 blocking, 72 impairing
 Ninety-nine links that announce nothing. A screen reader user hears "link, link,
 link". So does a shopping agent.
 
+Sixteen sites have been swept this way. A sample:
+
+| Site | Blocking | Impairing | Tab stops | Time |
+| --- | --- | --- | --- | --- |
+| Nike, men's shoes | 99 | 72 | 313 | 88s |
+| Flipkart, men's footwear | 71 | 149 | 286 | 125s |
+| Wayfair, living room | 5 | 3 | 177 | 25s |
+| **Apple, buy MacBook Air** | **0** | 1 | 125 | 9s |
+| **Airbnb, Lisbon search** | **0** | **0** | 118 | 12s |
+
+**The two zeroes are the most important rows in that table.** Neither is a scan that
+failed; both pages were fully served and fully read. A tool that finds problems
+everywhere is a random number generator with a WCAG citation attached, and Apple and
+Airbnb are the control on that.
+
+Four more sites were not measured at all, and are reported as not measured rather than
+as clean: Sephora and Uniqlo refused to serve an automated client, Myntra was in
+maintenance, and Decathlon returned a 404.
+
 ## Three things that make a Buyable result mean something
 
 **1. A persona is a constraint, not a prompt.** This is the part people assume is
@@ -171,6 +190,13 @@ every one blamed a real retailer for a limitation of our tool.
 | 5 | The blocker locator matched only one model's phrasing | "No element identified" |
 | 6 | The control persona was blamed for an accessibility barrier | "A missing label blocked a mouse user" |
 | 7 | A 503 and a bot challenge were recorded as barriers | "Amazon and Target exclude disabled customers" |
+| 8 | The free inspection reported findings from a 404 template | "Decathlon has 8 accessibility problems" |
+| 9 | The provider validator condemned a model over our own network error | "This model must not be used" |
+
+Numbers 8 and 9 were found today, after the first seven had been fixed, in the two
+parts of the system nobody had thought to check: the free page inspection, and the
+tool whose entire job is to police exactly this. The 404 page carried 54 reachable
+controls, so every "is the page empty" heuristic waved it straight through.
 
 Not one could have appeared against our own fixture, because the fixture is small,
 static, well-behaved and ours. They were found by pointing the tool at Amazon, Etsy,

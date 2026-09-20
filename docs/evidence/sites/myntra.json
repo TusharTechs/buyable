@@ -1,0 +1,36 @@
+{
+  "url": "https://www.myntra.com/men-tshirts",
+  "finalUrl": "https://www.myntra.com/men-tshirts",
+  "title": "Site Maintenance",
+  "createdAt": "2026-09-20T19:02:33.049Z",
+  "durationMs": 4939,
+  "nodeCount": 5,
+  "focusableCount": 1,
+  "findings": [
+    {
+      "kind": "document-without-language",
+      "severity": "impairs",
+      "summary": "The page does not declare a language, so screen readers may pronounce it with the wrong voice.",
+      "wcag": [
+        "3.1.1"
+      ],
+      "occurrences": 1
+    }
+  ],
+  "transcript": [],
+  "counts": {
+    "blocks": 0,
+    "impairs": 1,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ],
+  "notTheRealPage": {
+    "kind": "error-page",
+    "reason": "the page title is \"Site Maintenance\""
+  }
+}

@@ -23,6 +23,13 @@ console.log(`${report.finalUrl}`);
 console.log(`${report.nodeCount} nodes, ${report.focusableCount} focusable, ${Math.round(report.durationMs / 1000)}s`);
 console.log(bar);
 
+if (report.notTheRealPage) {
+  console.log(`\nTHIS IS NOT THE PAGE YOU ASKED FOR`);
+  console.log(`  ${report.notTheRealPage.reason}`);
+  console.log(`  Anything below describes that page, not the site. Findings about a 404`);
+  console.log(`  template or an anti-bot screen are not findings about a shop.\n`);
+}
+
 console.log(`\nFINDINGS  ${report.counts.blocks} blocking, ${report.counts.impairs} impairing, ${report.counts.note} notes\n`);
 for (const f of report.findings.slice(0, 20)) {
   const times = (f.occurrences ?? 1) > 1 ? `  (${f.occurrences} elements)` : "";

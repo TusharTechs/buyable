@@ -73,6 +73,86 @@ asking Chrome for the listeners actually attached, rather than inferred from sty
 wider sample. That matters as much as the findings: a tool that reports problems
 everywhere is not measuring anything.
 
+## A second sweep, 2026-09-21
+
+Ten more sites, chosen to widen the sample rather than to flatter it, including three
+of the largest Indian retailers. Same free inspection: one page load, no model, no key.
+
+| Site | Page | Result | Blocking | Impairing | Tab stops | Time |
+| --- | --- | --- | --- | --- | --- | --- |
+| Nike | men's shoes listing | worked | 99 | 72 | 313 | 88s |
+| Flipkart | men's footwear listing | worked | 71 | 149 | 286 | 125s |
+| Wayfair | living room furniture | worked | 5 | 3 | 177 | 25s |
+| Nykaa | makeup category | worked | 2 | 2 | 29 | 11s |
+| Apple | buy MacBook Air | worked | **0** | 1 | 125 | 9s |
+| Airbnb | Lisbon search results | worked | **0** | **0** | 118 | 12s |
+| Decathlon | shoes | not the real page, a 404 | | | 54 | 14s |
+| Myntra | men's t-shirts | not the real page, "Site Maintenance" | | | 1 | 5s |
+| Sephora | makeup | not the real page, "Access Denied" | | | 1 | 5s |
+| Uniqlo | men's tops | not the real page, an interstitial | | | 1 | 5s |
+
+### The two clean results are the most important rows
+
+**Apple returned zero blocking findings across 125 tab stops. Airbnb returned zero of
+either across 118.** Neither is a scan that failed: both pages were fully served and
+fully read.
+
+That is the row that makes the rest of the table mean something. A tool that finds
+problems everywhere is a random number generator with a WCAG citation attached, and
+these two are the control on that. Apple's single impairing finding is one decorative
+SVG with no text alternative.
+
+### Flipkart, verified by hand
+
+India's largest retailer, on the men's footwear listing: **71 blocking and 149
+impairing findings.** The blocking ones are mostly product links with no accessible
+name.
+
+Checked independently in a separate browser before writing it down, because three
+false-positive classes had to be removed before any of these numbers were worth
+anything:
+
+```
+267 links on the page
+ 44 visible links with no accessible name, no aria-label, no title, no image alt
+    <a class="CIaYa1" href="/bruton-lite-casual-shoe...">
+    <a class="CIaYa1" href="/boldfit-trial-king-men-...">
+```
+
+Each one goes to a product page. A customer tabbing through those search results with
+a screen reader hears "link, link, link" with no way to tell which shoe is which. So
+does a shopping agent.
+
+### Nike
+
+**99 blocking findings**, nearly all of them links in the global navigation with no
+accessible name, plus seven product links reachable only with a pointer. Also verified
+by hand in a separate browser.
+
+### What this sweep found in Buyable itself
+
+The Decathlon row is why this section exists. The first run of that URL reported
+**"0 blocking, 8 impairing"** for Decathlon. It was their 404 page.
+
+Every one of those findings belonged to a 404 template, and the report said nothing
+about that. It would have gone into a document with their name on it.
+
+This is the same mistake the journey runner spent a day learning not to make, sitting
+undetected in the one part of the system that had never been checked for it: describing
+something that is not the site as though it were the site. The free inspection had no
+equivalent of the preflight's "is this actually the page" check, because that check had
+been written for journeys and never carried across.
+
+Fixed. `inspectPage` now returns `notTheRealPage` when it was served an error page, a
+maintenance notice, an anti-bot screen or an interstitial, and both the CLI and the
+batch runner lead with it instead of printing findings under it.
+
+The detail that matters: **that 404 page had 54 reachable controls.** Any check based
+on "is the page nearly empty" would have waved it through, and the batch runner's own
+five-control heuristic did exactly that. `packages/engine/test/real-page.test.mjs`
+pins it, along with the opposite error: a shop selling a camera called the 500D, or a
+box set called "Trial and Error", must not be condemned for its title.
+
 ### What it cannot do
 
 Two sites refuse to serve us at all. Argos returns "Access Denied", eBay an error

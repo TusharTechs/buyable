@@ -1,0 +1,1971 @@
+{
+  "url": "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+  "finalUrl": "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+  "title": "Men's Shoes & Sneakers. Nike.com",
+  "language": "en-US",
+  "createdAt": "2026-09-20T18:56:38.980Z",
+  "durationMs": 88245,
+  "nodeCount": 752,
+  "focusableCount": 313,
+  "findings": [
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "occurrences": 99
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 7
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 6
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$190",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$190\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 4
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Road Running Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Road Running Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 3
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$115",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$115\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 3
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$220",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$220\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$180",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$180\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$155",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$155\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$145",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$145\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$135",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$135\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 2
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Pegasus Premium",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Pegasus Premium\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Road Running Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Road Running Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Vomero Plus",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Vomero Plus\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Pegasus 42",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Pegasus 42\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Vomero 18",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Vomero 18\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$165",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$165\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Kobe III Low Protro",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Kobe III Low Protro\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Men's Basketball Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Men's Basketball Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Kobe Air Force 1 Low",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Kobe Air Force 1 Low\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$125",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$125\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Book 2 \"Iron Fist\"",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Book 2 \"Iron Fist\"\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Basketball Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Basketball Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Sabrina 4 \"Light Work\"",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Sabrina 4 \"Light Work\"\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Basketball Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Basketball Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Court Heritage SL",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Court Heritage SL\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$75",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$75\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Force 1 '07",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Force 1 '07\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Zoom Vomero 5",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Zoom Vomero 5\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$170",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$170\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Max Moto 2K",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Max Moto 2K\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$135",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$135\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper:nth-of-type(1) > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Liquid Max AW",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Liquid Max AW\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Zoom Vomero Roam",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Zoom Vomero Roam\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Ava Edge",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Ava Edge\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike V5 RNR",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike V5 RNR\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$95",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$95\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Max Plus",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Max Plus\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(3) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Ava Rover",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Ava Rover\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Max \"Joga Bonito\"",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Max \"Joga Bonito\"\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Zoom Skylon 11",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Zoom Skylon 11\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Shoes",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Shoes\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__subtitle:nth-of-type(2)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Air Jordan 7 Retro \"Tennis Day\"",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Air Jordan 7 Retro \"Tennis Day\"\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "$215",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"$215\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.product-card__animation_wrapper:nth-of-type(2) > div.product-card__price-wrapper > div.product-card__price",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Jordan Trunner O/S",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Jordan Trunner O/S\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike P-6000",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike P-6000\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    },
+    {
+      "kind": "unreachable-by-keyboard",
+      "severity": "impairs",
+      "summary": "A link cannot be reached by keyboard, so it works only with a pointer.",
+      "role": "link",
+      "accessibleName": "Nike Air Max 95 Big Bubble",
+      "wcag": [
+        "2.1.1"
+      ],
+      "announcement": "\"Nike Air Max 95 Big Bubble\", link",
+      "selector": "figure > div.product-card__info.disable-animations > div.has--image-colorways.product_msg_info:nth-of-type(1) > div.product-card__titles:nth-of-type(2) > div.product-card__title:nth-of-type(1)",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Skip to main content",
+      "announcement": "\"Skip to main content\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Accessibility at Nike",
+      "announcement": "\"Accessibility at Nike\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "link",
+      "name": "Jordan",
+      "announcement": "\"Jordan\", link",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "link",
+      "name": "Converse",
+      "announcement": "\"Converse\", link",
+      "silent": false
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "Find a Store",
+      "announcement": "\"Find a Store\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Help",
+      "announcement": "\"Help\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "menuitem",
+      "name": "Help menu",
+      "announcement": "\"Help menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "Join Us",
+      "announcement": "\"Join Us\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "Sign In",
+      "announcement": "\"Sign In\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Nike Home Page",
+      "announcement": "\"Nike Home Page\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "link",
+      "name": "Men",
+      "announcement": "\"Men\", link",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "menuitem",
+      "name": "Men menu",
+      "announcement": "\"Men menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "link",
+      "name": "Women",
+      "announcement": "\"Women\", link",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "menuitem",
+      "name": "Women menu",
+      "announcement": "\"Women menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "link",
+      "name": "Kids",
+      "announcement": "\"Kids\", link",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "menuitem",
+      "name": "Kids menu",
+      "announcement": "\"Kids menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "link",
+      "name": "Jordan",
+      "announcement": "\"Jordan\", link",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "menuitem",
+      "name": "Jordan menu",
+      "announcement": "\"Jordan menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 19,
+      "role": "link",
+      "name": "NikeSKIMS",
+      "announcement": "\"NikeSKIMS\", link",
+      "silent": false
+    },
+    {
+      "position": 20,
+      "role": "menuitem",
+      "name": "NikeSKIMS menu",
+      "announcement": "\"NikeSKIMS menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "link",
+      "name": "Sport",
+      "announcement": "\"Sport\", link",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "menuitem",
+      "name": "Sport menu",
+      "announcement": "\"Sport menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "link",
+      "name": "Sportswear",
+      "announcement": "\"Sportswear\", link",
+      "silent": false
+    },
+    {
+      "position": 24,
+      "role": "button",
+      "name": "Search",
+      "announcement": "\"Search\", button",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "searchbox",
+      "name": "Search Products",
+      "announcement": "\"Search Products\", searchbox",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "Favorites",
+      "announcement": "\"Favorites\", link",
+      "silent": false
+    },
+    {
+      "position": 27,
+      "role": "link",
+      "name": "Bag Items: 0",
+      "announcement": "\"Bag Items: 0\", link",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "Nike Pegasus Premium",
+      "announcement": "\"Nike Pegasus Premium\", link",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 30,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "Nike Vomero Plus",
+      "announcement": "\"Nike Vomero Plus\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "Nike Pegasus 42 ",
+      "announcement": "\"Nike Pegasus 42 \", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "Nike Vomero 18 ",
+      "announcement": "\"Nike Vomero 18 \", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 49,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 50,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 51,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 52,
+      "role": "link",
+      "name": "Kobe III Low Protro",
+      "announcement": "\"Kobe III Low Protro\", link",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 54,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 55,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 56,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 58,
+      "role": "link",
+      "name": "Kobe Air Force 1 Low",
+      "announcement": "\"Kobe Air Force 1 Low\", link",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 60,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 62,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "Book 2 \"Iron Fist\"",
+      "announcement": "\"Book 2 \"Iron Fist\"\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 68,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 69,
+      "role": "link",
+      "name": "Sabrina 4 \"Light Work\"",
+      "announcement": "\"Sabrina 4 \"Light Work\"\", link",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 74,
+      "role": "link",
+      "name": "Nike Court Heritage SL",
+      "announcement": "\"Nike Court Heritage SL\", link",
+      "silent": false
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 76,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 77,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 78,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 79,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "Nike Air Force 1 '07",
+      "announcement": "\"Nike Air Force 1 '07\", link",
+      "silent": false
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "Nike Zoom Vomero 5",
+      "announcement": "\"Nike Zoom Vomero 5\", link",
+      "silent": false
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "Nike Air Max Moto 2K",
+      "announcement": "\"Nike Air Max Moto 2K\", link",
+      "silent": false
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "Nike Air Liquid Max AW",
+      "announcement": "\"Nike Air Liquid Max AW\", link",
+      "silent": false
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "Nike Zoom Vomero Roam",
+      "announcement": "\"Nike Zoom Vomero Roam\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "Nike Ava Edge",
+      "announcement": "\"Nike Ava Edge\", link",
+      "silent": false
+    },
+    {
+      "position": 105,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 106,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 107,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 108,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 109,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 110,
+      "role": "link",
+      "name": "Nike V5 RNR",
+      "announcement": "\"Nike V5 RNR\", link",
+      "silent": false
+    },
+    {
+      "position": 111,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 112,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 113,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 114,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 115,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 116,
+      "role": "link",
+      "name": "Nike Air Max Plus",
+      "announcement": "\"Nike Air Max Plus\", link",
+      "silent": false
+    },
+    {
+      "position": 117,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 118,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 119,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 120,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 121,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 122,
+      "role": "link",
+      "name": "Nike Ava Rover",
+      "announcement": "\"Nike Ava Rover\", link",
+      "silent": false
+    },
+    {
+      "position": 123,
+      "role": "link",
+      "name": "Nike Air Max \"Joga Bonito\"",
+      "announcement": "\"Nike Air Max \"Joga Bonito\"\", link",
+      "silent": false
+    },
+    {
+      "position": 124,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 125,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 126,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 127,
+      "role": "link",
+      "name": "Nike Zoom Skylon 11",
+      "announcement": "\"Nike Zoom Skylon 11\", link",
+      "silent": false
+    },
+    {
+      "position": 128,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 129,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 130,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 131,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 132,
+      "role": "link",
+      "name": "Air Jordan 7 Retro \"Tennis Day\"",
+      "announcement": "\"Air Jordan 7 Retro \"Tennis Day\"\", link",
+      "silent": false
+    },
+    {
+      "position": 133,
+      "role": "link",
+      "name": "Jordan Trunner O/S",
+      "announcement": "\"Jordan Trunner O/S\", link",
+      "silent": false
+    },
+    {
+      "position": 134,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 135,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 136,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 137,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 138,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 139,
+      "role": "link",
+      "name": "Nike P-6000",
+      "announcement": "\"Nike P-6000\", link",
+      "silent": false
+    },
+    {
+      "position": 140,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 141,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 142,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 143,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 144,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 145,
+      "role": "link",
+      "name": "Nike Air Max 95 Big Bubble",
+      "announcement": "\"Nike Air Max 95 Big Bubble\", link",
+      "silent": false
+    },
+    {
+      "position": 146,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 147,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 148,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 149,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 150,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 151,
+      "role": "link",
+      "name": "Resources",
+      "announcement": "\"Resources\", link",
+      "silent": false
+    },
+    {
+      "position": 152,
+      "role": "link",
+      "name": "Gift Cards",
+      "announcement": "\"Gift Cards\", link",
+      "silent": false
+    },
+    {
+      "position": 153,
+      "role": "link",
+      "name": "Corporate Sales",
+      "announcement": "\"Corporate Sales\", link",
+      "silent": false
+    },
+    {
+      "position": 154,
+      "role": "link",
+      "name": "Find a Store",
+      "announcement": "\"Find a Store\", link",
+      "silent": false
+    },
+    {
+      "position": 155,
+      "role": "link",
+      "name": "Membership",
+      "announcement": "\"Membership\", link",
+      "silent": false
+    },
+    {
+      "position": 156,
+      "role": "link",
+      "name": "Nike Journal",
+      "announcement": "\"Nike Journal\", link",
+      "silent": false
+    },
+    {
+      "position": 157,
+      "role": "link",
+      "name": "Site Feedback",
+      "announcement": "\"Site Feedback\", link",
+      "silent": false
+    },
+    {
+      "position": 158,
+      "role": "link",
+      "name": "Help",
+      "announcement": "\"Help\", link",
+      "silent": false
+    },
+    {
+      "position": 159,
+      "role": "link",
+      "name": "Get Help",
+      "announcement": "\"Get Help\", link",
+      "silent": false
+    },
+    {
+      "position": 160,
+      "role": "link",
+      "name": "Order Status",
+      "announcement": "\"Order Status\", link",
+      "silent": false
+    },
+    {
+      "position": 161,
+      "role": "link",
+      "name": "Shipping and Delivery",
+      "announcement": "\"Shipping and Delivery\", link",
+      "silent": false
+    },
+    {
+      "position": 162,
+      "role": "link",
+      "name": "Returns",
+      "announcement": "\"Returns\", link",
+      "silent": false
+    },
+    {
+      "position": 163,
+      "role": "link",
+      "name": "Order Cancellation",
+      "announcement": "\"Order Cancellation\", link",
+      "silent": false
+    },
+    {
+      "position": 164,
+      "role": "link",
+      "name": "Payment Options",
+      "announcement": "\"Payment Options\", link",
+      "silent": false
+    },
+    {
+      "position": 165,
+      "role": "link",
+      "name": "Gift Card Balance",
+      "announcement": "\"Gift Card Balance\", link",
+      "silent": false
+    },
+    {
+      "position": 166,
+      "role": "link",
+      "name": "Contact Us",
+      "announcement": "\"Contact Us\", link",
+      "silent": false
+    },
+    {
+      "position": 167,
+      "role": "link",
+      "name": "Company",
+      "announcement": "\"Company\", link",
+      "silent": false
+    },
+    {
+      "position": 168,
+      "role": "link",
+      "name": "About Nike",
+      "announcement": "\"About Nike\", link",
+      "silent": false
+    },
+    {
+      "position": 169,
+      "role": "link",
+      "name": "News",
+      "announcement": "\"News\", link",
+      "silent": false
+    },
+    {
+      "position": 170,
+      "role": "link",
+      "name": "Careers",
+      "announcement": "\"Careers\", link",
+      "silent": false
+    },
+    {
+      "position": 171,
+      "role": "link",
+      "name": "Investors",
+      "announcement": "\"Investors\", link",
+      "silent": false
+    },
+    {
+      "position": 172,
+      "role": "link",
+      "name": "Purpose",
+      "announcement": "\"Purpose\", link",
+      "silent": false
+    },
+    {
+      "position": 173,
+      "role": "link",
+      "name": "Sustainability",
+      "announcement": "\"Sustainability\", link",
+      "silent": false
+    },
+    {
+      "position": 174,
+      "role": "link",
+      "name": "Accessibility",
+      "announcement": "\"Accessibility\", link",
+      "silent": false
+    },
+    {
+      "position": 175,
+      "role": "link",
+      "name": "Promotions & Discounts",
+      "announcement": "\"Promotions & Discounts\", link",
+      "silent": false
+    },
+    {
+      "position": 176,
+      "role": "link",
+      "name": "Student",
+      "announcement": "\"Student\", link",
+      "silent": false
+    },
+    {
+      "position": 177,
+      "role": "link",
+      "name": "Military",
+      "announcement": "\"Military\", link",
+      "silent": false
+    },
+    {
+      "position": 178,
+      "role": "link",
+      "name": "Teacher",
+      "announcement": "\"Teacher\", link",
+      "silent": false
+    },
+    {
+      "position": 179,
+      "role": "link",
+      "name": "First Responders & Medical Professionals",
+      "announcement": "\"First Responders & Medical Professionals\", link",
+      "silent": false
+    },
+    {
+      "position": 180,
+      "role": "link",
+      "name": "Birthday",
+      "announcement": "\"Birthday\", link",
+      "silent": false
+    },
+    {
+      "position": 181,
+      "role": "button",
+      "name": "Selected Location: United States",
+      "announcement": "\"Selected Location: United States\", button",
+      "silent": false
+    },
+    {
+      "position": 182,
+      "role": "menuitem",
+      "name": "Guides menu",
+      "announcement": "\"Guides menu\", menuitem, hasPopup=menu",
+      "silent": false
+    },
+    {
+      "position": 183,
+      "role": "link",
+      "name": "Terms of Sale",
+      "announcement": "\"Terms of Sale\", link",
+      "silent": false
+    },
+    {
+      "position": 184,
+      "role": "link",
+      "name": "Terms of Use",
+      "announcement": "\"Terms of Use\", link",
+      "silent": false
+    },
+    {
+      "position": 185,
+      "role": "link",
+      "name": "Nike Privacy Policy",
+      "announcement": "\"Nike Privacy Policy\", link",
+      "silent": false
+    },
+    {
+      "position": 186,
+      "role": "link",
+      "name": "Your Privacy Choices",
+      "announcement": "\"Your Privacy Choices\", link",
+      "silent": false
+    },
+    {
+      "position": 187,
+      "role": "link",
+      "name": "CA Supply Chains Act",
+      "announcement": "\"CA Supply Chains Act\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 99,
+    "impairs": 72,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}

@@ -1,0 +1,3629 @@
+{
+  "url": "https://www.flipkart.com/mens-footwear/shoes/pr?sid=osp,cil,nit",
+  "finalUrl": "https://www.flipkart.com/mens-footwear/pr?sid=osp,cil",
+  "title": "Men's Footwear - Buy Shoes, Sandals, Sneakers and more on Flipkart",
+  "language": "en",
+  "createdAt": "2026-09-20T18:58:49.462Z",
+  "durationMs": 124686,
+  "nodeCount": 1284,
+  "focusableCount": 286,
+  "findings": [
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.col.x_CUu6 > div.row:nth-of-type(2) > div.G4PxIA > div > span.Mp5ZZJ",
+      "outerHtml": "<span class=\"Mp5ZZJ\" data-buyable-candidate=\"46\"><span>Read full review</span></span>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Read full review",
+      "occurrences": 2
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.RQHjDX.address:nth-of-type(5) > div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(1) > a",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.RQHjDX.address:nth-of-type(5) > div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(2) > a",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.RQHjDX.address:nth-of-type(5) > div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(3) > a",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.RQHjDX.address:nth-of-type(5) > div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(4) > a",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(2) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(2) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(2) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(2) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(3) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(3) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(3) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(3) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(4) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(4) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(4) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(4) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(5) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(5) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(5) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(5) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(6) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(6) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(6) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(6) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(7) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(7) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(7) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(7) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(8) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(8) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(8) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(8) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(9) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(9) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(9) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(9) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(10) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(10) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(10) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(10) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(11) > div.nZIRY7 > div:nth-of-type(1) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(11) > div.nZIRY7 > div:nth-of-type(2) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(11) > div.nZIRY7 > div:nth-of-type(3) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "empty-link",
+      "severity": "blocks",
+      "summary": "A link has no text, so it is announced only as \"link\".",
+      "role": "link",
+      "accessibleName": "",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), link",
+      "selector": "div.lvJbLV.col-12-12:nth-of-type(11) > div.nZIRY7 > div:nth-of-type(4) > div.bLCLBY.nr15la > a.CIaYa1",
+      "occurrences": 1
+    },
+    {
+      "kind": "control-without-accessible-name",
+      "severity": "blocks",
+      "summary": "A button announces nothing, so a screen reader user cannot tell what it does.",
+      "role": "button",
+      "accessibleName": "",
+      "wcag": [
+        "4.1.2",
+        "2.4.6"
+      ],
+      "announcement": "(no accessible name), button",
+      "selector": "div.nS94SX:nth-of-type(2) > div.yZCQWU:nth-of-type(2) > form.rcHWnF.header-form-search > div.col-12-12.kdPmDK > button.bJtikv",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), combobox, value \"Min\", hasPopup=menu",
+      "selector": "div.v360g_ > section.XC54e7.vRd1kF:nth-of-type(7) > div.MoAPVV:nth-of-type(4) > div.FrhiFV:nth-of-type(1) > select.hbnjE2",
+      "occurrences": 1
+    },
+    {
+      "kind": "form-field-without-label",
+      "severity": "blocks",
+      "summary": "A form field has no label, so its purpose is never announced.",
+      "role": "combobox",
+      "accessibleName": "",
+      "wcag": [
+        "1.3.1",
+        "3.3.2",
+        "4.1.2"
+      ],
+      "announcement": "(no accessible name), combobox, value \"₹3000+\", hasPopup=menu",
+      "selector": "div.v360g_ > section.XC54e7.vRd1kF:nth-of-type(7) > div.MoAPVV:nth-of-type(4) > div.WoGl7t:nth-of-type(3) > select.hbnjE2",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.CgvN2_:nth-of-type(1) > div.nzadEb:nth-of-type(1) > div.nS94SX:nth-of-type(2) > div.VyTVML:nth-of-type(5) > div.kOnij4",
+      "outerHtml": "<div class=\"kOnij4\" data-buyable-candidate=\"0\"><div class=\"yrDfl4 jODOEE\"><div><div class=\"UGFyTG\"> More </div></div></div><svg width=\"4.7\" height=\"8\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"gGO26o\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "More",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div._f7dpA > section.EbGpCV > div:nth-of-type(3) > div:nth-of-type(2) > div.hdcn5O.yQhGfT",
+      "outerHtml": "<div class=\"hdcn5O yQhGfT\" data-buyable-candidate=\"11\"><span>Show 3 more</span></div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Show 3 more",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(2) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"13\"><div class=\"_6odwB UHMz4K\">Brand</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\">",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "BRAND",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(2) > div.kMXMaw:nth-of-type(2) > div.GN2Hca.rQQNAD:nth-of-type(2)",
+      "outerHtml": "<div class=\"GN2Hca rQQNAD\" data-buyable-candidate=\"15\"><span>4083 MORE</span></div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "4083 MORE",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(3) > div.iCspr8.AF1m2F",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"17\"><div class=\"_6odwB UHMz4K\">Gender</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\"></path",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "GENDER",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(4) > div.iCspr8.AF1m2F",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"19\"><div class=\"_6odwB UHMz4K\">Color</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\"></path>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "COLOR",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(5) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"21\"><div class=\"_6odwB UHMz4K\">Occasion</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmV",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "OCCASION",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(6) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"23\"><div class=\"_6odwB UHMz4K\">Size</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\"><",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "SIZE",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(6) > div.kMXMaw:nth-of-type(2) > div.GN2Hca.rQQNAD:nth-of-type(2)",
+      "outerHtml": "<div class=\"GN2Hca rQQNAD\" data-buyable-candidate=\"25\"><span>18 MORE</span></div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "18 MORE",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(8) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"27\"><div class=\"_6odwB UHMz4K\">Discount</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmV",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "DISCOUNT",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(9) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"29\"><div class=\"_6odwB UHMz4K\">Customer Ratings</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" clas",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "CUSTOMER RATINGS",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.vRd1kF.J5IblS:nth-of-type(10) > div.ewLL6y > span.question",
+      "outerHtml": "<span class=\"question\" data-buyable-candidate=\"31\">?</span>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "?",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(11) > div.iCspr8.AF1m2F:nth-of-type(1)",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"32\"><div class=\"_6odwB UHMz4K\">Offers</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL WInslT\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\"",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "OFFERS",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(12) > div.iCspr8.AF1m2F",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"34\"><div class=\"_6odwB UHMz4K\">Country Of Origin</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMq",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "COUNTRY OF ORIGIN",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(13) > div.iCspr8.AF1m2F",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"36\"><div class=\"_6odwB UHMz4K\">New Arrivals</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\">",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "NEW ARRIVALS",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE > div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(14) > div.iCspr8.AF1m2F",
+      "outerHtml": "<div class=\"iCspr8 AF1m2F\" data-buyable-candidate=\"38\"><div class=\"_6odwB UHMz4K\">Availability</div><svg width=\"16\" height=\"27\" viewBox=\"0 0 16 27\" xmlns=\"http://www.w3.org/2000/svg\" class=\"RlN0VL\"><path d=\"M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z\" fill=\"#fff\" class=\"eMqmVf\">",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "AVAILABILITY",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.eRsYMo:nth-of-type(1) > div.lvJbLV > div.Vba09Z > div.s6YJlm:nth-of-type(3) > div.WNv7PR.dKeN6y:nth-of-type(1)",
+      "outerHtml": "<div class=\"WNv7PR dKeN6y\" data-buyable-candidate=\"40\">Popularity</div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Popularity",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.eRsYMo:nth-of-type(1) > div.lvJbLV > div.Vba09Z > div.s6YJlm:nth-of-type(3) > div.WNv7PR:nth-of-type(2)",
+      "outerHtml": "<div class=\"WNv7PR\" data-buyable-candidate=\"41\">Price -- Low to High</div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Price -- Low to High",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.eRsYMo:nth-of-type(1) > div.lvJbLV > div.Vba09Z > div.s6YJlm:nth-of-type(3) > div.WNv7PR:nth-of-type(3)",
+      "outerHtml": "<div class=\"WNv7PR\" data-buyable-candidate=\"42\">Price -- High to Low</div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Price -- High to Low",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.eRsYMo:nth-of-type(1) > div.lvJbLV > div.Vba09Z > div.s6YJlm:nth-of-type(3) > div.WNv7PR:nth-of-type(4)",
+      "outerHtml": "<div class=\"WNv7PR\" data-buyable-candidate=\"43\">Newest First</div>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Newest First",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE:nth-of-type(2) > div.lvJbLV.col-12-12:nth-of-type(13) > div.WVH6Jb > div.NrWeGL.g2s8e6 > span.P6xg17.c4g4fb:nth-of-type(1)",
+      "outerHtml": "<span class=\"P6xg17 c4g4fb\" data-buyable-candidate=\"44\">Yes</span>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "Yes",
+      "occurrences": 1
+    },
+    {
+      "kind": "non-semantic-interactive-element",
+      "severity": "blocks",
+      "summary": "An element responds to clicks but not to the keyboard, and is not exposed as a control, so it works with a mouse and with nothing else.",
+      "selector": "div.QSCKDh.dLgFEE:nth-of-type(2) > div.lvJbLV.col-12-12:nth-of-type(13) > div.WVH6Jb > div.NrWeGL.g2s8e6 > span.P6xg17.c4g4fb:nth-of-type(2)",
+      "outerHtml": "<span class=\"P6xg17 c4g4fb\" data-buyable-candidate=\"45\">No</span>",
+      "wcag": [
+        "4.1.2",
+        "2.1.1"
+      ],
+      "accessibleName": "No",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.bLCLBY.nr15la > a.CIaYa1 > div.SJekt1._PHN4S:nth-of-type(3) > div.JiknFv > svg.rE8OAo",
+      "occurrences": 38
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row.f6dnIR:nth-of-type(3) > div.row > svg.m0AJbz",
+      "occurrences": 10
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.ojKpP6 > img.PZfbSE",
+      "occurrences": 8
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
+      "occurrences": 7
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
+      "occurrences": 6
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
+      "occurrences": 6
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
+      "occurrences": 5
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
+      "occurrences": 5
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
+      "occurrences": 5
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
+      "occurrences": 3
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.s4t9tK:nth-of-type(1) > svg",
+      "occurrences": 3
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
+      "occurrences": 3
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(3) > img",
+      "occurrences": 2
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
+      "occurrences": 2
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(4) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
+      "occurrences": 2
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
+      "occurrences": 2
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.bLCLBY.nr15la > a.CIaYa1 > div.SJekt1._PHN4S:nth-of-type(4) > div.JiknFv > svg.rE8OAo",
+      "occurrences": 2
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.NgqjPl > div:nth-of-type(3) > div:nth-of-type(2) > div.IIWDQV > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(1) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(2) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(3) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(4) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(5) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(6) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.rX6Fng:nth-of-type(2) > div.xDeJa6._53gVo > div.t_CPtu > span.OqYNhN:nth-of-type(7) > svg.izSqBy",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(1) > a > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(2) > a > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(3) > a > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.CetntC > div.pfnqiI:nth-of-type(4) > span.dRabuN:nth-of-type(4) > a > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div.IIWDQV > div:nth-of-type(1) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div.IIWDQV > div:nth-of-type(2) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div.IIWDQV > div:nth-of-type(3) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div.IIWDQV > div:nth-of-type(4) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.nzadEb:nth-of-type(1) > div.nS94SX:nth-of-type(2) > div.VyTVML:nth-of-type(5) > div.kOnij4 > svg.gGO26o",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV > div.Vba09Z > div.aDN3s4:nth-of-type(1) > div.IHPEN6:nth-of-type(1) > svg.sPPh64",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV > div.Vba09Z > div.aDN3s4:nth-of-type(1) > div.IHPEN6:nth-of-type(2) > svg.sPPh64",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.aOVv6M > img.PZfbSE",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.col:nth-of-type(2) > div.col.x_CUu6 > div.row:nth-of-type(1) > div.MKiFS6.pnieuf > img.PZfbSE",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.yZCQWU:nth-of-type(2) > form.rcHWnF.header-form-search > div.col-12-12.kdPmDK > button.bJtikv > svg",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(2) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "section.KNnSWQ.vRd1kF:nth-of-type(2) > div.kMXMaw:nth-of-type(2) > div.Za3X8s:nth-of-type(1) > div.Ye50_w:nth-of-type(1) > svg.KhBZWk",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(3) > div.iCspr8.AF1m2F > svg.RlN0VL",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(4) > div.iCspr8.AF1m2F > svg.RlN0VL",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(5) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(6) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(8) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(9) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(11) > div.iCspr8.AF1m2F:nth-of-type(1) > svg.RlN0VL.WInslT",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(12) > div.iCspr8.AF1m2F > svg.RlN0VL",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(13) > div.iCspr8.AF1m2F > svg.RlN0VL",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div.lvJbLV.col-12-12 > div.v360g_ > section.KNnSWQ.vRd1kF:nth-of-type(14) > div.iCspr8.AF1m2F > svg.RlN0VL",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(2) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(1) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "div:nth-of-type(1) > div.bLCLBY.nr15la > div.p0C73x > div.Q3Sg7S:nth-of-type(2) > img",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "section.EbGpCV > div:nth-of-type(2) > div.pBPis1 > span > svg.QASjE5",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "section.EbGpCV > div:nth-of-type(3) > div.pBPis1:nth-of-type(1) > span > svg.QASjE5.V8qGiD",
+      "occurrences": 1
+    },
+    {
+      "kind": "image-without-alt",
+      "severity": "impairs",
+      "summary": "An image has no text alternative, so its content is unavailable to anyone who cannot see it.",
+      "role": "image",
+      "accessibleName": "",
+      "wcag": [
+        "1.1.1"
+      ],
+      "announcement": "(no accessible name), image",
+      "selector": "section.vRd1kF.J5IblS:nth-of-type(10) > label.BMOCJ3.qJewMY > div.buvtMR:nth-of-type(2) > div.h69y2R > img.h69y2R",
+      "occurrences": 1
+    }
+  ],
+  "transcript": [
+    {
+      "position": 1,
+      "role": "link",
+      "name": "Flipkart",
+      "announcement": "\"Flipkart\", link",
+      "silent": false
+    },
+    {
+      "position": 2,
+      "role": "link",
+      "name": "Explore Plus",
+      "announcement": "\"Explore Plus\", link",
+      "silent": false
+    },
+    {
+      "position": 3,
+      "role": "textbox",
+      "name": "Search for products, brands and more",
+      "announcement": "\"Search for products, brands and more\", textbox",
+      "silent": false
+    },
+    {
+      "position": 4,
+      "role": "button",
+      "name": "",
+      "announcement": "(no accessible name), button",
+      "silent": true
+    },
+    {
+      "position": 5,
+      "role": "link",
+      "name": "Login",
+      "announcement": "\"Login\", link",
+      "silent": false
+    },
+    {
+      "position": 6,
+      "role": "link",
+      "name": "Become a Seller",
+      "announcement": "\"Become a Seller\", link",
+      "silent": false
+    },
+    {
+      "position": 7,
+      "role": "link",
+      "name": "Cart",
+      "announcement": "\"Cart\", link",
+      "silent": false
+    },
+    {
+      "position": 8,
+      "role": "link",
+      "name": "Flights",
+      "announcement": "\"Flights\", link",
+      "silent": false
+    },
+    {
+      "position": 9,
+      "role": "link",
+      "name": "Offer Zone",
+      "announcement": "\"Offer Zone\", link",
+      "silent": false
+    },
+    {
+      "position": 10,
+      "role": "link",
+      "name": "Footwear",
+      "announcement": "\"Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 11,
+      "role": "link",
+      "name": "Men's Footwear",
+      "announcement": "\"Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 12,
+      "role": "link",
+      "name": "Shoe Laces",
+      "announcement": "\"Shoe Laces\", link",
+      "silent": false
+    },
+    {
+      "position": 13,
+      "role": "link",
+      "name": "Men’s Casual Shoes",
+      "announcement": "\"Men’s Casual Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 14,
+      "role": "link",
+      "name": "Men’s Sports Shoes",
+      "announcement": "\"Men’s Sports Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 15,
+      "role": "link",
+      "name": "Men’s Formal Shoes",
+      "announcement": "\"Men’s Formal Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 16,
+      "role": "link",
+      "name": "Men’s Sandals & Floaters",
+      "announcement": "\"Men’s Sandals & Floaters\", link",
+      "silent": false
+    },
+    {
+      "position": 17,
+      "role": "textbox",
+      "name": "Search Brand",
+      "announcement": "\"Search Brand\", textbox",
+      "silent": false
+    },
+    {
+      "position": 18,
+      "role": "combobox",
+      "name": "",
+      "announcement": "(no accessible name), combobox, value \"Min\", hasPopup=menu",
+      "silent": true
+    },
+    {
+      "position": 19,
+      "role": "combobox",
+      "name": "",
+      "announcement": "(no accessible name), combobox, value \"₹3000+\", hasPopup=menu",
+      "silent": true
+    },
+    {
+      "position": 20,
+      "role": "link",
+      "name": "Home",
+      "announcement": "\"Home\", link",
+      "silent": false
+    },
+    {
+      "position": 21,
+      "role": "link",
+      "name": "Footwear",
+      "announcement": "\"Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 22,
+      "role": "link",
+      "name": "Men's Footwear",
+      "announcement": "\"Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 23,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 24,
+      "role": "link",
+      "name": "Trekking shoes high neck boots for men anti skid trekki...",
+      "announcement": "\"Trekking shoes high neck boots for men anti skid trekki...\", link",
+      "silent": false
+    },
+    {
+      "position": 25,
+      "role": "link",
+      "name": "₹1,639 ₹4,899 66% off",
+      "announcement": "\"₹1,639 ₹4,899 66% off\", link",
+      "silent": false
+    },
+    {
+      "position": 26,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 27,
+      "role": "link",
+      "name": "Trial king Men High Grip Lightweight Breathable Shoes O...",
+      "announcement": "\"Trial king Men High Grip Lightweight Breathable Shoes O...\", link",
+      "silent": false
+    },
+    {
+      "position": 28,
+      "role": "link",
+      "name": "₹1,509 ₹3,899 61% off",
+      "announcement": "\"₹1,509 ₹3,899 61% off\", link",
+      "silent": false
+    },
+    {
+      "position": 29,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 30,
+      "role": "link",
+      "name": "Lite Casual Shoes Sneakers For Men",
+      "announcement": "\"Lite Casual Shoes Sneakers For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 31,
+      "role": "link",
+      "name": "₹478 ₹2,499 80% off",
+      "announcement": "\"₹478 ₹2,499 80% off\", link",
+      "silent": false
+    },
+    {
+      "position": 32,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 33,
+      "role": "link",
+      "name": "ESGRPEP Sneakers For Men",
+      "announcement": "\"ESGRPEP Sneakers For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 34,
+      "role": "link",
+      "name": "₹457 ₹1,999 77% off",
+      "announcement": "\"₹457 ₹1,999 77% off\", link",
+      "silent": false
+    },
+    {
+      "position": 35,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 36,
+      "role": "link",
+      "name": "Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...",
+      "announcement": "\"Premium Sports ,Gym, Trending, Stylish Running Shoes Fo...\", link",
+      "silent": false
+    },
+    {
+      "position": 37,
+      "role": "link",
+      "name": "₹998 ₹4,998 80% off",
+      "announcement": "\"₹998 ₹4,998 80% off\", link",
+      "silent": false
+    },
+    {
+      "position": 38,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 39,
+      "role": "link",
+      "name": "SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...",
+      "announcement": "\"SHOESHINE Men's Shoe Trees (6 Pairs) Premium Quality Ad...\", link",
+      "silent": false
+    },
+    {
+      "position": 40,
+      "role": "link",
+      "name": "₹920 ₹3,600 74% off",
+      "announcement": "\"₹920 ₹3,600 74% off\", link",
+      "silent": false
+    },
+    {
+      "position": 41,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 42,
+      "role": "link",
+      "name": "Avero 1524 Shoe Lace",
+      "announcement": "\"Avero 1524 Shoe Lace\", link",
+      "silent": false
+    },
+    {
+      "position": 43,
+      "role": "link",
+      "name": "₹92 ₹399 76% off",
+      "announcement": "\"₹92 ₹399 76% off\", link",
+      "silent": false
+    },
+    {
+      "position": 44,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 45,
+      "role": "link",
+      "name": "Shoes, Lightweight Moccasin for Office & Casual, Waterp...",
+      "announcement": "\"Shoes, Lightweight Moccasin for Office & Casual, Waterp...\", link",
+      "silent": false
+    },
+    {
+      "position": 46,
+      "role": "link",
+      "name": "₹296 ₹999 70% off",
+      "announcement": "\"₹296 ₹999 70% off\", link",
+      "silent": false
+    },
+    {
+      "position": 47,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 48,
+      "role": "link",
+      "name": "Men Lightweight with Arch Support Durable Anti-Skid & S...",
+      "announcement": "\"Men Lightweight with Arch Support Durable Anti-Skid & S...\", link",
+      "silent": false
+    },
+    {
+      "position": 49,
+      "role": "link",
+      "name": "₹603 ₹1,399 56% off",
+      "announcement": "\"₹603 ₹1,399 56% off\", link",
+      "silent": false
+    },
+    {
+      "position": 50,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 51,
+      "role": "link",
+      "name": "Adilette Aqua Unisex Slides",
+      "announcement": "\"Adilette Aqua Unisex Slides\", link",
+      "silent": false
+    },
+    {
+      "position": 52,
+      "role": "link",
+      "name": "₹899 ₹1,999 55% off",
+      "announcement": "\"₹899 ₹1,999 55% off\", link",
+      "silent": false
+    },
+    {
+      "position": 53,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 54,
+      "role": "link",
+      "name": "JOOTIYAPA PREMIUM TRENDY SPORTS SHOES FOR MEN Casuals F...",
+      "announcement": "\"JOOTIYAPA PREMIUM TRENDY SPORTS SHOES FOR MEN Casuals F...\", link",
+      "silent": false
+    },
+    {
+      "position": 55,
+      "role": "link",
+      "name": "₹480 ₹999 51% off",
+      "announcement": "\"₹480 ₹999 51% off\", link",
+      "silent": false
+    },
+    {
+      "position": 56,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 57,
+      "role": "link",
+      "name": "Men Sandal",
+      "announcement": "\"Men Sandal\", link",
+      "silent": false
+    },
+    {
+      "position": 58,
+      "role": "link",
+      "name": "₹912 ₹4,200 78% off",
+      "announcement": "\"₹912 ₹4,200 78% off\", link",
+      "silent": false
+    },
+    {
+      "position": 59,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 60,
+      "role": "link",
+      "name": "Boots For Men",
+      "announcement": "\"Boots For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 61,
+      "role": "link",
+      "name": "₹849 ₹2,499 66% off",
+      "announcement": "\"₹849 ₹2,499 66% off\", link",
+      "silent": false
+    },
+    {
+      "position": 62,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 63,
+      "role": "link",
+      "name": "VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...",
+      "announcement": "\"VELWAR Shoe Cleaner Foam Spray with Brush | No Rinse Sn...\", link",
+      "silent": false
+    },
+    {
+      "position": 64,
+      "role": "link",
+      "name": "₹255 ₹599 57% off",
+      "announcement": "\"₹255 ₹599 57% off\", link",
+      "silent": false
+    },
+    {
+      "position": 65,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 66,
+      "role": "link",
+      "name": "RAFAEL Walking Shoes For Men",
+      "announcement": "\"RAFAEL Walking Shoes For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 67,
+      "role": "link",
+      "name": "₹969 ₹2,699 64% off",
+      "announcement": "\"₹969 ₹2,699 64% off\", link",
+      "silent": false
+    },
+    {
+      "position": 68,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 69,
+      "role": "link",
+      "name": "Men Clogs Sandal",
+      "announcement": "\"Men Clogs Sandal\", link",
+      "silent": false
+    },
+    {
+      "position": 70,
+      "role": "link",
+      "name": "₹389 ₹1,299 70% off",
+      "announcement": "\"₹389 ₹1,299 70% off\", link",
+      "silent": false
+    },
+    {
+      "position": 71,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 72,
+      "role": "link",
+      "name": "Men Klunys Sneakers for Men | Casual Stylish Shoes|Prem...",
+      "announcement": "\"Men Klunys Sneakers for Men | Casual Stylish Shoes|Prem...\", link",
+      "silent": false
+    },
+    {
+      "position": 73,
+      "role": "link",
+      "name": "₹1,379 ₹3,949 65% off",
+      "announcement": "\"₹1,379 ₹3,949 65% off\", link",
+      "silent": false
+    },
+    {
+      "position": 74,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 75,
+      "role": "link",
+      "name": "SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...",
+      "announcement": "\"SHOESHINE 2 Pair Round Boot Lace Casual, Hiking Shoelac...\", link",
+      "silent": false
+    },
+    {
+      "position": 76,
+      "role": "link",
+      "name": "₹138 ₹250 44% off",
+      "announcement": "\"₹138 ₹250 44% off\", link",
+      "silent": false
+    },
+    {
+      "position": 77,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 78,
+      "role": "link",
+      "name": "KEE universal shoes repair rivets replacement button fo...",
+      "announcement": "\"KEE universal shoes repair rivets replacement button fo...\", link",
+      "silent": false
+    },
+    {
+      "position": 79,
+      "role": "link",
+      "name": "₹82 ₹699 88% off",
+      "announcement": "\"₹82 ₹699 88% off\", link",
+      "silent": false
+    },
+    {
+      "position": 80,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 81,
+      "role": "link",
+      "name": "premiumblack deer loafer for men Casuals For Men",
+      "announcement": "\"premiumblack deer loafer for men Casuals For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 82,
+      "role": "link",
+      "name": "₹361 ₹999 63% off",
+      "announcement": "\"₹361 ₹999 63% off\", link",
+      "silent": false
+    },
+    {
+      "position": 83,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 84,
+      "role": "link",
+      "name": "MALFOY Casuals For Men",
+      "announcement": "\"MALFOY Casuals For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 85,
+      "role": "link",
+      "name": "₹869 ₹2,599 66% off",
+      "announcement": "\"₹869 ₹2,599 66% off\", link",
+      "silent": false
+    },
+    {
+      "position": 86,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 87,
+      "role": "link",
+      "name": "Athleo WALKER-101 Breathable Flexible Lightweight Comfo...",
+      "announcement": "\"Athleo WALKER-101 Breathable Flexible Lightweight Comfo...\", link",
+      "silent": false
+    },
+    {
+      "position": 88,
+      "role": "link",
+      "name": "₹579 ₹1,699 65% off",
+      "announcement": "\"₹579 ₹1,699 65% off\", link",
+      "silent": false
+    },
+    {
+      "position": 89,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 90,
+      "role": "link",
+      "name": "DIGISM SHOES CLEANER Cleaner & Conditioner",
+      "announcement": "\"DIGISM SHOES CLEANER Cleaner & Conditioner\", link",
+      "silent": false
+    },
+    {
+      "position": 91,
+      "role": "link",
+      "name": "₹186 ₹599 68% off",
+      "announcement": "\"₹186 ₹599 68% off\", link",
+      "silent": false
+    },
+    {
+      "position": 92,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 93,
+      "role": "link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "silent": false
+    },
+    {
+      "position": 94,
+      "role": "link",
+      "name": "₹178 ₹599 70% off",
+      "announcement": "\"₹178 ₹599 70% off\", link",
+      "silent": false
+    },
+    {
+      "position": 95,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 96,
+      "role": "link",
+      "name": "Trendy Silicon Multi Coloured shoe Running Shoes For Me...",
+      "announcement": "\"Trendy Silicon Multi Coloured shoe Running Shoes For Me...\", link",
+      "silent": false
+    },
+    {
+      "position": 97,
+      "role": "link",
+      "name": "₹1,029 ₹3,199 67% off",
+      "announcement": "\"₹1,029 ₹3,199 67% off\", link",
+      "silent": false
+    },
+    {
+      "position": 98,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 99,
+      "role": "link",
+      "name": "Embroider party Wedding Ethnic Shoes For Men Jutis For ...",
+      "announcement": "\"Embroider party Wedding Ethnic Shoes For Men Jutis For ...\", link",
+      "silent": false
+    },
+    {
+      "position": 100,
+      "role": "link",
+      "name": "₹497 ₹1,999 75% off",
+      "announcement": "\"₹497 ₹1,999 75% off\", link",
+      "silent": false
+    },
+    {
+      "position": 101,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 102,
+      "role": "link",
+      "name": "Smash Pro Badminton shoes for men anti skid non marking...",
+      "announcement": "\"Smash Pro Badminton shoes for men anti skid non marking...\", link",
+      "silent": false
+    },
+    {
+      "position": 103,
+      "role": "link",
+      "name": "₹999 ₹2,399 58% off",
+      "announcement": "\"₹999 ₹2,399 58% off\", link",
+      "silent": false
+    },
+    {
+      "position": 104,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 105,
+      "role": "link",
+      "name": "Classic Cushion Slippers with Adjustable Buckle Strap A...",
+      "announcement": "\"Classic Cushion Slippers with Adjustable Buckle Strap A...\", link",
+      "silent": false
+    },
+    {
+      "position": 106,
+      "role": "link",
+      "name": "₹699 ₹1,799 61% off",
+      "announcement": "\"₹699 ₹1,799 61% off\", link",
+      "silent": false
+    },
+    {
+      "position": 107,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 108,
+      "role": "link",
+      "name": "laceexp Flat Athletic Shoe Laces For All Sneaker Types ...",
+      "announcement": "\"laceexp Flat Athletic Shoe Laces For All Sneaker Types ...\", link",
+      "silent": false
+    },
+    {
+      "position": 109,
+      "role": "link",
+      "name": "₹97 ₹289 66% off",
+      "announcement": "\"₹97 ₹289 66% off\", link",
+      "silent": false
+    },
+    {
+      "position": 110,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 111,
+      "role": "link",
+      "name": "valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...",
+      "announcement": "\"valsheri Shoe Washing Machine Bag, Laundry Bag for Wash...\", link",
+      "silent": false
+    },
+    {
+      "position": 112,
+      "role": "link",
+      "name": "₹141 ₹699 79% off",
+      "announcement": "\"₹141 ₹699 79% off\", link",
+      "silent": false
+    },
+    {
+      "position": 113,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 114,
+      "role": "link",
+      "name": "Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D...",
+      "announcement": "\"Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D...\", link",
+      "silent": false
+    },
+    {
+      "position": 115,
+      "role": "link",
+      "name": "₹172 ₹999 82% off",
+      "announcement": "\"₹172 ₹999 82% off\", link",
+      "silent": false
+    },
+    {
+      "position": 116,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 117,
+      "role": "link",
+      "name": "HELIXX Running Shoes For Men",
+      "announcement": "\"HELIXX Running Shoes For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 118,
+      "role": "link",
+      "name": "₹909 ₹2,399 62% off",
+      "announcement": "\"₹909 ₹2,399 62% off\", link",
+      "silent": false
+    },
+    {
+      "position": 119,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 120,
+      "role": "link",
+      "name": "Rungryp Sneakers For Men",
+      "announcement": "\"Rungryp Sneakers For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 121,
+      "role": "link",
+      "name": "₹1,599 ₹4,999 68% off",
+      "announcement": "\"₹1,599 ₹4,999 68% off\", link",
+      "silent": false
+    },
+    {
+      "position": 122,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 123,
+      "role": "link",
+      "name": "Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...",
+      "announcement": "\"Moonwalk-01 Black Casual,Walking,Slipon,Stylish Walking...\", link",
+      "silent": false
+    },
+    {
+      "position": 124,
+      "role": "link",
+      "name": "₹504 ₹999 49% off",
+      "announcement": "\"₹504 ₹999 49% off\", link",
+      "silent": false
+    },
+    {
+      "position": 125,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 126,
+      "role": "link",
+      "name": "Royal24kt Shoe Care Combo | Wax Shoe Polish + Liquid Po...",
+      "announcement": "\"Royal24kt Shoe Care Combo | Wax Shoe Polish + Liquid Po...\", link",
+      "silent": false
+    },
+    {
+      "position": 127,
+      "role": "link",
+      "name": "₹178 ₹251 29% off",
+      "announcement": "\"₹178 ₹251 29% off\", link",
+      "silent": false
+    },
+    {
+      "position": 128,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 129,
+      "role": "link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "silent": false
+    },
+    {
+      "position": 130,
+      "role": "link",
+      "name": "₹301 ₹1,199 74% off",
+      "announcement": "\"₹301 ₹1,199 74% off\", link",
+      "silent": false
+    },
+    {
+      "position": 131,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 132,
+      "role": "link",
+      "name": "Athleo BULLET-405 Stylish Lightweight Comfortable Trend...",
+      "announcement": "\"Athleo BULLET-405 Stylish Lightweight Comfortable Trend...\", link",
+      "silent": false
+    },
+    {
+      "position": 133,
+      "role": "link",
+      "name": "₹969 ₹2,699 64% off",
+      "announcement": "\"₹969 ₹2,699 64% off\", link",
+      "silent": false
+    },
+    {
+      "position": 134,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 135,
+      "role": "link",
+      "name": "Royal24kt Royal 24kt Liquid Shoe Polish Black + Black S...",
+      "announcement": "\"Royal24kt Royal 24kt Liquid Shoe Polish Black + Black S...\", link",
+      "silent": false
+    },
+    {
+      "position": 136,
+      "role": "link",
+      "name": "₹170 ₹279 39% off",
+      "announcement": "\"₹170 ₹279 39% off\", link",
+      "silent": false
+    },
+    {
+      "position": 137,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 138,
+      "role": "link",
+      "name": "Stylish Comfortable Lightweight Sports Running shoes Sn...",
+      "announcement": "\"Stylish Comfortable Lightweight Sports Running shoes Sn...\", link",
+      "silent": false
+    },
+    {
+      "position": 139,
+      "role": "link",
+      "name": "₹522 ₹2,499 79% off",
+      "announcement": "\"₹522 ₹2,499 79% off\", link",
+      "silent": false
+    },
+    {
+      "position": 140,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 141,
+      "role": "link",
+      "name": "VRPRIME Foam Sneaker Cleaning Kit Cleaner",
+      "announcement": "\"VRPRIME Foam Sneaker Cleaning Kit Cleaner\", link",
+      "silent": false
+    },
+    {
+      "position": 142,
+      "role": "link",
+      "name": "₹264 ₹999 73% off",
+      "announcement": "\"₹264 ₹999 73% off\", link",
+      "silent": false
+    },
+    {
+      "position": 143,
+      "role": "link",
+      "name": "1",
+      "announcement": "\"1\", link",
+      "silent": false
+    },
+    {
+      "position": 144,
+      "role": "link",
+      "name": "2",
+      "announcement": "\"2\", link",
+      "silent": false
+    },
+    {
+      "position": 145,
+      "role": "link",
+      "name": "3",
+      "announcement": "\"3\", link",
+      "silent": false
+    },
+    {
+      "position": 146,
+      "role": "link",
+      "name": "4",
+      "announcement": "\"4\", link",
+      "silent": false
+    },
+    {
+      "position": 147,
+      "role": "link",
+      "name": "5",
+      "announcement": "\"5\", link",
+      "silent": false
+    },
+    {
+      "position": 148,
+      "role": "link",
+      "name": "6",
+      "announcement": "\"6\", link",
+      "silent": false
+    },
+    {
+      "position": 149,
+      "role": "link",
+      "name": "7",
+      "announcement": "\"7\", link",
+      "silent": false
+    },
+    {
+      "position": 150,
+      "role": "link",
+      "name": "8",
+      "announcement": "\"8\", link",
+      "silent": false
+    },
+    {
+      "position": 151,
+      "role": "link",
+      "name": "9",
+      "announcement": "\"9\", link",
+      "silent": false
+    },
+    {
+      "position": 152,
+      "role": "link",
+      "name": "10",
+      "announcement": "\"10\", link",
+      "silent": false
+    },
+    {
+      "position": 153,
+      "role": "link",
+      "name": "NEXT",
+      "announcement": "\"NEXT\", link",
+      "silent": false
+    },
+    {
+      "position": 154,
+      "role": "link",
+      "name": "1. jootiyapa JOOTIYAPA PREMIUM... 3.9 3,036 Ratings&163 Reviews ₹480 51% off",
+      "announcement": "\"1. jootiyapa JOOTIYAPA PREMIUM... 3.9 3,036 Ratings&163 Reviews ₹480 51% off\", link",
+      "silent": false
+    },
+    {
+      "position": 155,
+      "role": "link",
+      "name": "2. BOLDFIT Trial king Men High... 4.3 533 Ratings&91 Reviews ₹1,509 61% off",
+      "announcement": "\"2. BOLDFIT Trial king Men High... 4.3 533 Ratings&91 Reviews ₹1,509 61% off\", link",
+      "silent": false
+    },
+    {
+      "position": 156,
+      "role": "link",
+      "name": "3. PUMA Rungryp Sneakers For M... 4.1 74,342 Ratings&4,820 Reviews ₹1,599 68% off",
+      "announcement": "\"3. PUMA Rungryp Sneakers For M... 4.1 74,342 Ratings&4,820 Reviews ₹1,599 68% off\", link",
+      "silent": false
+    },
+    {
+      "position": 157,
+      "role": "link",
+      "name": "4. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off",
+      "announcement": "\"4. SHOESHINE Men's Shoe Trees ... 4.2 18 Ratings&1 Reviews ₹920 74% off\", link",
+      "silent": false
+    },
+    {
+      "position": 158,
+      "role": "link",
+      "name": "5. BOLDFIT Smash Pro Badminton... 4.1 1,007 Ratings&111 Reviews ₹999 58% off",
+      "announcement": "\"5. BOLDFIT Smash Pro Badminton... 4.1 1,007 Ratings&111 Reviews ₹999 58% off\", link",
+      "silent": false
+    },
+    {
+      "position": 159,
+      "role": "link",
+      "name": "ADIDAS Unisex Adilette Aqua Slides",
+      "announcement": "\"ADIDAS Unisex Adilette Aqua Slides\", link",
+      "silent": false
+    },
+    {
+      "position": 160,
+      "role": "link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "silent": false
+    },
+    {
+      "position": 161,
+      "role": "link",
+      "name": "Abros MALFOY Casuals For Men",
+      "announcement": "\"Abros MALFOY Casuals For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 162,
+      "role": "link",
+      "name": "Abros HELIXX Running Shoes For Men",
+      "announcement": "\"Abros HELIXX Running Shoes For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 163,
+      "role": "link",
+      "name": "Royal24kt Royal 24kt Liquid Shoe Polish Black + Black Shoe Polish Combo Leather, Patent Leather, Synthetic Leather Shoe Liquid Polish",
+      "announcement": "\"Royal24kt Royal 24kt Liquid Shoe Polish Black + Black Shoe Polish Combo Leather, Patent Leather, Synthetic Leather Shoe Liquid Polish\", link",
+      "silent": false
+    },
+    {
+      "position": 164,
+      "role": "link",
+      "name": "DIGISM SHOES FOAMING CLEANER Cleaner",
+      "announcement": "\"DIGISM SHOES FOAMING CLEANER Cleaner\", link",
+      "silent": false
+    },
+    {
+      "position": 165,
+      "role": "link",
+      "name": "BOLDFIT Men Klunys Sneakers for Men | Casual Stylish Shoes|Premium PU Leather|TPR Sole Sneakers For Men",
+      "announcement": "\"BOLDFIT Men Klunys Sneakers for Men | Casual Stylish Shoes|Premium PU Leather|TPR Sole Sneakers For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 166,
+      "role": "link",
+      "name": "WELCOME Lightweight with Arch Support Durable Anti-Skid & Stylish Dailywear| Men Sandals",
+      "announcement": "\"WELCOME Lightweight with Arch Support Durable Anti-Skid & Stylish Dailywear| Men Sandals\", link",
+      "silent": false
+    },
+    {
+      "position": 167,
+      "role": "link",
+      "name": "Abros RAFAEL Walking Shoes For Men",
+      "announcement": "\"Abros RAFAEL Walking Shoes For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 168,
+      "role": "link",
+      "name": "Adbee Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D Cushion For Men & Women Form Full Length Regular, Sports, Orthotic Shoe Insole",
+      "announcement": "\"Adbee Shoes Pads Soft Bubble Insole Sole Protector PU Foam 5D Cushion For Men & Women Form Full Length Regular, Sports, Orthotic Shoe Insole\", link",
+      "silent": false
+    },
+    {
+      "position": 169,
+      "role": "link",
+      "name": "Footwear",
+      "announcement": "\"Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 170,
+      "role": "link",
+      "name": "Sports Shoes",
+      "announcement": "\"Sports Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 171,
+      "role": "link",
+      "name": "Casual Shoes",
+      "announcement": "\"Casual Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 172,
+      "role": "link",
+      "name": "Mens Slippers Flip Flops",
+      "announcement": "\"Mens Slippers Flip Flops\", link",
+      "silent": false
+    },
+    {
+      "position": 173,
+      "role": "link",
+      "name": "Mens Sandals Floaters",
+      "announcement": "\"Mens Sandals Floaters\", link",
+      "silent": false
+    },
+    {
+      "position": 174,
+      "role": "link",
+      "name": "Mens Formal Shoes",
+      "announcement": "\"Mens Formal Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 175,
+      "role": "link",
+      "name": "Shoe Care",
+      "announcement": "\"Shoe Care\", link",
+      "silent": false
+    },
+    {
+      "position": 176,
+      "role": "link",
+      "name": "Mens Ethnic Shoes",
+      "announcement": "\"Mens Ethnic Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 177,
+      "role": "link",
+      "name": "Shoe Laces",
+      "announcement": "\"Shoe Laces\", link",
+      "silent": false
+    },
+    {
+      "position": 178,
+      "role": "link",
+      "name": "Wrist Watches",
+      "announcement": "\"Wrist Watches\", link",
+      "silent": false
+    },
+    {
+      "position": 179,
+      "role": "link",
+      "name": "Mens And Womens Socks",
+      "announcement": "\"Mens And Womens Socks\", link",
+      "silent": false
+    },
+    {
+      "position": 180,
+      "role": "link",
+      "name": "Sunglasses",
+      "announcement": "\"Sunglasses\", link",
+      "silent": false
+    },
+    {
+      "position": 181,
+      "role": "link",
+      "name": "Mens Casual Shirts",
+      "announcement": "\"Mens Casual Shirts\", link",
+      "silent": false
+    },
+    {
+      "position": 182,
+      "role": "link",
+      "name": "Belts",
+      "announcement": "\"Belts\", link",
+      "silent": false
+    },
+    {
+      "position": 183,
+      "role": "link",
+      "name": "Wallets",
+      "announcement": "\"Wallets\", link",
+      "silent": false
+    },
+    {
+      "position": 184,
+      "role": "link",
+      "name": "Mens Jeans",
+      "announcement": "\"Mens Jeans\", link",
+      "silent": false
+    },
+    {
+      "position": 185,
+      "role": "link",
+      "name": "Wired Earphones",
+      "announcement": "\"Wired Earphones\", link",
+      "silent": false
+    },
+    {
+      "position": 186,
+      "role": "link",
+      "name": "Wallets",
+      "announcement": "\"Wallets\", link",
+      "silent": false
+    },
+    {
+      "position": 187,
+      "role": "link",
+      "name": "Mens Briefs And Trunks",
+      "announcement": "\"Mens Briefs And Trunks\", link",
+      "silent": false
+    },
+    {
+      "position": 188,
+      "role": "link",
+      "name": "Mens Formal Shirts",
+      "announcement": "\"Mens Formal Shirts\", link",
+      "silent": false
+    },
+    {
+      "position": 189,
+      "role": "link",
+      "name": "Mens Track Pants",
+      "announcement": "\"Mens Track Pants\", link",
+      "silent": false
+    },
+    {
+      "position": 190,
+      "role": "link",
+      "name": "Clothing And Accessories",
+      "announcement": "\"Clothing And Accessories\", link",
+      "silent": false
+    },
+    {
+      "position": 191,
+      "role": "link",
+      "name": "Mens Vests",
+      "announcement": "\"Mens Vests\", link",
+      "silent": false
+    },
+    {
+      "position": 192,
+      "role": "link",
+      "name": "Laptop Bags",
+      "announcement": "\"Laptop Bags\", link",
+      "silent": false
+    },
+    {
+      "position": 193,
+      "role": "link",
+      "name": "Boys Footwear",
+      "announcement": "\"Boys Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 194,
+      "role": "link",
+      "name": "Asics Tiger Shoes",
+      "announcement": "\"Asics Tiger Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 195,
+      "role": "link",
+      "name": "Air Jordan 1 High",
+      "announcement": "\"Air Jordan 1 High\", link",
+      "silent": false
+    },
+    {
+      "position": 196,
+      "role": "link",
+      "name": "Adidas Solar Glide Shoes",
+      "announcement": "\"Adidas Solar Glide Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 197,
+      "role": "link",
+      "name": "Asics Gel Shoes",
+      "announcement": "\"Asics Gel Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 198,
+      "role": "link",
+      "name": "Akshay Kumar Shoes",
+      "announcement": "\"Akshay Kumar Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 199,
+      "role": "link",
+      "name": "Adidas Men Shoes",
+      "announcement": "\"Adidas Men Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 200,
+      "role": "link",
+      "name": "Bacca Bucci Boots",
+      "announcement": "\"Bacca Bucci Boots\", link",
+      "silent": false
+    },
+    {
+      "position": 201,
+      "role": "link",
+      "name": "Adidas Eqt Shoes",
+      "announcement": "\"Adidas Eqt Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 202,
+      "role": "link",
+      "name": "Adidas Sobakov Shoes",
+      "announcement": "\"Adidas Sobakov Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 203,
+      "role": "link",
+      "name": "Adidas Deerupt Shoes",
+      "announcement": "\"Adidas Deerupt Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 204,
+      "role": "link",
+      "name": "Arrow Shoes",
+      "announcement": "\"Arrow Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 205,
+      "role": "link",
+      "name": "At Studio Shoes",
+      "announcement": "\"At Studio Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 206,
+      "role": "link",
+      "name": "American Swan Shoes",
+      "announcement": "\"American Swan Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 207,
+      "role": "link",
+      "name": "Asics Comutora Shoes",
+      "announcement": "\"Asics Comutora Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 208,
+      "role": "link",
+      "name": "Adidas Tubular Shoes",
+      "announcement": "\"Adidas Tubular Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 209,
+      "role": "link",
+      "name": "Belly Shoes For Men",
+      "announcement": "\"Belly Shoes For Men\", link",
+      "silent": false
+    },
+    {
+      "position": 210,
+      "role": "link",
+      "name": "Adidas Continental 80 Shoes",
+      "announcement": "\"Adidas Continental 80 Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 211,
+      "role": "link",
+      "name": "Asics Japan S",
+      "announcement": "\"Asics Japan S\", link",
+      "silent": false
+    },
+    {
+      "position": 212,
+      "role": "link",
+      "name": "Air Force 1 Shoes",
+      "announcement": "\"Air Force 1 Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 213,
+      "role": "link",
+      "name": "Adidas X",
+      "announcement": "\"Adidas X\", link",
+      "silent": false
+    },
+    {
+      "position": 214,
+      "role": "link",
+      "name": "Action Men's Footwear",
+      "announcement": "\"Action Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 215,
+      "role": "link",
+      "name": "Adidas Men's Footwear",
+      "announcement": "\"Adidas Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 216,
+      "role": "link",
+      "name": "Adidas Originals Men's Footwear",
+      "announcement": "\"Adidas Originals Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 217,
+      "role": "link",
+      "name": "Ajanta Men's Footwear",
+      "announcement": "\"Ajanta Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 218,
+      "role": "link",
+      "name": "Allen Solly Men's Footwear",
+      "announcement": "\"Allen Solly Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 219,
+      "role": "link",
+      "name": "Asics Men's Footwear",
+      "announcement": "\"Asics Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 220,
+      "role": "link",
+      "name": "Bata Men's Footwear",
+      "announcement": "\"Bata Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 221,
+      "role": "link",
+      "name": "Bxxy Men's Footwear",
+      "announcement": "\"Bxxy Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 222,
+      "role": "link",
+      "name": "Campus Men's Footwear",
+      "announcement": "\"Campus Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 223,
+      "role": "link",
+      "name": "Clarks Men's Footwear",
+      "announcement": "\"Clarks Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 224,
+      "role": "link",
+      "name": "Columbus Men's Footwear",
+      "announcement": "\"Columbus Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 225,
+      "role": "link",
+      "name": "Converse Men's Footwear",
+      "announcement": "\"Converse Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 226,
+      "role": "link",
+      "name": "Crocs Men's Footwear",
+      "announcement": "\"Crocs Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 227,
+      "role": "link",
+      "name": "Fashion Section Men's Footwear",
+      "announcement": "\"Fashion Section Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 228,
+      "role": "link",
+      "name": "Fila Men's Footwear",
+      "announcement": "\"Fila Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 229,
+      "role": "link",
+      "name": "French Connection Men's Footwear",
+      "announcement": "\"French Connection Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 230,
+      "role": "link",
+      "name": "Hush Puppies Men's Footwear",
+      "announcement": "\"Hush Puppies Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 231,
+      "role": "link",
+      "name": "Lancer Men's Footwear",
+      "announcement": "\"Lancer Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 232,
+      "role": "link",
+      "name": "Lee Cooper Men's Footwear",
+      "announcement": "\"Lee Cooper Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 233,
+      "role": "link",
+      "name": "Li Ning Men's Footwear",
+      "announcement": "\"Li Ning Men's Footwear\", link",
+      "silent": false
+    },
+    {
+      "position": 234,
+      "role": "link",
+      "name": "Loafers",
+      "announcement": "\"Loafers\", link",
+      "silent": false
+    },
+    {
+      "position": 235,
+      "role": "link",
+      "name": "Running Shoes",
+      "announcement": "\"Running Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 236,
+      "role": "link",
+      "name": "Sneakers",
+      "announcement": "\"Sneakers\", link",
+      "silent": false
+    },
+    {
+      "position": 237,
+      "role": "link",
+      "name": "Walking Shoes",
+      "announcement": "\"Walking Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 238,
+      "role": "link",
+      "name": "Slippers",
+      "announcement": "\"Slippers\", link",
+      "silent": false
+    },
+    {
+      "position": 239,
+      "role": "link",
+      "name": "Cricket Shoes",
+      "announcement": "\"Cricket Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 240,
+      "role": "link",
+      "name": "Formal Shoes",
+      "announcement": "\"Formal Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 241,
+      "role": "link",
+      "name": "Casual Shoes",
+      "announcement": "\"Casual Shoes\", link",
+      "silent": false
+    },
+    {
+      "position": 242,
+      "role": "link",
+      "name": "White Sneaker",
+      "announcement": "\"White Sneaker\", link",
+      "silent": false
+    },
+    {
+      "position": 243,
+      "role": "link",
+      "name": "Contact Us",
+      "announcement": "\"Contact Us\", link",
+      "silent": false
+    },
+    {
+      "position": 244,
+      "role": "link",
+      "name": "About Us",
+      "announcement": "\"About Us\", link",
+      "silent": false
+    },
+    {
+      "position": 245,
+      "role": "link",
+      "name": "Careers",
+      "announcement": "\"Careers\", link",
+      "silent": false
+    },
+    {
+      "position": 246,
+      "role": "link",
+      "name": "Flipkart Stories",
+      "announcement": "\"Flipkart Stories\", link",
+      "silent": false
+    },
+    {
+      "position": 247,
+      "role": "link",
+      "name": "Press",
+      "announcement": "\"Press\", link",
+      "silent": false
+    },
+    {
+      "position": 248,
+      "role": "link",
+      "name": "Corporate Information",
+      "announcement": "\"Corporate Information\", link",
+      "silent": false
+    },
+    {
+      "position": 249,
+      "role": "link",
+      "name": "Myntra",
+      "announcement": "\"Myntra\", link",
+      "silent": false
+    },
+    {
+      "position": 250,
+      "role": "link",
+      "name": "Cleartrip",
+      "announcement": "\"Cleartrip\", link",
+      "silent": false
+    },
+    {
+      "position": 251,
+      "role": "link",
+      "name": "Shopsy",
+      "announcement": "\"Shopsy\", link",
+      "silent": false
+    },
+    {
+      "position": 252,
+      "role": "link",
+      "name": "Payments",
+      "announcement": "\"Payments\", link",
+      "silent": false
+    },
+    {
+      "position": 253,
+      "role": "link",
+      "name": "Shipping",
+      "announcement": "\"Shipping\", link",
+      "silent": false
+    },
+    {
+      "position": 254,
+      "role": "link",
+      "name": "Cancellation & Returns",
+      "announcement": "\"Cancellation & Returns\", link",
+      "silent": false
+    },
+    {
+      "position": 255,
+      "role": "link",
+      "name": "FAQ",
+      "announcement": "\"FAQ\", link",
+      "silent": false
+    },
+    {
+      "position": 256,
+      "role": "link",
+      "name": "Cancellation & Returns",
+      "announcement": "\"Cancellation & Returns\", link",
+      "silent": false
+    },
+    {
+      "position": 257,
+      "role": "link",
+      "name": "Terms Of Use",
+      "announcement": "\"Terms Of Use\", link",
+      "silent": false
+    },
+    {
+      "position": 258,
+      "role": "link",
+      "name": "Security",
+      "announcement": "\"Security\", link",
+      "silent": false
+    },
+    {
+      "position": 259,
+      "role": "link",
+      "name": "Privacy",
+      "announcement": "\"Privacy\", link",
+      "silent": false
+    },
+    {
+      "position": 260,
+      "role": "link",
+      "name": "Sitemap",
+      "announcement": "\"Sitemap\", link",
+      "silent": false
+    },
+    {
+      "position": 261,
+      "role": "link",
+      "name": "Grievance Redressal",
+      "announcement": "\"Grievance Redressal\", link",
+      "silent": false
+    },
+    {
+      "position": 262,
+      "role": "link",
+      "name": "EPR Compliance",
+      "announcement": "\"EPR Compliance\", link",
+      "silent": false
+    },
+    {
+      "position": 263,
+      "role": "link",
+      "name": "FSSAI Food Safety Connect App",
+      "announcement": "\"FSSAI Food Safety Connect App\", link",
+      "silent": false
+    },
+    {
+      "position": 264,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 265,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 266,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 267,
+      "role": "link",
+      "name": "",
+      "announcement": "(no accessible name), link",
+      "silent": true
+    },
+    {
+      "position": 268,
+      "role": "link",
+      "name": "044-45614700",
+      "announcement": "\"044-45614700\", link",
+      "silent": false
+    },
+    {
+      "position": 269,
+      "role": "link",
+      "name": "044-67415800",
+      "announcement": "\"044-67415800\", link",
+      "silent": false
+    },
+    {
+      "position": 270,
+      "role": "link",
+      "name": "Become a Seller",
+      "announcement": "\"Become a Seller\", link",
+      "silent": false
+    },
+    {
+      "position": 271,
+      "role": "link",
+      "name": "Gift Cards",
+      "announcement": "\"Gift Cards\", link",
+      "silent": false
+    },
+    {
+      "position": 272,
+      "role": "link",
+      "name": "Help Center",
+      "announcement": "\"Help Center\", link",
+      "silent": false
+    }
+  ],
+  "counts": {
+    "blocks": 71,
+    "impairs": 149,
+    "note": 0
+  },
+  "limits": [
+    "This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.",
+    "Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.",
+    "Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.",
+    "Nothing here replaces testing with people who use assistive technology every day."
+  ]
+}
