@@ -1,0 +1,55 @@
+/*
+ * The account pages.
+ *
+ * The chart is the only new thing here worth styling deliberately. Everything about it
+ * is arranged so the picture is a convenience rather than the only copy of the
+ * information: it carries an accessible name describing the whole trend, the same
+ * numbers sit in a table underneath, and direction is never signalled by colour on its
+ * own, because a line going down and a line going up look identical to somebody who
+ * cannot see either.
+ */
+
+.account-bar {
+  margin: 0 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.linkish {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.chart { margin: 20px 0 8px; padding: 0; }
+.chart svg {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.chart figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .axis {
+  fill: var(--muted);
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.chart .series { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+
+/* A run that did not reach 100 percent is marked by shape as well as colour: it is
+   filled, where a passing run is hollow. Colour alone would carry nothing in print,
+   in high contrast mode, or for most kinds of colour blindness. */
+.chart .dot.ok { fill: var(--bg); stroke: var(--accent); stroke-width: 2.5; }
+.chart .dot.bad { fill: var(--bad-ink); stroke: var(--bad-ink); stroke-width: 2.5; }
+
+#journeys table, #runs table, #detail table { margin-top: 12px; }

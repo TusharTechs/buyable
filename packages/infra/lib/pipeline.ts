@@ -11,6 +11,8 @@ import * as s3 from "aws-cdk-lib/aws-s3";
 import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager";
 import * as apigw from "aws-cdk-lib/aws-apigatewayv2";
 import * as integrations from "aws-cdk-lib/aws-apigatewayv2-integrations";
+import * as authorizers from "aws-cdk-lib/aws-apigatewayv2-authorizers";
+import type { Identity } from "./identity";
 import * as logs from "aws-cdk-lib/aws-logs";
 
 const repoRoot = path.resolve(__dirname, "..", "..", "..");
@@ -26,6 +28,8 @@ export interface PipelineProps {
   webBaseUrl: string;
   /** Holds the reasoning provider API key. Never an environment variable. */
   providerSecret: secretsmanager.Secret;
+  /** The user pool behind the authenticated half of the API. */
+  identity: Identity;
 }
 
 /**
@@ -363,6 +367,27 @@ export class Pipeline extends Construct {
       }),
     );
 
+    /*
+     * The authenticated half of the API.
+     *
+     * API Gateway verifies the token itself: signature, issuer, audience and expiry,
+     * against the pool's published keys. Nothing behind these routes checks a
+     * signature, because a signature check written here is a signature check that can
+     * be wrong here.
+     *
+     * The handlers still decide what a given subject may see. Authentication answers
+     * who is calling; it says nothing about whose runs they are entitled to read, and
+     * conflating the two is how one tenant ends up looking at another's data.
+     */
+    const authorizer = new authorizers.HttpJwtAuthorizer(
+      "Accounts",
+      props.identity.userPool.userPoolProviderUrl,
+      {
+        jwtAudience: [props.identity.client.userPoolClientId],
+        identitySource: ["$request.header.Authorization"],
+      },
+    );
+
     const api = new apigw.HttpApi(this, "Api", {
       description: "Buyable public API",
       corsPreflight: {
@@ -370,7 +395,7 @@ export class Pipeline extends Construct {
         allowMethods: [apigw.CorsHttpMethod.GET, apigw.CorsHttpMethod.POST],
         // x-buyable-key so the report viewer can send the key in a header rather
         // than a query string, keeping it out of every access log on the way.
-        allowHeaders: ["content-type", "x-buyable-key"],
+        allowHeaders: ["content-type", "x-buyable-key", "authorization"],
       },
     });
 
@@ -398,6 +423,45 @@ export class Pipeline extends Construct {
       path: "/reports/{runId}/revoke",
       methods: [apigw.HttpMethod.POST],
       integration: new integrations.HttpLambdaIntegration("RevokeIntegration", reportFn),
+    });
+
+    /* ------------------------------------------------------------------ *
+     * Signed in. Everything above keeps working without an account.
+     * ------------------------------------------------------------------ */
+
+    // Same handler as the anonymous route. It reads the caller from the request
+    // context when there is one, so an owned run and an anonymous run differ by who
+    // is recorded against them and by nothing else.
+    api.addRoutes({
+      path: "/me/runs",
+      methods: [apigw.HttpMethod.POST],
+      integration: new integrations.HttpLambdaIntegration("StartOwnedIntegration", startFn),
+      authorizer,
+    });
+
+    const historyFn = makeFunction("History", fn("history"));
+    props.table.grantReadData(historyFn);
+
+    api.addRoutes({
+      path: "/me/runs",
+      methods: [apigw.HttpMethod.GET],
+      integration: new integrations.HttpLambdaIntegration("MyRunsIntegration", historyFn),
+      authorizer,
+    });
+    api.addRoutes({
+      path: "/me/journeys/{journeyKey}",
+      methods: [apigw.HttpMethod.GET],
+      integration: new integrations.HttpLambdaIntegration("JourneyIntegration", historyFn),
+      authorizer,
+    });
+
+    // Owning a report is a different claim from holding its key, and the owner never
+    // saw the key: it was shown once, to whoever started the run.
+    api.addRoutes({
+      path: "/me/reports/{runId}",
+      methods: [apigw.HttpMethod.GET],
+      integration: new integrations.HttpLambdaIntegration("MyReportIntegration", reportFn),
+      authorizer,
     });
 
     this.apiUrl = api.apiEndpoint;

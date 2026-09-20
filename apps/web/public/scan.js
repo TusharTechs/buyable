@@ -266,7 +266,20 @@
     say("Starting.");
     status.focus();
 
-    fetch(API + "/runs", {
+    /*
+     * Signed in, the run goes to the authenticated route and is recorded as yours,
+     * which is what puts it in your history. Signed out, it goes to the public one
+     * and belongs to nobody, which is the same thing that has always happened.
+     *
+     * The difference is one route and one header. There is deliberately no feature
+     * on the far side of signing in: a public scanner anyone can point at any site is
+     * what answers the objection that we chose the site ourselves.
+     */
+    var auth = window.BuyableAuth;
+    var owned = auth && auth.available && auth.signedIn();
+    var send = owned ? auth.authedFetch : window.fetch;
+
+    send(API + (owned ? "/me/runs" : "/runs"), {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(body)

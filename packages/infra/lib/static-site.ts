@@ -120,6 +120,18 @@ function handler(event) {
       distribution: this.distribution,
       distributionPaths: ["/*"],
       prune: props.prune ?? true,
+      /*
+       * Five minutes, then revalidate.
+       *
+       * Invalidating the distribution clears the edge and does nothing about the copy
+       * already in somebody's browser, so without this a returning visitor can be
+       * running a mix of old and new files for as long as their cache holds. That is
+       * how a deployment ends up half applied for one person and fine for everybody
+       * else, which is close to undebuggable from a bug report.
+       *
+       * These files are small and change rarely. The revalidation is a 304.
+       */
+      cacheControl: [s3deploy.CacheControl.fromString("max-age=300, must-revalidate")],
     });
 
     this.url = `https://${this.distribution.distributionDomainName}`;

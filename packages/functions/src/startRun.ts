@@ -12,13 +12,23 @@ import { randomUUID } from "node:crypto";
 import {
   checkFeasibility,
   defineJourney,
+  describeJourney,
+  journeyKey,
   mintReportKey,
   PERSONA_IDS,
   withBrowserSession,
   type PersonaId,
 } from "@buyable/engine";
 import { assertNotHalted, assertRobotsAllows, assertUrlIsFetchable, assertWithinLimits, Refused } from "./guards.js";
-import { json, putReportGrant, putRun, REGION, WEB_BASE_URL } from "./shared.js";
+import {
+  callerId,
+  json,
+  ownerKeyFor,
+  putReportGrant,
+  putRun,
+  REGION,
+  WEB_BASE_URL,
+} from "./shared.js";
 
 const sfn = new SFNClient({});
 
@@ -112,13 +122,35 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
     // table opens nothing.
     const grant = mintReportKey();
 
+    /*
+     * Ownership, when there is anybody to own it.
+     *
+     * An anonymous run carries no index keys and therefore appears in no list, which
+     * is right rather than a gap: there is nobody to list it for. Signing in is
+     * additive here in the most literal sense, and the public scanner keeps working
+     * untouched because it is the thing that answers "you chose the fixture".
+     */
+    const caller = callerId(event);
+    const startedAt = new Date().toISOString();
+    const ownership = caller
+      ? {
+          ownerKey: ownerKeyFor(caller),
+          journeyKey: journeyKey(journey, caller),
+          startedAt,
+          journeyLabel: describeJourney(journey),
+          journeyGoal: journey.goal,
+          startUrl: journey.startUrl,
+        }
+      : {};
+
     await putRun({
       runId,
       status: "queued",
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: startedAt,
+      updatedAt: startedAt,
       journey,
       progress: Object.fromEntries(personas.map((p) => [p, "queued"])),
+      ...ownership,
     });
 
     // Its own item, so that the handlers which rewrite the run record as it progresses
@@ -158,6 +190,8 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
         "This key is shown once and is not stored anywhere we can read. Keep the link: without it the report cannot be opened, by you or by anybody else.",
       personas,
       attempts,
+      // Present only for a signed in caller: the handle for this journey's history.
+      journeyKey: caller ? journeyKey(journey, caller) : undefined,
       // Anything the preflight noticed but did not consider fatal, so the caller can
       // read the eventual result knowing what stood in the way.
       warnings: feasibility.findings.filter((f) => f.severity === "warns"),

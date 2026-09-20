@@ -172,11 +172,40 @@ working. The full matrix is in [report-access.md](report-access.md), along with 
 costs: the viewer needs JavaScript, keys cannot be rotated, and the access log is a
 counter rather than an audit trail.
 
-### 4. No accounts, no tenancy, no history
+### 4. Accounts and history: done
 
-There is no way to say "my scans", compare a journey over time, or stop a colleague
-seeing another team's results. A scan is a one-off with no memory, which means the
-regression story, arguably the most valuable one, does not exist.
+There was no way to say "my scans" or compare a journey over time, which meant the
+regression story, arguably the most valuable one, did not exist.
+
+Cognito with the hosted pages and the authorization code flow with PKCE. No password is
+typed into anything in this repository, no refresh token is kept, and the token lives in
+sessionStorage for an hour. API Gateway verifies the token natively, so nothing here
+checks a signature.
+
+Runs started while signed in are recorded against the caller and indexed two ways: by
+owner for "what have I run", and by journey for "how has this behaved over time". A
+journey is the same journey when the starting page, the goal and the proof of completion
+are unchanged, which means changing the assertion starts a new history rather than
+putting incomparable numbers on one chart.
+
+The trend follows the same attribution rule as everything else: a run that produced no
+verdict is excluded and labelled, never plotted as zero, and a failed run between two
+good ones is skipped rather than compared against. One measurement is reported as one
+measurement rather than drawn as a line.
+
+Everything still works signed out, and always will. A public scanner anyone can point at
+any site is what answers the objection that we chose the site ourselves.
+
+Full design, and the two open questions it raises, in [accounts.md](accounts.md).
+
+**Found while building it:** the run record is written by four handlers as a run
+progresses, all of them with `PutItem`, so each silently deleted every field it did not
+mention. That is the same bug as the report grant, in a place where the fix used there
+could not be applied, and it would have left every history empty with nothing looking
+broken. `putRun` is now an update that sets only what it is given.
+
+**Still open:** no teams, no deletion of a run from your own history, and no pagination
+beyond the most recent 50 runs.
 
 ### 5. Narrow blocker taxonomy
 

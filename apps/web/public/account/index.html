@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Your journeys</title>
+<link rel="stylesheet" href="/report.css">
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/run.css">
+<link rel="stylesheet" href="/account.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Buyable</a>
+    <p class="tagline">Proof that a customer can finish</p>
+    <p class="account-bar">
+      <span id="who"></span>
+      <button type="button" class="linkish" id="sign-out" hidden>Sign out</button>
+    </p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <h1 id="page-heading">Your journeys</h1>
+
+  <p role="alert" id="account-error" class="scan-error" hidden></p>
+
+  <p id="account-status" aria-live="polite">Checking whether you are signed in.</p>
+
+  <!-- Signed out. Not a wall: everything on the site works without this. -->
+  <section id="signed-out" hidden aria-labelledby="signed-out-heading">
+    <h2 id="signed-out-heading">Sign in to keep a history</h2>
+    <p>
+      A single scan tells you whether a checkout works today. The sentence worth having
+      is <q>this worked on the 12th and does not work now</q>, and nothing can say that
+      without a record of the 12th.
+    </p>
+    <p>
+      An account records the runs you start, groups them by journey, and shows what
+      changed between one run and the last. Scanning without one keeps working exactly
+      as before, and always will: a public scanner that anyone can point at any site is
+      what answers the objection that we picked the site ourselves.
+    </p>
+    <p class="cta-row">
+      <button class="btn" type="button" id="sign-in">Sign in or create an account</button>
+      <a class="btn secondary" href="/">Scan without an account</a>
+    </p>
+  </section>
+
+  <!-- Signed in. -->
+  <section id="signed-in" hidden aria-labelledby="journeys-heading">
+    <h2 id="journeys-heading">Journeys</h2>
+    <p class="hint" id="journeys-intro">
+      One row per journey, most recently run first. A journey is the same journey when
+      the starting page, the goal and the proof of completion are unchanged, because
+      comparing runs that measured different things would say nothing true.
+    </p>
+    <div id="journeys"></div>
+
+    <h2 id="runs-heading">Every run</h2>
+    <div id="runs"></div>
+  </section>
+
+  <!-- One journey over time. -->
+  <section id="journey-detail" hidden aria-labelledby="detail-heading">
+    <p><a href="/account/" id="back-link">Back to all journeys</a></p>
+    <h2 id="detail-heading">Journey</h2>
+    <div id="detail"></div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="/">Buyable</a>. <a href="https://github.com/TusharTechs/buyable">Source on GitHub</a>.</p>
+  </div>
+</footer>
+
+<script src="/config.js"></script>
+<script src="/auth.js"></script>
+<script src="/account.js"></script>
+</body>
+</html>

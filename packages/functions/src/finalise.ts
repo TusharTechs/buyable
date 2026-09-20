@@ -115,6 +115,14 @@ export async function handler(input: FinaliseInput) {
     // No key here. It was shown once when the run was created and is not recoverable
     // from anything we store, which is the point of storing only the digest.
     reportUrl: `${WEB_BASE_URL}/r/${input.runId}`,
+    // The verdict, copied onto the record so a history list is one query rather than
+    // thirty report fetches that get slower every week.
+    completionRate: bundle.result.journeyCompletionRate,
+    siteIsTheVariable: bundle.result.siteIsTheVariable,
+    personaSummary: Object.values(input.report.verdicts)
+      .filter((v) => v)
+      .map((v) => `${v!.persona} ${v!.completions}/${v!.attempts}`)
+      .join(", "),
   });
 
   return {

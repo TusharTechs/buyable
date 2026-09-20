@@ -137,12 +137,16 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
     };
   }
 
+  return await serveReport(runId);
+}
+
+/** The report itself, once the caller has been found entitled to it by either route. */
+async function serveReport(runId: string): Promise<APIGatewayProxyResultV2> {
   const html = await getObjectText(EVIDENCE_BUCKET, reportKeyFor(runId));
   if (!html) {
-    // The grant exists but the document does not, which means the run has not
-    // finished. That is a different answer from "you may not read this".
-    // A run that has not finished is a different answer from one you may not read,
-    // and heading it "not available" reads as a refusal when it is a wait.
+    // Entitled, but there is nothing there yet, which means the run has not finished.
+    // That is a different answer from one you may not read, and heading it "not
+    // available" reads as a refusal when it is a wait.
     return refusalPage(
       404,
       "This run has not finished yet. Keep the link: it will work as soon as there is a report.",
@@ -151,7 +155,7 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
   }
 
   // Deliberately not awaited. A counter that cannot be written is not a reason to
-  // keep somebody from a report they hold the key to.
+  // keep somebody from a report they are entitled to.
   void recordReportAccess(runId);
 
   return {

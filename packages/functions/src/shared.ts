@@ -106,14 +106,64 @@ export interface RunRecord {
   progress?: Record<string, string>;
   reportUrl?: string;
   error?: string;
+  /**
+   * Index keys, present only on a run started by somebody signed in.
+   *
+   * An anonymous run carries none of these and therefore appears in no index, which
+   * is the correct behaviour rather than an omission: there is nobody to list it for.
+   */
+  ownerKey?: string;
+  journeyKey?: string;
+  startedAt?: string;
+  journeyLabel?: string;
+  journeyGoal?: string;
+  startUrl?: string;
+  completionRate?: number;
+  siteIsTheVariable?: boolean;
+  personaSummary?: string;
   ttl: number;
 }
 
-export async function putRun(record: Omit<RunRecord, "pk" | "sk" | "ttl">): Promise<void> {
+/**
+ * Create or advance a run record, setting only the fields given.
+ *
+ * An update rather than a put, and the distinction is load bearing.
+ *
+ * A run passes through four handlers as it goes: started, aggregated, finalised, or
+ * failed. Each one knows about its own part of the record and nothing about the rest.
+ * With a put, each of them silently deleted every field it did not happen to mention,
+ * and the fields that get deleted are exactly the ones written once at the start and
+ * needed at the end: who owns the run, which journey it belongs to, when it began.
+ *
+ * That bug had already been found once, in the report access grant, and was fixed
+ * there by moving the grant to its own item so a put could not reach it. The index
+ * keys cannot be moved, because a secondary index projects from this item. So the
+ * write is narrowed instead: after this, a handler can only ever change what it names.
+ *
+ * `status` is a reserved word in DynamoDB, as is `ttl`, so every attribute goes
+ * through a placeholder rather than only the ones that happen to collide today.
+ */
+export async function putRun(
+  record: Partial<Omit<RunRecord, "pk" | "sk" | "ttl">> & { runId: string },
+): Promise<void> {
+  const sets: string[] = ["#ttl = :ttl"];
+  const names: Record<string, string> = { "#ttl": "ttl" };
+  const values: Record<string, unknown> = { ":ttl": runTtl() };
+
+  for (const [key, value] of Object.entries(record)) {
+    if (value === undefined) continue;
+    sets.push(`#${key} = :${key}`);
+    names[`#${key}`] = key;
+    values[`:${key}`] = value;
+  }
+
   await ddb.send(
-    new PutCommand({
+    new UpdateCommand({
       TableName: TABLE,
-      Item: { pk: `run#${record.runId}`, sk: "meta", ttl: runTtl(), ...record },
+      Key: { pk: `run#${record.runId}`, sk: "meta" },
+      UpdateExpression: `SET ${sets.join(", ")}`,
+      ExpressionAttributeNames: names,
+      ExpressionAttributeValues: values,
     }),
   );
 }
@@ -287,4 +337,132 @@ export async function revokeReport(runId: string, keyHash: string): Promise<bool
     if ((err as { name?: string }).name === "ConditionalCheckFailedException") return false;
     throw err;
   }
+}
+
+/* --------------------------------------------------------------------------- *
+ * Accounts.
+ *
+ * Signing in is additive. Everything works without it, and an account buys exactly
+ * three things: your runs are recorded as yours, you can list them, and you can see
+ * one journey's numbers over time. There is no feature behind a wall.
+ * --------------------------------------------------------------------------- */
+
+/**
+ * Who is calling, when anybody is.
+ *
+ * The subject claim from the token API Gateway already verified. Never an email and
+ * never anything the caller chose: an email is mutable and a display name is not an
+ * identity, and keying ownership on either means a tenant boundary that moves when
+ * somebody edits their profile.
+ */
+export function callerId(event: {
+  requestContext?: unknown;
+}): string | undefined {
+  // Read structurally rather than through the aws-lambda types. Those describe the
+  // payload of an API with an authorizer attached, and this same handler also serves
+  // routes with none, where the field is simply absent.
+  const context = event.requestContext as
+    | { authorizer?: { jwt?: { claims?: Record<string, unknown> } } }
+    | undefined;
+  const sub = context?.authorizer?.jwt?.claims?.sub;
+  return typeof sub === "string" && sub ? sub : undefined;
+}
+
+/**
+ * The partition a caller's runs live in.
+ *
+ * Prefixed rather than the bare subject so that an index partition can never be
+ * confused with anything else that might later share the attribute, and so a value
+ * read out of the table is obviously an owner rather than obviously a UUID.
+ */
+export function ownerKeyFor(callerId: string): string {
+  return `owner#${callerId}`;
+}
+
+/** What a run needs in order to appear in either index. Absent on anonymous runs. */
+export interface RunOwnership {
+  ownerKey: string;
+  journeyKey: string;
+  startedAt: string;
+  journeyLabel: string;
+  journeyGoal: string;
+  startUrl: string;
+}
+
+/**
+ * Attach the verdict to the run record, so a history list is one query.
+ *
+ * The alternative is reading every run's report to draw a list, which is a page load
+ * that gets slower every week for a feature whose entire purpose is looking a long
+ * way back.
+ */
+export interface RunOutcomeSummary {
+  completionRate?: number;
+  siteIsTheVariable?: boolean;
+  /** "baseline 1/1, assistive 0/1", denormalised for a list row. */
+  personaSummary?: string;
+}
+
+/** The verdict, denormalised onto the run record so a history list is one query. */
+export async function updateRunSummary(
+  runId: string,
+  summary: RunOutcomeSummary,
+): Promise<void> {
+  try {
+    await putRun({ runId, ...summary });
+  } catch (err) {
+    // A missing list row is cosmetic. Failing a run that produced a real verdict
+    // because a denormalised copy could not be written would not be.
+    console.warn("could not write the run summary", err);
+  }
+}
+
+export interface RunListRow {
+  runId: string;
+  status: string;
+  startedAt: string;
+  journeyKey?: string;
+  journeyLabel?: string;
+  journeyGoal?: string;
+  startUrl?: string;
+  completionRate?: number;
+  siteIsTheVariable?: boolean;
+  personaSummary?: string;
+}
+
+/** A caller's runs, newest first. */
+export async function listRunsByOwner(ownerKey: string, limit = 50): Promise<RunListRow[]> {
+  const result = await ddb.send(
+    new QueryCommand({
+      TableName: TABLE,
+      IndexName: "ByOwner",
+      KeyConditionExpression: "ownerKey = :owner",
+      ExpressionAttributeValues: { ":owner": ownerKey },
+      ScanIndexForward: false,
+      Limit: limit,
+    }),
+  );
+  return (result.Items ?? []) as RunListRow[];
+}
+
+/**
+ * One journey's runs, oldest first, because a history is read left to right.
+ *
+ * The owner is checked by the caller against each row rather than being part of the
+ * key. The journey key already contains the owner, so a caller cannot construct
+ * another tenant's key without already knowing their subject; checking anyway costs
+ * nothing and means the tenant boundary does not rest on that argument holding.
+ */
+export async function listRunsByJourney(journeyKey: string, limit = 100): Promise<RunListRow[]> {
+  const result = await ddb.send(
+    new QueryCommand({
+      TableName: TABLE,
+      IndexName: "ByJourney",
+      KeyConditionExpression: "journeyKey = :journey",
+      ExpressionAttributeValues: { ":journey": journeyKey },
+      ScanIndexForward: true,
+      Limit: limit,
+    }),
+  );
+  return (result.Items ?? []) as Array<RunListRow & { ownerKey?: string }>;
 }

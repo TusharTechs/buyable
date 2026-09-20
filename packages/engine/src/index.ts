@@ -18,6 +18,8 @@ export * from "./consent.js";
 export * from "./renderInspection.js";
 export * from "./config.js";
 export * from "./runPersona.js";
+export * from "./journeyKey.js";
+export * from "./trend.js";
 export * from "./runJourney.js";
 // ci.ts is the action entry point and is imported directly, not through the barrel:
 // its __testing export would collide with consent.ts and neither belongs in the API.
