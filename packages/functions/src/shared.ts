@@ -34,36 +34,62 @@ let cachedProvider: ReasoningProvider | undefined;
 /**
  * The reasoning provider, built from whatever this deployment is configured to use.
  *
- * BUYABLE_PROVIDER decides. When it names Bedrock no secret is read at all, which is
- * the intended shape; the Anthropic path exists because this account cannot invoke
- * Bedrock models. See docs/adr/0002.
+ * BUYABLE_PROVIDER decides. Bedrock reads no secret at all, which is the intended
+ * shape; the others exist because this account cannot invoke Bedrock models. See
+ * docs/adr/0002.
+ *
+ * Whichever is selected must have passed tools/validate-provider.mjs first. The
+ * provider is not a component that can be swapped on trust: a model that guesses past
+ * an unlabelled control reports disabled shoppers completing purchases they cannot
+ * complete, and nothing about that looks broken from here.
  */
 export async function getProvider(): Promise<ReasoningProvider> {
   if (cachedProvider) return cachedProvider;
 
-  const choice = (process.env.BUYABLE_PROVIDER ?? "anthropic").toLowerCase();
+  const choice = (process.env.BUYABLE_PROVIDER ?? "gemini").toLowerCase();
 
   if (choice === "bedrock") {
     cachedProvider = createProvider({ region: REGION, provider: "bedrock" });
     return cachedProvider;
   }
 
-  const secretArn = process.env.ANTHROPIC_SECRET_ARN;
-  if (!secretArn) throw new Error("ANTHROPIC_SECRET_ARN is not set");
+  const secretArn = process.env.PROVIDER_SECRET_ARN ?? process.env.ANTHROPIC_SECRET_ARN;
+  if (!secretArn) throw new Error("PROVIDER_SECRET_ARN is not set");
 
   const secrets = new SecretsManagerClient({});
   const secret = await secrets.send(new GetSecretValueCommand({ SecretId: secretArn }));
-  const raw = secret.SecretString ?? "";
+  const raw = (secret.SecretString ?? "").trim();
 
-  // Accept either a bare key or a JSON blob, since both are things people paste in.
-  let apiKey = raw.trim();
-  if (apiKey.startsWith("{")) {
-    const parsed = JSON.parse(apiKey) as Record<string, string>;
-    apiKey = parsed.ANTHROPIC_API_KEY ?? parsed.apiKey ?? "";
+  // The secret holds JSON with one entry per provider, so switching providers is an
+  // environment variable rather than a redeployment of credentials. A bare string is
+  // still accepted, because that is what a person pastes when they are in a hurry.
+  let keys: Record<string, string> = {};
+  if (raw.startsWith("{")) {
+    keys = JSON.parse(raw) as Record<string, string>;
+  } else if (raw) {
+    keys = { ANTHROPIC_API_KEY: raw };
   }
-  if (!apiKey) throw new Error("The Anthropic secret is present but empty");
 
-  cachedProvider = createProvider({ region: REGION, provider: "anthropic", anthropicApiKey: apiKey });
+  const keyFor: Record<string, string | undefined> = {
+    anthropic: keys.ANTHROPIC_API_KEY ?? keys.anthropic,
+    gemini: keys.GEMINI_API_KEY ?? keys.gemini,
+    groq: keys.GROQ_API_KEY ?? keys.groq,
+  };
+
+  const apiKey = keyFor[choice];
+  if (!apiKey) {
+    throw new Error(
+      `BUYABLE_PROVIDER is "${choice}" but the provider secret holds no key for it.`,
+    );
+  }
+
+  cachedProvider = createProvider({
+    region: REGION,
+    provider: choice,
+    anthropicApiKey: choice === "anthropic" ? apiKey : undefined,
+    geminiApiKey: choice === "gemini" ? apiKey : undefined,
+    groqApiKey: choice === "groq" ? apiKey : undefined,
+  });
   return cachedProvider;
 }
 

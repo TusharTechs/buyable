@@ -53,8 +53,9 @@ export class Pipeline extends Construct {
       SHADOW_BUCKET: props.shadowBucket.bucketName,
       SHADOW_BASE_URL: props.shadowBaseUrl,
       WEB_BASE_URL: props.webBaseUrl,
-      ANTHROPIC_SECRET_ARN: props.providerSecret.secretArn,
-      BUYABLE_PROVIDER: process.env.BUYABLE_PROVIDER ?? "anthropic",
+      PROVIDER_SECRET_ARN: props.providerSecret.secretArn,
+      // Only a provider that has passed tools/validate-provider.mjs belongs here.
+      BUYABLE_PROVIDER: process.env.BUYABLE_PROVIDER ?? "gemini",
       NODE_OPTIONS: "--enable-source-maps",
     };
 

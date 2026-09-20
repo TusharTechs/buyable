@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Can anyone complete: Buy the Harrier Trail in UK size 9</title>
-<meta name="description" content="Journey Completion Rate 67% for Buy the Harrier Trail in UK size 9, measured by attempting the journey as a screen reader user, an AI agent, and a baseline control.">
+<meta name="description" content="Journey Completion Rate 33% for Buy the Harrier Trail in UK size 9, measured by attempting the journey as a screen reader user, an AI agent, and a baseline control.">
 <link rel="stylesheet" href="/report.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
 </header>
 
 <main id="main" class="wrap">
-  <p class="eyebrow">Report 17ef2231-3565-4be8-8d1c-15cdc93dd5e9</p>
+  <p class="eyebrow">Report 70afb416-e420-4507-b14e-a2aafbc68848</p>
   <h1>Buy the Harrier Trail in UK size 9</h1>
 
   <dl class="subject">
@@ -29,14 +29,14 @@
     <dt>How completion was proven</dt>
     <dd>the page contained <q>Order confirmed</q>. This is checked against the live page and never taken from the model's own claim.</dd>
     <dt>Run at</dt>
-    <dd><time datetime="2026-09-20T04:12:29.664Z">2026-09-20T04:12:29.664Z</time></dd>
+    <dd><time datetime="2026-09-20T07:34:06.639Z">2026-09-20T07:34:06.639Z</time></dd>
   </dl>
 
   <section aria-labelledby="verdict-heading">
     <h2 id="verdict-heading">Verdict</h2>
 
     <p class="headline">
-      <span class="figure">67%</span>
+      <span class="figure">33%</span>
       <span class="label">Journey Completion Rate</span>
     </p>
 
@@ -56,7 +56,7 @@
             baseline
             <span class="blurb">A sighted customer using a mouse. This is the control.</span>
           </th>
-          <td class="num">3 of 3</td>
+          <td class="num">2 of 2<span class="blurb">1 run excluded, Buyable could not drive the page</span></td>
           <td class="num">100%</td>
           <td><span class="pill ok">Completed</span></td>
         </tr>
@@ -74,12 +74,22 @@
             agent
             <span class="blurb">An AI shopping agent, which reads the same accessibility tree a screen reader does.</span>
           </th>
-          <td class="num">3 of 3</td>
-          <td class="num">100%</td>
-          <td><span class="pill mixed">Completed by guessing</span></td>
+          <td class="num">0 of 3</td>
+          <td class="num">0%</td>
+          <td><span class="pill bad">Never completed</span></td>
         </tr></tbody>
     </table>
 
+    
+    <p class="control-note">
+      <strong>Some runs were excluded from this verdict.</strong>
+      A persona that stops making progress, by repeating an action that changes nothing,
+      is far more likely to mean Buyable could not drive the page than that a real
+      customer would be stuck. Those runs are dropped from the denominator rather than
+      counted against the site, because reporting them as barriers would be an
+      accusation we cannot support.
+      
+    </p>
     
 
     <p class="control-note">
@@ -88,44 +98,35 @@
   </section>
 
   
-    <section aria-labelledby="guessing-heading">
-      <h2 id="guessing-heading">Completions that were guesses</h2>
-      
-        <p>
-          <strong>agent</strong> completed this journey
-          3 of 3 times, and
-          <strong>3</strong> of those completions
-          required activating a control with no accessible name.
-        </p>
-        <p>
-          A screen reader user cannot do this, because not knowing what a control does
-          is precisely why they stop. An agent can, and did, because it acts on
-          inference. What it inferred:
-        </p>
-        <ul>
-          <li><code>&lt;button&gt;</code> <code>#pay</code>: <q>Click the button to confirm payment and complete the order for the Harrier Trail shoe in UK size 9.</q></li><li><code>&lt;button&gt;</code> <code>#pay</code>: <q>I need to click the button to complete the checkout and confirm the order. The button at node 33 should be the submit/confirm button.</q></li><li><code>&lt;button&gt;</code> <code>#pay</code>: <q>I need to click the button to complete the checkout and confirm the order. The button at node 33 appears to be the submit/confirm button for the checkout form.</q></li>
-        </ul>
-      <p class="control-note">
-        Recorded separately on purpose. <q>The agent finished</q> and <q>the agent
-        finished by gambling on an unidentifiable control during payment</q> are
-        different facts about a site, and only one of them is reassuring.
-      </p>
-    </section>
 
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">What stopped them</h2>
     
-      <article class="finding" aria-labelledby="finding-assistive-31">
-        <h3 id="finding-assistive-31">A button announces nothing, so neither a screen reader user nor an AI agent can tell what it does.</h3>
+      <article class="finding" aria-labelledby="finding-assistive-15">
+        <h3 id="finding-assistive-15">A button announces nothing, so neither a screen reader user nor an AI agent can tell what it does.</h3>
         <dl class="facts">
-          <dt>Stopped</dt><dd>assistive, at step 31</dd>
+          <dt>Stopped</dt><dd>assistive, at step 15</dd>
           <dt>Page</dt><dd><a href="https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html">https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html</a></dd>
           <dt>Element</dt><dd><code>&lt;button&gt;</code> with <strong>no accessible name</strong></dd>
           <dt>Selector</dt><dd><code>#pay</code></dd>
           <dt>WCAG</dt><dd>4.1.2, 2.4.6</dd>
         </dl>
         <blockquote>
-          <p>I am focused on node [33], which is a button with no accessible name. The screen reader announces &quot;(no accessible name), button&quot; which means I cannot determine what this button does. I need to know what this button is labeled as to confirm whether it is the correct button to complete the purchase and confirm the order.</p>
+          <p>The button node [33] has no accessible name (&#39;button (no accessible name)&#39;), so I cannot determine what it does or whether it places the order without guessing.</p>
+          <footer>The agent's own account of being stuck, recorded verbatim.</footer>
+        </blockquote>
+      </article>
+      <article class="finding" aria-labelledby="finding-agent-5">
+        <h3 id="finding-agent-5">A button announces nothing, so neither a screen reader user nor an AI agent can tell what it does.</h3>
+        <dl class="facts">
+          <dt>Stopped</dt><dd>agent, at step 5</dd>
+          <dt>Page</dt><dd><a href="https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html">https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html</a></dd>
+          <dt>Element</dt><dd><code>&lt;button&gt;</code> with <strong>no accessible name</strong></dd>
+          <dt>Selector</dt><dd><code>#pay</code></dd>
+          <dt>WCAG</dt><dd>4.1.2, 2.4.6</dd>
+        </dl>
+        <blockquote>
+          <p>Cannot determine the function or label of button [33], which has no accessible name, so I cannot identify the control to complete or confirm the purchase.</p>
           <footer>The agent's own account of being stuck, recorded verbatim.</footer>
         </blockquote>
       </article>
@@ -134,7 +135,7 @@
   
     <section aria-labelledby="fix-heading">
       <h2 id="fix-heading">The fix, and the proof it works</h2>
-      <p>The button has no accessible name because its only content is an SVG marked aria-hidden. Adding aria-label gives the button an accessible name so screen reader users know it is the payment button.</p>
+      <p>The button contained only an aria-hidden SVG icon, leaving it without an accessible name. Adding an aria-label announces the button&#39;s purpose to screen reader users.</p>
       <p class="filepath"><code>checkout.html</code></p>
       <pre class="diff"><code><span class="line del"><span class="sr-only">removed: </span>--- a/checkout.html</span>
 <span class="line add"><span class="sr-only">added: </span>+++ b/checkout.html</span>
@@ -158,8 +159,8 @@
       <dt>Reasoning</dt><dd><code>anthropic:claude-sonnet-4-5-20250929</code></dd>
       <dt>Browser</dt><dd>Amazon Bedrock AgentCore Browser (aws.browser.v1)</dd>
       <dt>Attempts per persona</dt><dd>3</dd>
-      <dt>Duration</dt><dd>311 seconds</dd>
-      <dt>Model cost</dt><dd>$0.9802</dd>
+      <dt>Duration</dt><dd>290 seconds</dd>
+      <dt>Model cost</dt><dd>$0.0465</dd>
     </dl>
     <p>The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator.</p>
     <p class="fineprint">Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount.</p>
