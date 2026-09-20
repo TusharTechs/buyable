@@ -20,6 +20,7 @@ Built for the AWS Zero to Shipped 2026 hackathon on Amazon Bedrock AgentCore Bro
 | Is it ready for real users | [docs/production-readiness.md](docs/production-readiness.md) |
 | Who can read a report | [docs/report-access.md](docs/report-access.md) |
 | Accounts and journey history | [docs/accounts.md](docs/accounts.md) |
+| Why the model is part of the instrument | [docs/model-study.md](docs/model-study.md) |
 | How it did against the world's largest retailers | [docs/top-ten-retailers.md](docs/top-ten-retailers.md) |
 
 ## Why this is two problems, not one

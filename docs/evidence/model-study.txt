@@ -1,0 +1,33 @@
+Recorded 2026-09-21. node tools/validate-provider.mjs gemini <model>
+
+=== gemini-3.8-flash ===
+Validating gemini:gemini-3.8-flash
+against the fixture, whose answer is known.
+
+  baseline completes the journey        ... pass
+  assistive stops at the pay button     ... pass
+  and says why, in its own words        ... pass
+
+  it said: Node [33] button (no accessible name) has no accessible name or text, so as a screen reader user I cannot determine what this button does or whether it completes the purchase.
+
+  cost: $0.0130   steps: baseline 6, assistive 14
+
+  VALID: gemini:gemini-3.8-flash measures what we expect.
+
+=== gemini-flash-lite-latest ===
+Validating gemini:gemini-flash-lite-latest
+against the fixture, whose answer is known.
+
+  baseline completes the journey        ... (error, retrying) pass
+  assistive stops at the pay button     ... FAIL (outcome=completed, blocker=none)
+  and says why, in its own words        ... FAIL (explanation does not mention the missing name)
+
+  it completed by activating 1 control(s) it could not identify:
+    <button> #pay
+    guessed: "Press Enter on the submit order button (which has no accessible name) to complete the purchase of the Harrier Trail UK size 9."
+
+  final step reasoning: Press Enter on the submit order button (which has no accessible name) to complete the purchase of the Harrier Trail UK size 9.
+
+  cost: $0.0100   steps: baseline 7, assistive 41
+
+  NOT VALID: gemini:gemini-flash-lite-latest must not be used to publish numbers.

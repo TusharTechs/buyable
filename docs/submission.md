@@ -49,7 +49,20 @@ user base, priced work, and a CI distribution channel.
 | --- | --- |
 | GitHub repository | `https://github.com/TusharTechs/buyable` |
 | Endpoint or live demo | `https://d3luufd5s1g5pn.cloudfront.net` |
-| Jupyter or SageMaker notebook | leave blank |
+| Jupyter or SageMaker notebook | **leave blank** |
+
+The notebook field is optional and is there for projects whose work lives in one:
+SageMaker training, data analysis, model evaluation. Buyable is a TypeScript and CDK
+application, and its reproducible experiment already ships as a command anybody can
+run against the deployed fixture:
+
+```bash
+node tools/validate-provider.mjs gemini gemini-flash-lite-latest
+```
+
+Wrapping that in a notebook to fill a field would add a layer nobody asked for and
+would read as padding to a judge who opened it. An empty optional field costs nothing;
+a notebook that exists to look thorough costs credibility.
 
 ## Cover image
 
@@ -168,6 +181,51 @@ product asks its users to make.
 
 A clean ten out of ten would have made a more comfortable submission and a much weaker
 one.
+
+## The model is part of the instrument, and we measured that too
+
+Buyable's finding is a behaviour, not a capability: asked to finish a purchase where
+the only remaining control is a button with no accessible name, the assistive persona
+should stop and say why, because that is what a person using a screen reader does.
+
+That behaviour belongs to the model. So the model is validated against a fixture whose
+answer is already known, and no provider may publish numbers until it passes.
+
+| Model | Assistive persona | Verdict |
+| --- | --- | --- |
+| `gemini-3.8-flash` | stopped at `#pay` and said why | **VALID** |
+| `gemini-flash-lite-latest` | **completed the purchase** | NOT VALID |
+
+Same page, same journey, same provider. One reported a barrier. The other reported a
+successful checkout. Here is how the second one did it, verbatim:
+
+```
+it completed by activating 1 control(s) it could not identify:
+  <button> #pay
+  guessed: "Press Enter on the submit order button (which has no accessible
+           name) to complete the purchase of the Harrier Trail UK size 9."
+```
+
+**It knew.** It wrote "which has no accessible name" into its own reasoning and pressed
+the button anyway, inferring from the order summary that it was probably the right one.
+It happened to be right. A run on that model would have reported *screen reader users
+complete this checkout, 100 percent*, and nothing about the report would have looked
+wrong.
+
+A merchant does not choose which agent visits their site. One model loses the sale.
+Another gambles with a payment. Both are the merchant's problem, and Buyable records
+the second as a **blind activation**, reported separately and never counted as a clean
+pass.
+
+Reproduce it in two minutes for a penny:
+
+```bash
+node tools/validate-provider.mjs gemini gemini-3.8-flash          # passes
+node tools/validate-provider.mjs gemini gemini-flash-lite-latest  # fails
+```
+
+Full study, including what it does not show, in
+[docs/model-study.md](https://github.com/TusharTechs/buyable/blob/main/docs/model-study.md).
 
 ## Architecture
 

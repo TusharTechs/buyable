@@ -38,6 +38,9 @@ if (existsSync(envFile)) {
 }
 
 const REGION = process.env.AWS_REGION ?? "us-west-2";
+
+/** Outcomes that describe our infrastructure rather than the model under test. */
+const NON_ATTRIBUTABLE = new Set(["error", "inconclusive"]);
 const STORE = "https://d2dvlfc6rcbvw8.cloudfront.net/index.html";
 
 const provider = createProvider({
@@ -60,11 +63,31 @@ const checks = [];
 
 // 1. The control must still be able to complete the journey. If it cannot, no verdict
 //    this provider produces can distinguish a broken site from a weak model.
+//
+//    The attribution rule applies here too, and this script was breaking it. A run
+//    that ended in `error` or `inconclusive` says nothing about the model: the first
+//    time this was noticed, a browser session died with "fetch failed" and the script
+//    declared a model NOT VALID on the strength of it. That is precisely the mistake
+//    the rest of the system exists to avoid, made by the tool that polices it.
+//
+//    An unattributable run is now retried once, and if it is still unattributable the
+//    check is reported as inconclusive and the verdict is withheld rather than failed.
 process.stdout.write("  baseline completes the journey        ... ");
-const baseline = await runPersona({ region: REGION, journey, persona: "baseline", runLabel: "validate-base", provider });
-const baselineOk = baseline.completed;
-console.log(baselineOk ? "pass" : `FAIL (${baseline.outcome}: ${baseline.errorMessage ?? "did not complete"})`);
-checks.push(baselineOk);
+let baseline = await runPersona({ region: REGION, journey, persona: "baseline", runLabel: "validate-base", provider });
+if (NON_ATTRIBUTABLE.has(baseline.outcome)) {
+  process.stdout.write(`(${baseline.outcome}, retrying) `);
+  baseline = await runPersona({ region: REGION, journey, persona: "baseline", runLabel: "validate-base-2", provider });
+}
+
+let baselineInconclusive = false;
+let baselineOk = baseline.completed;
+if (!baselineOk && NON_ATTRIBUTABLE.has(baseline.outcome)) {
+  baselineInconclusive = true;
+  console.log(`INCONCLUSIVE (${baseline.outcome}: ${baseline.errorMessage ?? "no usable attempt"})`);
+} else {
+  console.log(baselineOk ? "pass" : `FAIL (${baseline.outcome}: ${baseline.errorMessage ?? "did not complete"})`);
+  checks.push(baselineOk);
+}
 
 // 2. The assistive persona must stop, and stop at the right element, for the right
 //    reason. Stopping somewhere else would mean it is failing for a reason we have
@@ -91,8 +114,27 @@ checks.push(coherent);
 
 console.log();
 if (assistive.blocker) {
-  console.log(`  it said: ${assistive.blocker.agentExplanation.slice(0, 220)}`);
+  console.log(`  it said: ${assistive.blocker.agentExplanation.slice(0, 260)}`);
   console.log();
+}
+
+/*
+ * The interesting failure is not "it could not finish". It is "it finished by pressing
+ * a control it could not identify", because that produces a green report on a checkout
+ * a real screen reader user cannot use. Printing the model's own words at that step is
+ * the whole evidence, so it is no longer left only in the run record.
+ */
+if (assistive.blindActivations?.length) {
+  console.log(`  it completed by activating ${assistive.blindActivations.length} control(s) it could not identify:`);
+  for (const b of assistive.blindActivations) {
+    console.log(`    <${b.role}> ${b.selector ?? "?"}`);
+    console.log(`    guessed: "${b.inferredPurpose}"`);
+  }
+  console.log();
+}
+if (assistive.completed) {
+  const last = assistive.steps[assistive.steps.length - 1];
+  if (last?.action?.reason) console.log(`  final step reasoning: ${last.action.reason.slice(0, 260)}\n`);
 }
 
 const cost =
@@ -101,5 +143,17 @@ const cost =
 console.log(`  cost: $${cost.toFixed(4)}   steps: baseline ${baseline.steps.length}, assistive ${assistive.steps.length}`);
 
 const passed = checks.every(Boolean);
+
+if (baselineInconclusive) {
+  // Withheld, not failed, and not passed either. A model this script could not
+  // measure must not be published on, and must not be condemned on, which are two
+  // different things and both matter.
+  console.log(
+    `\n  UNDECIDED: ${provider.id} could not be measured. The control produced no usable attempt, ` +
+      `which is our infrastructure rather than the model. Run this again before drawing a conclusion.`,
+  );
+  process.exit(2);
+}
+
 console.log(`\n  ${passed ? "VALID" : "NOT VALID"}: ${provider.id} ${passed ? "measures what we expect." : "must not be used to publish numbers."}`);
 process.exit(passed ? 0 : 1);
