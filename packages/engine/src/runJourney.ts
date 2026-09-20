@@ -10,7 +10,7 @@
 import { randomUUID } from "node:crypto";
 import { runPersona, type RunEvent } from "./runPersona.js";
 import type { ReasoningProvider } from "./reasoning.js";
-import { PERSONA_IDS } from "./types.js";
+import { NON_ATTRIBUTABLE_OUTCOMES, PERSONA_IDS } from "./types.js";
 import type {
   Journey,
   JourneyReport,
@@ -31,9 +31,10 @@ export interface RunJourneyOptions {
 }
 
 function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict {
-  // Infrastructure errors are excluded from the denominator. They are our fault,
-  // not the site's, and folding them in would understate a site unfairly.
-  const scored = runs.filter((r) => r.outcome !== "error");
+  // Runs we cannot attribute to the site are excluded from the denominator entirely.
+  // Infrastructure errors and stuck runs are our fault, not the site's, and folding
+  // them in would understate a site unfairly.
+  const scored = runs.filter((r) => !NON_ATTRIBUTABLE_OUTCOMES.includes(r.outcome));
   const completions = scored.filter((r) => r.completed).length;
   const attempts = scored.length;
 
@@ -50,6 +51,7 @@ function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict
     persona,
     attempts,
     completions,
+    inconclusive: runs.filter((r) => NON_ATTRIBUTABLE_OUTCOMES.includes(r.outcome)).length,
     rate: attempts === 0 ? 0 : completions / attempts,
     runs,
     blocker,

@@ -83,7 +83,13 @@ export function renderReportHtml(
             ${escapeHtml(p.persona)}
             <span class="blurb">${escapeHtml(personaBlurb(p.persona))}</span>
           </th>
-          <td class="num">${p.completions} of ${p.attempts}</td>
+          <td class="num">${
+            p.attempts === 0 ? "no usable runs" : `${p.completions} of ${p.attempts}`
+          }${
+            p.inconclusive > 0
+              ? `<span class="blurb">${p.inconclusive} run${p.inconclusive === 1 ? "" : "s"} excluded, Buyable could not drive the page</span>`
+              : ""
+          }</td>
           <td class="num">${pct(p.rate)}</td>
           <td><span class="pill ${p.completionsWithBlindActivation > 0 ? "mixed" : p.rate === 1 ? "ok" : p.rate === 0 ? "bad" : "mixed"}">${
             p.completionsWithBlindActivation > 0 ? "Completed by guessing" : verdictWord(p.rate)
@@ -132,6 +138,22 @@ export function renderReportHtml(
    * has to say what it is and is not evidence of, or it invites exactly the
    * overreading this project exists to argue against.
    */
+  const anyInconclusive = b.result.perPersona.some((p) => p.inconclusive > 0);
+  const noUsableRuns = b.result.perPersona.some((p) => p.attempts === 0);
+  const inconclusiveNote =
+    anyInconclusive || noUsableRuns
+      ? `
+    <p class="control-note">
+      <strong>Some runs were excluded from this verdict.</strong>
+      A persona that stops making progress, by repeating an action that changes nothing,
+      is far more likely to mean Buyable could not drive the page than that a real
+      customer would be stuck. Those runs are dropped from the denominator rather than
+      counted against the site, because reporting them as barriers would be an
+      accusation we cannot support.
+      ${noUsableRuns ? "For at least one persona no usable run remained, so no claim is made about it at all." : ""}
+    </p>`
+      : "";
+
   const lowAttempts = b.method.attemptsPerPersona < 3;
   const confidenceNote = lowAttempts
     ? `
@@ -262,6 +284,7 @@ export function renderReportHtml(
       <tbody>${rows}</tbody>
     </table>
 
+    ${inconclusiveNote}
     ${confidenceNote}
 
     <p class="control-note">

@@ -70,6 +70,8 @@ export interface EvidenceBundle {
        */
       completionsWithBlindActivation: number;
       blindActivations: Array<{ role: string; selector?: string; inferredPurpose: string }>;
+      /** Runs excluded from the denominator because we could not attribute them. */
+      inconclusive: number;
     }>;
   };
 
@@ -174,6 +176,7 @@ export function buildEvidenceBundle(args: {
         browserSessionIds: v.runs.map((r) => r.browserSessionId ?? "unknown"),
         completionsWithBlindActivation: v.completionsWithBlindActivation,
         blindActivations: v.blindActivations,
+        inconclusive: v.inconclusive,
       })),
     },
 

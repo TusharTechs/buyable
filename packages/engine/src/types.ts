@@ -156,6 +156,8 @@ export interface StepRecord {
   focusedRef?: number;
   /** ms since run start */
   at: number;
+  /** True when the page was byte-identical before and after this action. */
+  noProgress?: boolean;
   /**
    * Set when this step activated a control with no accessible name.
    *
@@ -182,8 +184,25 @@ export type RunOutcome =
   | "blocked"
   /** The model claimed done but the independent assertion failed. */
   | "false_completion"
+  /**
+   * The persona stopped making progress in a way we cannot attribute to the site.
+   *
+   * Repeating one action with no effect on the page usually means our own
+   * perception or actuation failed, not that a customer would be stuck. Reporting
+   * that as a site failure would be an accusation we cannot support, so it gets its
+   * own outcome and is excluded from every denominator, exactly like `error`.
+   *
+   * This distinction was added after Buyable was first pointed at a real single
+   * page storefront and both personas looped silently: one clicked the same element
+   * fourteen times, the other tabbed back and forth between two nodes. Neither was
+   * the site's fault and the old code would have scored both as failures.
+   */
+  | "inconclusive"
   /** Infrastructure fell over. Not the site's fault, and never counted against it. */
   | "error";
+
+/** Outcomes that say nothing about the site and must never count against it. */
+export const NON_ATTRIBUTABLE_OUTCOMES: RunOutcome[] = ["error", "inconclusive"];
 
 /** The node that stopped a persona, with enough context to write a patch. */
 export interface Blocker {
@@ -247,6 +266,13 @@ export interface PersonaVerdict {
   rate: number;
   runs: PersonaRunResult[];
   blocker?: Blocker;
+  /**
+   * Runs excluded from the denominator because we could not attribute them to the
+   * site. Reported rather than hidden: a verdict resting on one usable attempt out
+   * of three is a weaker claim than one resting on three, and the reader is entitled
+   * to know which they are looking at.
+   */
+  inconclusive: number;
   /**
    * Completions that required activating at least one unidentifiable control.
    * A completion of this kind is reported, never quietly counted as a clean pass.

@@ -60,17 +60,25 @@ const QUICK_NAV_ROLES: Record<string, string[]> = {
  */
 async function quickNav(
   page: PageHandle,
-  snapshot: AxSnapshot,
+  stale: AxSnapshot,
   action: ActionName,
 ): Promise<{ ref?: number; error?: string }> {
   const roles = QUICK_NAV_ROLES[action];
   if (!roles) return { error: `Unsupported quick navigation: ${action}` };
 
+  // Resolve against a tree read now, not the one the model was shown.
+  //
+  // On a single page application the DOM mutates constantly: a toast appears, a
+  // route transition swaps a subtree, and the refs in the snapshot the model saw
+  // already point somewhere else. Pointed at a real storefront this made next_button
+  // oscillate between two nodes forever, one of which was a transient "Close toast"
+  // control and the other a search box. Re-reading costs one round trip and removes
+  // the whole class of failure.
+  const snapshot = await snapshotAxTree(page);
   const roleSet = new Set(roles);
-  const from = snapshot.focusedRef ?? -1;
-  const ordered = snapshot.nodes;
+  const from = snapshot.focusedRef ?? stale.focusedRef ?? -1;
 
-  const matches = ordered.filter((n) => roleSet.has(n.role.toLowerCase()));
+  const matches = snapshot.nodes.filter((n) => roleSet.has(n.role.toLowerCase()));
   if (matches.length === 0) {
     return { error: `No ${action.replace("next_", "")} on this page.` };
   }
@@ -220,6 +228,24 @@ async function settle(page: PageHandle, ms = 700): Promise<void> {
   await new Promise((r) => setTimeout(r, ms));
 }
 
+/**
+ * A cheap fingerprint of what the user can currently perceive.
+ *
+ * URL alone is not enough: a single page application changes everything on screen
+ * without touching the address bar, so a URL-only check reports "nothing happened"
+ * through an entire checkout. This hashes the accessibility tree instead, which is
+ * both what the constrained personas actually perceive and what changes when the
+ * page meaningfully changes.
+ */
+export function pageFingerprint(url: string, snapshot: AxSnapshot): string {
+  const shape = snapshot.nodes
+    .map((n) => `${n.role}|${n.name}|${n.value ?? ""}|${n.states.join(",")}`)
+    .join("\n");
+  let hash = 5381;
+  for (let i = 0; i < shape.length; i++) hash = ((hash << 5) + hash + shape.charCodeAt(i)) | 0;
+  return `${url}#${hash}#${snapshot.nodes.length}`;
+}
+
 export interface ActResult {
   error?: string;
   /** What a screen reader would have said as a result of this action. */
@@ -293,11 +319,32 @@ export async function act(
           );
         }
         if (!action.selector) return refuse("click_selector requires a selector.");
-        const ok = await evaluate<boolean>(
+        // Report the reason a click cannot work rather than calling click() and
+        // returning true regardless. A click on a disabled or invisible element
+        // silently does nothing, and silence is what let a persona click the same
+        // element fourteen times in a row believing it had worked.
+        const outcome = await evaluate<{ ok: boolean; reason?: string }>(
           page,
-          `(() => { const el = document.querySelector(${JSON.stringify(action.selector)}); if (!el) return false; el.scrollIntoView({block:'center'}); el.click(); return true; })()`,
+          `(() => {
+            const el = document.querySelector(${JSON.stringify(action.selector)});
+            if (!el) return { ok: false, reason: 'no element matched' };
+            if (el.disabled) return { ok: false, reason: 'the element is disabled' };
+            const style = getComputedStyle(el);
+            if (style.display === 'none' || style.visibility === 'hidden') {
+              return { ok: false, reason: 'the element is not visible' };
+            }
+            const rect = el.getBoundingClientRect();
+            if (rect.width === 0 && rect.height === 0) {
+              return { ok: false, reason: 'the element has no size on screen' };
+            }
+            el.scrollIntoView({ block: 'center' });
+            el.click();
+            return { ok: true };
+          })()`,
         );
-        if (!ok) return refuse(`No element matched selector ${action.selector}`);
+        if (!outcome?.ok) {
+          return refuse(`Could not click ${action.selector}: ${outcome?.reason ?? "unknown reason"}`);
+        }
         await settle(page);
         break;
       }

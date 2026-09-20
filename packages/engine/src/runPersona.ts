@@ -9,7 +9,14 @@
 
 import { withBrowserSession, type PageHandle } from "./browserSession.js";
 import { isSilentControl, snapshotAxTree, type AxSnapshot } from "./axtree.js";
-import { act, checkAssertion, currentUrl, observe, renderObservation } from "./page.js";
+import {
+  act,
+  checkAssertion,
+  currentUrl,
+  observe,
+  pageFingerprint,
+  renderObservation,
+} from "./page.js";
 import { locateBlocker } from "./blocker.js";
 import { getPersona } from "./personas.js";
 import type { ReasoningProvider, ReasoningTurn } from "./reasoning.js";
@@ -41,6 +48,27 @@ export type RunEvent =
 
 /** Conversation history is trimmed so long journeys do not blow up input tokens. */
 const MAX_HISTORY_TURNS = 8;
+
+/**
+ * How many consecutive actions may change nothing at all before the run is abandoned.
+ *
+ * Set from observation rather than taste. Pointed at a real single page storefront,
+ * the baseline persona clicked one element fourteen times with near identical
+ * reasoning and nothing in the harness noticed, because nothing was looking. Two or
+ * three repeats can be legitimate on a slow page; fourteen is a stuck loop that costs
+ * money and produces a verdict we would have had no right to publish.
+ */
+const MAX_NO_PROGRESS = 4;
+
+/** How many times the identical action on the identical target may repeat. */
+const MAX_IDENTICAL_ACTIONS = 3;
+
+/** A stable description of an action, for spotting repeats. */
+function actionSignature(action: { action: string; ref?: number; selector?: string; key?: string; text?: string }): string {
+  return [action.action, action.ref, action.selector, action.key, action.text]
+    .filter((part) => part !== undefined && part !== "")
+    .join("|");
+}
 
 function trimHistory(history: ReasoningTurn[]): ReasoningTurn[] {
   if (history.length <= MAX_HISTORY_TURNS * 2) return history;
@@ -141,6 +169,9 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
         const history: ReasoningTurn[] = [];
         let pendingAnnouncements: string[] = [];
         let lastActionError: string | undefined;
+        let noProgressStreak = 0;
+        let identicalStreak = 0;
+        let lastSignature = "";
 
         for (let step = 1; step <= persona.maxSteps; step++) {
           const snapshot = await snapshotAxTree(page);
@@ -251,6 +282,8 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
             blindActivations.push(entry);
           }
 
+          const before = pageFingerprint(observation.url, snapshot);
+
           const actResult = await act(page, persona, snapshot, decision.action);
           if (actResult.error) {
             record.error = actResult.error;
@@ -258,11 +291,63 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           }
           pendingAnnouncements = actResult.announcements;
 
+          // Did anything actually change? A fingerprint over the accessibility tree
+          // rather than the URL, because a single page application rewrites the whole
+          // screen without touching the address bar.
+          const afterSnapshot = await snapshotAxTree(page);
+          const after = pageFingerprint(await currentUrl(page), afterSnapshot);
+          const changedNothing = before === after;
+          record.noProgress = changedNothing;
+
+          const signature = actionSignature(decision.action);
+          identicalStreak = signature === lastSignature ? identicalStreak + 1 : 0;
+          lastSignature = signature;
+          noProgressStreak = changedNothing ? noProgressStreak + 1 : 0;
+
+          // Tell the model, in the next observation, what we can see and it cannot.
+          if (changedNothing && !actResult.error) {
+            lastActionError =
+              `That action changed nothing on the page: the content is byte for byte identical to before. ` +
+              (identicalStreak >= 1
+                ? `You have now tried "${decision.action.action}" on the same target ${identicalStreak + 1} times. Repeating it will not work. Try something different, or use blocked and say what you cannot determine.`
+                : `Try a different approach.`);
+          }
+
           steps.push(record);
           opts.onEvent?.({ type: "step", persona: persona.id, record, narration: decision.narration });
 
+          // Abandon a stuck run rather than let it spend money producing a verdict we
+          // would have no right to publish. This is emphatically not a site failure:
+          // a persona that cannot make anything happen is far more likely to be our
+          // perception or actuation failing than a real barrier, and saying otherwise
+          // would be an accusation we cannot support.
+          if (noProgressStreak >= MAX_NO_PROGRESS || identicalStreak >= MAX_IDENTICAL_ACTIONS) {
+            const why =
+              noProgressStreak >= MAX_NO_PROGRESS
+                ? `${noProgressStreak} consecutive actions changed nothing on the page`
+                : `the same action was repeated ${identicalStreak + 1} times`;
+            const result: PersonaRunResult = {
+              ...base,
+              outcome: "inconclusive",
+              completed: false,
+              steps,
+              inputTokens,
+              outputTokens,
+              blindActivations,
+              durationMs: Date.now() - t0,
+              finalUrl: observation.url,
+              errorMessage:
+                `Stopped after ${why}. This says nothing about the site: it means Buyable could not ` +
+                `drive this page, so the run is excluded from the verdict rather than counted against it.`,
+            };
+            opts.onEvent?.({ type: "finished", persona: persona.id, result });
+            return result;
+          }
+
           // A persona can wander into success without declaring it, which still counts.
-          if (actResult.navigated) {
+          // Checked on any content change, not only navigation, because a single page
+          // application can reach the end of a journey without the URL ever changing.
+          if (actResult.navigated || !changedNothing) {
             const assertion = await checkAssertion(page, opts.journey.assertion);
             if (assertion.passed) {
               const result: PersonaRunResult = {

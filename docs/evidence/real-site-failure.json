@@ -1,0 +1,566 @@
+{
+  "report": {
+    "reportId": "f492b7f4-f573-4f10-828d-a83a42abfdc0",
+    "journeyId": "18f8895d-6951-4209-95bf-9714dbbb7607",
+    "journey": {
+      "journeyId": "18f8895d-6951-4209-95bf-9714dbbb7607",
+      "createdAt": "2026-09-20T06:34:25.010Z",
+      "name": "Add a product to the cart on a real Next.js storefront",
+      "startUrl": "https://demo.vercel.store/",
+      "goal": "Find any t-shirt, choose a size if one is required, and add it to the shopping cart.",
+      "assertion": {
+        "textPresent": "Proceed to Checkout"
+      }
+    },
+    "createdAt": "2026-09-20T06:36:27.917Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 0,
+        "completions": 0,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "error",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nAcme Drawstring Bag\n\n$12.00USD\n\nAcme Cup\n\n$15.00USD\n\nAcme Mug\n\n$15.00USD\n\nAcme Hoodie\n\n$50.00USD\n\nAcme Baby Onesie\n\n$10.00USD\n\nAcme Baby Cap\n\n$10.00USD\n\nAcme Mug\n\n$15.00USD\n\nAcme Hoodie\n\n$50.00USD\n\nAcme Baby Onesie\n\n$10.00USD\n\nAcme Baby Cap\n\n$10.00USD\n\nAcme M",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see \"Acme Circles T-Shirt\" which is a t-shirt product. I'll click on it to view the product details and select a size.",
+                  "selector": "main > section.mx-auto.grid:nth-of-type(1) > div.md\\:col-span-4.md\\:row-span-2:nth-of-type(1) > a.relative.block"
+                },
+                "url": "https://demo.vercel.store/",
+                "at": 15450
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://demo.vercel.store/product/acme-geometric-circles-t-shirt\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I need to select a size (M) before adding the t-shirt to the cart.",
+                  "selector": "form:nth-of-type(2) > dl.mb-8 > dd.flex.flex-wrap > button.flex.min-w-\\[48px\\]:nth-of-type(3)"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "at": 22984
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Size M is already selected (as shown in the URL and the blue outline on the M button), so now I'll click the \"Add To Cart\" button to complete the goal.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 31100
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button is visible on the page. I'll click it to add the t-shirt (size M already selected) to the shopping cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 38717
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly on the page with size M already selected (shown with blue outline), so I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 46556
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the DOM and on the page with size M already selected (shown with blue outline), so I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 54445
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the DOM and on the rendered page, with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 62371
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the DOM and on the rendered page, with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 70511
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAcm",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the rendered page with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 78577
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAc",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the DOM and on the rendered page, with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 86767
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAc",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly in the DOM and on the rendered page, with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 94778
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAc",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly on the page with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 103032
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAc",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly on the page with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 109773
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M\nTITLE: Acme Circles T-Shirt | Acme Store\n\nDOM:\nVISIBLE TEXT:\nACME STORE\nAll\nShirts\nStickers\nAcme Circles T-Shirt\n\n$20.00USD\n\nCOLOR\nBlack\nWhite\nBlue\nSIZE\nXS\nS\nM\nL\nXL\nXXL\nXXXL\n60% combed ringspun cotton/40% polyester jersey tee.\nAdd To Cart\n\nRelated Products\nAcme T-Shirt\n\n$20.00USD\n\nAcme Prism T-Shirt\n\n$25.00USD\n\nAc",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "I can see the \"Add To Cart\" button clearly on the page with size M already selected (shown with blue outline). I'll click it to add the t-shirt to the cart.",
+                  "selector": "div.flex.flex-col:nth-of-type(1) > div.basis-full.lg\\:basis-2\\/6:nth-of-type(2) > form:nth-of-type(3) > button.relative.flex"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt?size=M",
+                "at": 117627
+              }
+            ],
+            "startedAt": "2026-09-20T06:34:25.014Z",
+            "durationMs": 122903,
+            "inputTokens": 83466,
+            "outputTokens": 2301,
+            "blindActivations": [],
+            "browserSessionId": "01M2YRBV85WCCAGYZX4VFJYMY9",
+            "errorMessage": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"You have reached your specified workspace API usage limits. You will regain access on 2026-10-01 at 00:00 UTC.\"},\"request_id\":\"req_011CfEEDRZdjP8nMSjk8Xdwm\"}"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 0,
+        "completions": 0,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "error",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Store\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]  <<< FOCUS\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [",
+                "action": {
+                  "action": "next_link",
+                  "reason": "I need to find a t-shirt product. I can see \"Acme Circles T-Shirt\" in the accessibility tree at node [14]. I'll navigate to the first link to start exploring products."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 0,
+                "at": 12450
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Store logo ACME STORE\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]  <<< FOCUS\n            [4] list\n            [5] button \"Open cart\" [focusable]\n",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the \"Acme Circles T-Shirt\" link at node [14] to view and add a t-shirt to the cart."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 3,
+                "at": 17350
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"All\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [6] sectionfooter\n        ",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to continue navigating forward to reach the \"Acme Circles T-Shirt\" link at node [14] to view the t-shirt product."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 27,
+                "at": 22183
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Shirts\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [6] sectionfooter\n     ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "I need to go back to reach the \"Acme Circles T-Shirt\" link at node [14] which is earlier in the tab order."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 28,
+                "at": 27062
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"All\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [6] sectionfooter\n        ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "I need to continue going back to reach the \"Acme Circles T-Shirt\" link at node [14]."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 27,
+                "at": 31979
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Store logo ACME STORE\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]  <<< FOCUS\n            [4] list\n            [5] button \"Open cart\" [focusable]\n",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the \"Acme Circles T-Shirt\" link at node [14] to view the t-shirt product."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 3,
+                "at": 36722
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"All\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [6] sectionfooter\n        ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "I need to go back to reach the \"Acme Circles T-Shirt\" link at node [14] which appears earlier in the tab order."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 27,
+                "at": 41490
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Store logo ACME STORE\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]  <<< FOCUS\n            [4] list\n            [5] button \"Open cart\" [focusable]\n",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the \"Acme Circles T-Shirt\" link at node [14] to view the t-shirt product."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 3,
+                "at": 46134
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"All\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open cart\" [focusable]\n        [6] sectionfooter\n        ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "I need to go back to reach the \"Acme Circles T-Shirt\" link at node [14] which is earlier in the tab order."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 27,
+                "at": 50724
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Store logo ACME STORE\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]  <<< FOCUS\n            [4] list\n            [5] button \"Open cart\" [focusable]",
+                "action": {
+                  "action": "next_link",
+                  "reason": "I need to navigate to the next link to reach the \"Acme Circles T-Shirt\" link at node [14]."
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 3,
+                "at": 55682
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://demo.vercel.store/\nTITLE: Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Acme Circles T-Shirt Acme Circles T-Shirt $20.00USD\", link\n\nACCESSIBILITY TREE (reading order, 161 nodes, 37 focusable):\n[0] RootWebArea \"Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] list\n            [5] button \"Open car",
+                "action": {
+                  "action": "press",
+                  "reason": "I've reached the \"Acme Circles T-Shirt\" link at node [14], now I need to activate it to view the product page.",
+                  "key": "Enter"
+                },
+                "url": "https://demo.vercel.store/",
+                "focusedRef": 14,
+                "at": 60608
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://demo.vercel.store/product/acme-geometric-circles-t-shirt\n  \"Acme Circles T-Shirt | Acme Store\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusa",
+                "action": {
+                  "action": "next_button",
+                  "reason": "I need to navigate to the size selection buttons to choose a size for the t-shirt before I can add it to cart."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 0,
+                "at": 65912
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Open cart\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n         ",
+                "action": {
+                  "action": "next_button",
+                  "reason": "I need to navigate to the size selection buttons to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 5,
+                "at": 70232
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Open cart\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n         ",
+                "action": {
+                  "action": "next_button",
+                  "reason": "I need to navigate to the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 5,
+                "at": 74579
+              },
+              {
+                "step": 15,
+                "observationDigest": "STEP 15\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Open cart\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n         ",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 5,
+                "at": 79045
+              },
+              {
+                "step": 16,
+                "observationDigest": "STEP 16\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Previous product image\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusab",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 83,
+                "at": 83613
+              },
+              {
+                "step": 17,
+                "observationDigest": "STEP 17\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Next product image\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 84,
+                "at": 88459
+              },
+              {
+                "step": 18,
+                "observationDigest": "STEP 18\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Select product image\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 85,
+                "at": 93735
+              },
+              {
+                "step": 19,
+                "observationDigest": "STEP 19\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Select product image\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 86,
+                "at": 98579
+              },
+              {
+                "step": 20,
+                "observationDigest": "STEP 20\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Select product image\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 87,
+                "at": 103184
+              },
+              {
+                "step": 21,
+                "observationDigest": "STEP 21\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"Black\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 88,
+                "at": 107012
+              },
+              {
+                "step": 22,
+                "observationDigest": "STEP 22\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"White\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [",
+                "action": {
+                  "action": "tab",
+                  "reason": "I need to navigate forward to reach the size selection buttons (nodes 91-97) to choose a size for the t-shirt."
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 89,
+                "at": 112010
+              },
+              {
+                "step": 23,
+                "observationDigest": "STEP 23\nURL: https://demo.vercel.store/product/acme-geometric-circles-t-shirt\nTITLE: Acme Circles T-Shirt | Acme Store\n\nSCREEN READER ANNOUNCED:\n  \"XS\", button\n\nACCESSIBILITY TREE (reading order, 170 nodes, 46 focusable):\n[0] RootWebArea \"Acme Circles T-Shirt | Acme Store\" [focusable]\n      [1] navigation\n      [2] main\n            [3] link \"Acme Store logo ACME STORE\" [focusable]\n            [4] ",
+                "action": {
+                  "action": "press",
+                  "reason": "I've reached the size selection buttons and will select \"XS\" size for the t-shirt.",
+                  "key": "Enter"
+                },
+                "url": "https://demo.vercel.store/product/acme-geometric-circles-t-shirt",
+                "focusedRef": 91,
+                "at": 117669
+              }
+            ],
+            "startedAt": "2026-09-20T06:34:25.017Z",
+            "durationMs": 122098,
+            "inputTokens": 99055,
+            "outputTokens": 1912,
+            "blindActivations": [],
+            "browserSessionId": "01M2YRBV7D6PM5VFA3QYXX9KWZ",
+            "errorMessage": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"You have reached your specified workspace API usage limits. You will regain access on 2026-10-01 at 00:00 UTC.\"},\"request_id\":\"req_011CfEEDRQCzZF83A9f7fwrS\"}"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 0,
+    "siteIsTheVariable": false,
+    "completedOnlyByGuessing": false,
+    "durationMs": 122904,
+    "costUsd": 0.610758
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "f492b7f4-f573-4f10-828d-a83a42abfdc0",
+    "createdAt": "2026-09-20T06:36:27.917Z",
+    "subject": {
+      "journeyName": "Add a product to the cart on a real Next.js storefront",
+      "startUrl": "https://demo.vercel.store/",
+      "goal": "Find any t-shirt, choose a size if one is required, and add it to the shopping cart.",
+      "provenBy": {
+        "textPresent": "Proceed to Checkout"
+      }
+    },
+    "method": {
+      "reasoningProvider": "anthropic:claude-sonnet-4-5-20250929",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 0,
+      "siteIsTheVariable": false,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 0,
+          "attempts": 0,
+          "rate": 0,
+          "outcomes": [
+            "error"
+          ],
+          "browserSessionIds": [
+            "01M2YRBV85WCCAGYZX4VFJYMY9"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": []
+        },
+        {
+          "persona": "assistive",
+          "completions": 0,
+          "attempts": 0,
+          "rate": 0,
+          "outcomes": [
+            "error"
+          ],
+          "browserSessionIds": [
+            "01M2YRBV7D6PM5VFA3QYXX9KWZ"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": []
+        }
+      ]
+    },
+    "findings": [],
+    "accounting": {
+      "durationMs": 122904,
+      "estimatedModelCostUsd": 0.6108,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}

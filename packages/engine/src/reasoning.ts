@@ -230,6 +230,16 @@ export function buildSystemPrompt(persona: Persona, goal: string): string {
     );
   }
 
+  if (persona.perceive.accessibilityTree) {
+    lines.push(
+      `Node numbers in square brackets are valid only for the tree you are looking at`,
+      `right now. They are renumbered every turn, so do not plan several steps ahead`,
+      `around a number, and do not chase a node you saw earlier. Work from the tree in`,
+      `front of you.`,
+      ``,
+    );
+  }
+
   lines.push(
     `RULES:`,
     `1. Take exactly one action per turn by calling the ${ACTION_TOOL_NAME} tool.`,

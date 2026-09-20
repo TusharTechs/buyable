@@ -19,6 +19,7 @@ import { materialisePatchedTree, proposePatch, type ProposedPatch } from "./patc
 import { publishShadowBuild, toShadowUrl, type ShadowBuild } from "./shadow.js";
 import { runPersona } from "./runPersona.js";
 import type { ReasoningProvider } from "./reasoning.js";
+import { NON_ATTRIBUTABLE_OUTCOMES } from "./types.js";
 import type {
   Blocker,
   Journey,
@@ -89,7 +90,7 @@ async function countSilentControls(region: string, url: string): Promise<number>
 }
 
 function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict {
-  const scored = runs.filter((r) => r.outcome !== "error");
+  const scored = runs.filter((r) => !NON_ATTRIBUTABLE_OUTCOMES.includes(r.outcome));
   const completions = scored.filter((r) => r.completed).length;
   const blindActivations = runs.flatMap((r) => r.blindActivations);
   return {
@@ -99,6 +100,7 @@ function toVerdict(persona: PersonaId, runs: PersonaRunResult[]): PersonaVerdict
     rate: scored.length === 0 ? 0 : completions / scored.length,
     runs,
     blocker: runs.find((r) => r.blocker)?.blocker,
+    inconclusive: runs.filter((r) => NON_ATTRIBUTABLE_OUTCOMES.includes(r.outcome)).length,
     completionsWithBlindActivation: scored.filter(
       (r) => r.completed && r.blindActivations.length > 0,
     ).length,
