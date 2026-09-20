@@ -19,7 +19,6 @@ import {
 } from "@buyable/engine";
 import {
   EVIDENCE_BUCKET,
-  WEB_BUCKET,
   WEB_BASE_URL,
   getProvider,
   putObject,
@@ -89,14 +88,20 @@ export async function handler(input: FinaliseInput) {
       body: renderSummaryMarkdown(bundle),
       contentType: "text/markdown; charset=utf-8",
     }),
+    // The report goes to the private evidence bucket, not to the public web bucket.
+    //
+    // It was on a public CDN, and the defence was that the run id is a UUID so the
+    // address cannot be guessed. An unguessable address is still an address: it
+    // survives in browser history, in Referer headers, in link previews and in every
+    // access log on the way, and once it has escaped there is no expiry, no
+    // revocation and no way to know. It is now reachable only through the gate in
+    // getReport.ts, which checks a key that was shown once.
     putObject({
-      bucket: WEB_BUCKET,
+      bucket: EVIDENCE_BUCKET,
       key: `reports/${input.runId}.html`,
       body: renderReportHtml(bundle, { siteUrl: WEB_BASE_URL }),
       contentType: "text/html; charset=utf-8",
-      // Reports are immutable once written, so they can be cached hard. The evidence
-      // bucket holds the authoritative copy under Object Lock either way.
-      cacheControl: "public, max-age=3600",
+      cacheControl: "private, no-store",
     }),
   ]);
 
@@ -107,12 +112,14 @@ export async function handler(input: FinaliseInput) {
     createdAt: existing?.createdAt ?? bundle.createdAt,
     updatedAt: new Date().toISOString(),
     journey: input.journey,
-    reportUrl: `${WEB_BASE_URL}/reports/${input.runId}.html`,
+    // No key here. It was shown once when the run was created and is not recoverable
+    // from anything we store, which is the point of storing only the digest.
+    reportUrl: `${WEB_BASE_URL}/r/${input.runId}`,
   });
 
   return {
     runId: input.runId,
-    reportUrl: `${WEB_BASE_URL}/reports/${input.runId}.html`,
+    reportUrl: `${WEB_BASE_URL}/r/${input.runId}`,
     journeyCompletionRate: bundle.result.journeyCompletionRate,
     proven: fix?.proven ?? false,
   };

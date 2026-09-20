@@ -11,6 +11,7 @@ export * from "./patch.js";
 export * from "./shadow.js";
 export * from "./verifyFix.js";
 export * from "./renderReport.js";
+export * from "./reportAccess.js";
 export * from "./inspect.js";
 export * from "./feasibility.js";
 export * from "./consent.js";

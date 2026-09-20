@@ -7,7 +7,7 @@
  */
 
 import type { APIGatewayProxyEventV2, APIGatewayProxyResultV2 } from "aws-lambda";
-import { getRun, listEvents, json, WEB_BASE_URL } from "./shared.js";
+import { getReportGrant, getRun, listEvents, json, WEB_BASE_URL } from "./shared.js";
 
 export async function handler(event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> {
   const runId = event.pathParameters?.runId;
@@ -16,6 +16,9 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
   const record = await getRun(runId);
   if (!record) return json(404, { error: "No such run." });
 
+  // Only the state of the grant, never the digest and certainly never a key.
+  const grant = await getReportGrant(runId);
+
   return json(200, {
     runId,
     status: record.status,
@@ -23,7 +26,11 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
     error: record.error,
     createdAt: record.createdAt,
     updatedAt: record.updatedAt,
-    reportUrl: record.status === "complete" ? `${WEB_BASE_URL}/reports/${runId}.html` : undefined,
+    // The path only. This endpoint has no key and could not produce one: the caller
+    // who started the run is holding it, and nobody else is meant to.
+    reportUrl: record.status === "complete" ? `${WEB_BASE_URL}/r/${runId}` : undefined,
+    reportExpiresAt: grant?.expiresAt,
+    reportRevoked: !!grant?.revokedAt,
     events: await listEvents(runId),
   });
 }

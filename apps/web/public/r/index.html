@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Buyable report</title>
+<link rel="stylesheet" href="/report.css">
+<style>
+  .gate { max-width: 52ch; margin: 12vh auto; padding: 0 20px; }
+  .gate h1 { font-size: 22px; margin: 0 0 12px; }
+  .gate p { margin: 0 0 14px; }
+  .gate .key-note { color: var(--muted); font-size: 14px; }
+  .frame { width: 100%; border: 0; min-height: 100vh; display: block; }
+</style>
+</head>
+<body>
+<!--
+  The report viewer.
+
+  The access key lives in the fragment of this page's URL, after the # symbol.
+  Browsers never send a fragment to a server, so the key that opens this report
+  appears in no access log, no Referer header and no CDN record anywhere between the
+  reader and us. The page reads it, sends it as a request header, and then removes it
+  from the address bar so it does not sit in a screenshot or over somebody's shoulder.
+
+  It is the one place in this product that genuinely needs JavaScript, and that is a
+  real cost on a page arguing for pages that do not. The alternative is putting the
+  key in the query string, where every hop writes it down permanently. The trade was
+  made deliberately: see docs/report-access.md. The no-JavaScript path is a documented
+  curl command rather than a broken page.
+-->
+<main id="gate" class="gate">
+  <h1 id="gate-heading">Opening the report</h1>
+  <p id="gate-status" role="status">Checking the access key.</p>
+  <noscript>
+    <p>
+      This viewer needs JavaScript, because it reads the access key out of the address
+      without sending it to a server. The API does not need JavaScript. Take the part
+      of this address after the <code>#</code> symbol and use it as a header:
+    </p>
+    <pre class="diff"><code>curl -H 'x-buyable-key: YOUR_KEY' \
+  https://o62sq0ywp8.execute-api.us-west-2.amazonaws.com/reports/RUN_ID</code></pre>
+  </noscript>
+</main>
+<script src="/config.js"></script>
+<script src="/report-viewer.js"></script>
+</body>
+</html>

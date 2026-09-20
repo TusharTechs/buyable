@@ -8,8 +8,14 @@
  */
 
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, PutCommand, GetCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import {
+  DynamoDBDocumentClient,
+  PutCommand,
+  GetCommand,
+  QueryCommand,
+  UpdateCommand,
+} from "@aws-sdk/lib-dynamodb";
+import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { createProvider, type ReasoningProvider } from "@buyable/engine";
 
@@ -174,4 +180,111 @@ export function json(status: number, body: unknown) {
     },
     body: JSON.stringify(body),
   };
+}
+
+/**
+ * Read an object back. Reports live in the private evidence bucket and are served
+ * only through the gate, so this is how the gate gets at them.
+ */
+export async function getObjectText(bucket: string, key: string): Promise<string | undefined> {
+  try {
+    const result = await s3.send(new GetObjectCommand({ Bucket: bucket, Key: key }));
+    return await result.Body?.transformToString();
+  } catch (err) {
+    if ((err as { name?: string }).name === "NoSuchKey") return undefined;
+    throw err;
+  }
+}
+
+/**
+ * The access grant for a report, kept as its own item.
+ *
+ * It would have been simpler to hang the key digest off the run's `meta` item. That
+ * was the first version and it was wrong: `putRun` writes the whole item, three
+ * different handlers call it after the run has started, and every one of them would
+ * have silently deleted the grant. The report would then be unopenable by anybody,
+ * including the person holding the key, and nothing would have looked broken until
+ * somebody tried to read one.
+ *
+ * A separate sort key removes the possibility rather than relying on four call sites
+ * remembering. `putRun` writes `meta` and physically cannot touch `grant`.
+ *
+ * Only the digest is stored. A dump of this table opens no reports at all, which is
+ * the whole reason the key is not kept beside it.
+ */
+export interface ReportGrantRecord {
+  keyHash: string;
+  expiresAt: string;
+  revokedAt?: string;
+  readCount?: number;
+  lastReadAt?: string;
+}
+
+export async function putReportGrant(
+  runId: string,
+  grant: { keyHash: string; expiresAt: string },
+): Promise<void> {
+  await ddb.send(
+    new PutCommand({
+      TableName: TABLE,
+      Item: { pk: `run#${runId}`, sk: "grant", ttl: runTtl(), ...grant },
+    }),
+  );
+}
+
+export async function getReportGrant(runId: string): Promise<ReportGrantRecord | undefined> {
+  const result = await ddb.send(
+    new GetCommand({ TableName: TABLE, Key: { pk: `run#${runId}`, sk: "grant" } }),
+  );
+  return result.Item as ReportGrantRecord | undefined;
+}
+
+/**
+ * Note that a report was read.
+ *
+ * Not for its own sake. The value of an access log here is that the owner of a report
+ * can see that a link they believed was private has been opened forty times from
+ * somewhere they do not recognise, and then revoke it. Access control with no way to
+ * notice it has failed is only half of the thing.
+ *
+ * Best effort: a counter that cannot be written is not a reason to keep somebody from
+ * a report they hold the key to.
+ */
+export async function recordReportAccess(runId: string): Promise<void> {
+  try {
+    await ddb.send(
+      new UpdateCommand({
+        TableName: TABLE,
+        Key: { pk: `run#${runId}`, sk: "grant" },
+        UpdateExpression: "SET lastReadAt = :now ADD readCount :one",
+        ExpressionAttributeValues: { ":now": new Date().toISOString(), ":one": 1 },
+      }),
+    );
+  } catch (err) {
+    console.warn("could not record report access", err);
+  }
+}
+
+/**
+ * Revoke a report, permanently.
+ *
+ * Conditional on the key digest rather than read-then-write, so a revocation cannot be
+ * lost to a concurrent update and cannot land on a grant that changed underneath it.
+ */
+export async function revokeReport(runId: string, keyHash: string): Promise<boolean> {
+  try {
+    await ddb.send(
+      new UpdateCommand({
+        TableName: TABLE,
+        Key: { pk: `run#${runId}`, sk: "grant" },
+        UpdateExpression: "SET revokedAt = :now",
+        ConditionExpression: "keyHash = :hash",
+        ExpressionAttributeValues: { ":now": new Date().toISOString(), ":hash": keyHash },
+      }),
+    );
+    return true;
+  } catch (err) {
+    if ((err as { name?: string }).name === "ConditionalCheckFailedException") return false;
+    throw err;
+  }
 }

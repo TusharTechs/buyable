@@ -42,6 +42,9 @@ export class BuyableStack extends cdk.Stack {
     const web = new StaticSite(this, "Web", {
       sourcePath: path.join(repoRoot, "apps", "web", "public"),
       comment: "Buyable web app",
+      // Report links are /r/<runId>, served by the viewer at /r/index.html, which
+      // reads the access key out of the fragment.
+      singlePagePrefixes: ["/r"],
       // This bucket receives published reports at runtime under reports/. Pruning on
       // deploy would delete every one of them and break every report link that had
       // ever been shared, so the checked-in files are added without removing

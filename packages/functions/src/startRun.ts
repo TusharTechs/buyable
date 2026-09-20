@@ -12,12 +12,13 @@ import { randomUUID } from "node:crypto";
 import {
   checkFeasibility,
   defineJourney,
+  mintReportKey,
   PERSONA_IDS,
   withBrowserSession,
   type PersonaId,
 } from "@buyable/engine";
 import { assertNotHalted, assertRobotsAllows, assertUrlIsFetchable, assertWithinLimits, Refused } from "./guards.js";
-import { json, putRun, REGION, WEB_BASE_URL } from "./shared.js";
+import { json, putReportGrant, putRun, REGION, WEB_BASE_URL } from "./shared.js";
 
 const sfn = new SFNClient({});
 
@@ -106,6 +107,11 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
     const runId = journey0.journeyId;
     const journey = journey0;
 
+    // The report's access key, minted before the run starts so it can be handed back
+    // in this response and never again. Only the digest is stored: a dump of our own
+    // table opens nothing.
+    const grant = mintReportKey();
+
     await putRun({
       runId,
       status: "queued",
@@ -114,6 +120,10 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
       journey,
       progress: Object.fromEntries(personas.map((p) => [p, "queued"])),
     });
+
+    // Its own item, so that the handlers which rewrite the run record as it progresses
+    // cannot delete it. See the note on putReportGrant.
+    await putReportGrant(runId, { keyHash: grant.hash, expiresAt: grant.expiresAt });
 
     await sfn.send(
       new StartExecutionCommand({
@@ -139,7 +149,13 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
       runId,
       status: "queued",
       statusUrl: `/runs/${runId}`,
-      reportUrl: `${WEB_BASE_URL}/reports/${runId}.html`,
+      // The key rides in the fragment, which browsers never send to a server, so the
+      // link that opens this report appears in no access log along the way.
+      reportUrl: `${WEB_BASE_URL}/r/${runId}#k=${grant.key}`,
+      reportKey: grant.key,
+      reportExpiresAt: grant.expiresAt,
+      keyNote:
+        "This key is shown once and is not stored anywhere we can read. Keep the link: without it the report cannot be opened, by you or by anybody else.",
       personas,
       attempts,
       // Anything the preflight noticed but did not consider fatal, so the caller can

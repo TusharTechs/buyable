@@ -68,6 +68,16 @@
 
   /** Personas this run was started with, so lanes appear before any event arrives. */
   var running = [];
+  /**
+   * The report link, including its access key.
+   *
+   * The key is shown once, in the response that starts the run, and is not stored
+   * anywhere we can read it back from. If this page is closed before the run finishes,
+   * the report cannot be opened by anyone, including us. That is the cost of the key
+   * not existing on our side, and it is the point rather than an oversight, so the
+   * link is put in front of the reader immediately rather than at the end.
+   */
+  var reportLink = "";
   /** The last sentence announced, so an unchanged state is not spoken again. */
   var lastSpoken = "";
 
@@ -116,6 +126,42 @@
     result.hidden = false;
   }
 
+  /**
+   * Tell the reader, before the run finishes, that this link is the only copy.
+   *
+   * Showing it at the end would be too late for anyone who closed the tab, and saying
+   * nothing would be worse: a link that cannot be recovered is a surprising property
+   * and the surprise should not arrive when they need the report.
+   */
+  function showKeyNotice(data) {
+    if (!data.reportUrl) return;
+    var box = document.getElementById("scan-key");
+    if (!box) return;
+
+    var expires = data.reportExpiresAt
+      ? new Date(data.reportExpiresAt).toISOString().slice(0, 10)
+      : "";
+
+    box.innerHTML =
+      "<p><strong>Keep this link.</strong> It carries the key that opens the report, " +
+      "and the key is not stored anywhere we can read. If you lose it, nobody can open " +
+      "the report, including us." +
+      (expires ? " The link stops working on " + esc(expires) + "." : "") +
+      "</p>";
+
+    var field = document.createElement("input");
+    field.type = "text";
+    field.readOnly = true;
+    field.value = data.reportUrl;
+    field.id = "scan-key-value";
+    field.setAttribute("aria-label", "Report link, including its access key");
+    field.addEventListener("focus", function () {
+      field.select();
+    });
+    box.appendChild(field);
+    box.hidden = false;
+  }
+
   function renderWarnings(warnings) {
     var html = "<p class=\"hint\">Running, with these caveats:</p><ul>";
     warnings.forEach(function (w) {
@@ -142,7 +188,9 @@
           result.innerHTML = "";
           var link = document.createElement("a");
           link.className = "btn";
-          link.href = data.reportUrl;
+          // The link held from the start, because it carries the access key and the
+          // status endpoint has no way to produce one.
+          link.href = reportLink || data.reportUrl;
           link.textContent = "Read the full report";
           result.appendChild(link);
           // Take the keyboard to the thing that just became available, rather than
@@ -251,6 +299,8 @@
           renderWarnings(payload.data.warnings);
         }
         running = payload.data.personas || personas;
+        reportLink = payload.data.reportUrl || "";
+        showKeyNotice(payload.data);
         var startedAt = Date.now();
         renderRun([], startedAt);
         say("Started. This usually takes two to four minutes.");

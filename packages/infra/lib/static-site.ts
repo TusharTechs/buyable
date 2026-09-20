@@ -29,6 +29,18 @@ export interface StaticSiteProps {
    * quietly break every report link anyone had ever been given.
    */
   prune?: boolean;
+  /**
+   * Path prefixes served by a single page under that prefix.
+   *
+   * `/r` maps every `/r/<anything>` to `/r/index.html`, so a report link can be
+   * `/r/<runId>` rather than `/r/index.html?id=<runId>`. That matters more than
+   * tidiness: a report link is a thing people forward, and one that looks like a
+   * debug URL invites the recipient to start editing it.
+   *
+   * Without this the request would miss, fall through the 404 handler, and serve the
+   * landing page with a 200, which looks to the reader like the report vanished.
+   */
+  singlePagePrefixes?: string[];
 }
 
 /**
@@ -55,6 +67,29 @@ export class StaticSite extends Construct {
       autoDeleteObjects: true,
     });
 
+    // A viewer request function rather than a Lambda at the edge: it runs in under a
+    // millisecond, costs almost nothing, and rewriting a path is the whole job.
+    const prefixes = props.singlePagePrefixes ?? [];
+    const rewrite = prefixes.length
+      ? new cloudfront.Function(this, "Rewrite", {
+          comment: `Serve ${prefixes.join(", ")} from their own index`,
+          code: cloudfront.FunctionCode.fromInline(`
+function handler(event) {
+  var request = event.request;
+  var prefixes = ${JSON.stringify(prefixes)};
+  for (var i = 0; i < prefixes.length; i++) {
+    var prefix = prefixes[i];
+    if (request.uri === prefix || request.uri.indexOf(prefix + '/') === 0) {
+      request.uri = prefix + '/index.html';
+      return request;
+    }
+  }
+  return request;
+}
+`),
+        })
+      : undefined;
+
     this.distribution = new cloudfront.Distribution(this, "Distribution", {
       comment: props.comment,
       defaultRootObject: props.indexDocument ?? "index.html",
@@ -63,6 +98,9 @@ export class StaticSite extends Construct {
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
         responseHeadersPolicy: cloudfront.ResponseHeadersPolicy.SECURITY_HEADERS,
+        functionAssociations: rewrite
+          ? [{ function: rewrite, eventType: cloudfront.FunctionEventType.VIEWER_REQUEST }]
+          : undefined,
       },
       // A single-page miss should still render something, not an XML error document.
       errorResponses: [

@@ -317,6 +317,10 @@ export class Pipeline extends Construct {
     });
     const getFn = makeFunction("GetRun", fn("getRun"));
 
+    // The report gate. Reports are written to the private evidence bucket and this is
+    // the only thing that can read one, after checking a key that was shown once.
+    const reportFn = makeFunction("GetReport", fn("getReport"));
+
     // The free tier. Synchronous, because an inspection finishes in seconds, and
     // generously sized because most of its time is spent waiting on a browser.
     const inspectFn = makeFunction("Inspect", fn("inspect"), {
@@ -341,6 +345,12 @@ export class Pipeline extends Construct {
     this.stateMachine.grantStartExecution(startFn);
     props.table.grantReadWriteData(startFn);
     props.table.grantReadData(getFn);
+
+    // Read to check the grant, write to record an access and to revoke. The report
+    // objects themselves are read only: nothing behind this endpoint can alter a
+    // published finding.
+    props.table.grantReadWriteData(reportFn);
+    props.evidenceBucket.grantRead(reportFn);
     startFn.addToRolePolicy(
       new iam.PolicyStatement({
         actions: [
@@ -358,7 +368,9 @@ export class Pipeline extends Construct {
       corsPreflight: {
         allowOrigins: [props.webBaseUrl],
         allowMethods: [apigw.CorsHttpMethod.GET, apigw.CorsHttpMethod.POST],
-        allowHeaders: ["content-type"],
+        // x-buyable-key so the report viewer can send the key in a header rather
+        // than a query string, keeping it out of every access log on the way.
+        allowHeaders: ["content-type", "x-buyable-key"],
       },
     });
 
@@ -376,6 +388,16 @@ export class Pipeline extends Construct {
       path: "/runs/{runId}",
       methods: [apigw.HttpMethod.GET],
       integration: new integrations.HttpLambdaIntegration("GetIntegration", getFn),
+    });
+    api.addRoutes({
+      path: "/reports/{runId}",
+      methods: [apigw.HttpMethod.GET],
+      integration: new integrations.HttpLambdaIntegration("ReportIntegration", reportFn),
+    });
+    api.addRoutes({
+      path: "/reports/{runId}/revoke",
+      methods: [apigw.HttpMethod.POST],
+      integration: new integrations.HttpLambdaIntegration("RevokeIntegration", reportFn),
     });
 
     this.apiUrl = api.apiEndpoint;

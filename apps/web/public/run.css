@@ -211,3 +211,30 @@
 @media (max-width: 720px) {
   .lane-steps { height: 240px; }
 }
+
+/*
+ * The report link, with its key.
+ *
+ * Shown as soon as the run starts rather than when it finishes, because the key exists
+ * only in this response. Anyone who closes the tab before then has lost the report
+ * permanently, and being told that afterwards is no use at all.
+ */
+.key-notice {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--panel);
+}
+.key-notice p { margin: 0 0 10px; font-size: 14px; }
+.key-notice input {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+}

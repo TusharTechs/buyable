@@ -149,11 +149,28 @@ and returns that honestly rather than guessing:
 > Buyable does not hold the source for this site, so it can diagnose the barrier but
 > cannot propose a verified fix.
 
-### 3. Reports are unauthenticated
+### 3. Report access control: done
 
-Every report is world readable at its URL. The identifier is a UUID so it is not
-guessable, but a link forwarded once is public forever. No enterprise will accept
-that for a document listing how their checkout excludes customers.
+Reports were world readable at their URL, defended only by the run id being a UUID. An
+unguessable address is still an address: it survives in browser history, in `Referer`
+headers, in link previews and in every access log on the way, with no expiry, no
+revocation and no way to know it had escaped.
+
+Every report now has a key. 32 random bytes, shown once when the run starts, stored only
+as a SHA-256 digest, compared in constant time, expiring in 30 days and revocable
+immediately and permanently. The report itself moved out of the public bucket into the
+private evidence bucket and is reachable only through a gate that checks the key. The
+five reports already published to the public bucket were deleted from it; the
+authoritative copies remain under Object Lock.
+
+The key rides in the URL fragment, which browsers never send to a server, so it appears
+in no access log anywhere between the reader and us.
+
+Verified on the deployed system, including that a wrong key and a report that does not
+exist give byte-identical answers, and that revocation kills a key that was already
+working. The full matrix is in [report-access.md](report-access.md), along with the
+costs: the viewer needs JavaScript, keys cannot be rotated, and the access log is a
+counter rather than an audit trail.
 
 ### 4. No accounts, no tenancy, no history
 
