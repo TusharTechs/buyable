@@ -1,1 +1,835 @@
-{"inspectionId":"cd6b7835-2c0c-465d-9ff0-7ae397d88fc1","reportUrl":"https://d3luufd5s1g5pn.cloudfront.net/inspections/cd6b7835-2c0c-465d-9ff0-7ae397d88fc1.html","url":"https://www.etsy.com/","title":"Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone","durationMs":7086,"counts":{"blocks":0,"impairs":1,"note":0},"tabStops":143,"findings":[{"kind":"unreachable-by-keyboard","severity":"impairs","summary":"A link cannot be reached by keyboard, so it works only with a pointer.","selector":"div.wt-display-flex-xs.wt-flex-direction-column-xs:nth-of-type(1) > div.wt-flex-xs-1.wt-mb-xs-5:nth-of-type(1) > div > div.wt-popover.wt-popover--top > a.wt-popover__trigger.wt-popover__trigger--underline","announcement":"\"Here are some of the ways we’re making a positive impact, together.\", link","wcag":["2.1.1"],"occurrences":1}],"transcript":[{"position":1,"role":"link","name":"Etsy","announcement":"\"Etsy\", link","silent":false},{"position":2,"role":"combobox","name":"Search for items or shops","announcement":"\"Search for items or shops\", combobox, hasPopup=listbox","silent":false},{"position":3,"role":"button","name":"Search","announcement":"\"Search\", button","silent":false},{"position":4,"role":"link","name":"Skip to Content","announcement":"\"Skip to Content\", link","silent":false},{"position":5,"role":"button","name":"Sign in","announcement":"\"Sign in\", button","silent":false},{"position":6,"role":"link","name":"Gifts","announcement":"\"Gifts\", link","silent":false},{"position":7,"role":"link","name":"Cart","announcement":"\"Cart\", link","silent":false},{"position":8,"role":"link","name":"Gifts","announcement":"\"Gifts\", link","silent":false},{"position":9,"role":"link","name":"Fresh Finds for Fall","announcement":"\"Fresh Finds for Fall\", link","silent":false},{"position":10,"role":"link","name":"Home Favorites","announcement":"\"Home Favorites\", link","silent":false},{"position":11,"role":"link","name":"Fashion Finds","announcement":"\"Fashion Finds\", link","silent":false},{"position":12,"role":"link","name":"Vintage","announcement":"\"Vintage\", link","silent":false},{"position":13,"role":"link","name":"Wedding Trends","announcement":"\"Wedding Trends\", link","silent":false},{"position":14,"role":"link","name":"Gift Cards","announcement":"\"Gift Cards\", link","silent":false},{"position":15,"role":"link","name":"Your best spooky season yet starts here Shop Halloween","announcement":"\"Your best spooky season yet starts here Shop Halloween\", link","silent":false},{"position":16,"role":"link","name":"Shop Halloween","announcement":"\"Shop Halloween\", link","silent":false},{"position":17,"role":"link","name":"Celebrate every moment with your pet Shop now","announcement":"\"Celebrate every moment with your pet Shop now\", link","silent":false},{"position":18,"role":"link","name":"Customizable Gifts","announcement":"\"Customizable Gifts\", link","silent":false},{"position":19,"role":"link","name":"Bridal Party Gifts","announcement":"\"Bridal Party Gifts\", link","silent":false},{"position":20,"role":"link","name":"Classic Craft Buttons","announcement":"\"Classic Craft Buttons\", link","silent":false},{"position":21,"role":"link","name":"Custom Home Decor","announcement":"\"Custom Home Decor\", link","silent":false},{"position":22,"role":"link","name":"Creative Pet Finds","announcement":"\"Creative Pet Finds\", link","silent":false},{"position":23,"role":"link","name":"Gothic Romance Wedding","announcement":"\"Gothic Romance Wedding\", link","silent":false},{"position":24,"role":"link","name":"Fall Hosting & Decor","announcement":"\"Fall Hosting & Decor\", link","silent":false},{"position":25,"role":"link","name":"Heirloom Jewelry","announcement":"\"Heirloom Jewelry\", link","silent":false}],"limits":["This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.","Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.","Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.","Nothing here replaces testing with people who use assistive technology every day."]}
+{
+  "report": {
+    "reportId": "000dc608-7596-4177-be7f-0c8d75bc40da",
+    "journeyId": "f0f6f8ca-7d7b-434c-8f3e-46cc1524be93",
+    "journey": {
+      "journeyId": "f0f6f8ca-7d7b-434c-8f3e-46cc1524be93",
+      "createdAt": "2026-09-20T10:55:08.474Z",
+      "name": "etsy",
+      "startUrl": "https://www.etsy.com/",
+      "goal": "Search for a leather notebook and open the listing page for the first result.",
+      "assertion": {
+        "urlMatches": "/listing/"
+      }
+    },
+    "createdAt": "2026-09-20T11:01:41.093Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 1,
+        "completions": 1,
+        "inconclusive": 0,
+        "rate": 1,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "completed",
+            "completed": true,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\n\nYour best spooky season yet starts here\n\nShop Halloween\n\nCelebrate every moment with your pet\n\nShop now\nJump into featured int",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the search input field to focus it.",
+                  "selector": "#global-enhancements-search-query"
+                },
+                "url": "https://www.etsy.com/",
+                "at": 18797,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\n\nYour best spooky season yet starts here\n\nShop Halloween\n\nCelebrate every moment with your pet\n\nShop now\nJump into featured int",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'leather notebook' into the search input field.",
+                  "selector": "#global-enhancements-search-query",
+                  "text": "leather notebook"
+                },
+                "url": "https://www.etsy.com/",
+                "at": 27056,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\n\nYour best spooky season yet starts here\n\nShop Halloween\n\nCelebrate every moment with your pet\n\nShop now\nJump into featured int",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'leather notebook' into the search box",
+                  "selector": "#global-enhancements-search-query",
+                  "text": "leather notebook"
+                },
+                "url": "https://www.etsy.com/",
+                "at": 34234,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\n\nYour best spooky season yet starts here\n\nShop Halloween\n\nCelebrate every moment with your pet\n\nShop now\nJump into featured int",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Focus the search input field",
+                  "selector": "#global-enhancements-search-query"
+                },
+                "url": "https://www.etsy.com/",
+                "at": 41240,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\n\nYour best spooky season yet starts here\n\nShop Halloween\n\nCelebrate every moment with your pet\n\nShop now\nJump into featured int",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate directly to the search results page for 'leather notebook'.",
+                  "url": "https://www.etsy.com/search?q=leather+notebook"
+                },
+                "url": "https://www.etsy.com/",
+                "at": 48929,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.etsy.com/search?q=leather+notebook\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.etsy.com/search?q=leather+notebook\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nClear search\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift Cards\nShow filters\nUnapplied filters\nShips from US\nUn",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click on the first search result listing to open its page.",
+                  "selector": "div.js-merch-stash-check-listing.v2-listing-card > div.listing-link.wt-display-inline-block:nth-of-type(1) > div.v2-listing-card__info > a.wt-z-index-1"
+                },
+                "url": "https://www.etsy.com/search?q=leather+notebook",
+                "at": 64254,
+                "noProgress": true
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.etsy.com/search?q=leather+notebook\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nEtsy\nSearch for items or shops\nClear search\nSkip to Content\nSign in\nGifts\nFresh Finds for Fall\nHome Favorites\nFashion Finds\nVintage\nRegistry\nGift C",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate directly to the listing page of the first search result.",
+                  "url": "https://www.etsy.com/listing/4380289299/personalized-monogrammed-journal"
+                },
+                "url": "https://www.etsy.com/search?q=leather+notebook",
+                "at": 75027,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T10:55:08.477Z",
+            "durationMs": 79997,
+            "inputTokens": 82777,
+            "outputTokens": 402,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z797ZEZ9SK3EP32JHVZVXR",
+            "finalUrl": "https://www.etsy.com/search?q=leather+notebook"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 0,
+        "completions": 0,
+        "inconclusive": 1,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "inconclusive",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nSCREEN READER ANNOUNCED:\n  \"Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 636 nodes, 159 focusable):\n[0] RootWebArea \"Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\" [focusable]  <<<",
+                "action": {
+                  "action": "next_form_field",
+                  "reason": "Move focus to the search input field."
+                },
+                "url": "https://www.etsy.com/",
+                "focusedRef": 0,
+                "at": 23520,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nSCREEN READER ANNOUNCED:\n  \"Search for items or shops\", combobox, hasPopup=listbox\n\nACCESSIBILITY TREE (reading order, 578 nodes, 144 focusable):\n[0] RootWebArea \"Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\" [focusable]\n        [1] navigation\n      [2] mai",
+                "action": {
+                  "action": "type",
+                  "reason": "Type leather notebook into the search input.",
+                  "text": "leather notebook"
+                },
+                "url": "https://www.etsy.com/",
+                "focusedRef": 132,
+                "at": 29850,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.etsy.com/\nTITLE: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\n\nSCREEN READER ANNOUNCED:\n  \"Search for items or shops\", combobox, value \"leather notebook\", hasPopup=listbox\n\nACCESSIBILITY TREE (reading order, 579 nodes, 144 focusable):\n[0] RootWebArea \"Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone\" [focusable]\n        [1",
+                "action": {
+                  "action": "press",
+                  "reason": "Submit the search for leather notebook by pressing Enter.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/",
+                "focusedRef": 132,
+                "at": 34767,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\n  \"Leather notebook - Etsy\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 517 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]  <<< FOCUS\n        [1] nav",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the search results heading."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 0,
+                "at": 44416,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Search results\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 518 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Move to the next link to find the first search result listing."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 22,
+                "at": 51032,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Terms of Use\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 518 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] co",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see the section structure."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 30,
+                "at": 59035,
+                "noProgress": false
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"We’re on a mission to keep commerce human.\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no a",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward into the search result items to find the first listing link."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 117,
+                "at": 67874,
+                "noProgress": false
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Next\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] contentinf",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the controls and content around the current focus to find search result links."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 149,
+                "at": 74416,
+                "noProgress": true
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Next\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [fo",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward from pagination link toward the search result links."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 149,
+                "at": 79230,
+                "noProgress": false
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"5\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] contentinfo\n",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward to inspect previous links in the search results."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 148,
+                "at": 85903,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"4\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] contentinfo\n",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward before pagination to inspect search result listing links."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 147,
+                "at": 91593,
+                "noProgress": false
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"3\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] contentinfo\n",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the accessibility tree around current focus to see preceding pagination and listing links."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 146,
+                "at": 101115,
+                "noProgress": true
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"3\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focu",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward past the pagination numbers to reach the listing links."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 146,
+                "at": 106133,
+                "noProgress": false
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"2\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 519 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) [focusable]\n        [5] contentinfo\n",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Navigate forward through landmarks to reach the main content or wrap around to the top."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 145,
+                "at": 115525,
+                "noProgress": false
+              },
+              {
+                "step": 15,
+                "observationDigest": "STEP 15\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  (no accessible name), navigation\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]  <<< FOCUS\n      [2] main\n          [3] banner\n        [4",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the Search results heading to get closer to the listings."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 1,
+                "at": 121824,
+                "noProgress": false
+              },
+              {
+                "step": 16,
+                "observationDigest": "STEP 16\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Search results\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate to the next link to find the first search result listing."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 22,
+                "at": 128990,
+                "noProgress": false
+              },
+              {
+                "step": 17,
+                "observationDigest": "STEP 17\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Terms of Use\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessibl",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the accessibility tree around the search results to find the first listing link."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 30,
+                "at": 136523,
+                "noProgress": true
+              },
+              {
+                "step": 18,
+                "observationDigest": "STEP 18\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Terms of Use\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward from Terms of Use to see what interactive element precedes it."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 30,
+                "at": 144674,
+                "noProgress": false
+              },
+              {
+                "step": 19,
+                "observationDigest": "STEP 19\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"YouTube\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible nam",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward from YouTube link to see next interactive elements in the main content."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 15,
+                "at": 153411,
+                "noProgress": false
+              },
+              {
+                "step": 20,
+                "observationDigest": "STEP 20\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Terms of Use\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessibl",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward to find listing links before Terms of Use."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 30,
+                "at": 162268,
+                "noProgress": false
+              },
+              {
+                "step": 21,
+                "observationDigest": "STEP 21\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"YouTube\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible nam",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move backward through interactive elements toward the search results listings."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 15,
+                "at": 167431,
+                "noProgress": false
+              },
+              {
+                "step": 22,
+                "observationDigest": "STEP 22\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Pinterest\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible n",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward from Pinterest to YouTube.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 14,
+                "at": 174898,
+                "noProgress": false
+              },
+              {
+                "step": 23,
+                "observationDigest": "STEP 23\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"YouTube\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible nam",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate forward to find listing links past the footer/search controls."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 15,
+                "at": 183043,
+                "noProgress": false
+              },
+              {
+                "step": 24,
+                "observationDigest": "STEP 24\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Etsy\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible name) ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Tab forward from Etsy link toward search results listings"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 17,
+                "at": 194086,
+                "noProgress": false
+              },
+              {
+                "step": 25,
+                "observationDigest": "STEP 25\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Search for items or shops\", combobox, value \"leather notebook\", hasPopup=listbox\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Find the next link after the search box to reach search results."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 37,
+                "at": 200190,
+                "noProgress": false
+              },
+              {
+                "step": 26,
+                "observationDigest": "STEP 26\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Gifts\", link\n\nACCESSIBILITY TREE (reading order, 1568 nodes, 520 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible name)",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Jump to the Search results heading to get closer to the first listing."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 132,
+                "at": 208553,
+                "noProgress": false
+              },
+              {
+                "step": 27,
+                "observationDigest": "STEP 27\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 521 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no acces",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the text around the current focus to see the first result."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 150,
+                "at": 214712,
+                "noProgress": true
+              },
+              {
+                "step": 28,
+                "observationDigest": "STEP 28\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Shop\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 521 focusable):\n[0] RootWebArea \"Leather noteboo",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Jump to the next heading to locate the first listing title."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 150,
+                "at": 219379,
+                "noProgress": false
+              },
+              {
+                "step": 29,
+                "observationDigest": "STEP 29\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Sell\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 522 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no acces",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Advance to the next link to cycle through or find search results."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 151,
+                "at": 229207,
+                "noProgress": false
+              },
+              {
+                "step": 30,
+                "observationDigest": "STEP 30\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"App Store\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 522 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible n",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Advance to wrap around to the top of the page."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 170,
+                "at": 236355,
+                "noProgress": false
+              },
+              {
+                "step": 31,
+                "observationDigest": "STEP 31\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Google Play\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 522 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no accessible",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to wrap around to Search results."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 171,
+                "at": 243775,
+                "noProgress": false
+              },
+              {
+                "step": 32,
+                "observationDigest": "STEP 32\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas Gift Idea for Him\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 523 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" ",
+                "action": {
+                  "action": "press",
+                  "reason": "Open the first search result by pressing Enter on its heading.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 574,
+                "at": 255142,
+                "noProgress": true
+              },
+              {
+                "step": 33,
+                "observationDigest": "STEP 33\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Find the link associated with the first search result."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 574,
+                "at": 262044,
+                "noProgress": false
+              },
+              {
+                "step": 34,
+                "observationDigest": "STEP 34\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift Rating: 4.9 out of 5 stars, (9.3k) reviews · From shop tergusco Sale Price $34.80 Original Price $58.00 (40% off)\", link\n\nACCESSIBILITY TREE (readin",
+                "action": {
+                  "action": "press",
+                  "reason": "Open the listing page for the first search result by activating the focused link.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 581,
+                "at": 269266,
+                "noProgress": true
+              },
+              {
+                "step": 35,
+                "observationDigest": "STEP 35\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift Ratin",
+                "action": {
+                  "action": "press",
+                  "reason": "Try activating the link with Space in case it listens to keydown Space.",
+                  "key": "Space"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 581,
+                "at": 278476,
+                "noProgress": true
+              },
+              {
+                "step": 36,
+                "observationDigest": "STEP 36\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift Ratin",
+                "action": {
+                  "action": "read",
+                  "reason": "Inspect the accessibility tree around the first listing to understand its structure."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 581,
+                "at": 285508,
+                "noProgress": true
+              },
+              {
+                "step": 37,
+                "observationDigest": "STEP 37\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift Ratin",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Navigate backward to find the link for the first listing."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 581,
+                "at": 290635,
+                "noProgress": false
+              },
+              {
+                "step": 38,
+                "observationDigest": "STEP 38\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift\", link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 523 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation ",
+                "action": {
+                  "action": "press",
+                  "reason": "Activate the focused link to open the listing page.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 180,
+                "at": 296730,
+                "noProgress": true
+              },
+              {
+                "step": 39,
+                "observationDigest": "STEP 39\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Leather Journal Notebook Diary, Leather Sketchbook, Travel Notebook, Corporate Gifts, Graduation Gift\", lin",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Navigate backward to find the link for the first result that was announced in the heading."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 180,
+                "at": 307092,
+                "noProgress": false
+              },
+              {
+                "step": 40,
+                "observationDigest": "STEP 40\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Add to favorites\", button\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 523 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no acc",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backward to find the link for the first result heading."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 580,
+                "at": 319901,
+                "noProgress": false
+              },
+              {
+                "step": 41,
+                "observationDigest": "STEP 41\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas Gift Idea for Him Rating: 4.9 out of 5 stars, (4.6k) reviews · From shop VUNandCo Sale Price $20.80 Original Price $51.99 (60% off)\", link\n\nACC",
+                "action": {
+                  "action": "press",
+                  "reason": "Open the listing page for the first result by pressing Enter on its link.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 325815,
+                "noProgress": true
+              },
+              {
+                "step": 42,
+                "observationDigest": "STEP 42\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the accessibility tree around the current focus to inspect the structure of the first listing."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 334288,
+                "noProgress": true
+              },
+              {
+                "step": 43,
+                "observationDigest": "STEP 43\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Navigate backward from the current listing link to see what other interactive elements exist for this item."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 340048,
+                "noProgress": false
+              },
+              {
+                "step": 44,
+                "observationDigest": "STEP 44\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  (no accessible name), link\n\nACCESSIBILITY TREE (reading order, 1567 nodes, 523 focusable):\n[0] RootWebArea \"Leather notebook - Etsy\" [focusable]\n        [1] navigation (no accessible name) [focusable]\n      [2] main\n          [3] banner\n        [4] generic (no acc",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward to the link with an accessible name."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 178,
+                "at": 346403,
+                "noProgress": false
+              },
+              {
+                "step": 45,
+                "observationDigest": "STEP 45\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas Gift Idea for Him Rating: 4.9 out of 5 stars, (4.6k) reviews · From shop VUNandCo Sale Price $20.80 Original Price $51.99 (60% off)\", link\n\nACC",
+                "action": {
+                  "action": "press",
+                  "reason": "Press Enter on the focused listing link to open the listing page.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 357714,
+                "noProgress": true
+              },
+              {
+                "step": 46,
+                "observationDigest": "STEP 46\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "press",
+                  "reason": "Try pressing Space to activate the link in case Enter is not handled.",
+                  "key": "Space"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 368071,
+                "noProgress": true
+              },
+              {
+                "step": 47,
+                "observationDigest": "STEP 47\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "press",
+                  "reason": "Retry pressing Enter on the focused listing link.",
+                  "key": "Enter"
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 374065,
+                "noProgress": true
+              },
+              {
+                "step": 48,
+                "observationDigest": "STEP 48\nURL: https://www.etsy.com/search?q=leather%20notebook&ref=search_bar\nTITLE: Leather notebook - Etsy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Personalized Monogrammed Journal Notebook Custom Vegan Leather Writing Journal Embossed Name Leather Notebook Christmas ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward from the listing link to see what interactive elements follow it."
+                },
+                "url": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+                "focusedRef": 179,
+                "at": 387434,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T10:55:08.480Z",
+            "durationMs": 391680,
+            "inputTokens": 241606,
+            "outputTokens": 1643,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z7980D3QB4VREEW7X38XHP",
+            "finalUrl": "https://www.etsy.com/search?q=leather%20notebook&ref=search_bar",
+            "errorMessage": "Ran out of steps after 48 turns while still making progress, and no barrier was identified. This says nothing about the site: the step budget was the limit, so the run is excluded from the verdict rather than counted against it."
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 0.5,
+    "siteIsTheVariable": true,
+    "completedOnlyByGuessing": false,
+    "durationMs": 392616,
+    "costUsd": 0.1024274
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "000dc608-7596-4177-be7f-0c8d75bc40da",
+    "createdAt": "2026-09-20T11:01:41.093Z",
+    "subject": {
+      "journeyName": "etsy",
+      "startUrl": "https://www.etsy.com/",
+      "goal": "Search for a leather notebook and open the listing page for the first result.",
+      "provenBy": {
+        "urlMatches": "/listing/"
+      }
+    },
+    "method": {
+      "reasoningProvider": "gemini:gemini-3.8-flash",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 0.5,
+      "siteIsTheVariable": true,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 1,
+          "attempts": 1,
+          "rate": 1,
+          "outcomes": [
+            "completed"
+          ],
+          "browserSessionIds": [
+            "01M2Z797ZEZ9SK3EP32JHVZVXR"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        },
+        {
+          "persona": "assistive",
+          "completions": 0,
+          "attempts": 0,
+          "rate": 0,
+          "outcomes": [
+            "inconclusive"
+          ],
+          "browserSessionIds": [
+            "01M2Z7980D3QB4VREEW7X38XHP"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 1
+        }
+      ]
+    },
+    "findings": [],
+    "accounting": {
+      "durationMs": 392616,
+      "estimatedModelCostUsd": 0.1024,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}

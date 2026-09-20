@@ -1,0 +1,446 @@
+{
+  "report": {
+    "reportId": "2ce1fd1b-0003-41be-b2b7-855200da62d3",
+    "journeyId": "f11e12cb-04e0-4b73-a536-90149f322028",
+    "journey": {
+      "journeyId": "f11e12cb-04e0-4b73-a536-90149f322028",
+      "createdAt": "2026-09-20T11:08:46.939Z",
+      "name": "amazon",
+      "startUrl": "https://www.amazon.co.uk/",
+      "goal": "Search for a desk lamp and open the product page for the first result.",
+      "assertion": {
+        "urlMatches": "/dp/"
+      }
+    },
+    "createdAt": "2026-09-20T11:11:00.278Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 1,
+        "completions": 0,
+        "inconclusive": 0,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "blocked",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\nO\nShow/Hide shortcuts\nshift\n+\nopt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.co.uk\nAll\nAll Departments\nAlexa Skills\nAma",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'desk lamp' into the search input box.",
+                  "selector": "#twotabsearchtextbox",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 14572,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\nO\nShow/Hide shortcuts\nshift\n+\nopt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.co.uk\nAll\nAll Departments\nAlexa Skills\nAma",
+                "action": {
+                  "action": "type",
+                  "reason": "Type desk lamp into the search box",
+                  "selector": "#twotabsearchtextbox",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 21545,
+                "noProgress": true
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. You have now tried \"type\" on the same target 2 times. Repeating it will not work. Try something different, or use blocked and say what you cannot determine.\n\nDOM:\nVIS",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Focus the search box to prepare for typing the search query.",
+                  "selector": "#twotabsearchtextbox"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 27688,
+                "noProgress": true
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\n",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate directly to the search results for 'desk lamp'.",
+                  "url": "https://www.amazon.co.uk/s?k=desk+lamp"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 35997,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.amazon.co.uk/s?k=desk+lamp\nTITLE: 503 - Service Unavailable Error\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.amazon.co.uk/s?k=desk+lamp\n\nDOM:\nVISIBLE TEXT:\nWe're sorry\nAn error occurred when we tried to process your request.\nWe're working on the problem and expect to resolve it shortly. Please note that if you were trying to place an order, it will not have bee",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Return to the home page to retry searching.",
+                  "selector": "p:nth-of-type(2) > font > b > a"
+                },
+                "url": "https://www.amazon.co.uk/s?k=desk+lamp",
+                "at": 46458,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.amazon.co.uk/ref=cs_503_link/\nTITLE: 503 - Service Unavailable Error\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.amazon.co.uk/ref=cs_503_link/\n\nDOM:\nVISIBLE TEXT:\nWe're sorry\nAn error occurred when we tried to process your request.\nWe're working on the problem and expect to resolve it shortly. Please note that if you were trying to place an order, it will not ha",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click to return to the Amazon.co.uk home page.",
+                  "selector": "p:nth-of-type(2) > font > b > a"
+                },
+                "url": "https://www.amazon.co.uk/ref=cs_503_link/",
+                "at": 53314,
+                "noProgress": true
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.amazon.co.uk/ref=cs_503_link/\nTITLE: 503 - Service Unavailable Error\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. You have now tried \"click_selector\" on the same target 2 times. Repeating it will not work. Try something different, or use blocked and say what you cannot determine.\n\nDOM:\nVISIBLE TEXT:\nWe'",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate back to the Amazon home page to check if the site is accessible.",
+                  "url": "https://www.amazon.co.uk/"
+                },
+                "url": "https://www.amazon.co.uk/ref=cs_503_link/",
+                "at": 59793,
+                "noProgress": false
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.amazon.co.uk/\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\nO\nShow/Hide shortcuts\nshift\n+\nopt\n+\nZ\nTo move between items, use your key",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the search input box to focus it.",
+                  "selector": "#twotabsearchtextbox"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 69166,
+                "noProgress": true
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\n",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the search assist link to focus the search box.",
+                  "selector": "#nav-assist-search"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 77363,
+                "noProgress": true
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+",
+                "action": {
+                  "action": "tab",
+                  "reason": "Tab forward to move focus towards the search input."
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 84734,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+\nO\nShow/Hide shortcuts\nshift\n+\nopt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.co.uk\nAll\nAll Departments\nAlexa Skills\nAm",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'desk lamp' into the search input.",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 97024,
+                "noProgress": true
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click directly on the search input box again to establish focus.",
+                  "selector": "#twotabsearchtextbox"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 107625,
+                "noProgress": true
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nopt\n+\n/\nBasket\nshift\n+\nopt\n+\nC\nHome\nshift\n+\nopt\n+\nH\nOrders\nshift\n+\nopt\n+",
+                "action": {
+                  "action": "blocked",
+                  "reason": "",
+                  "blockedExplanation": "navigate: Navigate to the search results for 'desk lamp' now that the home page has loaded cookies."
+                },
+                "url": "https://www.amazon.co.uk/",
+                "at": 119471
+              }
+            ],
+            "startedAt": "2026-09-20T11:08:59.162Z",
+            "durationMs": 120117,
+            "inputTokens": 79998,
+            "outputTokens": 558,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z82K4JVR1X1GK2DKN2NHDY",
+            "blocker": {
+              "persona": "baseline",
+              "step": 13,
+              "url": "https://www.amazon.co.uk/",
+              "node": {
+                "ref": 37,
+                "role": "link",
+                "name": "Amazon.co.uk",
+                "states": [],
+                "focusable": true,
+                "depth": 9,
+                "backendNodeId": 3810
+              },
+              "selector": "#nav-logo-sprites",
+              "outerHtml": "<a href=\"/ref=nav_logo\" id=\"nav-logo-sprites\" class=\"nav-logo-link nav-progressive-attribute\" aria-label=\"Amazon.co.uk\" lang=\"en\">\n      <span class=\"nav-sprite nav-logo-base\"></span>\n      <span id=\"logo-ext\" class=\"nav-sprite nav-logo-ext nav-progressive-content\"></span>\n      <span class=\"nav-logo-locale\">.co.uk</span>\n    </a>",
+              "kind": "unknown",
+              "wcag": [],
+              "agentExplanation": "navigate: Navigate to the search results for 'desk lamp' now that the home page has loaded cookies."
+            },
+            "finalUrl": "https://www.amazon.co.uk/"
+          }
+        ],
+        "blocker": {
+          "persona": "baseline",
+          "step": 13,
+          "url": "https://www.amazon.co.uk/",
+          "node": {
+            "ref": 37,
+            "role": "link",
+            "name": "Amazon.co.uk",
+            "states": [],
+            "focusable": true,
+            "depth": 9,
+            "backendNodeId": 3810
+          },
+          "selector": "#nav-logo-sprites",
+          "outerHtml": "<a href=\"/ref=nav_logo\" id=\"nav-logo-sprites\" class=\"nav-logo-link nav-progressive-attribute\" aria-label=\"Amazon.co.uk\" lang=\"en\">\n      <span class=\"nav-sprite nav-logo-base\"></span>\n      <span id=\"logo-ext\" class=\"nav-sprite nav-logo-ext nav-progressive-content\"></span>\n      <span class=\"nav-logo-locale\">.co.uk</span>\n    </a>",
+          "kind": "unknown",
+          "wcag": [],
+          "agentExplanation": "navigate: Navigate to the search results for 'desk lamp' now that the home page has loaded cookies."
+        },
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 1,
+        "completions": 0,
+        "inconclusive": 0,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "blocked",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nSCREEN READER ANNOUNCED:\n  \"Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 270 nodes, 136 focusable):\n[0] RootWebArea \"Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\" [focusable]  <<",
+                "action": {
+                  "action": "next_form_field",
+                  "reason": "Navigate to the search box form field."
+                },
+                "url": "https://www.amazon.co.uk/",
+                "focusedRef": 0,
+                "at": 11546,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nSCREEN READER ANNOUNCED:\n  \"Search Amazon.co.uk\", searchbox, hasPopup=grid\n\nACCESSIBILITY TREE (reading order, 277 nodes, 137 focusable):\n[0] RootWebArea \"Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\" [focusable]\n        [1] navigation \"Shortcuts menu\" [f",
+                "action": {
+                  "action": "type",
+                  "reason": "Type desk lamp into the search box.",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "focusedRef": 59,
+                "at": 16933,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.amazon.co.uk/\nTITLE: Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\n\nSCREEN READER ANNOUNCED:\n  \"Search Amazon.co.uk\", searchbox, value \"desk lamp\", hasPopup=grid\n\nACCESSIBILITY TREE (reading order, 278 nodes, 137 focusable):\n[0] RootWebArea \"Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more\" [focusable]\n        [1] navigation ",
+                "action": {
+                  "action": "press",
+                  "reason": "Submit the search query for desk lamp.",
+                  "key": "Enter"
+                },
+                "url": "https://www.amazon.co.uk/",
+                "focusedRef": 59,
+                "at": 21187,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp\nTITLE: 503 - Service Unavailable Error\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp\n  \"503 - Service Unavailable Error\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 12 nodes, 3 focusable):\n[0] RootWebArea ",
+                "action": {
+                  "action": "blocked",
+                  "reason": "Cannot proceed because Amazon returned a 503 Service Unavailable error page instead of search results.",
+                  "blockedExplanation": "The search request returned a '503 - Service Unavailable Error' page, preventing access to search results or products."
+                },
+                "url": "https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp",
+                "focusedRef": 0,
+                "at": 26657
+              }
+            ],
+            "startedAt": "2026-09-20T11:08:59.163Z",
+            "durationMs": 26657,
+            "inputTokens": 15707,
+            "outputTokens": 166,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z82K59S8VWVKFM9TCZRASB",
+            "blocker": {
+              "persona": "assistive",
+              "step": 4,
+              "url": "https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp",
+              "kind": "unknown",
+              "wcag": [],
+              "agentExplanation": "The search request returned a '503 - Service Unavailable Error' page, preventing access to search results or products."
+            },
+            "finalUrl": "https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp"
+          }
+        ],
+        "blocker": {
+          "persona": "assistive",
+          "step": 4,
+          "url": "https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp",
+          "kind": "unknown",
+          "wcag": [],
+          "agentExplanation": "The search request returned a '503 - Service Unavailable Error' page, preventing access to search results or products."
+        },
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 0,
+    "siteIsTheVariable": false,
+    "completedOnlyByGuessing": false,
+    "durationMs": 133335,
+    "costUsd": 0.0305215
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "2ce1fd1b-0003-41be-b2b7-855200da62d3",
+    "createdAt": "2026-09-20T11:11:00.278Z",
+    "subject": {
+      "journeyName": "amazon",
+      "startUrl": "https://www.amazon.co.uk/",
+      "goal": "Search for a desk lamp and open the product page for the first result.",
+      "provenBy": {
+        "urlMatches": "/dp/"
+      }
+    },
+    "method": {
+      "reasoningProvider": "gemini:gemini-3.8-flash",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 0,
+      "siteIsTheVariable": false,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 0,
+          "attempts": 1,
+          "rate": 0,
+          "outcomes": [
+            "blocked"
+          ],
+          "browserSessionIds": [
+            "01M2Z82K4JVR1X1GK2DKN2NHDY"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        },
+        {
+          "persona": "assistive",
+          "completions": 0,
+          "attempts": 1,
+          "rate": 0,
+          "outcomes": [
+            "blocked"
+          ],
+          "browserSessionIds": [
+            "01M2Z82K59S8VWVKFM9TCZRASB"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        }
+      ]
+    },
+    "findings": [
+      {
+        "persona": "baseline",
+        "step": 13,
+        "url": "https://www.amazon.co.uk/",
+        "summary": "The journey stopped at <link> \"Amazon.co.uk\".",
+        "kind": "unknown",
+        "wcag": [],
+        "element": {
+          "role": "link",
+          "accessibleName": "Amazon.co.uk",
+          "selector": "#nav-logo-sprites",
+          "outerHtml": "<a href=\"/ref=nav_logo\" id=\"nav-logo-sprites\" class=\"nav-logo-link nav-progressive-attribute\" aria-label=\"Amazon.co.uk\" lang=\"en\">\n      <span class=\"nav-sprite nav-logo-base\"></span>\n      <span id=\"logo-ext\" class=\"nav-sprite nav-logo-ext nav-progressive-content\"></span>\n      <span class=\"nav-logo-locale\">.co.uk</span>\n    </a>"
+        },
+        "agentExplanation": "navigate: Navigate to the search results for 'desk lamp' now that the home page has loaded cookies."
+      },
+      {
+        "persona": "assistive",
+        "step": 4,
+        "url": "https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=desk+lamp",
+        "summary": "The journey stopped at an unidentified element.",
+        "kind": "unknown",
+        "wcag": [],
+        "agentExplanation": "The search request returned a '503 - Service Unavailable Error' page, preventing access to search results or products."
+      }
+    ],
+    "accounting": {
+      "durationMs": 133335,
+      "estimatedModelCostUsd": 0.0305,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}

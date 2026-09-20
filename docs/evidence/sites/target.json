@@ -1,0 +1,405 @@
+{
+  "report": {
+    "reportId": "83e70152-c5ef-4fed-97d8-5eecb4b00395",
+    "journeyId": "ee5b8296-20c4-454a-9189-de6ed88abf25",
+    "journey": {
+      "journeyId": "ee5b8296-20c4-454a-9189-de6ed88abf25",
+      "createdAt": "2026-09-20T11:20:17.446Z",
+      "name": "target",
+      "startUrl": "https://www.target.com/s?searchTerm=desk+lamp",
+      "goal": "Open the product page for the first search result.",
+      "assertion": {
+        "urlMatches": "/p/"
+      }
+    },
+    "createdAt": "2026-09-20T11:22:22.873Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 1,
+        "completions": 0,
+        "inconclusive": 0,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "blocked",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nDOM:\nVISIBLE TEXT:\nskip to main content\nskip to footer\nShip to 97818\nRichland\nTarget Circle™\nTarget Circle™ Card\nTarget Circle 360™\nRegistry & Wish List\nWeekly Ad\nFind Stores\nCategories\nDeals\nPickup & delivery\nsearch\nAsk Target\nAccount\nGet top deals, latest trends, and more.\nEmail address\nSign up\nPrivacy policy\n",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the search button to submit the search for desk lamp.",
+                  "selector": "div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX.styles_withAgenticEntryPoint__Idg_a > button.styles_searchButton__atdn9:nth-of-type(2)"
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "at": 15905,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nDOM:\nVISIBLE TEXT:\nskip to main content\nskip to footer\nShip to 97818\nRichland\nTarget Circle™\nTarget Circle™ Card\nTarget Circle 360™\nRegistry & Wish List\nWeekly Ad\nFind Stores\nCategories\nDeals\nPickup & delivery\nsearch\nAccount\ndesk lamp\nFilter\nSort\nPickup\nSame-day Delivery\nShipping\nShop in store\nDeals\nHeight\nLamp ",
+                "action": {
+                  "action": "blocked",
+                  "reason": "Cannot proceed past the bot verification challenge.",
+                  "blockedExplanation": "The page is blocked by a bot detection verification screen (\"Quick verification - Press & hold to confirm you're a human (and not a bot)\"). The required interactive press-and-hold action is neither in the DOM interactive elements nor supported by the available toolset."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "at": 42587
+              }
+            ],
+            "startedAt": "2026-09-20T11:20:29.608Z",
+            "durationMs": 43603,
+            "inputTokens": 13385,
+            "outputTokens": 211,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z8QNE1XMTCDFJ52CCQZ590",
+            "blocker": {
+              "persona": "baseline",
+              "step": 2,
+              "url": "https://www.target.com/s?searchTerm=desk+lamp",
+              "node": {
+                "ref": 506,
+                "role": "button",
+                "name": "search",
+                "states": [],
+                "focusable": true,
+                "depth": 11,
+                "backendNodeId": 204
+              },
+              "selector": "div.styles_primaryHeader__JSgSy > div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX > button.styles_searchButton__atdn9:nth-of-type(2)",
+              "outerHtml": "<button aria-label=\"search\" class=\"styles_searchButton__atdn9 \" data-test=\"@web/Search/SearchButton\" tabindex=\"0\" type=\"submit\">search</button>",
+              "kind": "unknown",
+              "wcag": [],
+              "agentExplanation": "The page is blocked by a bot detection verification screen (\"Quick verification - Press & hold to confirm you're a human (and not a bot)\"). The required interactive press-and-hold action is neither in the DOM interactive elements nor supported by the available toolset."
+            },
+            "finalUrl": "https://www.target.com/s?searchTerm=desk+lamp"
+          }
+        ],
+        "blocker": {
+          "persona": "baseline",
+          "step": 2,
+          "url": "https://www.target.com/s?searchTerm=desk+lamp",
+          "node": {
+            "ref": 506,
+            "role": "button",
+            "name": "search",
+            "states": [],
+            "focusable": true,
+            "depth": 11,
+            "backendNodeId": 204
+          },
+          "selector": "div.styles_primaryHeader__JSgSy > div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX > button.styles_searchButton__atdn9:nth-of-type(2)",
+          "outerHtml": "<button aria-label=\"search\" class=\"styles_searchButton__atdn9 \" data-test=\"@web/Search/SearchButton\" tabindex=\"0\" type=\"submit\">search</button>",
+          "kind": "unknown",
+          "wcag": [],
+          "agentExplanation": "The page is blocked by a bot detection verification screen (\"Quick verification - Press & hold to confirm you're a human (and not a bot)\"). The required interactive press-and-hold action is neither in the DOM interactive elements nor supported by the available toolset."
+        },
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 1,
+        "completions": 1,
+        "inconclusive": 0,
+        "rate": 1,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "completed",
+            "completed": true,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"\"desk lamp\" : Target\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 49 nodes, 24 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]  <<< FOCUS\n          [1] main\n              [2] heading \"Get top deals, latest trends, and more.\" {level=3}\n                [3] link \"priv",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward to navigate into the page content and see if the search results have loaded."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 0,
+                "at": 13621,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nACCESSIBILITY TREE (reading order, 1045 nodes, 220 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main\n              [3] heading \"Get top deals, latest trends, and more.\" {level=3}\n                [4] link \"privacy policy - opens in a new tab\" [focusable]\n          ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus to skip link or main content"
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "at": 33706,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nACCESSIBILITY TREE (reading order, 1047 nodes, 220 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main\n              [3] heading \"Get top deals, latest trends, and more.\" {level=3}\n                [4] link \"privacy policy - opens in a new tab\" [focusable]\n          ",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Move to the main content landmark where search results are located."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "at": 39936,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  (no accessible name), main\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 231 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]  <<< FOCUS\n              [3] paragraph\n              [4] heading \"Get top d",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate to the skip link to reach the main search results."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 2,
+                "at": 46034,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"privacy policy - opens in a new tab\", link\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 231 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to locate the first search result product title."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 5,
+                "at": 52336,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Footer\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 231 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, lates",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading to see if it reaches the product listings or popular filters."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 16,
+                "at": 58800,
+                "noProgress": false
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"About Us\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 232 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, lat",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate forward through headings to reach the search results area."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 42,
+                "at": 66144,
+                "noProgress": false
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Help\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 233 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, latest ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading to reach the search results section."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 56,
+                "at": 72553,
+                "noProgress": false
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Stores\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 234 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, lates",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Navigate to the next landmark on the page to find the main search results container."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 67,
+                "at": 78261,
+                "noProgress": false
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Carousel\", region\n\nACCESSIBILITY TREE (reading order, 1045 nodes, 225 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, latest trend",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate forward through headings from the Carousel region to find the search results heading or product titles."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 100,
+                "at": 83893,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Popular filters\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1045 nodes, 226 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top de",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading after Popular filters to find the search results or first product."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 101,
+                "at": 89325,
+                "noProgress": false
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"desk lamp\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1045 nodes, 226 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      [1] Iframe\n          [2] main (no accessible name) [focusable]\n              [3] paragraph\n              [4] heading \"Get top deals, l",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the content around the heading 'desk lamp' to find the first search result."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 159,
+                "at": 95136,
+                "noProgress": true
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"desk lamp\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1045 nodes, 226 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusabl",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate to the first link after the 'desk lamp' heading to find the first search result."
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 159,
+                "at": 100540,
+                "noProgress": false
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://www.target.com/s?searchTerm=desk+lamp\nTITLE: \"desk lamp\" : Target\n\nSCREEN READER ANNOUNCED:\n  \"Possini Euro Design Ricky Modern Desk Lamp 13 3/4\" High Black with USB Charging Port LED Gooseneck Touch On Off Dimmer for Bedroom Bedside Office Sponsored\", link\n\nACCESSIBILITY TREE (reading order, 1077 nodes, 236 focusable):\n[0] RootWebArea \"\"desk lamp\" : Target\" [focusable]\n      ",
+                "action": {
+                  "action": "press",
+                  "reason": "Press Enter to open the product page for the first search result.",
+                  "key": "Enter"
+                },
+                "url": "https://www.target.com/s?searchTerm=desk+lamp",
+                "focusedRef": 164,
+                "at": 106543,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T11:20:29.610Z",
+            "durationMs": 112384,
+            "inputTokens": 67062,
+            "outputTokens": 496,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z8QNCVZQ8YP5NBA8SJSYJ6",
+            "finalUrl": "https://www.target.com/s?searchTerm=desk+lamp"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 0.5,
+    "siteIsTheVariable": false,
+    "completedOnlyByGuessing": false,
+    "durationMs": 125424,
+    "costUsd": 0.025901599999999997
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "83e70152-c5ef-4fed-97d8-5eecb4b00395",
+    "createdAt": "2026-09-20T11:22:22.873Z",
+    "subject": {
+      "journeyName": "target",
+      "startUrl": "https://www.target.com/s?searchTerm=desk+lamp",
+      "goal": "Open the product page for the first search result.",
+      "provenBy": {
+        "urlMatches": "/p/"
+      }
+    },
+    "method": {
+      "reasoningProvider": "gemini:gemini-3.8-flash",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 0.5,
+      "siteIsTheVariable": false,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 0,
+          "attempts": 1,
+          "rate": 0,
+          "outcomes": [
+            "blocked"
+          ],
+          "browserSessionIds": [
+            "01M2Z8QNE1XMTCDFJ52CCQZ590"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        },
+        {
+          "persona": "assistive",
+          "completions": 1,
+          "attempts": 1,
+          "rate": 1,
+          "outcomes": [
+            "completed"
+          ],
+          "browserSessionIds": [
+            "01M2Z8QNCVZQ8YP5NBA8SJSYJ6"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        }
+      ]
+    },
+    "findings": [
+      {
+        "persona": "baseline",
+        "step": 2,
+        "url": "https://www.target.com/s?searchTerm=desk+lamp",
+        "summary": "The journey stopped at <button> \"search\".",
+        "kind": "unknown",
+        "wcag": [],
+        "element": {
+          "role": "button",
+          "accessibleName": "search",
+          "selector": "div.styles_primaryHeader__JSgSy > div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX > button.styles_searchButton__atdn9:nth-of-type(2)",
+          "outerHtml": "<button aria-label=\"search\" class=\"styles_searchButton__atdn9 \" data-test=\"@web/Search/SearchButton\" tabindex=\"0\" type=\"submit\">search</button>"
+        },
+        "agentExplanation": "The page is blocked by a bot detection verification screen (\"Quick verification - Press & hold to confirm you're a human (and not a bot)\"). The required interactive press-and-hold action is neither in the DOM interactive elements nor supported by the available toolset."
+      }
+    ],
+    "accounting": {
+      "durationMs": 125424,
+      "estimatedModelCostUsd": 0.0259,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}

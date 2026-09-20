@@ -1,0 +1,1127 @@
+{
+  "report": {
+    "reportId": "c3981492-794b-48bd-8644-779e6e9b3611",
+    "journeyId": "df6bc8cb-8598-4d21-8d06-165d24b3b82d",
+    "journey": {
+      "journeyId": "df6bc8cb-8598-4d21-8d06-165d24b3b82d",
+      "createdAt": "2026-09-20T11:13:21.380Z",
+      "name": "bestbuy",
+      "startUrl": "https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones",
+      "goal": "Open the product page for the first search result.",
+      "assertion": {
+        "urlMatches": "\\.p\\?"
+      }
+    },
+    "createdAt": "2026-09-20T11:20:17.145Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 0,
+        "completions": 0,
+        "inconclusive": 1,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "inconclusive",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy Business\nMain Content\nwireless headphones search resu",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to view the search results.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones",
+                "at": 27972,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to see the full details and link for the first search result.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 47308,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to see the title and link for the first product result.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 56008,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to reveal the titles and links of the first search results.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 70220,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down slightly to bring the first search result link fully into view and check interactive elements.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 79120,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click Skip To Results link to jump directly to the search results section.",
+                  "selector": "a.skip-link"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 91756,
+                "noProgress": false
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy ",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the first product title link in the search results",
+                  "selector": "h4 a, .product-title a, .sku-title a, a[data-track*=\"Product\"]"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 106062,
+                "error": "Could not click h4 a, .product-title a, .sku-title a, a[data-track*=\"Product\"]: no element matched",
+                "noProgress": true
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nYOUR LAST ACTION FAILED: Could not click h4 a, .product-title a, .sku-title a, a[data-track*=\"Product\"]: no element matched\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nD",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the first search result product image or title link.",
+                  "selector": "img[alt*=\"OpenRun Pro\"]"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 112759,
+                "noProgress": false
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: chrome-error://chromewebdata/\nTITLE: www.bestbuy.com\n\nSCREEN READER ANNOUNCED:\n  Page changed to chrome-error://chromewebdata/\n\nDOM:\nVISIBLE TEXT:\nThis site can’t be reached\n\nThe webpage at https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366 might be temporarily down or it may have moved per",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Retry navigating to the product page URL.",
+                  "url": "https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366"
+                },
+                "url": "chrome-error://chromewebdata/",
+                "at": 119535,
+                "noProgress": true
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: chrome-error://chromewebdata/\nTITLE: www.bestbuy.com\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nThis site can’t be reached\n\nThe webpage at https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3G",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate back to the search page to see if Best Buy is accessible.",
+                  "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones"
+                },
+                "url": "chrome-error://chromewebdata/",
+                "at": 126797,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to load and display the first actual search result below the sponsored banner.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 149208,
+                "noProgress": false
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy Business\nMore\nMain Cont",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to bring the first product card and its title link into view.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 165701,
+                "noProgress": false
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to reveal the product titles and links for the search results.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 174711,
+                "noProgress": false
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to see the product titles and links in the search results grid.",
+                  "key": "Space"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 184053,
+                "noProgress": false
+              },
+              {
+                "step": 15,
+                "observationDigest": "STEP 15\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll up slightly to see the title of the first search result at the top of the results grid.",
+                  "key": "ArrowUp"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 193233,
+                "noProgress": false
+              },
+              {
+                "step": 16,
+                "observationDigest": "STEP 16\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down slightly to bring the first search result's title link fully into view.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 206427,
+                "noProgress": false
+              },
+              {
+                "step": 17,
+                "observationDigest": "STEP 17\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll up to bring the title of the first search result into view.",
+                  "key": "ArrowUp"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 215017,
+                "noProgress": false
+              },
+              {
+                "step": 18,
+                "observationDigest": "STEP 18\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the product title link of the first search result.",
+                  "selector": "a[href*=\"openrun-pro\"]"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 224721,
+                "noProgress": false
+              },
+              {
+                "step": 19,
+                "observationDigest": "STEP 19\nURL: chrome-error://chromewebdata/\nTITLE: www.bestbuy.com\n\nSCREEN READER ANNOUNCED:\n  Page changed to chrome-error://chromewebdata/\n\nDOM:\nVISIBLE TEXT:\nThis site can’t be reached\n\nThe webpage at https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366 might be temporarily down or it may have moved pe",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Attempt to navigate directly to the product page URL.",
+                  "url": "https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366"
+                },
+                "url": "chrome-error://chromewebdata/",
+                "at": 231544,
+                "noProgress": true
+              },
+              {
+                "step": 20,
+                "observationDigest": "STEP 20\nURL: chrome-error://chromewebdata/\nTITLE: www.bestbuy.com\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nThis site can’t be reached\n\nThe webpage at https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3G",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Return to search results page to try opening another link or re-attempting.",
+                  "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones"
+                },
+                "url": "chrome-error://chromewebdata/",
+                "at": 239661,
+                "noProgress": false
+              },
+              {
+                "step": 21,
+                "observationDigest": "STEP 21\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of ",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to see the search results and their links.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 275236,
+                "noProgress": false
+              },
+              {
+                "step": 22,
+                "observationDigest": "STEP 22\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to see the search results and their actual links in the DOM.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 287186,
+                "noProgress": false
+              },
+              {
+                "step": 23,
+                "observationDigest": "STEP 23\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to reveal the first search result's interactive link elements in the DOM.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 299010,
+                "noProgress": false
+              },
+              {
+                "step": 24,
+                "observationDigest": "STEP 24\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to bring the product cards and their title links into view.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 307343,
+                "noProgress": false
+              },
+              {
+                "step": 25,
+                "observationDigest": "STEP 25\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to bring the search results and their links into the DOM view.",
+                  "key": "Space"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 317491,
+                "noProgress": false
+              },
+              {
+                "step": 26,
+                "observationDigest": "STEP 26\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll up to view the titles of the first row of search results.",
+                  "key": "ArrowUp"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 329417,
+                "noProgress": false
+              },
+              {
+                "step": 27,
+                "observationDigest": "STEP 27\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll back to the top of the page to see the top of the search results grid.",
+                  "key": "Home"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 339252,
+                "noProgress": false
+              },
+              {
+                "step": 28,
+                "observationDigest": "STEP 28\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down slightly to bring the title and link of the first search result into view.",
+                  "key": "ArrowDown"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 347459,
+                "noProgress": false
+              },
+              {
+                "step": 29,
+                "observationDigest": "STEP 29\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "press",
+                  "reason": "Scroll down to bring the titles and links of the product results into view.",
+                  "key": "Space"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 355431,
+                "noProgress": false
+              },
+              {
+                "step": 30,
+                "observationDigest": "STEP 30\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Skip to the results section to focus on the main product results.",
+                  "selector": "a.skip-link.sr-only"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 367118,
+                "noProgress": false
+              },
+              {
+                "step": 31,
+                "observationDigest": "STEP 31\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nDOM:\nVISIBLE TEXT:\nSkip to content\nGo to Product Search\nAssistive Survey\nYour store\nFind a store\nAccount\nSign in\nShop\nDeals\nSupport & Services\nDiscover\nFall Football\nTop Deals\nDeal of the Day\nGift Ideas\nMy Best Buy Memberships\nCredit Cards\nGift Cards\nTrade-In\nBest Buy",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the product title link of the first search result.",
+                  "selector": "a[href*=\"openrun-pro\"]"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 376952,
+                "noProgress": false
+              },
+              {
+                "step": 32,
+                "observationDigest": "STEP 32\nURL: chrome-error://chromewebdata/\nTITLE: www.bestbuy.com\n\nSCREEN READER ANNOUNCED:\n  Page changed to chrome-error://chromewebdata/\n\nDOM:\nVISIBLE TEXT:\nThis site can’t be reached\n\nThe webpage at https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366 might be temporarily down or it may have moved pe",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Retry navigating to the product page URL.",
+                  "url": "https://www.bestbuy.com/product/shokz-openrun-pro-2-mini-wireless-bone-conduction-open-ear-bluetooth-sports-headphones-black/J3GW2989PR/sku/6589366"
+                },
+                "url": "chrome-error://chromewebdata/",
+                "at": 386889,
+                "noProgress": true
+              }
+            ],
+            "startedAt": "2026-09-20T11:13:45.851Z",
+            "durationMs": 390428,
+            "inputTokens": 181804,
+            "outputTokens": 1573,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z8BB5KHMAWEV4MNSHW2G4G",
+            "finalUrl": "chrome-error://chromewebdata/",
+            "errorMessage": "Ran out of steps after 32 turns while still making progress, and no barrier was identified. This says nothing about the site: the step budget was the limit, so the run is excluded from the verdict rather than counted against it."
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 0,
+        "completions": 0,
+        "inconclusive": 1,
+        "rate": 0,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "inconclusive",
+            "completed": false,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"wireless headphones - Best Buy\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 693 nodes, 458 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]  <<< FOCUS\n            [1] region \"skip target\"\n          [2] main\n                [3",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the first heading to reach the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones",
+                "focusedRef": 0,
+                "at": 23533,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nACCESSIBILITY TREE (reading order, 645 nodes, 391 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n              [4] generic (no accessible name) [focusable]\n    ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus into the page from the initial unfocused state."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 40847,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nACCESSIBILITY TREE (reading order, 797 nodes, 468 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n              [4] generic (no accessible name) [focusable]\n    ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus into the page to start keyboard navigation."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "at": 50766,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Skip To Results\", link\n\nACCESSIBILITY TREE (reading order, 814 nodes, 475 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n           ",
+                "action": {
+                  "action": "press",
+                  "reason": "Activate Skip To Results to jump directly to the search results.",
+                  "key": "Enter"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 56,
+                "at": 56860,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"“wireless headphones” in Headphones (1453)\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 814 nodes, 475 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach the first search result product title."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 7,
+                "at": 63675,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Filters\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 719 nodes, 473 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n       ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see if product results have heading titles."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 21,
+                "at": 69840,
+                "noProgress": false
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Get it fast\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 731 nodes, 447 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n   ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance past filter headings to reach the product results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 96,
+                "at": 76812,
+                "noProgress": false
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Sold & shipped by\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 731 nodes, 448 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] bann",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 99,
+                "at": 83406,
+                "noProgress": false
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Category\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 731 nodes, 449 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n      ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance to the next heading to navigate toward product results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 101,
+                "at": 89380,
+                "noProgress": false
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Headphone Fit\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 731 nodes, 450 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Jump to the next heading to reach the first search result."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 105,
+                "at": 95713,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Brand\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 731 nodes, 451 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n        ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance through headings to reach the product titles."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 112,
+                "at": 102220,
+                "noProgress": false
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Features\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 740 nodes, 452 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n     ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading to reach the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 122,
+                "at": 109382,
+                "noProgress": false
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Price\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 447 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n        ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading past the Price filter."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 132,
+                "at": 115979,
+                "noProgress": false
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Current Deals\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 448 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance past the remaining filter headings to reach the first search result."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 144,
+                "at": 121975,
+                "noProgress": false
+              },
+              {
+                "step": 15,
+                "observationDigest": "STEP 15\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Condition\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 449 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n    ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading towards the product search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 150,
+                "at": 127938,
+                "noProgress": false
+              },
+              {
+                "step": 16,
+                "observationDigest": "STEP 16\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Connection Type\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 450 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banne",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading toward the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 154,
+                "at": 135124,
+                "noProgress": false
+              },
+              {
+                "step": 17,
+                "observationDigest": "STEP 17\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Customer Rating\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 451 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banne",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading toward the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 158,
+                "at": 142464,
+                "noProgress": false
+              },
+              {
+                "step": 18,
+                "observationDigest": "STEP 18\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Color\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 452 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n        ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance to the next heading toward the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 162,
+                "at": 148831,
+                "noProgress": false
+              },
+              {
+                "step": 19,
+                "observationDigest": "STEP 19\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Wireless Connectivity\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 453 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3]",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance to the next heading towards the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 172,
+                "at": 154949,
+                "noProgress": false
+              },
+              {
+                "step": 20,
+                "observationDigest": "STEP 20\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Battery Life\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 454 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading toward the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 181,
+                "at": 160806,
+                "noProgress": false
+              },
+              {
+                "step": 21,
+                "observationDigest": "STEP 21\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Connector Size\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 736 nodes, 440 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading, which should be the first product result."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 187,
+                "at": 166621,
+                "noProgress": false
+              },
+              {
+                "step": 22,
+                "observationDigest": "STEP 22\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"JLab - JBuds Lux ANC Wireless Bluetooth Over-Ear Headphones with Active Noise Cancelling, Spatial Audio & 70+ Hour Battery - Graphite\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 736 nodes, 441 focusable):\n[0] RootWebArea \"wireles",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the content around the focused heading to find the link to the product page."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 630,
+                "at": 174071,
+                "noProgress": true
+              },
+              {
+                "step": 23,
+                "observationDigest": "STEP 23\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"JLab - JBuds Lux ANC Wireless Bluetooth Over-Ear Headphones with Active Noise Cancelling, Spatial",
+                "action": {
+                  "action": "press",
+                  "reason": "Activate the focused heading link to open the product page.",
+                  "key": "Enter"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 630,
+                "at": 184721,
+                "noProgress": true
+              },
+              {
+                "step": 24,
+                "observationDigest": "STEP 24\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"JLab - JBuds Lux ANC Wireless Bluetooth Over-Ear Headphones with Active Noise Cancelling, Spatial",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Find the link associated with the first product heading."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 630,
+                "at": 190443,
+                "noProgress": false
+              },
+              {
+                "step": 25,
+                "observationDigest": "STEP 25\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Sony - WH-1000XM5 Wireless Noise Cancelling Over-the-Ear Headphones - Black\", link\n\nACCESSIBILITY TREE (reading order, 739 nodes, 438 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip targ",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Check if there is a product link immediately before this one."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 638,
+                "at": 199956,
+                "noProgress": false
+              },
+              {
+                "step": 26,
+                "observationDigest": "STEP 26\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Save\", button\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n              [4] g",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Move forward to find product links."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 711,
+                "at": 206950,
+                "noProgress": false
+              },
+              {
+                "step": 27,
+                "observationDigest": "STEP 27\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Rating 4.6 out of 5 stars with 3700 reviews\", link\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n         ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to locate the first search result."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 712,
+                "at": 216938,
+                "noProgress": false
+              },
+              {
+                "step": 28,
+                "observationDigest": "STEP 28\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"wireless headphones search results\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n      ",
+                "action": {
+                  "action": "press",
+                  "reason": "Skip directly to the search results using the Skip To Results link.",
+                  "ref": 50,
+                  "key": "Enter"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 5,
+                "at": 223845,
+                "noProgress": true
+              },
+              {
+                "step": 29,
+                "observationDigest": "STEP 29\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"wireless headphones search results\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 743 nod",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the first product heading in the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 5,
+                "at": 230521,
+                "noProgress": false
+              },
+              {
+                "step": 30,
+                "observationDigest": "STEP 30\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"“wireless headphones” in Headphones (1453)\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] mai",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading in the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 7,
+                "at": 237379,
+                "noProgress": false
+              },
+              {
+                "step": 31,
+                "observationDigest": "STEP 31\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Filters\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n      ",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus toward Skip To Results or product links."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 21,
+                "at": 244702,
+                "noProgress": false
+              },
+              {
+                "step": 32,
+                "observationDigest": "STEP 32\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Skip To Results\", link\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n          ",
+                "action": {
+                  "action": "press",
+                  "reason": "Activate the Skip To Results link to jump directly to the search results.",
+                  "key": "Enter"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 50,
+                "at": 250484,
+                "noProgress": false
+              },
+              {
+                "step": 33,
+                "observationDigest": "STEP 33\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"“wireless headphones” in Headphones (1453)\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] mai",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading, which should be the first product result."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 7,
+                "at": 256699,
+                "noProgress": false
+              },
+              {
+                "step": 34,
+                "observationDigest": "STEP 34\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Filters\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 432 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n      ",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Jump past the filters landmark toward the search results landmark."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 21,
+                "at": 264369,
+                "noProgress": false
+              },
+              {
+                "step": 35,
+                "observationDigest": "STEP 35\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Quick filter options\", region\n\nACCESSIBILITY TREE (reading order, 743 nodes, 433 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n   ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 71,
+                "at": 270855,
+                "noProgress": false
+              },
+              {
+                "step": 36,
+                "observationDigest": "STEP 36\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Get it fast\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 433 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] banner\n  ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 96,
+                "at": 276788,
+                "noProgress": false
+              },
+              {
+                "step": 37,
+                "observationDigest": "STEP 37\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Sold & shipped by\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 433 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\"\n          [2] main\n                [3] ban",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Navigate to the next landmark to get past the filters."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 99,
+                "at": 283081,
+                "noProgress": false
+              },
+              {
+                "step": 38,
+                "observationDigest": "STEP 38\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"skip target\", region\n\nACCESSIBILITY TREE (reading order, 743 nodes, 434 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]  <<< FOCUS\n          [2] main\n                ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move focus down through the headings toward the product results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 1,
+                "at": 289709,
+                "noProgress": false
+              },
+              {
+                "step": 39,
+                "observationDigest": "STEP 39\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"wireless headphones search results\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 743 nodes, 434 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2]",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Navigate to the next landmark to see if it reaches the product listings area."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 5,
+                "at": 300461,
+                "noProgress": false
+              },
+              {
+                "step": 40,
+                "observationDigest": "STEP 40\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Best Buy Promotion\", region\n\nACCESSIBILITY TREE (reading order, 743 nodes, 435 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] ",
+                "action": {
+                  "action": "next_landmark",
+                  "reason": "Advance past promotional region toward the main search results list."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 6,
+                "at": 308861,
+                "noProgress": false
+              },
+              {
+                "step": 41,
+                "observationDigest": "STEP 41\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Related searches\", navigation\n\nACCESSIBILITY TREE (reading order, 743 nodes, 436 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Move to the next link to reach the skip link or results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 13,
+                "at": 318988,
+                "noProgress": false
+              },
+              {
+                "step": 42,
+                "observationDigest": "STEP 42\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Skip to content\", link\n\nACCESSIBILITY TREE (reading order, 743 nodes, 410 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] banne",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Move toward the Skip To Results link."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 17,
+                "at": 325433,
+                "noProgress": false
+              },
+              {
+                "step": 43,
+                "observationDigest": "STEP 43\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Go to Product Search\", link\n\nACCESSIBILITY TREE (reading order, 743 nodes, 410 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the product headings."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 18,
+                "at": 331590,
+                "noProgress": false
+              },
+              {
+                "step": 44,
+                "observationDigest": "STEP 44\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Filters\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 410 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] b",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Move to the next link toward 'Skip To Results'"
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 21,
+                "at": 337985,
+                "noProgress": false
+              },
+              {
+                "step": 45,
+                "observationDigest": "STEP 45\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"wireless earbuds\", link\n\nACCESSIBILITY TREE (reading order, 743 nodes, 410 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] bann",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Jump to the next heading which may be a product heading in the results list."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 43,
+                "at": 343860,
+                "noProgress": false
+              },
+              {
+                "step": 46,
+                "observationDigest": "STEP 46\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Get it fast\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 743 nodes, 410 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Advance to the next heading to reach the search results."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 96,
+                "at": 350083,
+                "noProgress": false
+              },
+              {
+                "step": 47,
+                "observationDigest": "STEP 47\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Sold & shipped by\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 741 nodes, 383 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n           ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next filter heading toward the search result headings."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 99,
+                "at": 360085,
+                "noProgress": false
+              },
+              {
+                "step": 48,
+                "observationDigest": "STEP 48\nURL: https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones\nTITLE: wireless headphones - Best Buy\n\nSCREEN READER ANNOUNCED:\n  \"Category\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 741 nodes, 383 focusable):\n[0] RootWebArea \"wireless headphones - Best Buy\" [focusable]\n            [1] region \"skip target\" [focusable]\n          [2] main\n                [3] ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading toward search result items."
+                },
+                "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+                "focusedRef": 101,
+                "at": 366676,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T11:13:45.852Z",
+            "durationMs": 371582,
+            "inputTokens": 220175,
+            "outputTokens": 1549,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z8BB4PGKBM2NS9RG4N48WE",
+            "finalUrl": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=wireless+headphones",
+            "errorMessage": "Ran out of steps after 48 turns while still making progress, and no barrier was identified. This says nothing about the site: the step budget was the limit, so the run is excluded from the verdict rather than counted against it."
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 0,
+    "siteIsTheVariable": false,
+    "completedOnlyByGuessing": false,
+    "durationMs": 415761,
+    "costUsd": 0.1283987
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "c3981492-794b-48bd-8644-779e6e9b3611",
+    "createdAt": "2026-09-20T11:20:17.145Z",
+    "subject": {
+      "journeyName": "bestbuy",
+      "startUrl": "https://www.bestbuy.com/site/searchpage.jsp?st=wireless+headphones",
+      "goal": "Open the product page for the first search result.",
+      "provenBy": {
+        "urlMatches": "\\.p\\?"
+      }
+    },
+    "method": {
+      "reasoningProvider": "gemini:gemini-3.8-flash",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 0,
+      "siteIsTheVariable": false,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 0,
+          "attempts": 0,
+          "rate": 0,
+          "outcomes": [
+            "inconclusive"
+          ],
+          "browserSessionIds": [
+            "01M2Z8BB5KHMAWEV4MNSHW2G4G"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 1
+        },
+        {
+          "persona": "assistive",
+          "completions": 0,
+          "attempts": 0,
+          "rate": 0,
+          "outcomes": [
+            "inconclusive"
+          ],
+          "browserSessionIds": [
+            "01M2Z8BB4PGKBM2NS9RG4N48WE"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 1
+        }
+      ]
+    },
+    "findings": [],
+    "accounting": {
+      "durationMs": 415761,
+      "estimatedModelCostUsd": 0.1284,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}

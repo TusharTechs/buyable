@@ -1,0 +1,168 @@
+############################### etsy
+PREFLIGHT  1 reachable controls, 1 nodes, 5s
+  [STOP] Only a handful of controls are reachable, which usually means an interstitial rather than the real page: an age gate, a country chooser, or a challenge.
+         found: 1 reachable controls, 1 accessibility nodes
+         try:   Start the journey from the page that appears after the interstitial.
+========================================================================
+
+========================================================================
+Buyable will not start this journey, because it would not tell you anything true.
+
+Only a handful of controls are reachable, which usually means an interstitial rather than the real page: an age gate, a country chooser, or a challenge.
+  What was found: 1 reachable controls, 1 accessibility nodes
+  What to try: Start the journey from the page that appears after the interstitial.
+
+========================================================================
+############################### bestbuy
+PREFLIGHT  460 reachable controls, 689 nodes, 17s
+  [note] This page has far more reachable controls than a persona has steps, so a run may run out of budget while still navigating rather than because anything blocked it.
+         found: 460 reachable controls against a budget of 32 steps
+         try:   Start closer to the goal, for example from a category or search results page rather than the home page.
+========================================================================
+
+[assistive] browser session 01M2Z8BB4PGKBM2NS9RG4N48WE
+
+[baseline] browser session 01M2Z8BB5KHMAWEV4MNSHW2G4G
+[assistive]  1 next_heading                                Navigate to the first heading to reach the search results.
+[baseline]  1 press          ArrowDown                    Scroll down to view the search results.
+[assistive]  2 tab                                         Move focus into the page from the initial unfocused state.
+[baseline]  2 press          ArrowDown                    Scroll down to see the full details and link for the first search result.
+[assistive]  3 tab                                         Move focus into the page to start keyboard navigation.
+[baseline]  3 press          ArrowDown                    Scroll down to see the title and link for the first product result.
+[assistive]  4 press          Enter                        Activate Skip To Results to jump directly to the search results.
+[assistive]  5 next_heading                                Navigate to the next heading to reach the first search result product title.
+[assistive]  6 next_heading                                Navigate to the next heading to see if product results have heading titles.
+[baseline]  4 press          ArrowDown                    Scroll down to reveal the titles and links of the first search results.
+[assistive]  7 next_heading                                Advance past filter headings to reach the product results.
+[baseline]  5 press          ArrowDown                    Scroll down slightly to bring the first search result link fully into view and check interactive elements.
+[assistive]  8 next_heading                                Navigate to the next heading.
+[assistive]  9 next_heading                                Advance to the next heading to navigate toward product results.
+[baseline]  6 click_selector a.skip-link                  Click Skip To Results link to jump directly to the search results section.
+[assistive] 10 next_heading                                Jump to the next heading to reach the first search result.
+[assistive] 11 next_heading                                Advance through headings to reach the product titles.
+[baseline]  7 click_selector h4 a, .product-title a, .sku-title a, a[data-track*="Product"] Click the first product title link in the search results
+[baseline]    refused: Could not click h4 a, .product-title a, .sku-title a, a[data-track*="Product"]: no element matched
+[assistive] 12 next_heading                                Move to the next heading to reach the search results.
+[baseline]  8 click_selector img[alt*="OpenRun Pro"]      Click the first search result product image or title link.
+[assistive] 13 next_heading                                Navigate to the next heading past the Price filter.
+[baseline]  9 navigate                                    Retry navigating to the product page URL.
+[assistive] 14 next_heading                                Advance past the remaining filter headings to reach the first search result.
+[assistive] 15 next_heading                                Navigate to the next heading towards the product search results.
+[assistive] 16 next_heading                                Navigate to the next heading toward the search results.
+[baseline] 10 navigate                                    Navigate back to the search page to see if Best Buy is accessible.
+[assistive] 17 next_heading                                Navigate to the next heading toward the search results.
+[assistive] 18 next_heading                                Advance to the next heading toward the search results.
+[baseline] 11 press          ArrowDown                    Scroll down to load and display the first actual search result below the sponsored banner.
+[assistive] 19 next_heading                                Advance to the next heading towards the search results.
+[assistive] 20 next_heading                                Navigate to the next heading toward the search results.
+[baseline] 12 press          ArrowDown                    Scroll down to bring the first product card and its title link into view.
+[assistive] 21 next_heading                                Navigate to the next heading, which should be the first product result.
+[assistive] 22 read                                        Read the content around the focused heading to find the link to the product page.
+[baseline] 13 press          ArrowDown                    Scroll down to reveal the product titles and links for the search results.
+[baseline] 14 press          Space                        Scroll down to see the product titles and links in the search results grid.
+[assistive] 23 press          Enter                        Activate the focused heading link to open the product page.
+[assistive] 24 next_link                                   Find the link associated with the first product heading.
+[baseline] 15 press          ArrowUp                      Scroll up slightly to see the title of the first search result at the top of the results grid.
+[assistive] 25 shift_tab                                   Check if there is a product link immediately before this one.
+[baseline] 16 press          ArrowDown                    Scroll down slightly to bring the first search result's title link fully into view.
+[assistive] 26 next_link                                   Move forward to find product links.
+[baseline] 17 press          ArrowUp                      Scroll up to bring the title of the first search result into view.
+[assistive] 27 next_heading                                Navigate to the next heading to locate the first search result.
+[assistive] 28 press          ref=50 Enter                 Skip directly to the search results using the Skip To Results link.
+[baseline] 18 click_selector a[href*="openrun-pro"]       Click the product title link of the first search result.
+[assistive] 29 next_heading                                Navigate to the first product heading in the search results.
+[baseline] 19 navigate                                    Attempt to navigate directly to the product page URL.
+[assistive] 30 next_heading                                Navigate to the next heading in the search results.
+[assistive] 31 tab                                         Move focus toward Skip To Results or product links.
+[baseline] 20 navigate                                    Return to search results page to try opening another link or re-attempting.
+[assistive] 32 press          Enter                        Activate the Skip To Results link to jump directly to the search results.
+[assistive] 33 next_heading                                Move to the next heading, which should be the first product result.
+[assistive] 34 next_landmark                               Jump past the filters landmark toward the search results landmark.
+[assistive] 35 next_heading                                Navigate to the next heading.
+[assistive] 36 next_heading                                Navigate to the next heading.
+[baseline] 21 press          ArrowDown                    Scroll down to see the search results and their links.
+[assistive] 37 next_landmark                               Navigate to the next landmark to get past the filters.
+[baseline] 22 press          ArrowDown                    Scroll down to see the search results and their actual links in the DOM.
+[assistive] 38 next_heading                                Move focus down through the headings toward the product results.
+[baseline] 23 press          ArrowDown                    Scroll down to reveal the first search result's interactive link elements in the DOM.
+[assistive] 39 next_landmark                               Navigate to the next landmark to see if it reaches the product listings area.
+[baseline] 24 press          ArrowDown                    Scroll down to bring the product cards and their title links into view.
+[assistive] 40 next_landmark                               Advance past promotional region toward the main search results list.
+[baseline] 25 press          Space                        Scroll down to bring the search results and their links into the DOM view.
+[assistive] 41 next_link                                   Move to the next link to reach the skip link or results.
+[assistive] 42 next_link                                   Move toward the Skip To Results link.
+[baseline] 26 press          ArrowUp                      Scroll up to view the titles of the first row of search results.
+[assistive] 43 next_heading                                Navigate to the product headings.
+[assistive] 44 next_link                                   Move to the next link toward 'Skip To Results'
+[baseline] 27 press          Home                         Scroll back to the top of the page to see the top of the search results grid.
+[assistive] 45 next_heading                                Jump to the next heading which may be a product heading in the results list.
+[baseline] 28 press          ArrowDown                    Scroll down slightly to bring the title and link of the first search result into view.
+[assistive] 46 next_heading                                Advance to the next heading to reach the search results.
+[baseline] 29 press          Space                        Scroll down to bring the titles and links of the product results into view.
+[assistive] 47 next_heading                                Navigate to the next filter heading toward the search result headings.
+[assistive] 48 next_heading                                Navigate to the next heading toward search result items.
+[baseline] 30 click_selector a.skip-link.sr-only          Skip to the results section to focus on the main product results.
+[assistive] DONE outcome=inconclusive completed=false steps=48 372s
+[baseline] 31 click_selector a[href*="openrun-pro"]       Click the product title link of the first search result.
+[baseline] 32 navigate                                    Retry navigating to the product page URL.
+[baseline] DONE outcome=inconclusive completed=false steps=32 390s
+
+========================================================================
+VERDICT
+========================================================================
+  baseline   0/0    0%
+  assistive  0/0    0%
+
+  Journey Completion Rate: 0%
+  Site is the variable:    no
+  Completed only by guess: no
+  Wall clock:              416s
+  Model cost:              $0.1284
+
+  Report written to /private/tmp/claude-502/-Users-tusharagrawal-Documents-buyable/a80d4f18-033d-4946-99ee-05b9a6840f59/scratchpad/journeys/bestbuy.json
+############################### target
+PREFLIGHT  28 reachable controls, 59 nodes, 7s
+  nothing in the way. Starting the journey.
+========================================================================
+
+[baseline] browser session 01M2Z8QNE1XMTCDFJ52CCQZ590
+
+[assistive] browser session 01M2Z8QNCVZQ8YP5NBA8SJSYJ6
+[assistive]  1 tab                                         Move focus forward to navigate into the page content and see if the search results have loaded.
+[baseline]  1 click_selector div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX.styles_withAgenticEntryPoint__Idg_a > button.styles_searchButton__atdn9:nth-of-type(2) Click the search button to submit the search for desk lamp.
+[assistive]  2 tab                                         Move focus to skip link or main content
+[baseline]  2 blocked                                     Cannot proceed past the bot verification challenge.
+[assistive]  3 next_landmark                               Move to the main content landmark where search results are located.
+[baseline] DONE outcome=blocked completed=false steps=2 44s
+[assistive]  4 next_link                                   Navigate to the skip link to reach the main search results.
+[assistive]  5 next_heading                                Navigate to the next heading to locate the first search result product title.
+[assistive]  6 next_heading                                Move to the next heading to see if it reaches the product listings or popular filters.
+[assistive]  7 next_heading                                Navigate forward through headings to reach the search results area.
+[assistive]  8 next_heading                                Move to the next heading to reach the search results section.
+[assistive]  9 next_landmark                               Navigate to the next landmark on the page to find the main search results container.
+[assistive] 10 next_heading                                Navigate forward through headings from the Carousel region to find the search results heading or product titles.
+[assistive] 11 next_heading                                Navigate to the next heading after Popular filters to find the search results or first product.
+[assistive] 12 read                                        Read the content around the heading 'desk lamp' to find the first search result.
+[assistive] 13 next_link                                   Navigate to the first link after the 'desk lamp' heading to find the first search result.
+[assistive] 14 press          Enter                        Press Enter to open the product page for the first search result.
+[assistive] DONE outcome=completed completed=true steps=14 112s
+
+========================================================================
+VERDICT
+========================================================================
+  baseline   0/1    0%
+             blocked by: The journey stopped at <button> "search".
+             node: <button> "search" ref=506
+             selector: div.styles_primaryHeader__JSgSy > div.styles_styledRef__h4Xvi:nth-of-type(1) > div.styles_searchWrapper__u2tT3:nth-of-type(5) > form.styles_searchForm__pSAdX > button.styles_searchButton__atdn9:nth-of-type(2)
+             agent said: The page is blocked by a bot detection verification screen ("Quick verification - Press & hold to confirm you're a human (and not a bot)"). The required interactive press-and-hold action is neither in the DOM interactive elements nor supported by the available toolset.
+  assistive  1/1  100%
+
+  Journey Completion Rate: 50%
+  Site is the variable:    no
+  Completed only by guess: no
+  Wall clock:              125s
+  Model cost:              $0.0259
+
+  Report written to /private/tmp/claude-502/-Users-tusharagrawal-Documents-buyable/a80d4f18-033d-4946-99ee-05b9a6840f59/scratchpad/journeys/target.json
+
+[exited with code 0]

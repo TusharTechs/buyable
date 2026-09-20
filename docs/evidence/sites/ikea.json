@@ -1,1 +1,610 @@
-{"inspectionId":"ffc7fc26-438c-45f5-af61-1ede3f9de488","reportUrl":"https://d3luufd5s1g5pn.cloudfront.net/inspections/ffc7fc26-438c-45f5-af61-1ede3f9de488.html","url":"https://www.ikea.com/gb/en/","title":"Affordable Furniture And Home Inspiration - IKEA UK","durationMs":4111,"counts":{"blocks":1,"impairs":0,"note":0},"tabStops":40,"findings":[{"kind":"focusable-without-accessible-name","severity":"blocks","summary":"Keyboard focus lands on a list that announces nothing, so a screen reader user hears silence and cannot tell what they have reached.","selector":"#hnf-carousel__hnf-inpage-nav","announcement":"(no accessible name), list","wcag":["4.1.2","2.4.3"],"occurrences":1}],"transcript":[{"position":1,"role":"link","name":"Skip to main content","announcement":"\"Skip to main content\", link","silent":false},{"position":2,"role":"button","name":"Change language or country/region, current language is English","announcement":"\"Change language or country/region, current language is English\", button, hasPopup=dialog","silent":false},{"position":3,"role":"button","name":"Enter postcode","announcement":"\"Enter postcode\", button, hasPopup=dialog","silent":false},{"position":4,"role":"button","name":"Select store","announcement":"\"Select store\", button, hasPopup=dialog","silent":false},{"position":5,"role":"link","name":"IKEA Home","announcement":"\"IKEA Home\", link","silent":false},{"position":6,"role":"button","name":"Products","announcement":"\"Products\", button, hasPopup=menu","silent":false},{"position":7,"role":"button","name":"Rooms","announcement":"\"Rooms\", button, hasPopup=menu","silent":false},{"position":8,"role":"button","name":"Offers & deals","announcement":"\"Offers & deals\", button, hasPopup=menu","silent":false},{"position":9,"role":"button","name":"Design","announcement":"\"Design\", button, hasPopup=menu","silent":false},{"position":10,"role":"button","name":"Services","announcement":"\"Services\", button, hasPopup=menu","silent":false},{"position":11,"role":"combobox","name":"Search for products, inspiration or new arrivals","announcement":"\"Search for products, inspiration or new arrivals\", combobox, hasPopup=listbox","silent":false},{"position":12,"role":"link","name":"Hej! Log in","announcement":"\"Hej! Log in\", link","silent":false},{"position":13,"role":"link","name":"Wish list","announcement":"\"Wish list\", link","silent":false},{"position":14,"role":"link","name":"Shopping bag","announcement":"\"Shopping bag\", link","silent":false},{"position":15,"role":"link","name":"Skip product categories list","announcement":"\"Skip product categories list\", link","silent":false},{"position":16,"role":"list","name":"","announcement":"(no accessible name), list","silent":true},{"position":17,"role":"link","name":"Offers","announcement":"\"Offers\", link","silent":false},{"position":18,"role":"link","name":"Storage furniture","announcement":"\"Storage furniture\", link","silent":false},{"position":19,"role":"link","name":"Home storage & organisation","announcement":"\"Home storage & organisation\", link","silent":false},{"position":20,"role":"link","name":"Kitchens","announcement":"\"Kitchens\", link","silent":false},{"position":21,"role":"link","name":"Kitchenware & tableware","announcement":"\"Kitchenware & tableware\", link","silent":false},{"position":22,"role":"link","name":"Tables & chairs","announcement":"\"Tables & chairs\", link","silent":false},{"position":23,"role":"link","name":"Living room seating","announcement":"\"Living room seating\", link","silent":false},{"position":24,"role":"link","name":"Beds & mattresses","announcement":"\"Beds & mattresses\", link","silent":false},{"position":25,"role":"link","name":"Home textiles & rugs","announcement":"\"Home textiles & rugs\", link","silent":false}],"limits":["This checked one page against rules. It did not attempt a task, so it cannot tell you whether anyone can complete a purchase, a booking or a form.","Automated checks catch a minority of accessibility problems. A page with no findings here can still be impossible to use.","Judgement calls are out of scope: whether a label is meaningful, whether focus order matches the visual order, whether an error message explains what to do.","Nothing here replaces testing with people who use assistive technology every day."]}
+{
+  "report": {
+    "reportId": "3473ab89-7eb1-4868-84b7-2c6aee982568",
+    "journeyId": "ffa3658a-80ab-44ad-9e43-4192d76a185e",
+    "journey": {
+      "journeyId": "ffa3658a-80ab-44ad-9e43-4192d76a185e",
+      "createdAt": "2026-09-20T10:45:06.354Z",
+      "name": "ikea",
+      "startUrl": "https://www.ikea.com/gb/en/",
+      "goal": "Search for a desk lamp and open the product page for the first result.",
+      "assertion": {
+        "urlMatches": "/p/"
+      }
+    },
+    "createdAt": "2026-09-20T10:49:02.377Z",
+    "verdicts": {
+      "baseline": {
+        "persona": "baseline",
+        "attempts": 1,
+        "completions": 1,
+        "inconclusive": 0,
+        "rate": 1,
+        "runs": [
+          {
+            "persona": "baseline",
+            "outcome": "completed",
+            "completed": true,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nGBEnglish\nEnter postcode\nSelect store\nProducts\nRooms\nOffers & deals\nDesign\nServices\nClear the search input field\nSearch\nHej! Log in\nWish list\nShopping bag\nSkip product categories list\nOffers\nStorage furniture\nHome storage & organisation\nKitchens\nKitchenware & ",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'desk lamp' into the search input field.",
+                  "selector": "#ikea-search-input",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "at": 15330,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nGBEnglish\nDelivery services available\nEnter postcode\nSelect store\nProducts\nRooms\nOffers & deals\nDesign\nServices\nClear the search input field\nSearch\nHej! Log in\nWish list\nShopping bag\nSkip product categories list\nOffers\nStorage furniture\nHome storage & organisa",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click the search input field to focus it.",
+                  "selector": "#ikea-search-input"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "at": 25719,
+                "noProgress": true
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nGBEnglish\nDelivery services available\nEnter postcode\nSelect store\nProducts\nRooms\nOffers & deals\nDesign\nServices\nClear",
+                "action": {
+                  "action": "navigate",
+                  "reason": "Navigate directly to the search results for 'desk lamp'.",
+                  "url": "https://www.ikea.com/gb/en/search/?q=desk+lamp"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "at": 36432,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.ikea.com/gb/en/search/?q=desk+lamp\n\nDOM:\nVISIBLE TEXT:\nSkip to main content\nGBEnglish\nClick today and collect in store same day. Or, collect from hundreds of local pick-up points\nEnter postcode\nSelect store\nProducts\nRooms\nOffers & deals\nDesign",
+                "action": {
+                  "action": "click_selector",
+                  "reason": "Click on the first product result image to open its product page.",
+                  "selector": "div.plp-mastercard.plp-fragment-wrapper:nth-of-type(1) > div.plp-grid-product-card__image-container:nth-of-type(2) > div.plp-product__image__container:nth-of-type(1) > a.plp-product__image-link.link"
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp",
+                "at": 47250,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T10:45:06.359Z",
+            "durationMs": 50007,
+            "inputTokens": 39872,
+            "outputTokens": 265,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z6PW22E7PN71GT6DAT913D",
+            "finalUrl": "https://www.ikea.com/gb/en/search/?q=desk%20lamp"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      },
+      "assistive": {
+        "persona": "assistive",
+        "attempts": 1,
+        "completions": 1,
+        "inconclusive": 0,
+        "rate": 1,
+        "runs": [
+          {
+            "persona": "assistive",
+            "outcome": "completed",
+            "completed": true,
+            "steps": [
+              {
+                "step": 1,
+                "observationDigest": "STEP 1\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Affordable Furniture And Home Inspiration - IKEA UK\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 116 nodes, 47 focusable):\n[0] RootWebArea \"Affordable Furniture And Home Inspiration - IKEA UK\" [focusable]  <<< FOCUS\n        [1] link \"Skip to main content\" [focusable]",
+                "action": {
+                  "action": "next_form_field",
+                  "reason": "Navigate to the search field"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "focusedRef": 0,
+                "at": 11362,
+                "noProgress": false
+              },
+              {
+                "step": 2,
+                "observationDigest": "STEP 2\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Search for products, inspiration or new arrivals\", combobox, expanded, hasPopup=listbox\n\nACCESSIBILITY TREE (reading order, 1303 nodes, 418 focusable):\n[0] RootWebArea \"Affordable Furniture And Home Inspiration - IKEA UK\" [focusable]\n        [1] link \"Skip to main content",
+                "action": {
+                  "action": "type",
+                  "reason": "Type 'desk lamp' into the search input",
+                  "text": "desk lamp"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "focusedRef": 153,
+                "at": 18060,
+                "noProgress": false
+              },
+              {
+                "step": 3,
+                "observationDigest": "STEP 3\nURL: https://www.ikea.com/gb/en/\nTITLE: Affordable Furniture And Home Inspiration - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Search for products, inspiration or new arrivals\", combobox, value \"desk lamp\", expanded, hasPopup=listbox\n\nACCESSIBILITY TREE (reading order, 1312 nodes, 420 focusable):\n[0] RootWebArea \"Affordable Furniture And Home Inspiration - IKEA UK\" [focusable]\n        [1] link \"S",
+                "action": {
+                  "action": "press",
+                  "reason": "Submit search for desk lamp",
+                  "key": "Enter"
+                },
+                "url": "https://www.ikea.com/gb/en/",
+                "focusedRef": 153,
+                "at": 23375,
+                "noProgress": false
+              },
+              {
+                "step": 4,
+                "observationDigest": "STEP 4\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.ikea.com/gb/en/search/?q=desk+lamp\n  \"Cookie consent banner\", region\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 364 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusa",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate towards search results list"
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp",
+                "focusedRef": 40,
+                "at": 31035,
+                "noProgress": false
+              },
+              {
+                "step": 5,
+                "observationDigest": "STEP 5\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Showing results for \"desk lamp\"\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 365 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complem",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move to the 'Skip to results' link"
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp",
+                "focusedRef": 55,
+                "at": 36855,
+                "noProgress": false
+              },
+              {
+                "step": 6,
+                "observationDigest": "STEP 6\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Skip to results\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 365 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Floating action butt",
+                "action": {
+                  "action": "press",
+                  "reason": "Activate the 'Skip to results' link to jump directly to the product results list.",
+                  "key": "Enter"
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp",
+                "focusedRef": 56,
+                "at": 42129,
+                "noProgress": false
+              },
+              {
+                "step": 7,
+                "observationDigest": "STEP 7\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  Page changed to https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\n  \"Search for \"desk lamp\" - IKEA UK\", RootWebArea\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 365 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]  <<",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate towards the search results heading."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 0,
+                "at": 48502,
+                "noProgress": false
+              },
+              {
+                "step": 8,
+                "observationDigest": "STEP 8\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Sort and Filter\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 366 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complement",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading, aiming for the results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 18,
+                "at": 58688,
+                "noProgress": false
+              },
+              {
+                "step": 9,
+                "observationDigest": "STEP 9\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Others also searched for\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 367 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] c",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach the search results."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 16,
+                "at": 64689,
+                "noProgress": false
+              },
+              {
+                "step": 10,
+                "observationDigest": "STEP 10\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Footer\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 368 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Flo",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 18,
+                "at": 70962,
+                "noProgress": false
+              },
+              {
+                "step": 11,
+                "observationDigest": "STEP 11\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Download the IKEA app\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 369 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] com",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 19,
+                "at": 76822,
+                "noProgress": false
+              },
+              {
+                "step": 12,
+                "observationDigest": "STEP 12\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Join IKEA Family\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 370 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] compleme",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Continue navigating through headings to reach the results list or loop back."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 22,
+                "at": 83366,
+                "noProgress": false
+              },
+              {
+                "step": 13,
+                "observationDigest": "STEP 13\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Showing results for \"desk lamp\"\", heading, level=1\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 370 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n       ",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 55,
+                "at": 89144,
+                "noProgress": false
+              },
+              {
+                "step": 14,
+                "observationDigest": "STEP 14\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Related Content\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 371 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complemen",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach the Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 50,
+                "at": 95657,
+                "noProgress": false
+              },
+              {
+                "step": 15,
+                "observationDigest": "STEP 15\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Similar products\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 372 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] compleme",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to reach the Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 53,
+                "at": 104052,
+                "noProgress": false
+              },
+              {
+                "step": 16,
+                "observationDigest": "STEP 16\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Go to category\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 373 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complement",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see if there are more headings."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 55,
+                "at": 110226,
+                "noProgress": false
+              },
+              {
+                "step": 17,
+                "observationDigest": "STEP 17\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Results list\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 374 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementar",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate to the next link after Results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 119,
+                "at": 116272,
+                "noProgress": false
+              },
+              {
+                "step": 18,
+                "observationDigest": "STEP 18\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Show more products\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 374 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Flo",
+                "action": {
+                  "action": "shift_tab",
+                  "reason": "Move focus backwards from \"Show more products\" to see the preceding control."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 118,
+                "at": 125490,
+                "noProgress": false
+              },
+              {
+                "step": 19,
+                "observationDigest": "STEP 19\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Option: SOLSKUR, LED table lamp, light blue/nickel-plated\", radio, checked=true\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 374 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusabl",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Check what the next heading is from the current position."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 882,
+                "at": 133724,
+                "noProgress": false
+              },
+              {
+                "step": 20,
+                "observationDigest": "STEP 20\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"KABOMBA, LED wall lamp with mirror, dimmable matt/black, 20 cm LED wall lamp with mirror, dimmable matt/black, 20 cm\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focu",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see where it leads in the heading structure."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 910,
+                "at": 142994,
+                "noProgress": false
+              },
+              {
+                "step": 21,
+                "observationDigest": "STEP 21\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Sort and Filter\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complemen",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see the structure of the results."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 18,
+                "at": 149696,
+                "noProgress": false
+              },
+              {
+                "step": 22,
+                "observationDigest": "STEP 22\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Others also searched for\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] ",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the page elements to locate the first product result."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 16,
+                "at": 158205,
+                "noProgress": true
+              },
+              {
+                "step": 23,
+                "observationDigest": "STEP 23\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"Others also searched for\", heading, level=2\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] R",
+                "action": {
+                  "action": "tab",
+                  "reason": "Move focus forward to see what elements follow node 16."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 16,
+                "at": 163834,
+                "noProgress": false
+              },
+              {
+                "step": 24,
+                "observationDigest": "STEP 24\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"lamp (414)\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Floating ac",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the page to see the links and structure around the product results."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 126,
+                "at": 172035,
+                "noProgress": true
+              },
+              {
+                "step": 25,
+                "observationDigest": "STEP 25\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"lamp (414)\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"de",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Navigate forward to find product links among the search results."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 126,
+                "at": 178577,
+                "noProgress": false
+              },
+              {
+                "step": 26,
+                "observationDigest": "STEP 26\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"table lamp (97)\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 375 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Floati",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to see the next section after 'Others also searched for'."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 127,
+                "at": 184995,
+                "noProgress": false
+              },
+              {
+                "step": 27,
+                "observationDigest": "STEP 27\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Services\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 376 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"F",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to locate the first product result."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 136,
+                "at": 191434,
+                "noProgress": false
+              },
+              {
+                "step": 28,
+                "observationDigest": "STEP 28\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Help\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 377 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Float",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading to find product headings."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 138,
+                "at": 199598,
+                "noProgress": false
+              },
+              {
+                "step": 29,
+                "observationDigest": "STEP 29\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"About IKEA\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 378 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary ",
+                "action": {
+                  "action": "read",
+                  "reason": "Read the accessibility tree to see the elements around the results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 140,
+                "at": 205554,
+                "noProgress": true
+              },
+              {
+                "step": 30,
+                "observationDigest": "STEP 30\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nYOUR LAST ACTION FAILED: That action changed nothing on the page: the content is byte for byte identical to before. Try a different approach.\n\nSCREEN READER ANNOUNCED:\n  \"About IKEA\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 378 focusable):\n[0] RootWebArea \"Se",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Navigate to the next heading to wrap around to the top of the page."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 140,
+                "at": 211674,
+                "noProgress": false
+              },
+              {
+                "step": 31,
+                "observationDigest": "STEP 31\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"IKEA Family\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 379 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary",
+                "action": {
+                  "action": "next_heading",
+                  "reason": "Move to the next heading to see if products have heading titles."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 142,
+                "at": 218732,
+                "noProgress": false
+              },
+              {
+                "step": 32,
+                "observationDigest": "STEP 32\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"Sort\", heading, level=3\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 380 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          [3] complementary \"Float",
+                "action": {
+                  "action": "next_link",
+                  "reason": "Find the first product link in the search results list."
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 249,
+                "at": 225136,
+                "noProgress": false
+              },
+              {
+                "step": 33,
+                "observationDigest": "STEP 33\nURL: https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list\nTITLE: Search for \"desk lamp\" - IKEA UK\n\nSCREEN READER ANNOUNCED:\n  \"In-store only offer: TVÄRHAND Table lamp\", link\n\nACCESSIBILITY TREE (reading order, 1108 nodes, 380 focusable):\n[0] RootWebArea \"Search for \"desk lamp\" - IKEA UK\" [focusable]\n        [1] link \"Skip to main content\" [focusable]\n        [2] banner\n          ",
+                "action": {
+                  "action": "press",
+                  "reason": "Open the product page for the first result.",
+                  "key": "Enter"
+                },
+                "url": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list",
+                "focusedRef": 313,
+                "at": 230972,
+                "noProgress": false
+              }
+            ],
+            "startedAt": "2026-09-20T10:45:06.365Z",
+            "durationMs": 235053,
+            "inputTokens": 175684,
+            "outputTokens": 1072,
+            "blindActivations": [],
+            "browserSessionId": "01M2Z6PW33AYR8PGBR90S58AVS",
+            "finalUrl": "https://www.ikea.com/gb/en/search/?q=desk%20lamp#product-list"
+          }
+        ],
+        "completionsWithBlindActivation": 0,
+        "blindActivations": []
+      }
+    },
+    "journeyCompletionRate": 1,
+    "siteIsTheVariable": false,
+    "completedOnlyByGuessing": false,
+    "durationMs": 236017,
+    "costUsd": 0.0680093
+  },
+  "bundle": {
+    "schema": "buyable.evidence.v1",
+    "reportId": "3473ab89-7eb1-4868-84b7-2c6aee982568",
+    "createdAt": "2026-09-20T10:49:02.377Z",
+    "subject": {
+      "journeyName": "ikea",
+      "startUrl": "https://www.ikea.com/gb/en/",
+      "goal": "Search for a desk lamp and open the product page for the first result.",
+      "provenBy": {
+        "urlMatches": "/p/"
+      }
+    },
+    "method": {
+      "reasoningProvider": "gemini:gemini-3.8-flash",
+      "browser": "Amazon Bedrock AgentCore Browser (aws.browser.v1)",
+      "attemptsPerPersona": 1,
+      "personas": [
+        {
+          "id": "baseline",
+          "standsFor": "A sighted customer using a mouse, with no assistive technology.",
+          "perceives": [
+            "dom",
+            "vision",
+            "structuredData"
+          ],
+          "canDo": [
+            "pointer",
+            "keyboard"
+          ]
+        },
+        {
+          "id": "assistive",
+          "standsFor": "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
+          "perceives": [
+            "accessibilityTree"
+          ],
+          "canDo": [
+            "keyboard",
+            "quickNav"
+          ]
+        }
+      ],
+      "control": "The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator."
+    },
+    "result": {
+      "journeyCompletionRate": 1,
+      "siteIsTheVariable": false,
+      "perPersona": [
+        {
+          "persona": "baseline",
+          "completions": 1,
+          "attempts": 1,
+          "rate": 1,
+          "outcomes": [
+            "completed"
+          ],
+          "browserSessionIds": [
+            "01M2Z6PW22E7PN71GT6DAT913D"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        },
+        {
+          "persona": "assistive",
+          "completions": 1,
+          "attempts": 1,
+          "rate": 1,
+          "outcomes": [
+            "completed"
+          ],
+          "browserSessionIds": [
+            "01M2Z6PW33AYR8PGBR90S58AVS"
+          ],
+          "completionsWithBlindActivation": 0,
+          "blindActivations": [],
+          "inconclusive": 0
+        }
+      ]
+    },
+    "findings": [],
+    "accounting": {
+      "durationMs": 236017,
+      "estimatedModelCostUsd": 0.068,
+      "costBasis": "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount."
+    }
+  }
+}
