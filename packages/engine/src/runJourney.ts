@@ -27,6 +27,9 @@ export interface RunJourneyOptions {
   personas?: PersonaId[];
   /** Whatever decides the actions. The same instance is used for every persona. */
   provider: ReasoningProvider;
+  /** Set false only to re-run a journey already known to be feasible. */
+  preflight?: boolean;
+  onPreflight?: (report: import("./feasibility.js").FeasibilityReport) => void;
   onEvent?: (event: RunEvent) => void;
 }
 
@@ -84,13 +87,21 @@ export function summariseRuns(args: {
     PersonaVerdict
   >;
 
-  const rates = verdictList.map((v) => v.rate);
-  const journeyCompletionRate = rates.length
-    ? rates.reduce((a, b) => a + b, 0) / rates.length
+  // A persona with no usable attempts has no rate, and must not be read as one.
+  //
+  // `rate` returns 0 when there is nothing to divide, which is arithmetically
+  // reasonable and was being read as "never completed". On a real journey where every
+  // assistive attempt was excluded as inconclusive, that produced a 50% completion
+  // rate and an accusation that the site was the variable, from a run that had
+  // learned nothing about the site at all. Silence is not a failing grade.
+  const measured = verdictList.filter((v) => v.attempts > 0);
+
+  const journeyCompletionRate = measured.length
+    ? measured.reduce((sum, v) => sum + v.rate, 0) / measured.length
     : 0;
 
   const baseline = verdicts.baseline;
-  const constrained = verdictList.filter((v) => v.persona !== "baseline");
+  const constrained = measured.filter((v) => v.persona !== "baseline");
 
   return {
     reportId: args.reportId,
@@ -99,8 +110,10 @@ export function summariseRuns(args: {
     createdAt: args.createdAt ?? new Date().toISOString(),
     verdicts,
     journeyCompletionRate,
+    // Every clause needs real measurements behind it: a control that actually
+    // completed, and a constrained persona that actually ran.
     siteIsTheVariable:
-      !!baseline && baseline.rate === 1 && constrained.some((v) => v.rate < 1),
+      !!baseline && baseline.attempts > 0 && baseline.rate === 1 && constrained.some((v) => v.rate < 1),
     completedOnlyByGuessing: constrained.some(
       (v) => v.completions > 0 && v.completionsWithBlindActivation === v.completions,
     ),
@@ -109,11 +122,38 @@ export function summariseRuns(args: {
   };
 }
 
+export class JourneyNotFeasible extends Error {
+  constructor(
+    message: string,
+    readonly report: import("./feasibility.js").FeasibilityReport,
+  ) {
+    super(message);
+    this.name = "JourneyNotFeasible";
+  }
+}
+
 export async function runJourney(opts: RunJourneyOptions): Promise<JourneyReport> {
   const t0 = Date.now();
   const attempts = opts.attempts ?? 3;
   const personas = opts.personas ?? PERSONA_IDS;
   const reportId = randomUUID();
+
+  // Decide whether this is worth starting before anyone waits four minutes for an
+  // answer that was never going to mean anything. One page load, no model.
+  if (opts.preflight !== false) {
+    const { checkFeasibility, explainRefusal } = await import("./feasibility.js");
+    const { withBrowserSession } = await import("./browserSession.js");
+
+    const feasibility = await withBrowserSession(
+      { region: opts.region, name: `buyable-preflight-${reportId.slice(0, 8)}`, timeoutSeconds: 120 },
+      (page) => checkFeasibility(page, opts.journey, personas),
+    );
+    opts.onPreflight?.(feasibility);
+
+    if (!feasibility.canRun) {
+      throw new JourneyNotFeasible(explainRefusal(feasibility), feasibility);
+    }
+  }
 
   // Personas run in parallel because they are fully independent. In production this
   // same fan-out is a Step Functions Map state.

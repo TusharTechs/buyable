@@ -12,7 +12,7 @@
 
 import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import * as path from "node:path";
-import { runJourney, defineJourney } from "./runJourney.js";
+import { runJourney, defineJourney, JourneyNotFeasible } from "./runJourney.js";
 import { createProvider } from "./providers/index.js";
 import { describeBlocker } from "./blocker.js";
 import { verifyFix } from "./verifyFix.js";
@@ -82,7 +82,21 @@ const provider = createProvider({
 console.log(`         model:   ${provider.id}`);
 console.log(bar);
 
-const report = await runJourney({
+let report;
+try {
+  report = await runJourney({
+  preflight: arg("no-preflight") === undefined,
+  onPreflight: (f) => {
+    console.log(`\nPREFLIGHT  ${f.tabStops} reachable controls, ${f.nodeCount} nodes, ${Math.round(f.durationMs / 1000)}s`);
+    for (const finding of f.findings) {
+      const tag = finding.severity === "blocks" ? "STOP" : "note";
+      console.log(`  [${tag}] ${finding.message}`);
+      console.log(`         found: ${finding.evidence}`);
+      if (finding.suggestion) console.log(`         try:   ${finding.suggestion}`);
+    }
+    if (f.findings.length === 0) console.log(`  nothing in the way. Starting the journey.`);
+    console.log(bar);
+  },
   region: process.env.AWS_REGION ?? "us-west-2",
   journey,
   personas,
@@ -109,6 +123,17 @@ const report = await runJourney({
     }
   },
 });
+} catch (err) {
+  if (err instanceof JourneyNotFeasible) {
+    // A refusal is a result. Exit non-zero so a CI step fails loudly, but print the
+    // reason rather than a stack trace, and spend nothing on personas.
+    console.log(`\n${bar}`);
+    console.log(err.message);
+    console.log(bar);
+    process.exit(2);
+  }
+  throw err;
+}
 
 console.log(`\n${bar}`);
 console.log("VERDICT");

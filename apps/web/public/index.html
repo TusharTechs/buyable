@@ -140,7 +140,14 @@
       </fieldset>
 
       <button class="btn" type="submit" id="scan-submit">Run the journey</button>
-      <p class="hint" id="scan-cost">Takes two to four minutes. Each persona drives a real browser.</p>
+      <p class="hint" id="scan-cost">
+        Buyable checks first, in a few seconds, whether this journey can run at all.
+        If a site is serving an anti-bot page, sitting behind a sign-in wall, or the
+        success condition is already true on the starting page, it says so and stops
+        rather than leaving you waiting four minutes for a result that would mean
+        nothing. Otherwise each persona drives a real browser, which takes two to four
+        minutes.
+      </p>
     </form>
 
     <p role="alert" id="scan-error" class="scan-error" hidden></p>

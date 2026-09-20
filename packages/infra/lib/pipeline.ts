@@ -308,7 +308,13 @@ export class Pipeline extends Construct {
      * The public door
      * ---------------------------------------------------------------- */
 
-    const startFn = makeFunction("StartRun", fn("startRun"));
+    // StartRun runs the preflight before starting anything, so it drives a browser
+    // too. Longer timeout and more memory than a plain API handler for the same
+    // reason: it loads a real page before deciding whether the journey is worth it.
+    const startFn = makeFunction("StartRun", fn("startRun"), {
+      timeout: cdk.Duration.seconds(90),
+      memory: 1024,
+    });
     const getFn = makeFunction("GetRun", fn("getRun"));
 
     // The free tier. Synchronous, because an inspection finishes in seconds, and
@@ -335,6 +341,17 @@ export class Pipeline extends Construct {
     this.stateMachine.grantStartExecution(startFn);
     props.table.grantReadWriteData(startFn);
     props.table.grantReadData(getFn);
+    startFn.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: [
+          "bedrock-agentcore:StartBrowserSession",
+          "bedrock-agentcore:StopBrowserSession",
+          "bedrock-agentcore:GetBrowserSession",
+          "bedrock-agentcore:ConnectBrowserAutomationStream",
+        ],
+        resources: ["*"],
+      }),
+    );
 
     const api = new apigw.HttpApi(this, "Api", {
       description: "Buyable public API",

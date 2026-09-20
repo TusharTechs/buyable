@@ -89,6 +89,41 @@
     });
   }
 
+  function esc(v) {
+    var d = document.createElement("div");
+    d.textContent = v;
+    return d.innerHTML;
+  }
+
+  function renderRefusal(data) {
+    var html = "<p>Checked in " + esc(data.checkedIn || "a few seconds") + ", before anything was run.</p>";
+    if (data.page) {
+      html +=
+        "<p class=\"hint\">The page Buyable was served: <q>" + esc(data.page.title || "(no title)") +
+        "</q> with " + data.page.reachableControls + " reachable controls.</p>";
+    }
+    html += "<ul>";
+    (data.reasons || []).forEach(function (r) {
+      html += "<li><strong>" + esc(r.message) + "</strong>";
+      html += "<br><span class=\"hint\">What was found: " + esc(r.evidence) + "</span>";
+      if (r.suggestion) html += "<br><span class=\"hint\">What to try: " + esc(r.suggestion) + "</span>";
+      html += "</li>";
+    });
+    html += "</ul>";
+    result.innerHTML = html;
+    result.hidden = false;
+  }
+
+  function renderWarnings(warnings) {
+    var html = "<p class=\"hint\">Running, with these caveats:</p><ul>";
+    warnings.forEach(function (w) {
+      html += "<li class=\"hint\">" + esc(w.message) + "</li>";
+    });
+    html += "</ul>";
+    result.innerHTML = html;
+    result.hidden = false;
+  }
+
   function poll(runId, startedAt) {
     fetch(API + "/runs/" + encodeURIComponent(runId), { headers: { accept: "application/json" } })
       .then(function (response) {
@@ -194,9 +229,24 @@
       .then(function (payload) {
         if (!payload.ok) {
           setBusy(false);
+
+          // A preflight refusal is a useful answer, not an error, and it arrives in
+          // seconds rather than minutes. Render the reasons rather than collapsing
+          // them into one line, because "could not scan this site" tells nobody
+          // anything and invites them to retry the same thing.
+          if (payload.data.canRun === false) {
+            say("Buyable will not start this journey. Here is why.");
+            renderRefusal(payload.data);
+            return;
+          }
+
           say("That run was refused.");
           showError(payload.data.error || "That run was refused.");
           return;
+        }
+
+        if (payload.data.warnings && payload.data.warnings.length) {
+          renderWarnings(payload.data.warnings);
         }
         renderProgress(
           payload.data.personas.reduce(function (acc, p) {

@@ -9,9 +9,15 @@
 import type { APIGatewayProxyEventV2, APIGatewayProxyResultV2 } from "aws-lambda";
 import { SFNClient, StartExecutionCommand } from "@aws-sdk/client-sfn";
 import { randomUUID } from "node:crypto";
-import { defineJourney, PERSONA_IDS, type PersonaId } from "@buyable/engine";
+import {
+  checkFeasibility,
+  defineJourney,
+  PERSONA_IDS,
+  withBrowserSession,
+  type PersonaId,
+} from "@buyable/engine";
 import { assertNotHalted, assertRobotsAllows, assertUrlIsFetchable, assertWithinLimits, Refused } from "./guards.js";
-import { json, putRun, WEB_BASE_URL } from "./shared.js";
+import { json, putRun, REGION, WEB_BASE_URL } from "./shared.js";
 
 const sfn = new SFNClient({});
 
@@ -70,14 +76,35 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
       Math.max(1, Number(body.attempts ?? MAX_PUBLIC_ATTEMPTS)),
     );
 
-    const runId = randomUUID();
-    const journey = defineJourney({
-      journeyId: runId,
+    const journey0 = defineJourney({
       name: String(body.name ?? goal).slice(0, 140),
       startUrl: url.toString(),
       goal,
       assertion: { textPresent, urlMatches },
     });
+
+    // Decide whether this journey is worth starting before the caller waits minutes
+    // for an answer that was never going to mean anything. One page load, no model,
+    // a few seconds. A refusal here is a specific refusal: what was found, what it
+    // means, and what to do instead.
+    const feasibility = await withBrowserSession(
+      { region: REGION, name: `buyable-preflight-${journey0.journeyId.slice(0, 8)}`, timeoutSeconds: 120 },
+      (page) => checkFeasibility(page, journey0, personas),
+    );
+
+    if (!feasibility.canRun) {
+      return json(422, {
+        error: "This journey will not run, and here is why.",
+        canRun: false,
+        checkedIn: `${Math.round(feasibility.durationMs / 1000)}s`,
+        page: { url: feasibility.finalUrl, title: feasibility.title, reachableControls: feasibility.tabStops },
+        reasons: feasibility.findings.filter((f) => f.severity === "blocks"),
+        warnings: feasibility.findings.filter((f) => f.severity === "warns"),
+      });
+    }
+
+    const runId = journey0.journeyId;
+    const journey = journey0;
 
     await putRun({
       runId,
@@ -115,6 +142,9 @@ export async function handler(event: APIGatewayProxyEventV2): Promise<APIGateway
       reportUrl: `${WEB_BASE_URL}/reports/${runId}.html`,
       personas,
       attempts,
+      // Anything the preflight noticed but did not consider fatal, so the caller can
+      // read the eventual result knowing what stood in the way.
+      warnings: feasibility.findings.filter((f) => f.severity === "warns"),
       note: "Buyable will attempt this journey as each persona. Public scans are read only: no forms are submitted on sites we do not own.",
     });
   } catch (err) {
