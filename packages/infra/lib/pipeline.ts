@@ -310,6 +310,26 @@ export class Pipeline extends Construct {
     const startFn = makeFunction("StartRun", fn("startRun"));
     const getFn = makeFunction("GetRun", fn("getRun"));
 
+    // The free tier. Synchronous, because an inspection finishes in seconds, and
+    // generously sized because most of its time is spent waiting on a browser.
+    const inspectFn = makeFunction("Inspect", fn("inspect"), {
+      timeout: cdk.Duration.seconds(60),
+      memory: 1024,
+    });
+    props.table.grantReadData(inspectFn);
+    props.webBucket.grantPut(inspectFn);
+    inspectFn.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: [
+          "bedrock-agentcore:StartBrowserSession",
+          "bedrock-agentcore:StopBrowserSession",
+          "bedrock-agentcore:GetBrowserSession",
+          "bedrock-agentcore:ConnectBrowserAutomationStream",
+        ],
+        resources: ["*"],
+      }),
+    );
+
     startFn.addEnvironment("STATE_MACHINE_ARN", this.stateMachine.stateMachineArn);
     this.stateMachine.grantStartExecution(startFn);
     props.table.grantReadWriteData(startFn);
@@ -328,6 +348,11 @@ export class Pipeline extends Construct {
       path: "/runs",
       methods: [apigw.HttpMethod.POST],
       integration: new integrations.HttpLambdaIntegration("StartIntegration", startFn),
+    });
+    api.addRoutes({
+      path: "/inspect",
+      methods: [apigw.HttpMethod.POST],
+      integration: new integrations.HttpLambdaIntegration("InspectIntegration", inspectFn),
     });
     api.addRoutes({
       path: "/runs/{runId}",

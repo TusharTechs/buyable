@@ -172,3 +172,7 @@ footer.site { border-top: 1px solid var(--line); padding: 22px 0 40px; color: va
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* Announcement transcript. A silent stop is marked with a word, never colour alone. */
+tr.silent td { background: var(--bad-bg); }
+tr.silent .warn { color: var(--bad-ink); }

@@ -11,6 +11,8 @@ export * from "./patch.js";
 export * from "./shadow.js";
 export * from "./verifyFix.js";
 export * from "./renderReport.js";
+export * from "./inspect.js";
+export * from "./renderInspection.js";
 export * from "./config.js";
 export * from "./runPersona.js";
 export * from "./runJourney.js";

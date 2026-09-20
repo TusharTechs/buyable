@@ -38,8 +38,49 @@
   </section>
 
 
+
+  <section class="wrap scan" aria-labelledby="free-heading">
+    <h2 id="free-heading">Free, instant, no account</h2>
+
+    <p>
+      Paste any public URL. Buyable reads the accessibility tree Chrome actually
+      computed and shows you the page as a screen reader hears it, stop by stop, with
+      anything that announces nothing marked. About five seconds. No sign up, no key,
+      no limit, because this part needs no AI model at all.
+    </p>
+
+    <form id="free-form" novalidate>
+      <div class="field">
+        <label for="free-url">Page to check</label>
+        <input id="free-url" name="url" type="url" required autocomplete="url"
+               spellcheck="false" placeholder="https://example.com/checkout"
+               aria-describedby="free-url-hint">
+        <p class="hint" id="free-url-hint">
+          Any public page. Private addresses, and anything a site's robots.txt asks
+          automated clients to avoid, are refused.
+        </p>
+      </div>
+      <button class="btn" type="submit" id="free-submit">Hear this page</button>
+    </form>
+
+    <p role="alert" id="free-error" class="scan-error" hidden></p>
+
+    <section id="free-status" class="scan-status" hidden tabindex="-1"
+             aria-labelledby="free-status-heading" aria-live="polite" aria-busy="false">
+      <h3 id="free-status-heading">Result</h3>
+      <p id="free-status-line">Reading the page.</p>
+      <div id="free-result" hidden></div>
+    </section>
+
+    <p class="control-note">
+      This is a rule check, which is what every accessibility scanner does, and it
+      catches only a minority of real problems. It cannot tell you whether anyone can
+      actually finish buying. That is a different job, and it is the one below.
+    </p>
+  </section>
+
   <section class="wrap scan" aria-labelledby="scan-heading">
-    <h2 id="scan-heading">Try it on a site you choose</h2>
+    <h2 id="scan-heading">Prove someone can finish, on a site you choose</h2>
 
     <p>
       A report on a site we picked proves much less than a report on a site you picked.
@@ -320,5 +361,6 @@
 </footer>
 <script src="/config.js"></script>
 <script src="/scan.js"></script>
+<script src="/free.js"></script>
 </body>
 </html>

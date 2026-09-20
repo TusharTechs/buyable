@@ -160,3 +160,8 @@ main { padding: 0 0 72px; }
 .progress li:last-child { border-bottom: 0; }
 .progress .persona { font-weight: 600; }
 .progress .state { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.transcript { margin: 10px 0 16px; padding-left: 26px; }
+.transcript li { margin-bottom: 4px; }
+.transcript .warn { color: var(--bad-ink); }
+#free-result h4 { margin: 18px 0 6px; font-size: 15px; }
