@@ -4,8 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buyable, proof that a customer can actually finish</title>
-<meta name="description" content="Buyable attempts a real purchase as a screen reader user, as an AI shopping agent, and as a baseline control, reports whether each one could finish, and opens the pull request that fixes it when they cannot.">
+<meta name="description" content="Every accessibility tool counts the rules your site breaks. Buyable attempts a real checkout three times over, as a screen reader user, as an AI shopping agent, and as a sighted control, and reports whether each one could finish. When they cannot, it finds the element, writes the patch, and re-runs the journey to prove the fix.">
+<link rel="canonical" href="https://d3luufd5s1g5pn.cloudfront.net/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1d43c8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
+
+<!--
+  Social and search metadata.
+
+  The preview card carries the actual result rather than a logo on a gradient: the
+  control finished two of two and the other two customers finished none. Somebody who
+  only ever sees the card in a feed has still been told what this measures, which is
+  more than a wordmark would have done.
+-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Buyable">
+<meta property="og:url" content="https://d3luufd5s1g5pn.cloudfront.net/">
+<meta property="og:title" content="Can anyone actually finish buying from your site?">
+<meta property="og:description" content="Three customers attempt the same checkout. One has a mouse. Two do not. Buyable reports whether each one could finish, finds the element that stopped them, and proves the fix by re-running the journey.">
+<meta property="og:image" content="https://d3luufd5s1g5pn.cloudfront.net/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Buyable verdict: the baseline control completed 2 of 2, the screen reader user 0 of 3, the AI shopping agent 0 of 3.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can anyone actually finish buying from your site?">
+<meta name="twitter:description" content="Three customers attempt the same checkout. One has a mouse. Two do not.">
+<meta name="twitter:image" content="https://d3luufd5s1g5pn.cloudfront.net/og.png">
+
+<!--
+  Structured data, limited to what is true and checkable. No ratings, no review counts,
+  no invented organisation: a tool that exists to stop people publishing claims they
+  cannot support would be a poor place to start inventing some.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Buyable",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "url": "https://d3luufd5s1g5pn.cloudfront.net/",
+  "description": "Measures whether a real customer can complete a purchase using a screen reader, a keyboard, or an AI shopping agent, and proves any fix by re-running the journey.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "keywords": "web accessibility, WCAG, screen reader testing, AI agent readiness, ecommerce checkout, European Accessibility Act",
+  "codeRepository": "https://github.com/TusharTechs/buyable"
+}
+</script>
 <link rel="stylesheet" href="/report.css">
 <link rel="stylesheet" href="/home.css">
 <link rel="stylesheet" href="/run.css">

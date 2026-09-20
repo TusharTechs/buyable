@@ -1,3 +1,12 @@
+Two records, taken a day apart, both written by AWS rather than by us.
+
+`userAgent` and `sourceIPAddress` reading `aws-mcp.amazonaws.com` is CloudTrail
+recording that the call arrived through the AWS MCP Server. Neither field is
+something a client sets, which is the reason for preferring them over anything
+this repository could assert about itself.
+
+--- first connection ------------------------------------------------------
+
 eventTime   : 2026-09-20T06:28:16Z
 eventSource : cloudformation.amazonaws.com
 eventName   : DescribeStacks
@@ -7,3 +16,30 @@ sourceIP    : aws-mcp.amazonaws.com
 readOnly    : True
 stack       : Buyable
 
+--- still connected, reading the deployed stack ---------------------------
+
+eventTime   : 2026-09-20T17:13:42Z
+eventSource : cloudformation.amazonaws.com
+eventName   : DescribeStacks
+userAgent   : aws-mcp.amazonaws.com
+sourceIP    : aws-mcp.amazonaws.com
+principal   : arn:aws:iam::756590016817:user/quorum-dev
+readOnly    : True
+stack       : Buyable
+returned    : UPDATE_COMPLETE, 10 outputs
+
+That second call returned the live Buyable stack at the timestamp of that day's
+deployment. It was also found the same way: the agent queried CloudTrail through the
+MCP server and read back its own earlier call, which is as close to a self-evidencing
+record as this gets.
+
+Reproduce it:
+
+  aws cloudtrail lookup-events --region us-west-2 \
+    --lookup-attributes AttributeKey=EventSource,AttributeValue=cloudformation.amazonaws.com \
+    --query 'Events[].CloudTrailEvent' --output text | grep aws-mcp
+
+Out of 1000 CloudFormation events in the surrounding period, 992 came from the CDK
+over aws-sdk-js, 7 from the AWS CLI, and these from the MCP server. The mix is
+reported rather than hidden: most of the deployment work genuinely went through CDK,
+and the MCP connection is what the agent uses to inspect the account.

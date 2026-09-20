@@ -1,0 +1,16 @@
+# Buyable.
+#
+# The landing page and the free inspection are meant to be found. Reports are not:
+# every one of them is a document about somebody's site, they sit behind a key, and
+# they already carry X-Robots-Tag: noindex from the API. This is the second lock on
+# the same door.
+
+User-agent: *
+Allow: /$
+Allow: /index.html
+Allow: /sample-report.html
+Disallow: /r/
+Disallow: /reports/
+Disallow: /account/
+
+Sitemap: https://d3luufd5s1g5pn.cloudfront.net/sitemap.xml
