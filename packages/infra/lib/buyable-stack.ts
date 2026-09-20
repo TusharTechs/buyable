@@ -3,6 +3,7 @@ import { Construct } from "constructs";
 import * as path from "node:path";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
+import * as s3deploy from "aws-cdk-lib/aws-s3-deployment";
 import { StaticSite } from "./static-site";
 import { ShadowSite } from "./shadow-site";
 import { Pipeline } from "./pipeline";
@@ -41,6 +42,11 @@ export class BuyableStack extends cdk.Stack {
     const web = new StaticSite(this, "Web", {
       sourcePath: path.join(repoRoot, "apps", "web", "public"),
       comment: "Buyable web app",
+      // This bucket receives published reports at runtime under reports/. Pruning on
+      // deploy would delete every one of them and break every report link that had
+      // ever been shared, so the checked-in files are added without removing
+      // anything else.
+      prune: false,
     });
 
     /* ---------------------------------------------------------------------
@@ -118,6 +124,27 @@ export class BuyableStack extends cdk.Stack {
     new SpendGuard(this, "SpendGuard", {
       limitUsd: Number(this.node.tryGetContext("monthlyBudgetUsd") ?? 50),
       alertEmail: this.node.tryGetContext("alertEmail"),
+    });
+
+    // The API is constructed after the web bucket, so its address is published in a
+    // second, tiny deployment rather than folded into the first.
+    new s3deploy.BucketDeployment(this, "WebConfig", {
+      destinationBucket: web.bucket,
+      distribution: web.distribution,
+      distributionPaths: ["/config.js"],
+      // Never prune here: this deployment knows about one file and would otherwise
+      // delete the entire site, including every report written at runtime.
+      prune: false,
+      sources: [
+        s3deploy.Source.data(
+          "config.js",
+          [
+            "/* Generated at deploy time. Do not edit: see packages/infra/lib/buyable-stack.ts. */",
+            `window.BUYABLE_CONFIG = { apiUrl: ${JSON.stringify(pipeline.apiUrl)} };`,
+            "",
+          ].join("\n"),
+        ),
+      ],
     });
 
     new cdk.CfnOutput(this, "ApiUrl", {

@@ -11,6 +11,24 @@ export interface StaticSiteProps {
   /** Served at the distribution root when a directory is requested. */
   indexDocument?: string;
   comment: string;
+  /**
+   * Files generated at deploy time, keyed by object name.
+   *
+   * Used for configuration that is only known once the stack exists, such as the API
+   * endpoint. Writing it here rather than committing it means the published page and
+   * the deployed API can never drift apart, which is the sort of mismatch that gets
+   * discovered by a judge rather than by us.
+   */
+  generatedFiles?: Record<string, string>;
+  /**
+   * Whether to delete objects in the bucket that are not in the source.
+   *
+   * Defaults to true, which is right for a site whose content is entirely checked in.
+   * It is emphatically wrong for a bucket that also receives objects at runtime: the
+   * Buyable web bucket holds every published report, and pruning it on deploy would
+   * quietly break every report link anyone had ever been given.
+   */
+  prune?: boolean;
 }
 
 /**
@@ -54,12 +72,16 @@ export class StaticSite extends Construct {
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
     });
 
+    const generated = Object.entries(props.generatedFiles ?? {}).map(([key, body]) =>
+      s3deploy.Source.data(key, body),
+    );
+
     new s3deploy.BucketDeployment(this, "Deploy", {
-      sources: [s3deploy.Source.asset(props.sourcePath)],
+      sources: [s3deploy.Source.asset(props.sourcePath), ...generated],
       destinationBucket: this.bucket,
       distribution: this.distribution,
       distributionPaths: ["/*"],
-      prune: true,
+      prune: props.prune ?? true,
     });
 
     this.url = `https://${this.distribution.distributionDomainName}`;

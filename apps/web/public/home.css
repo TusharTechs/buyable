@@ -79,3 +79,84 @@ main { padding: 0 0 72px; }
 }
 .steps h3 { margin: 0 0 6px; font-size: 16px; }
 .steps p { margin: 0; color: var(--muted); }
+
+/* ---------------------------------------------------------------------------
+   The scan form.
+
+   Every input has a visible, persistent label. Placeholders are examples, never
+   labels: a placeholder disappears the moment someone types, which strands anyone
+   relying on it, and it is not reliably announced in the first place.
+
+   Hints are wired with aria-describedby rather than sitting loose next to the field,
+   so they are announced when focus arrives instead of being discovered by accident.
+   --------------------------------------------------------------------------- */
+
+.scan { padding-top: 8px; }
+
+.scan form {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 20px 0 0;
+  background: var(--panel);
+}
+
+.scan .field { margin-bottom: 20px; }
+.scan label { display: block; font-weight: 620; margin-bottom: 6px; }
+
+.scan input[type="url"],
+.scan input[type="text"] {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--ink);
+}
+.scan input::placeholder { color: var(--muted); opacity: 1; }
+
+.scan .hint { color: var(--muted); font-size: 13.5px; margin: 6px 0 0; }
+
+.scan fieldset {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 0 0 20px;
+}
+.scan legend { font-weight: 620; padding: 0 6px; }
+.scan .checks { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+.scan .checks label { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; }
+.scan .checks input { width: 18px; height: 18px; }
+
+.scan button[type="submit"] { border: 1px solid var(--accent); }
+.scan button[disabled] { opacity: 0.65; cursor: progress; }
+
+.scan-error {
+  margin: 16px 0 0;
+  padding: 13px 16px;
+  border-radius: 8px;
+  background: var(--bad-bg);
+  color: var(--bad-ink);
+  border-left: 3px solid currentColor;
+}
+
+.scan-status {
+  margin: 20px 0 0;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.scan-status h3 { margin: 0 0 8px; font-size: 16px; }
+
+.progress { list-style: none; padding: 0; margin: 12px 0 0; }
+.progress li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.progress li:last-child { border-bottom: 0; }
+.progress .persona { font-weight: 600; }
+.progress .state { color: var(--muted); font-variant-numeric: tabular-nums; }

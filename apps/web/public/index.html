@@ -37,6 +37,93 @@
     </p>
   </section>
 
+
+  <section class="wrap scan" aria-labelledby="scan-heading">
+    <h2 id="scan-heading">Try it on a site you choose</h2>
+
+    <p>
+      A report on a site we picked proves much less than a report on a site you picked.
+      Give Buyable a starting URL, what you want done, and a way to tell that it
+      finished. It will attempt the journey for real and publish a report.
+    </p>
+
+    <form id="scan-form" novalidate>
+      <div class="field">
+        <label for="scan-url">Starting URL</label>
+        <input
+          id="scan-url" name="url" type="url" required
+          autocomplete="url" spellcheck="false"
+          placeholder="https://example.com/"
+          aria-describedby="scan-url-hint">
+        <p class="hint" id="scan-url-hint">
+          A public page. Private addresses and anything a site's robots.txt asks
+          automated clients to avoid will be refused.
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="scan-goal">What should it try to do?</label>
+        <input
+          id="scan-goal" name="goal" type="text" required
+          placeholder="Add a product to the basket and reach the checkout page"
+          aria-describedby="scan-goal-hint">
+        <p class="hint" id="scan-goal-hint">
+          One sentence, the way you would tell a person. Public scans are read only:
+          Buyable will not submit a form or place an order on a site it does not own.
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="scan-proof">How will we know it finished?</label>
+        <input
+          id="scan-proof" name="textPresent" type="text" required
+          placeholder="Words that appear only on the final page"
+          aria-describedby="scan-proof-hint">
+        <p class="hint" id="scan-proof-hint">
+          Text that appears on the last page of the journey and nowhere earlier. This
+          is checked against the live page, never taken from the model's own claim,
+          which is the whole reason a Buyable result means anything.
+        </p>
+      </div>
+
+      <fieldset>
+        <legend>Who should try it?</legend>
+        <p class="hint">
+          The baseline control always runs. Without it, a failure cannot be attributed
+          to the site rather than to the model.
+        </p>
+        <div class="checks">
+          <label><input type="checkbox" name="persona" value="assistive" checked> <span>Screen reader user</span></label>
+          <label><input type="checkbox" name="persona" value="agent"> <span>AI shopping agent</span></label>
+        </div>
+      </fieldset>
+
+      <button class="btn" type="submit" id="scan-submit">Run the journey</button>
+      <p class="hint" id="scan-cost">Takes two to four minutes. Each persona drives a real browser.</p>
+    </form>
+
+    <p role="alert" id="scan-error" class="scan-error" hidden></p>
+
+    <section
+      id="scan-status" class="scan-status" hidden tabindex="-1"
+      aria-labelledby="scan-status-heading" aria-live="polite" aria-busy="false">
+      <h3 id="scan-status-heading">Progress</h3>
+      <p id="scan-status-line">Starting.</p>
+      <ul id="scan-progress" class="progress"></ul>
+      <p id="scan-result" hidden></p>
+    </section>
+
+    <noscript>
+      <p class="control-note">
+        This form needs JavaScript, but the API does not. Everything on this page is
+        also reachable with a single request:
+      </p>
+      <pre class="diff"><code>curl -X POST https://o62sq0ywp8.execute-api.us-west-2.amazonaws.com/runs \
+  -H 'content-type: application/json' \
+  -d '{"url":"https://example.com/","goal":"Add a product to the basket and reach checkout","textPresent":"Order summary"}'</code></pre>
+    </noscript>
+  </section>
+
   <section class="wrap" aria-labelledby="result-heading">
     <h2 id="result-heading">A worked example</h2>
 
@@ -231,5 +318,7 @@
     </p>
   </div>
 </footer>
+<script src="/config.js"></script>
+<script src="/scan.js"></script>
 </body>
 </html>
