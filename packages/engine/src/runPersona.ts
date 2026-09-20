@@ -283,17 +283,33 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
               agentExplanation: explanation,
             });
 
+            // The same rule the exhausted path already applies, and it belongs here
+            // too. A persona saying it is stuck is not by itself a finding: if no
+            // barrier could be identified, we cannot name an element, cite a success
+            // criterion, or propose a fix, and publishing it as a site failure would
+            // be an accusation with nothing behind it. A real Target run stopped at a
+            // press-and-hold bot challenge and the report attributed it to the search
+            // button, which was simply the nearest thing the fallback could see.
+            //
+            // The persona's own words are kept either way, because "it stopped here
+            // and we could not say why" is a useful thing to be able to read.
+            const barrierCouldAffectThisPersona = !persona.perceive.dom && !persona.act.pointer;
+            const identified = blocker.kind !== "unknown" && barrierCouldAffectThisPersona;
+
             const result: PersonaRunResult = {
               ...base,
-              outcome: "blocked",
+              outcome: identified ? "blocked" : "inconclusive",
               completed: false,
               steps,
-              blocker,
+              blocker: identified ? blocker : undefined,
               inputTokens,
               outputTokens,
               blindActivations,
               durationMs: Date.now() - t0,
               finalUrl: observation.url,
+              errorMessage: identified
+                ? undefined
+                : `The persona stopped, but no barrier could be identified, so this run is excluded from the verdict rather than counted against the site. It said: ${explanation.slice(0, 300)}`,
             };
             opts.onEvent?.({ type: "finished", persona: persona.id, result });
             return result;

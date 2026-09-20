@@ -226,7 +226,22 @@ export async function checkFeasibility(
 
   // Compare the page against the tightest step budget of the personas being run.
   const budget = Math.min(...personas.map((p) => getPersona(p).maxSteps));
-  if (tabStops > budget * 6) {
+  if (tabStops > budget * 12) {
+    // Past a certain ratio this stops being a caveat and becomes a certainty. A real
+    // run on a page with 460 reachable controls and a 32 step budget spent six
+    // minutes and produced nothing, having been warned in advance. Warning about an
+    // outcome we can already predict, and then charging for it, is not much of a
+    // warning.
+    add({
+      code: "page-very-large",
+      severity: "blocks",
+      message:
+        "This page has so many more reachable controls than a persona has steps that the run would almost certainly exhaust its budget while still navigating, which would tell you nothing about the site.",
+      evidence: `${tabStops} reachable controls against a budget of ${budget} steps, a ratio of ${Math.round(tabStops / budget)} to 1`,
+      suggestion:
+        "Start closer to the goal: a product page rather than a search result, or a search result rather than a home page.",
+    });
+  } else if (tabStops > budget * 6) {
     add({
       code: "page-very-large",
       severity: "warns",

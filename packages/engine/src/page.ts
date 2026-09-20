@@ -499,6 +499,12 @@ export async function looksLikeErrorPage(page: PageHandle): Promise<string | und
     [/service unavailable|temporarily unavailable|try again later/i, "service unavailable"],
     [/\b404\b|page not found|cannot be found/i, "page not found"],
     [/too many requests|rate limit|slow down/i, "rate limited"],
+    // Bot challenges belong here rather than with accessibility findings. A site that
+    // asks a visitor to prove they are human has not excluded anyone, it has stopped
+    // us. Note the flexible "and": one real run met "Press & hold to confirm you're a
+    // human" and a pattern written with the word "and" sailed straight past it.
+    [/press\s*(&|and)\s*hold|confirm you(?:'| a)?re a human|verify you are (?:a )?human/i, "bot challenge"],
+    [/quick verification|security check|checking your browser|unusual traffic/i, "bot challenge"],
     [/something went wrong|an error occurred/i, "error page"],
   ];
 
