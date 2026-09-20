@@ -111,7 +111,7 @@ docs/evidence        raw output from real runs, kept verbatim
 Architecture decisions worth reading: [raw CDP over
 AgentCore](docs/adr/0001-raw-cdp-over-agentcore-browser.md), [the reasoning provider
 seam](docs/adr/0002-reasoning-provider-seam.md), [anchored replacement
-patches](docs/adr/0004-anchored-replacement-patches.md).
+patches](docs/adr/0004-patches-as-anchored-replacements.md).
 
 ## Running it locally
 
