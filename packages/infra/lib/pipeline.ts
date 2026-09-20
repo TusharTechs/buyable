@@ -66,11 +66,11 @@ export class Pipeline extends Construct {
     const makeFunction = (
       name: string,
       entry: string,
-      opts: { timeout?: cdk.Duration; memory?: number } = {},
+      opts: { timeout?: cdk.Duration; memory?: number; handler?: string } = {},
     ) =>
       new NodejsFunction(this, name, {
         entry,
-        handler: "handler",
+        handler: opts.handler ?? "handler",
         runtime: lambda.Runtime.NODEJS_22_X,
         architecture: lambda.Architecture.ARM_64,
         timeout: opts.timeout ?? cdk.Duration.seconds(30),
@@ -327,13 +327,24 @@ export class Pipeline extends Construct {
 
     // The free tier. Synchronous, because an inspection finishes in seconds, and
     // generously sized because most of its time is spent waiting on a browser.
-    const inspectFn = makeFunction("Inspect", fn("inspect"), {
-      timeout: cdk.Duration.seconds(60),
+    /*
+     * The free inspection, in two halves.
+     *
+     * It used to be one synchronous Lambda behind POST /inspect, because an
+     * inspection took about six seconds. It now waits for the page to finish loading
+     * before reading it, which on a heavy retail page takes over a minute, and a
+     * minute does not fit in API Gateway's thirty second integration timeout.
+     *
+     * So the endpoint validates and hands off, and this does the work with a timeout
+     * that reflects how long the work actually takes.
+     */
+    const inspectWorkerFn = makeFunction("InspectWorker", fn("inspectWorker"), {
+      timeout: cdk.Duration.minutes(5),
       memory: 1024,
     });
-    props.table.grantReadData(inspectFn);
-    props.webBucket.grantPut(inspectFn);
-    inspectFn.addToRolePolicy(
+    props.table.grantReadWriteData(inspectWorkerFn);
+    props.webBucket.grantPut(inspectWorkerFn);
+    inspectWorkerFn.addToRolePolicy(
       new iam.PolicyStatement({
         actions: [
           "bedrock-agentcore:StartBrowserSession",
@@ -344,6 +355,16 @@ export class Pipeline extends Construct {
         resources: ["*"],
       }),
     );
+
+    const inspectFn = makeFunction("Inspect", fn("inspect"), {
+      timeout: cdk.Duration.seconds(20),
+      memory: 512,
+    });
+    // Validates, records, hands off. No browser and no bucket: the worker owns both,
+    // so the endpoint anyone on the internet can reach holds neither permission.
+    props.table.grantReadWriteData(inspectFn);
+    inspectFn.addEnvironment("INSPECT_WORKER_ARN", inspectWorkerFn.functionArn);
+    inspectWorkerFn.grantInvoke(inspectFn);
 
     startFn.addEnvironment("STATE_MACHINE_ARN", this.stateMachine.stateMachineArn);
     this.stateMachine.grantStartExecution(startFn);
@@ -408,6 +429,15 @@ export class Pipeline extends Construct {
       path: "/inspect",
       methods: [apigw.HttpMethod.POST],
       integration: new integrations.HttpLambdaIntegration("InspectIntegration", inspectFn),
+    });
+
+    // The caller polls this while the worker runs.
+    const inspectStatusFn = makeFunction("InspectStatus", fn("inspect"), { handler: "status" });
+    props.table.grantReadData(inspectStatusFn);
+    api.addRoutes({
+      path: "/inspections/{inspectionId}",
+      methods: [apigw.HttpMethod.GET],
+      integration: new integrations.HttpLambdaIntegration("InspectStatusIntegration", inspectStatusFn),
     });
     api.addRoutes({
       path: "/runs/{runId}",

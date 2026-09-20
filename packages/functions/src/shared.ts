@@ -466,3 +466,67 @@ export async function listRunsByJourney(journeyKey: string, limit = 100): Promis
   );
   return (result.Items ?? []) as Array<RunListRow & { ownerKey?: string }>;
 }
+
+/* --------------------------------------------------------------------------- *
+ * The free inspection.
+ *
+ * Its own item shape rather than a run record: an inspection is one page, has no
+ * personas, no attempts and no verdict, and squeezing it into the run vocabulary
+ * would make both harder to read.
+ * --------------------------------------------------------------------------- */
+
+export interface InspectionRecord {
+  inspectionId: string;
+  status: "queued" | "complete" | "failed";
+  requestedUrl: string;
+  url?: string;
+  title?: string;
+  durationMs?: number;
+  counts?: Record<string, number>;
+  tabStops?: number;
+  notTheRealPage?: unknown;
+  reportUrl?: string;
+  findings?: unknown[];
+  transcript?: unknown[];
+  limits?: string[];
+  error?: string;
+}
+
+/**
+ * Write or advance an inspection.
+ *
+ * An update rather than a put, for the same reason `putRun` is: the record is written
+ * once by the starter and again by the worker, and a put from the second would delete
+ * whatever the first knew.
+ */
+export async function putInspection(
+  record: Partial<InspectionRecord> & { inspectionId: string },
+): Promise<void> {
+  const sets: string[] = ["#ttl = :ttl", "#updatedAt = :updatedAt"];
+  const names: Record<string, string> = { "#ttl": "ttl", "#updatedAt": "updatedAt" };
+  const values: Record<string, unknown> = { ":ttl": runTtl(), ":updatedAt": new Date().toISOString() };
+
+  for (const [key, value] of Object.entries(record)) {
+    if (value === undefined) continue;
+    sets.push(`#${key} = :${key}`);
+    names[`#${key}`] = key;
+    values[`:${key}`] = value;
+  }
+
+  await ddb.send(
+    new UpdateCommand({
+      TableName: TABLE,
+      Key: { pk: `inspect#${record.inspectionId}`, sk: "meta" },
+      UpdateExpression: `SET ${sets.join(", ")}`,
+      ExpressionAttributeNames: names,
+      ExpressionAttributeValues: values,
+    }),
+  );
+}
+
+export async function getInspection(inspectionId: string): Promise<InspectionRecord | undefined> {
+  const result = await ddb.send(
+    new GetCommand({ TableName: TABLE, Key: { pk: `inspect#${inspectionId}`, sk: "meta" } }),
+  );
+  return result.Item as InspectionRecord | undefined;
+}
