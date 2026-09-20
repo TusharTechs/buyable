@@ -76,23 +76,36 @@ also achieving nothing, and the check now requires both.
 
 Honestly enumerated. Roughly in order of how quickly each would bite.
 
-### 1. Consent walls, which is every real site
+### 1. Consent walls: largely handled
 
-Measured on three real sites, none of which Buyable can currently get past cleanly:
+Buyable now deals with a consent dialog before the personas start, by declining it.
+Measured:
 
-| Site | What stands in front of the journey |
+| Site | Outcome |
 | --- | --- |
-| M&S | `alertdialog "We value your privacy"`, consent region is the second tab stop |
-| Zalando | `dialog "We'll tailor your experience"`, plus a second unnamed dialog |
-| GOV.UK | "Accept additional cookies" button, fifth tab stop |
+| M&S | declined via "Reject all cookies" (OneTrust) |
+| GOV.UK | declined via "Reject additional cookies" |
+| Currys | refused to consent: no direct decline is offered, reported as a finding |
+| Zalando | not actionable: the controls sit in a closed shadow root or a cross-origin frame |
 
-Two distinct problems. Practically, every journey wastes steps on a modal, and a
-focus-trapping consent dialog can strand the assistive persona in a way that looks
-exactly like a real barrier. Ethically, an automated agent clicking "Accept all" on a
-stranger's site manufactures a consent record for a person who does not exist, which
-is not a thing this project should do casually.
+The decision on the ethics was to decline and never accept. An automated agent
+clicking "Accept all" on a stranger's site manufactures a consent record for a person
+who does not exist. Acceptance exists as an explicit opt-in for someone scanning a
+site they own.
 
-This needs a product decision, not just code. See "Open questions" below.
+Where no genuine decline is offered, nothing is consented to. Currys presents "Allow
+all", "Allow recommended cookies only" and "Manage cookies"; the middle option agrees
+to recommended cookies and is not a decline, so Buyable closes the dialog if it can
+and otherwise leaves it, reporting that declining is harder than agreeing.
+
+The dialog is inspected before it is dismissed, because it is part of the journey.
+Unlabelled controls inside it, an unnamed dialog, and the absence of a direct decline
+are all reported.
+
+**Still open:** consent platforms that render into a closed shadow root or a
+cross-origin iframe are invisible to the accessibility tree we read, so those dialogs
+cannot be detected or dismissed. Zalando is one. Piercing frames is possible and not
+yet done.
 
 ### 2. The pull request story is not true for customers yet
 

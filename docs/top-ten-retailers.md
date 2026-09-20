@@ -101,6 +101,25 @@ under real constraints, and the verdict is whether the task could be completed.
 5. **Runs that cannot be attributed to the site are excluded** from the verdict rather
    than counted against it.
 
+### Marks and Spencer: past a consent wall
+
+```
+Journey:  dresses listing, open the first product page
+[assistive] consent: rejected via "Reject all cookies" (OneTrust)
+[baseline]  consent: rejected via "Reject all cookies" (OneTrust)
+baseline   1/1  100%
+assistive  1/1  100%   completed in 7 steps
+86 seconds, $0.017
+```
+
+The consent dialog is declined by the harness before the personas start, not by a
+persona spending its own steps on it. That is the realistic case: a returning customer
+has already made this choice and does not meet the banner every visit.
+
+What was done is recorded in the report, because it was done on the reader's behalf.
+Buyable declines and never accepts: clicking "Accept all" as an automated agent would
+manufacture a consent record for a person who does not exist.
+
 ### IKEA: a clean pass
 
 ```
