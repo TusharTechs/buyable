@@ -54,9 +54,23 @@ Three causes, found by probing deterministically with no model in the loop:
    `13 -> 76 -> 13 -> 76`, where 76 was a transient "Close toast" control. Fixed by
    re-reading the tree at the moment of acting.
 
-**These fixes are not yet verified end to end on a real site**, because the reasoning
-provider hit its account quota mid-investigation. They are verified deterministically.
-That distinction is stated rather than blurred.
+**Now verified end to end on the same real site that defeated it.** With a validated
+provider, the journey Buyable could not drive at all this morning completes:
+
+```
+demo.vercel.store, add a t-shirt to the cart
+  baseline   1/1  100%
+  assistive  1/1  100%
+  Journey Completion Rate 100%, site is the variable: no
+  148 seconds, $0.036
+```
+
+Both personas finish, and the verdict correctly declines to blame a site that is not
+at fault. Getting there took one more fix, and it was the same class of mistake as the
+others: the identical-action detector fired on four consecutive `next_button` calls
+while focus was advancing 83, 84, 85, 86. Pressing B repeatedly to move through
+buttons is what a screen reader user does. A repeat only counts as a loop if it is
+also achieving nothing, and the check now requires both.
 
 ## What is still missing for real users
 

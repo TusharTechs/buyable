@@ -60,7 +60,15 @@ const MAX_HISTORY_TURNS = 8;
  */
 const MAX_NO_PROGRESS = 4;
 
-/** How many times the identical action on the identical target may repeat. */
+/**
+ * How many times the identical action may repeat *while changing nothing*.
+ *
+ * The qualifier is load-bearing and was missing. Repeating an action is not a loop if
+ * it is getting somewhere: a screen reader user pressing B four times to move through
+ * four buttons is ordinary navigation, and the first version of this counted it as a
+ * stuck run and abandoned a healthy journey on a real storefront while focus was
+ * advancing 83, 84, 85, 86. Only a repeat that also achieves nothing is a loop.
+ */
 const MAX_IDENTICAL_ACTIONS = 3;
 
 /** A stable description of an action, for spotting repeats. */
@@ -300,7 +308,9 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           record.noProgress = changedNothing;
 
           const signature = actionSignature(decision.action);
-          identicalStreak = signature === lastSignature ? identicalStreak + 1 : 0;
+          // Only a repeat that also changed nothing counts toward the loop.
+          identicalStreak =
+            signature === lastSignature && changedNothing ? identicalStreak + 1 : 0;
           lastSignature = signature;
           noProgressStreak = changedNothing ? noProgressStreak + 1 : 0;
 

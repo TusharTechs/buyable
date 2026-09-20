@@ -114,6 +114,32 @@ function toGeminiSchema(schema: Record<string, unknown>): Schema {
   return convert(schema);
 }
 
+/**
+ * Retry transient transport failures.
+ *
+ * Two separate runs lost an attempt to a bare "fetch failed", which is a socket
+ * problem rather than anything the model said. Losing an attempt to it means a
+ * verdict rests on fewer samples than intended, so it is worth a couple of seconds to
+ * retry rather than silently narrowing the evidence.
+ */
+async function withRetry<T>(fn: () => Promise<T>, attempts = 3): Promise<T> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastError = err;
+      const message = err instanceof Error ? err.message : String(err);
+      // Only transport failures. A refusal, a quota error or a bad request is an
+      // answer, and retrying answers we dislike is how you manufacture a result.
+      const transient = /fetch failed|ECONNRESET|ETIMEDOUT|socket hang up|network/i.test(message);
+      if (!transient || attempt === attempts) throw err;
+      await new Promise((r) => setTimeout(r, 500 * 2 ** (attempt - 1)));
+    }
+  }
+  throw lastError;
+}
+
 export class GeminiProvider implements ReasoningProvider {
   readonly id: string;
   private client: GoogleGenAI;
@@ -150,7 +176,7 @@ export class GeminiProvider implements ReasoningProvider {
       { role: "user", parts },
     ];
 
-    const response = await this.client.models.generateContent({
+    const response = await withRetry(() => this.client.models.generateContent({
       model: this.modelId,
       contents,
       config: {
@@ -167,7 +193,7 @@ export class GeminiProvider implements ReasoningProvider {
           },
         },
       },
-    });
+    }));
 
     const call = response.functionCalls?.[0];
     // Reading .text when the response is a function call makes the SDK warn about
@@ -190,7 +216,7 @@ export class GeminiProvider implements ReasoningProvider {
       parameters: toGeminiSchema(FIX_TOOL_SCHEMA),
     };
 
-    const response = await this.client.models.generateContent({
+    const response = await withRetry(() => this.client.models.generateContent({
       model: this.modelId,
       contents: [{ role: "user", parts: [{ text: buildFixPrompt(request) }] }],
       config: {
@@ -206,7 +232,7 @@ export class GeminiProvider implements ReasoningProvider {
           },
         },
       },
-    });
+    }));
 
     const call = response.functionCalls?.[0];
     return {
