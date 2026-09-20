@@ -1,0 +1,213 @@
+/*
+ * The run view.
+ *
+ * A Buyable run is the only part of this product that is worth watching, and until
+ * now it was hidden behind the word "running". Three personas drive three real
+ * browsers at the same time, and the thing that makes the argument is seeing them
+ * diverge: the control moves through the checkout while the screen reader user
+ * arrives at a button that says nothing and stops.
+ *
+ * Design rules specific to this view, all of them load-bearing:
+ *
+ *  - The lanes are not a live region. A three minute run emits roughly ninety steps,
+ *    and announcing each one would talk over a screen reader user continuously for
+ *    the whole run. One polite sentence summarising the state is announced instead,
+ *    and the lanes are reachable on demand.
+ *  - Every state carries a word. The stopped lane says "stopped", not just red.
+ *  - The announcement line is the evidence, so it is set apart typographically and
+ *    quoted verbatim rather than paraphrased.
+ *  - Lanes stack on narrow screens in persona order, control first, because the
+ *    control is what makes the others mean anything.
+ */
+
+.wrap.wide { max-width: 1120px; }
+
+.theatre {
+  margin: 24px 0 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.theatre-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.theatre-head h3 { margin: 0; font-size: 15px; }
+.theatre-head .clock {
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.lanes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.lane {
+  background: var(--bg);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lane-head { padding: 14px 16px 12px; border-bottom: 1px solid var(--line); }
+.lane-head h4 { margin: 0 0 2px; font-size: 14.5px; }
+
+/* The constraint, stated as what this persona cannot do. This is the whole idea of
+   the product and it belongs on screen during the run, not in a footnote. */
+.lane-head .constraint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.lane-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 600;
+}
+.lane-state .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.lane-state.waiting { color: var(--muted); }
+.lane-state.running { color: var(--accent); }
+.lane-state.done    { color: var(--ok-ink); background: var(--ok-bg); }
+.lane-state.stopped { color: var(--bad-ink); background: var(--bad-bg); }
+.lane-state.unclear { color: var(--mixed-ink); background: var(--mixed-bg); }
+
+/* The running dot pulses, because a static dot beside the word "running" for three
+   minutes reads as a hung page. Removed entirely under reduced motion, where the
+   word carries the meaning on its own. */
+.lane-state.running .dot { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) {
+  .lane-state.running .dot { animation: none; }
+}
+
+/*
+ * Fixed height, not max-height.
+ *
+ * The step list grows for the whole of a three minute run. With a max-height the
+ * section grows with it, so the page reflows under the reader continuously and, when
+ * the replay restarts and the lanes empty, everything below jumps upward. A constant
+ * height means the run happens inside a stable frame and nothing else on the page
+ * moves while it does.
+ */
+.lane-steps {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  overflow-y: auto;
+  height: 420px;
+  flex: none;
+}
+
+.lane-steps li {
+  padding: 7px 16px;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.lane-steps li + li { border-top: 1px solid var(--line); }
+
+.lane-steps .what {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.lane-steps .n {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  flex: none;
+  min-width: 2ch;
+  text-align: right;
+}
+.lane-steps .verb { font-weight: 640; }
+.lane-steps .target { color: var(--muted); overflow-wrap: anywhere; }
+
+/* What the customer would have heard. Verbatim, set apart, never paraphrased. */
+.lane-steps .heard {
+  margin: 4px 0 0 calc(2ch + 8px);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* A control that announces nothing is the failure mode this product exists for, so
+   it is marked with a word as well as the colour. */
+.lane-steps li.silent { border-left-color: var(--bad-ink); background: var(--bad-bg); }
+.lane-steps li.silent .heard { color: var(--bad-ink); }
+.lane-steps li.refused { border-left-color: var(--mixed-ink); }
+.lane-steps li.refused .why { color: var(--mixed-ink); }
+.lane-steps .why {
+  display: block;
+  margin: 3px 0 0 calc(2ch + 8px);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.lane-empty { padding: 16px; color: var(--muted); font-size: 13px; margin: 0; }
+
+.lane-verdict {
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.lane-verdict p { margin: 0; }
+.lane-verdict .consent { color: var(--muted); font-size: 12.5px; margin-top: 6px; }
+
+/* The divergence line. Shown only once the control has finished and a constrained
+   persona has not, because that comparison is the entire verdict. */
+.divergence {
+  margin: 0;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--bad-bg);
+  color: var(--bad-ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.divergence.ok { background: var(--ok-bg); color: var(--ok-ink); }
+.divergence strong { font-weight: 700; }
+
+.replay-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 14px 0 0;
+}
+.replay-controls .hint { color: var(--muted); font-size: 13px; }
+
+/*
+ * Stacked on a phone, three 420px lanes put the comparison two screens apart, and
+ * the comparison is the entire point. Shorter lanes keep all three within reach.
+ */
+@media (max-width: 720px) {
+  .lane-steps { height: 240px; }
+}

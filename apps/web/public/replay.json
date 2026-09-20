@@ -1,0 +1,596 @@
+{
+  "source": "docs/evidence/canonical-report.json",
+  "journey": {
+    "name": "Buy the Harrier Trail in UK size 9",
+    "startUrl": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+    "goal": "Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed."
+  },
+  "createdAt": "2026-09-20T07:34:06.639Z",
+  "journeyCompletionRate": 0.3333333333333333,
+  "siteIsTheVariable": true,
+  "personas": [
+    "baseline",
+    "assistive",
+    "agent"
+  ],
+  "events": [
+    {
+      "type": "session_started",
+      "persona": "baseline",
+      "browserSessionId": "01M2YVGTG9MTVMR670RJZWMZZC"
+    },
+    {
+      "type": "session_started",
+      "persona": "assistive",
+      "browserSessionId": "01M2YVG96P6N40TKXPCXNESB87"
+    },
+    {
+      "type": "session_started",
+      "persona": "agent",
+      "browserSessionId": "01M2YVG977AAY5JN4R85KBYEH8"
+    },
+    {
+      "type": "step",
+      "persona": "agent",
+      "record": {
+        "step": 1,
+        "action": {
+          "action": "click_node",
+          "reason": "Navigate to the Harrier Trail product page.",
+          "ref": 23
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 10458,
+        "announcement": "\"Northbound Running · Shoes built for long miles\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 1,
+        "action": {
+          "action": "next_link",
+          "reason": "Move focus forward to the next link on the page."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 10460,
+        "announcement": "\"Northbound Running · Shoes built for long miles\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 1,
+        "action": {
+          "action": "click_selector",
+          "reason": "Navigate to the Harrier Trail product page",
+          "selector": "main.wrap > ul.grid > li.card:nth-of-type(1) > a.btn.secondary"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 13402
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 2,
+        "action": {
+          "action": "next_link",
+          "reason": "Move focus to the next link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 16240,
+        "announcement": "\"Skip to main content\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "agent",
+      "record": {
+        "step": 2,
+        "action": {
+          "action": "click_node",
+          "reason": "Add the Harrier Trail in UK size 9 to the basket.",
+          "ref": 19
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 16791,
+        "announcement": "\"Harrier Trail · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 2,
+        "action": {
+          "action": "click_selector",
+          "reason": "Select size 9 for the Harrier Trail shoe",
+          "selector": "fieldset > div.sizes > label:nth-of-type(3) > input"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 20181
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 3,
+        "action": {
+          "action": "next_link",
+          "reason": "Navigate forward to find the Harrier Trail product link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 21890,
+        "announcement": "\"Northbound Running\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "agent",
+      "record": {
+        "step": 3,
+        "action": {
+          "action": "click_node",
+          "reason": "Navigate to the basket to proceed to checkout.",
+          "ref": 33
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 22734,
+        "announcement": "\"Harrier Trail · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 4,
+        "action": {
+          "action": "press",
+          "reason": "Activate link to view Harrier Trail product page.",
+          "key": "Enter"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/index.html",
+        "at": 27532,
+        "announcement": "\"View Harrier Trail\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "agent",
+      "record": {
+        "step": 4,
+        "action": {
+          "action": "click_node",
+          "reason": "Click 'Continue to checkout' to proceed to the checkout page.",
+          "ref": 18
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 28526,
+        "announcement": "\"Your basket · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 3,
+        "action": {
+          "action": "click_selector",
+          "reason": "Add the Harrier Trail shoe in size 9 to the basket",
+          "selector": "div.detail > div:nth-of-type(2) > form > button.btn"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 29164
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 5,
+        "action": {
+          "action": "next_button",
+          "reason": "Move focus to the Add to basket button."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 33673,
+        "announcement": "\"Harrier Trail · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 4,
+        "action": {
+          "action": "click_selector",
+          "reason": "Go to the basket page to proceed to checkout",
+          "selector": "nav.site > ul > li:nth-of-type(2) > a"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 35780
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "agent",
+      "record": {
+        "step": 5,
+        "action": {
+          "action": "blocked",
+          "reason": "The checkout submit button has no accessible name, so its action cannot be determined without guessing.",
+          "blockedExplanation": "Cannot determine the function or label of button [33], which has no accessible name, so I cannot identify the control to complete or confirm the purchase."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+        "at": 36096,
+        "announcement": "\"Checkout · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "finished",
+      "persona": "agent",
+      "result": {
+        "persona": "agent",
+        "outcome": "blocked",
+        "completed": false,
+        "steps": [
+          {
+            "step": 1
+          },
+          {
+            "step": 2
+          },
+          {
+            "step": 3
+          },
+          {
+            "step": 4
+          },
+          {
+            "step": 5
+          }
+        ],
+        "blocker": {
+          "persona": "agent",
+          "step": 5,
+          "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+          "node": {
+            "ref": 33,
+            "parentRef": 10,
+            "role": "button",
+            "name": "",
+            "states": [],
+            "focusable": true,
+            "depth": 6,
+            "backendNodeId": 306
+          },
+          "selector": "#pay",
+          "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+          "kind": "control-without-accessible-name",
+          "wcag": [
+            "4.1.2",
+            "2.4.6"
+          ],
+          "agentExplanation": "Cannot determine the function or label of button [33], which has no accessible name, so I cannot identify the control to complete or confirm the purchase."
+        },
+        "durationMs": 36892,
+        "blindActivations": []
+      }
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 6,
+        "action": {
+          "action": "press",
+          "reason": "Add the Harrier Trail in size 9 (which is currently checked) to the basket.",
+          "key": "Enter"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 38957,
+        "announcement": "\"Add to basket\", button"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 5,
+        "action": {
+          "action": "click_selector",
+          "reason": "Proceed to checkout from the basket page",
+          "selector": "#to-checkout"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 43443
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 7,
+        "action": {
+          "action": "next_link",
+          "reason": "Move to the Basket link to proceed to checkout."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 45259,
+        "announcement": "\"Add to basket\", button"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 8,
+        "action": {
+          "action": "next_link",
+          "reason": "Move to the next link which is Basket."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 50902,
+        "announcement": "\"Shop\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "baseline",
+      "record": {
+        "step": 6,
+        "action": {
+          "action": "click_selector",
+          "reason": "Click the pay button to complete the purchase",
+          "selector": "#pay"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+        "at": 53962
+      },
+      "narration": ""
+    },
+    {
+      "type": "finished",
+      "persona": "baseline",
+      "result": {
+        "persona": "baseline",
+        "outcome": "completed",
+        "completed": true,
+        "steps": [
+          {
+            "step": 1
+          },
+          {
+            "step": 2
+          },
+          {
+            "step": 3
+          },
+          {
+            "step": 4
+          },
+          {
+            "step": 5
+          },
+          {
+            "step": 6
+          }
+        ],
+        "durationMs": 56301,
+        "blindActivations": []
+      }
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 9,
+        "action": {
+          "action": "next_link",
+          "reason": "Move to Basket link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 56512,
+        "announcement": "\"Shop\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 10,
+        "action": {
+          "action": "press",
+          "reason": "Navigate to the basket page to proceed with the purchase.",
+          "key": "Enter"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/product.html?id=harrier",
+        "at": 62049,
+        "announcement": "\"Basket\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 11,
+        "action": {
+          "action": "next_link",
+          "reason": "Move focus towards the Continue to checkout link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 68790,
+        "announcement": "\"Your basket · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 12,
+        "action": {
+          "action": "next_link",
+          "reason": "Move toward Continue to checkout link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 74472,
+        "announcement": "\"Skip to main content\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 13,
+        "action": {
+          "action": "next_link",
+          "reason": "Move focus to the next link."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 80255,
+        "announcement": "\"Northbound Running\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 14,
+        "action": {
+          "action": "press",
+          "reason": "Activate Continue to checkout link to start the checkout process.",
+          "key": "Enter"
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/cart.html",
+        "at": 85765,
+        "announcement": "\"Continue to checkout\", link"
+      },
+      "narration": ""
+    },
+    {
+      "type": "step",
+      "persona": "assistive",
+      "record": {
+        "step": 15,
+        "action": {
+          "action": "blocked",
+          "reason": "I cannot proceed because the control needed to complete the purchase has no accessible name.",
+          "blockedExplanation": "The button node [33] has no accessible name ('button (no accessible name)'), so I cannot determine what it does or whether it places the order without guessing."
+        },
+        "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+        "at": 92858,
+        "announcement": "\"Checkout · Northbound Running\", RootWebArea"
+      },
+      "narration": ""
+    },
+    {
+      "type": "finished",
+      "persona": "assistive",
+      "result": {
+        "persona": "assistive",
+        "outcome": "blocked",
+        "completed": false,
+        "steps": [
+          {
+            "step": 1
+          },
+          {
+            "step": 2
+          },
+          {
+            "step": 3
+          },
+          {
+            "step": 4
+          },
+          {
+            "step": 5
+          },
+          {
+            "step": 6
+          },
+          {
+            "step": 7
+          },
+          {
+            "step": 8
+          },
+          {
+            "step": 9
+          },
+          {
+            "step": 10
+          },
+          {
+            "step": 11
+          },
+          {
+            "step": 12
+          },
+          {
+            "step": 13
+          },
+          {
+            "step": 14
+          },
+          {
+            "step": 15
+          }
+        ],
+        "blocker": {
+          "persona": "assistive",
+          "step": 15,
+          "url": "https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html",
+          "node": {
+            "ref": 33,
+            "parentRef": 10,
+            "role": "button",
+            "name": "",
+            "states": [],
+            "focusable": true,
+            "depth": 6,
+            "backendNodeId": 310
+          },
+          "selector": "#pay",
+          "outerHtml": "<button class=\"pay-btn\" id=\"pay\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\" focusable=\"false\">\n          <rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2\"></rect>\n          <path d=\"M2 10h20\"></path>\n        </svg>\n      </button>",
+          "kind": "control-without-accessible-name",
+          "wcag": [
+            "4.1.2",
+            "2.4.6"
+          ],
+          "agentExplanation": "The button node [33] has no accessible name ('button (no accessible name)'), so I cannot determine what it does or whether it places the order without guessing."
+        },
+        "durationMs": 93461,
+        "blindActivations": []
+      }
+    }
+  ]
+}

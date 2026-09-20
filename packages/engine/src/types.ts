@@ -165,6 +165,13 @@ export interface StepRecord {
   focusedRef?: number;
   /** ms since run start */
   at: number;
+  /**
+   * What a screen reader would have spoken when focus landed here, if anything was
+   * focused. Recorded because it is the most direct evidence there is: a step that
+   * reads `(no accessible name), button` is the barrier, stated in the words the
+   * customer would have heard. Absent when nothing held focus.
+   */
+  announcement?: string;
   /** True when the page was byte-identical before and after this action. */
   noProgress?: boolean;
   /**

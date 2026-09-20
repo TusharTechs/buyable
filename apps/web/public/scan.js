@@ -66,27 +66,29 @@
     statusLine.textContent = message;
   }
 
-  var PERSONA_LABEL = {
-    baseline: "Baseline control",
-    assistive: "Screen reader user",
-    agent: "AI shopping agent"
-  };
+  /** Personas this run was started with, so lanes appear before any event arrives. */
+  var running = [];
+  /** The last sentence announced, so an unchanged state is not spoken again. */
+  var lastSpoken = "";
 
-  function renderProgress(map) {
-    progress.innerHTML = "";
-    Object.keys(map).forEach(function (persona) {
-      var li = document.createElement("li");
-      var name = document.createElement("span");
-      name.className = "persona";
-      name.textContent = PERSONA_LABEL[persona] || persona;
-      var state = document.createElement("span");
-      state.className = "state";
-      // The word is the signal. Colour, if any, is decoration on top of it.
-      state.textContent = map[persona] === "done" ? "finished" : map[persona];
-      li.appendChild(name);
-      li.appendChild(state);
-      progress.appendChild(li);
-    });
+  /**
+   * Draw the lanes, and announce only when the state actually changed.
+   *
+   * Re-announcing "still running" every six seconds for three minutes would be its
+   * own accessibility failure, in a live region on a page arguing about exactly that.
+   */
+  function renderRun(events, startedAt) {
+    if (!window.BuyableRunView) return;
+    var sentence = window.BuyableRunView.render(
+      progress,
+      running,
+      events || [],
+      (Date.now() - startedAt) / 1000
+    );
+    if (sentence !== lastSpoken) {
+      lastSpoken = sentence;
+      say(sentence);
+    }
   }
 
   function esc(v) {
@@ -130,18 +132,22 @@
         return response.json();
       })
       .then(function (data) {
-        if (data.progress) renderProgress(data.progress);
+        renderRun(data.events, startedAt);
 
         if (data.status === "complete") {
           setBusy(false);
+          lastSpoken = "";
           say("Finished. The report is ready.");
           result.hidden = false;
           result.innerHTML = "";
           var link = document.createElement("a");
           link.className = "btn";
           link.href = data.reportUrl;
-          link.textContent = "Read the report";
+          link.textContent = "Read the full report";
           result.appendChild(link);
+          // Take the keyboard to the thing that just became available, rather than
+          // leaving focus on a submit button that no longer does anything.
+          link.focus();
           return;
         }
 
@@ -162,13 +168,6 @@
           return;
         }
 
-        var seconds = Math.round(elapsed / 1000);
-        say(
-          "Still running, " +
-            seconds +
-            (seconds === 1 ? " second" : " seconds") +
-            " in. Each persona drives a real browser through the journey."
-        );
         window.setTimeout(function () {
           poll(runId, startedAt);
         }, POLL_MS);
@@ -210,9 +209,12 @@
     }
 
     setBusy(true);
+    running = personas;
+    lastSpoken = "";
     status.hidden = false;
     result.hidden = true;
     progress.innerHTML = "";
+    progress.hidden = true;
     say("Starting.");
     status.focus();
 
@@ -248,14 +250,12 @@
         if (payload.data.warnings && payload.data.warnings.length) {
           renderWarnings(payload.data.warnings);
         }
-        renderProgress(
-          payload.data.personas.reduce(function (acc, p) {
-            acc[p] = "queued";
-            return acc;
-          }, {})
-        );
+        running = payload.data.personas || personas;
+        var startedAt = Date.now();
+        renderRun([], startedAt);
         say("Started. This usually takes two to four minutes.");
-        poll(payload.data.runId, Date.now());
+        lastSpoken = "";
+        poll(payload.data.runId, startedAt);
       })
       .catch(function () {
         setBusy(false);

@@ -8,7 +8,7 @@
  */
 
 import { withBrowserSession, type PageHandle } from "./browserSession.js";
-import { isSilentControl, snapshotAxTree, type AxSnapshot } from "./axtree.js";
+import { announce, isSilentControl, snapshotAxTree, type AxSnapshot } from "./axtree.js";
 import {
   act,
   checkAssertion,
@@ -239,6 +239,7 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
             action: decision.action,
             url: observation.url,
             focusedRef: observation.focusedRef,
+            announcement: announcementAt(snapshot, observation.focusedRef),
             at: Date.now() - t0,
           };
 
@@ -500,4 +501,18 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
     opts.onEvent?.({ type: "finished", persona: persona.id, result });
     return result;
   }
+}
+
+/**
+ * What a screen reader would have said at this moment.
+ *
+ * This exists for the live run view and for the report, not for the model, which
+ * already receives the whole reading order. Showing a person the single line the
+ * customer would have heard at the step where the journey died does more work than
+ * any amount of explanation around it.
+ */
+function announcementAt(snapshot: AxSnapshot, focusedRef: number | undefined): string | undefined {
+  if (focusedRef === undefined) return undefined;
+  const node = snapshot.nodes.find((n) => n.ref === focusedRef);
+  return node ? announce(node) : undefined;
 }

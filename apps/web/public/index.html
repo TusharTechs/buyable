@@ -7,6 +7,7 @@
 <meta name="description" content="Buyable attempts a real purchase as a screen reader user, as an AI shopping agent, and as a baseline control, reports whether each one could finish, and opens the pull request that fixes it when they cannot.">
 <link rel="stylesheet" href="/report.css">
 <link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/run.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -32,12 +33,30 @@
     </p>
 
     <p class="cta-row">
-      <a class="btn" href="/sample-report.html">Read a real report</a>
-      <a class="btn secondary" href="https://github.com/TusharTechs/buyable">Source on GitHub</a>
+      <a class="btn" href="#scan-heading">Run it on your own site</a>
+      <a class="btn secondary" href="/sample-report.html">Read a real report</a>
     </p>
   </section>
 
+  <section class="wrap wide" aria-labelledby="replay-heading">
+    <h2 id="replay-heading">This is a real run. Watch where the lanes separate.</h2>
 
+    <p>
+      Three personas, the same checkout, at the same moment, each in its own browser.
+      The control has a mouse and can see the page. The other two cannot, and they get
+      as far as the pay button before they stop. Every step and every announcement
+      below was recorded by the deployed system against a live storefront.
+    </p>
+
+    <div id="replay" class="theatre" hidden></div>
+
+    <p class="replay-controls">
+      <button class="btn secondary" type="button" id="replay-play" aria-pressed="false" hidden>
+        Replay it step by step
+      </button>
+      <span class="hint" id="replay-caption"></span>
+    </p>
+  </section>
 
   <section class="wrap scan" aria-labelledby="free-heading">
     <h2 id="free-heading">Free, instant, no account</h2>
@@ -154,10 +173,20 @@
 
     <section
       id="scan-status" class="scan-status" hidden tabindex="-1"
-      aria-labelledby="scan-status-heading" aria-live="polite" aria-busy="false">
+      aria-labelledby="scan-status-heading" aria-busy="false">
       <h3 id="scan-status-heading">Progress</h3>
-      <p id="scan-status-line">Starting.</p>
-      <ul id="scan-progress" class="progress"></ul>
+      <!--
+        The live region is this one sentence, not the section around it.
+
+        A three minute run emits around ninety steps. If the lanes below sat inside a
+        live region, a screen reader user would be talked over continuously for the
+        whole run, on a page whose entire argument is that this sort of thing keeps
+        people out. aria-live is inherited by descendants and switching it back off
+        on a subtree is not reliably implemented, so the region is scoped to the
+        sentence instead. The lanes are detail, reachable on demand.
+      -->
+      <p id="scan-status-line" aria-live="polite">Starting.</p>
+      <div id="scan-progress" class="theatre" hidden></div>
       <p id="scan-result" hidden></p>
     </section>
 
@@ -370,6 +399,8 @@
   </div>
 </footer>
 <script src="/config.js"></script>
+<script src="/run-view.js"></script>
+<script src="/replay.js"></script>
 <script src="/scan.js"></script>
 <script src="/free.js"></script>
 </body>
