@@ -84,6 +84,38 @@ records a real tool call that reads **this project's own deployed stack**:
 
 Those URLs are live. Open them.
 
+## AWS's own attestation
+
+The strongest artifact here is not ours. CloudTrail recorded the call independently,
+and [`cloudtrail-evidence.txt`](cloudtrail-evidence.txt) holds it verbatim:
+
+```
+eventTime   : 2026-09-20T06:28:16Z
+eventSource : cloudformation.amazonaws.com
+eventName   : DescribeStacks
+userAgent   : aws-mcp.amazonaws.com
+sourceIP    : aws-mcp.amazonaws.com
+principal   : arn:aws:iam::756590016817:user/quorum-dev
+readOnly    : True
+stack       : Buyable
+```
+
+`userAgent` and `sourceIPAddress` both read `aws-mcp.amazonaws.com`. That is AWS
+recording that the call arrived through the AWS MCP Server rather than through the
+CLI or the SDK, against this account, on this stack, at a timestamp matching the tool
+call above to the second.
+
+Reproduce it yourself:
+
+```bash
+aws cloudtrail lookup-events --region us-west-2 \
+  --lookup-attributes AttributeKey=EventName,AttributeValue=DescribeStacks \
+  --query 'Events[].CloudTrailEvent' --output text | grep aws-mcp
+```
+
+A screenshot of a terminal can be fabricated. A CloudTrail record attributed to
+`aws-mcp.amazonaws.com` is written by AWS, which is the point of preferring it.
+
 ## A correction worth recording
 
 This was set up late, and the reason is instructive rather than flattering.

@@ -1,0 +1,9 @@
+eventTime   : 2026-09-20T06:28:16Z
+eventSource : cloudformation.amazonaws.com
+eventName   : DescribeStacks
+userAgent   : aws-mcp.amazonaws.com
+principal   : arn:aws:iam::756590016817:user/quorum-dev
+sourceIP    : aws-mcp.amazonaws.com
+readOnly    : True
+stack       : Buyable
+
