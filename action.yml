@@ -1,0 +1,131 @@
+name: Buyable
+description: Prove a customer using a screen reader, and an AI shopping agent, can still complete a revenue journey. Fails the check when they cannot and the control can.
+author: Tushar Agarwal
+
+branding:
+  icon: shopping-cart
+  color: blue
+
+inputs:
+  url:
+    description: The page the journey starts from. In a pull request this is usually the preview deployment.
+    required: true
+  goal:
+    description: What to attempt, in one sentence, the way you would tell a person.
+    required: true
+  proof:
+    description: >-
+      Text that appears on the final page of the journey and nowhere earlier. Completion
+      is checked against the live page, never taken from the model's claim, which is the
+      whole reason a Buyable result means anything.
+    required: false
+  url-matches:
+    description: A pattern the final URL must match. An alternative to `proof`, or used with it.
+    required: false
+  personas:
+    description: >-
+      Which constrained personas to run: assistive, agent, or both, comma separated.
+      The baseline control is always added, because without it a failure cannot be
+      attributed to the site.
+    required: false
+    default: assistive
+  attempts:
+    description: Attempts per persona. Results are reported as completions over attempts.
+    required: false
+    default: "1"
+  fix:
+    description: >-
+      Write the fix into the checkout when a barrier is found. The change is left in the
+      working tree and nothing is committed: opening the pull request is your workflow's
+      decision. Your source never leaves the runner.
+    required: false
+    default: "false"
+  source-root:
+    description: Where the site's source lives on the runner. Defaults to the workspace.
+    required: false
+  fail-on:
+    description: >-
+      `blocked` fails the check when a constrained persona was stopped by a barrier the
+      control got past. `never` reports and always passes.
+    required: false
+    default: blocked
+  provider:
+    description: Which reasoning provider to use. Defaults to whatever the environment is configured for.
+    required: false
+  model:
+    description: Model id, when the provider offers a choice.
+    required: false
+  artifact-dir:
+    description: Directory for report.json and fix.diff.
+    required: false
+    default: buyable-report
+
+outputs:
+  ran:
+    description: False when Buyable refused to start, for example against an anti-bot page or a sign-in wall.
+    value: ${{ steps.buyable.outputs.ran }}
+  outcome:
+    description: completed, blocked, inconclusive, not-feasible, or error.
+    value: ${{ steps.buyable.outputs.outcome }}
+  completion-rate:
+    description: Mean completion rate across the personas that produced usable attempts.
+    value: ${{ steps.buyable.outputs.completion-rate }}
+  site-is-the-variable:
+    description: True when the control completed the journey and a constrained persona did not.
+    value: ${{ steps.buyable.outputs.site-is-the-variable }}
+  blocked-persona:
+    description: The persona that was stopped.
+    value: ${{ steps.buyable.outputs.blocked-persona }}
+  selector:
+    description: A CSS selector for the element responsible.
+    value: ${{ steps.buyable.outputs.selector }}
+  wcag:
+    description: The WCAG criteria the barrier corresponds to.
+    value: ${{ steps.buyable.outputs.wcag }}
+  patch-applied:
+    description: True when a fix was written into the working tree.
+    value: ${{ steps.buyable.outputs.patch-applied }}
+  patch-file:
+    description: The file the fix was written to, relative to the source root.
+    value: ${{ steps.buyable.outputs.patch-file }}
+  report-path:
+    description: Path to the full report as JSON.
+    value: ${{ steps.buyable.outputs.report-path }}
+
+runs:
+  using: composite
+  steps:
+    # Node 22 for the native type stripping the engine relies on, so there is no build
+    # step and no bundled dist to drift out of date with the source.
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+
+    # Built rather than run from source. Node can strip types directly, but which
+    # versions do that without a flag has moved twice, and a check that stops working
+    # when the runner image updates is worse than a thirty second compile.
+    - name: Build Buyable
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: |
+        npm ci --ignore-scripts
+        npx tsc -p packages/engine/tsconfig.json
+
+    - name: Attempt the journey
+      id: buyable
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        INPUT_URL: ${{ inputs.url }}
+        INPUT_GOAL: ${{ inputs.goal }}
+        INPUT_PROOF: ${{ inputs.proof }}
+        INPUT_URL_MATCHES: ${{ inputs.url-matches }}
+        INPUT_PERSONAS: ${{ inputs.personas }}
+        INPUT_ATTEMPTS: ${{ inputs.attempts }}
+        INPUT_FIX: ${{ inputs.fix }}
+        INPUT_SOURCE_ROOT: ${{ inputs.source-root }}
+        INPUT_FAIL_ON: ${{ inputs.fail-on }}
+        INPUT_PROVIDER: ${{ inputs.provider }}
+        INPUT_MODEL: ${{ inputs.model }}
+        INPUT_ARTIFACT_DIR: ${{ github.workspace }}/${{ inputs.artifact-dir }}
+      run: node packages/engine/dist/ci-main.js

@@ -16,6 +16,7 @@
  */
 
 import { readFileSync } from "node:fs";
+import { announcementOfStep } from "../packages/engine/dist/page.js";
 
 const file = process.argv[2];
 if (!file) {
@@ -26,34 +27,6 @@ if (!file) {
 const loaded = JSON.parse(readFileSync(file, "utf8"));
 /** Bundles wrap the report; a bare report is also accepted. */
 const report = loaded.report ?? loaded;
-
-/**
- * What a screen reader announced at this step.
- *
- * Runs recorded before `announcement` existed on the step still carry it inside the
- * observation digest, which is the text the model was shown. Reading it back out is
- * preferable to leaving older evidence unusable, and it is the same string either
- * way: the digest is built from `announce()`.
- */
-function announcementOf(step) {
-  if (step.announcement) return step.announcement;
-
-  // The announced block holds anything queued since the last step, so a navigation
-  // reads "Page changed to ..." on one line and the newly focused node on the next.
-  // What belongs on the step is the node, which is the last quoted line in the block.
-  const block = /SCREEN READER ANNOUNCED:\n([\s\S]*?)\n\n/.exec(step.observationDigest ?? "");
-  if (!block) return undefined;
-  const lines = block[1]
-    .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean);
-  // Only a real announcement counts. The block can also hold "Page changed to ...",
-  // which is a note about navigation rather than something a screen reader spoke, and
-  // a live run never produces one here: `announcement` comes from announce() on the
-  // focused node, so it is always a quoted name or the no-name marker.
-  const quoted = lines.filter((l) => l.startsWith('"') || l.startsWith("(no accessible name)"));
-  return quoted.length ? quoted[quoted.length - 1] : undefined;
-}
 
 /**
  * One run per persona, chosen to represent the verdict rather than to flatter it.
@@ -91,7 +64,7 @@ for (const [persona, verdict] of Object.entries(report.verdicts ?? {})) {
         url: step.url,
         error: step.error,
         at: step.at,
-        announcement: announcementOf(step),
+        announcement: announcementOfStep(step),
       },
       narration: "",
     });

@@ -558,3 +558,31 @@ export async function checkAssertion(
 }
 
 export { snapshotAxTree };
+
+/**
+ * What a screen reader said at this step, for a report or a replay.
+ *
+ * Steps recorded from now on carry `announcement` directly, computed with announce()
+ * on the focused node. Evidence recorded before that field existed still holds the
+ * same string inside the observation digest, which is the text the model was shown,
+ * so it is read back out rather than leaving older runs unrenderable.
+ *
+ * Only a real announcement counts. The block can also hold "Page changed to ...",
+ * which is a note about navigation rather than anything a screen reader spoke.
+ */
+export function announcementOfStep(step: {
+  announcement?: string;
+  observationDigest?: string;
+}): string | undefined {
+  if (step.announcement) return step.announcement;
+
+  const block = /SCREEN READER ANNOUNCED:\n([\s\S]*?)\n\n/.exec(step.observationDigest ?? "");
+  if (!block) return undefined;
+
+  const spoken = block[1]!
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith('"') || line.startsWith("(no accessible name)"));
+
+  return spoken.length ? spoken[spoken.length - 1] : undefined;
+}

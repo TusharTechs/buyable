@@ -107,14 +107,44 @@ cross-origin iframe are invisible to the accessibility tree we read, so those di
 cannot be detected or dismissed. Zalando is one. Piercing frames is possible and not
 yet done.
 
-### 2. The pull request story is not true for customers yet
+### 2. The pull request story: true for customers now, through CI
 
-The fix loop requires Buyable to hold the site's source, which today means the
-fixture store. For a real customer it needs a GitHub App, repository permissions and a
-way to map a live URL to the source that renders it. Until that exists, Buyable
-diagnoses for everyone and remediates only for itself.
+This was the largest gap and it is closed. The fix loop needs the site's source, and
+the hosted service does not have anyone's. The expected answer was a GitHub App with
+repository permissions plus some way to map a live URL back to the code that rendered
+it, which is a lot of machinery and a lot of trust to ask for.
 
-The remediation branch already returns this honestly rather than guessing:
+Running inside the customer's own CI removes the problem instead of solving it. Their
+source is already checked out on the runner and their preview deployment already has a
+URL. Buyable drives the URL, locates the element in the checkout on the same machine,
+and writes the change into the working tree. Their workflow opens the pull request,
+from their repository, with their token. The code never leaves the runner.
+
+Shipped as `action.yml` at the repository root, with `packages/engine/src/ci.ts` as the
+entry point and [docs/ci.md](ci.md) for adoption. Verified end to end against the
+deployed fixture:
+
+```
+::error file=checkout.html,line=90::A button announces nothing, so neither a screen
+reader user nor an AI agent can tell what it does. Buyable has written a fix into
+this file.
+exit 1
+```
+
+The job summary carries the verdict table, the element, the WCAG criteria, the
+persona's own words and the full transcript including what a screen reader would have
+spoken at each step. `test/ci-summary.test.mjs` pins that output, because for a
+development team that markdown is the product.
+
+The exit code follows the same attribution rule as everything else: a build fails only
+when a constrained persona hit a barrier the control got past. A refused preflight, a
+failed browser session, or a control that could not finish either all report their
+reason and pass. This was verified too, on a run where the baseline hit a network
+error: the check reported `no usable attempts`, declined to blame the site, and exited
+zero.
+
+**Still open:** the hosted service, as opposed to the action, remains diagnosis only,
+and returns that honestly rather than guessing:
 
 > Buyable does not hold the source for this site, so it can diagnose the barrier but
 > cannot propose a verified fix.
@@ -131,24 +161,19 @@ There is no way to say "my scans", compare a journey over time, or stop a collea
 seeing another team's results. A scan is a one-off with no memory, which means the
 regression story, arguably the most valuable one, does not exist.
 
-### 5. No CI integration
-
-For a development team the product is a check on every pull request, not a web form.
-The API supports this; the GitHub Action does not exist.
-
-### 6. Narrow blocker taxonomy
+### 5. Narrow blocker taxonomy
 
 The classifier handles seven kinds and the fix generator is reliable on one: a control
 with no accessible name. Focus traps, reading order, and anything needing judgement
 about page structure are recognised at best and never repaired.
 
-### 7. Untested territory
+### 6. Untested territory
 
 No evidence either way for: login-gated journeys, bot protection such as Turnstile,
 multi-step forms with validation, locale and currency switching, or anything behind a
 paywall. Each is common and each could fail in its own way.
 
-### 8. Cost
+### 7. Cost
 
 Roughly $1.10 of model spend per three-persona, three-attempt journey. Fine for a
 pull request check, expensive for scanning a hundred journeys nightly. Cheaper models

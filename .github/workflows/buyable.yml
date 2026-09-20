@@ -1,0 +1,65 @@
+# Buyable checking its own storefront.
+#
+# The fixture ships with one deliberate defect: the pay button is an icon-only button
+# whose only content is an aria-hidden icon, so it has no accessible name. This
+# workflow is how we find out whether the check still catches it, on a real deployment,
+# without anyone remembering to look.
+#
+# It needs AWS credentials for the AgentCore browser and a key for the reasoning
+# provider, so it skips rather than fails when those are not configured. A check that
+# goes red because a fork has no secrets teaches people to ignore red.
+
+name: Buyable
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "apps/demo-store/**"
+      - "packages/engine/**"
+      - "action.yml"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  can-a-customer-finish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Are the credentials configured?
+        id: secrets
+        run: |
+          if [ -n "${{ secrets.AWS_ROLE_ARN }}" ] && [ -n "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Buyable needs AWS and provider credentials. Skipping rather than failing."
+          fi
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        if: steps.secrets.outputs.present == 'true'
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-west-2
+
+      - name: Can a screen reader user complete the checkout?
+        if: steps.secrets.outputs.present == 'true'
+        uses: ./
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        with:
+          url: https://d2dvlfc6rcbvw8.cloudfront.net/index.html
+          goal: Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed
+          proof: Order confirmed
+          personas: assistive
+          source-root: apps/demo-store/public
+          fix: true
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.secrets.outputs.present == 'true'
+        with:
+          name: buyable-report
+          path: buyable-report/

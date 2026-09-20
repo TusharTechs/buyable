@@ -374,6 +374,52 @@
     </ol>
   </section>
 
+  <section class="wrap" aria-labelledby="ci-heading">
+    <h2 id="ci-heading">Where this actually belongs: on the pull request</h2>
+
+    <p>
+      A web form is how you try Buyable. It is not how you use it. For a team that owns
+      a checkout, the product is a check that runs against the preview deployment on
+      every change and says whether a customer using a screen reader can still finish.
+    </p>
+
+    <pre class="diff"><code>- uses: TusharTechs/buyable@main
+  with:
+    url: ${{ steps.deploy.outputs.preview-url }}/checkout
+    goal: Add a product to the basket and reach the checkout page
+    proof: Order summary
+    fix: true</code></pre>
+
+    <p>
+      This also closes the gap that mattered most. Buyable could diagnose anybody's
+      site and fix only its own, because fixing needs the source and we do not have
+      anyone else's. The usual answer is a GitHub App with repository permissions and
+      some way to map a live URL back to the code that rendered it, which is a great
+      deal of machinery and a great deal of trust to ask for on the strength of a scan.
+    </p>
+
+    <p class="control-note">
+      Running inside your CI removes the problem rather than solving it. Your source is
+      already checked out. Your preview deployment already has a URL. Buyable drives
+      that URL, finds the element responsible, locates it in the checkout sitting on the
+      same machine, and writes the change into the working tree. <strong>Your workflow
+      opens the pull request, from your repository, with your token.</strong> The code
+      never leaves the runner and Buyable never needs access to it.
+    </p>
+
+    <p>
+      The check fails for one thing only: a persona stopped by a barrier that the
+      control got past. A preview serving an anti-bot page, a browser session that fell
+      over, a control that could not finish either: each of those reports its reason and
+      passes. A check that goes red for infrastructure noise is switched off within a
+      week, and then it is protecting nobody.
+    </p>
+
+    <p>
+      <a href="https://github.com/TusharTechs/buyable/blob/main/docs/ci.md">How to add it to your pipeline</a>
+    </p>
+  </section>
+
   <section class="wrap" aria-labelledby="stack-heading">
     <h2 id="stack-heading">Built on</h2>
     <p>
