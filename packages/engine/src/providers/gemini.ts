@@ -44,12 +44,25 @@ import {
   type ReasoningResult,
 } from "../reasoning.js";
 
-export const DEFAULT_GEMINI_MODEL = process.env.BUYABLE_GEMINI_MODEL ?? "gemini-3-flash";
+/**
+ * Default model.
+ *
+ * `gemini-3.8-flash` rather than a Flash-Lite, on evidence. Asked, as the assistive
+ * persona, what to do with a checkout whose only control was a button with no
+ * accessible name, `gemini-flash-lite-latest` pressed it anyway and explained it was
+ * "activating the unnamed button to proceed with the checkout". `gemini-3.8-flash`
+ * refused and said why. The cheaper model has roughly twenty-five times the daily
+ * allowance and cannot be used, because a model that guesses past unlabelled controls
+ * reports disabled shoppers completing purchases they cannot complete.
+ */
+export const DEFAULT_GEMINI_MODEL = process.env.BUYABLE_GEMINI_MODEL ?? "gemini-3.8-flash";
 
 /** Published list price, USD per million tokens. Free tier bills nothing and caps instead. */
 const GEMINI_RATES: Record<string, { input: number; output: number }> = {
-  "gemini-3-flash": { input: 0.3, output: 2.5 },
-  "gemini-3.1-flash-lite": { input: 0.1, output: 0.4 },
+  "gemini-flash-latest": { input: 0.3, output: 2.5 },
+  "gemini-flash-lite-latest": { input: 0.1, output: 0.4 },
+  "gemini-3.8-flash": { input: 0.3, output: 2.5 },
+  "gemini-3.5-flash-lite": { input: 0.1, output: 0.4 },
   "gemini-2.5-flash": { input: 0.3, output: 2.5 },
 };
 
@@ -157,7 +170,10 @@ export class GeminiProvider implements ReasoningProvider {
     });
 
     const call = response.functionCalls?.[0];
-    const narration = (response.text ?? "").trim();
+    // Reading .text when the response is a function call makes the SDK warn about
+    // concatenating non-text parts, on every single turn. The narration is optional,
+    // so only reach for it when there is actually text to read.
+    const narration = call ? "" : (response.text ?? "").trim();
 
     return {
       action: coerceAction((call?.args as Record<string, unknown>) ?? {}, narration),

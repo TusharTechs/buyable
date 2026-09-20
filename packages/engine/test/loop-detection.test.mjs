@@ -123,6 +123,23 @@ describe("a persona that stops making progress", () => {
 });
 
 describe("the page fingerprint", () => {
+  test("treats a focus move as progress", async () => {
+    const { pageFingerprint } = await import("../dist/page.js");
+    const node = (ref, role, name) => ({ ref, role, name, states: [], focusable: true, depth: 1 });
+    const nodes = [node(0, "link", "Shop"), node(1, "link", "Basket")];
+
+    const onFirst = { nodes, focusedRef: 0, backendByRef: new Map(), tabOrder: [0, 1] };
+    const onSecond = { nodes, focusedRef: 1, backendByRef: new Map(), tabOrder: [0, 1] };
+
+    // Tab is how a keyboard user gets anywhere. Treating it as no progress abandoned
+    // healthy runs after four consecutive tabs.
+    assert.notEqual(
+      pageFingerprint("https://x.test/", onFirst),
+      pageFingerprint("https://x.test/", onSecond),
+      "moving focus must count as progress",
+    );
+  });
+
   test("distinguishes a changed accessibility tree from an unchanged one", async () => {
     const { pageFingerprint } = await import("../dist/page.js");
 

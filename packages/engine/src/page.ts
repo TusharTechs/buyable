@@ -234,8 +234,16 @@ async function settle(page: PageHandle, ms = 700): Promise<void> {
  * URL alone is not enough: a single page application changes everything on screen
  * without touching the address bar, so a URL-only check reports "nothing happened"
  * through an entire checkout. This hashes the accessibility tree instead, which is
- * both what the constrained personas actually perceive and what changes when the
- * page meaningfully changes.
+ * both what the constrained personas actually perceive and what changes when the page
+ * meaningfully changes.
+ *
+ * Focus is part of the fingerprint, and leaving it out was a real bug rather than an
+ * oversight worth glossing. Moving focus is the *primary* navigation action for a
+ * keyboard or screen reader user: tab, tab, tab is how they get anywhere. Without
+ * focus in the hash, every one of those registered as "nothing changed", and four
+ * consecutive tabs tripped the no-progress detector and abandoned a perfectly healthy
+ * run. A loop detector that treats a screen reader user's main action as making no
+ * progress is worse than no loop detector at all.
  */
 export function pageFingerprint(url: string, snapshot: AxSnapshot): string {
   const shape = snapshot.nodes
@@ -243,7 +251,7 @@ export function pageFingerprint(url: string, snapshot: AxSnapshot): string {
     .join("\n");
   let hash = 5381;
   for (let i = 0; i < shape.length; i++) hash = ((hash << 5) + hash + shape.charCodeAt(i)) | 0;
-  return `${url}#${hash}#${snapshot.nodes.length}`;
+  return `${url}#${hash}#${snapshot.nodes.length}#focus=${snapshot.focusedRef ?? "none"}`;
 }
 
 export interface ActResult {

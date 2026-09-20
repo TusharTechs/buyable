@@ -132,12 +132,30 @@ export async function locateBlocker(args: {
 
   let node: AxNode | undefined;
 
-  const refMatch = agentExplanation.match(/\[?(?:node|ref)\]?\s*\[?(\d+)\]?/i);
-  if (refMatch?.[1]) {
-    node = snapshot.nodes.find((n) => n.ref === Number(refMatch[1]));
-  }
+  // Every bracketed number the model mentioned, in the order it mentioned them.
+  //
+  // The previous version required the word "node" or "ref" immediately before the
+  // number, which was really a transcription of how one model happens to phrase
+  // things. A different model wrote "Button [33] has no accessible name" and the
+  // match failed, so a run that had correctly identified the barrier reported no
+  // element at all. Model-specific phrasing has no business being load-bearing in
+  // code that is meant to work with any of them.
+  const mentioned = [...agentExplanation.matchAll(/\[(\d+)\]/g)]
+    .map((m) => Number(m[1]))
+    .filter((n) => Number.isFinite(n));
+
+  const mentionedNodes = mentioned
+    .map((ref) => snapshot.nodes.find((n) => n.ref === ref))
+    .filter((n): n is AxNode => n !== undefined);
+
+  // A control that announces nothing is what we are looking for, so prefer one of
+  // those over whichever number happened to be written first.
+  node = mentionedNodes.find(isSilentControl) ?? mentionedNodes[0];
+
   if (!node && snapshot.focusedRef !== undefined) {
-    node = snapshot.nodes.find((n) => n.ref === snapshot.focusedRef);
+    const focused = snapshot.nodes.find((n) => n.ref === snapshot.focusedRef);
+    // Focus on the document root tells us nothing; keep looking.
+    if (focused && focused.role !== "RootWebArea") node = focused;
   }
   if (!node) {
     node = snapshot.nodes.find(isSilentControl);
