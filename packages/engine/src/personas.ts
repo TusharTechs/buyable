@@ -22,7 +22,7 @@ export const PERSONAS: Record<PersonaId, Persona> = {
     standsFor: "A sighted customer using a mouse, with no assistive technology.",
     perceive: { dom: true, vision: true, accessibilityTree: false, structuredData: true },
     act: { pointer: true, keyboard: true, accessibilityNodeRef: false, quickNav: false },
-    maxSteps: 24,
+    maxSteps: 32,
   },
 
   assistive: {
@@ -34,7 +34,10 @@ export const PERSONAS: Record<PersonaId, Persona> = {
       "A customer using a screen reader, or anyone who cannot use a mouse and navigates by Tab and Enter.",
     perceive: { dom: false, vision: false, accessibilityTree: true, structuredData: false },
     act: { pointer: false, keyboard: true, accessibilityNodeRef: false, quickNav: true },
-    maxSteps: 34,
+    // Raised from 34 after a real retail search page, with 159 tab stops, exhausted
+    // the budget while still navigating normally. A real screen reader user has no
+    // step limit, and ours should not be tight enough to look like a site's fault.
+    maxSteps: 48,
   },
 
   agent: {
@@ -46,7 +49,7 @@ export const PERSONAS: Record<PersonaId, Persona> = {
       "An AI shopping agent acting for a customer, which reads the same accessibility tree a screen reader does.",
     perceive: { dom: false, vision: false, accessibilityTree: true, structuredData: true },
     act: { pointer: false, keyboard: true, accessibilityNodeRef: true, quickNav: true },
-    maxSteps: 28,
+    maxSteps: 40,
   },
 };
 

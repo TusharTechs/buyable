@@ -376,27 +376,45 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
           }
         }
 
-        // Out of steps. Record where it got stuck so the report is still actionable.
+        // Out of steps. Whether that says anything about the site depends entirely on
+        // whether a real barrier was found, and usually it has not been.
         const snapshot = await snapshotAxTree(page);
+        const finalUrl = await currentUrl(page);
         const blocker = await locateBlocker({
           page,
           snapshot,
           persona: persona.id,
           step: persona.maxSteps,
-          url: opts.journey.startUrl,
-          agentExplanation: `Ran out of steps after ${persona.maxSteps} turns without reaching the goal. Last URL was ${await currentUrl(page)}.`,
+          url: finalUrl,
+          agentExplanation: `Ran out of steps after ${persona.maxSteps} turns without reaching the goal. Last URL was ${finalUrl}.`,
         });
+
+        // A blocker classified as "unknown" is not a located barrier, it is whatever
+        // the fallback happened to land on. Reporting a run like that as a site
+        // failure is an accusation we cannot support, and it very nearly went out
+        // against a real retailer: the persona was navigating a large search results
+        // page perfectly well, ran out of its step budget, and the "barrier" recorded
+        // against the site was a product heading.
+        //
+        // A large site simply needs more steps than our fixture does. That is our
+        // limit, not theirs.
+        const foundRealBarrier = blocker.kind !== "unknown";
 
         const result: PersonaRunResult = {
           ...base,
-          outcome: "exhausted",
+          outcome: foundRealBarrier ? "exhausted" : "inconclusive",
           completed: false,
           steps,
-          blocker,
+          blocker: foundRealBarrier ? blocker : undefined,
           inputTokens,
           outputTokens,
           blindActivations,
           durationMs: Date.now() - t0,
+          finalUrl,
+          errorMessage: foundRealBarrier
+            ? undefined
+            : `Ran out of steps after ${persona.maxSteps} turns while still making progress, and no barrier was identified. ` +
+              `This says nothing about the site: the step budget was the limit, so the run is excluded from the verdict rather than counted against it.`,
         };
         opts.onEvent?.({ type: "finished", persona: persona.id, result });
         return result;
