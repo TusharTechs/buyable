@@ -483,6 +483,31 @@ export function renderObservation(obs: Observation, snapshot: AxSnapshot, person
   return parts.join("\n");
 }
 
+/**
+ * Did the site hand us an error page rather than a shop?
+ *
+ * Distinct from the preflight, which looks before a journey starts. This catches a
+ * site falling over partway through, which is common under the request rate a
+ * multi-persona run produces and is emphatically not an accessibility finding.
+ */
+export async function looksLikeErrorPage(page: PageHandle): Promise<string | undefined> {
+  const [title, text] = await Promise.all([pageTitle(page), pageText(page)]);
+  const haystack = `${title} ${text.slice(0, 2000)}`;
+
+  const patterns: Array<[RegExp, string]> = [
+    [/\b50[0234]\b[^.]{0,40}(error|unavailable|gateway|timeout)/i, "server error"],
+    [/service unavailable|temporarily unavailable|try again later/i, "service unavailable"],
+    [/\b404\b|page not found|cannot be found/i, "page not found"],
+    [/too many requests|rate limit|slow down/i, "rate limited"],
+    [/something went wrong|an error occurred/i, "error page"],
+  ];
+
+  for (const [pattern, label] of patterns) {
+    if (pattern.test(haystack)) return label;
+  }
+  return undefined;
+}
+
 export interface AssertionResult {
   passed: boolean;
   detail: string;

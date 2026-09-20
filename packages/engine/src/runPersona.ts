@@ -13,6 +13,7 @@ import {
   act,
   checkAssertion,
   currentUrl,
+  looksLikeErrorPage,
   observe,
   pageFingerprint,
   renderObservation,
@@ -250,6 +251,27 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
             steps.push(record);
             opts.onEvent?.({ type: "step", persona: persona.id, record, narration: decision.narration });
 
+            // A site that returned an error page did not exclude anyone, it fell over.
+            // Amazon answered one real run with a 503 mid-journey, and without this
+            // that would have been filed as an accessibility barrier.
+            const serverError = await looksLikeErrorPage(page);
+            if (serverError) {
+              const result: PersonaRunResult = {
+                ...base,
+                outcome: "inconclusive",
+                completed: false,
+                steps,
+                inputTokens,
+                outputTokens,
+                blindActivations,
+                durationMs: Date.now() - t0,
+                finalUrl: observation.url,
+                errorMessage: `The site returned an error page during the journey (${serverError}). That is the site being temporarily unavailable rather than excluding anyone, so this run is excluded from the verdict.`,
+              };
+              opts.onEvent?.({ type: "finished", persona: persona.id, result });
+              return result;
+            }
+
             const explanation =
               decision.action.blockedExplanation || decision.action.reason || decision.narration;
             const blocker = await locateBlocker({
@@ -398,7 +420,16 @@ export async function runPersona(opts: RunPersonaOptions): Promise<PersonaRunRes
         //
         // A large site simply needs more steps than our fixture does. That is our
         // limit, not theirs.
-        const foundRealBarrier = blocker.kind !== "unknown";
+        //
+        // The baseline persona can never be blocked by an accessibility barrier, and
+        // this is not a technicality. It sees the rendered DOM and clicks wherever it
+        // likes, so a missing label or an unnamed control cannot stop it by
+        // definition. When it fails, the cause is our step budget or the site being
+        // broken, never accessibility. A real run once attributed an exhausted
+        // baseline to an unlabelled sort dropdown, which was a genuine defect on that
+        // site and had nothing whatever to do with why the control ran out of turns.
+        const barrierCouldAffectThisPersona = !persona.perceive.dom && !persona.act.pointer;
+        const foundRealBarrier = blocker.kind !== "unknown" && barrierCouldAffectThisPersona;
 
         const result: PersonaRunResult = {
           ...base,
