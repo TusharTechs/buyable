@@ -18,6 +18,7 @@ import type {
   PersonaVerdict,
 } from "./types.js";
 import { describeBlocker } from "./blocker.js";
+import { PERSONAS } from "./personas.js";
 
 /** Schema version, so old bundles stay readable when the shape changes. */
 export const EVIDENCE_SCHEMA = "buyable.evidence.v1";
@@ -190,6 +191,36 @@ export function buildEvidenceBundle(args: {
         "Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount.",
     },
   };
+}
+
+/**
+ * Build a bundle straight from a report, filling the method section from the persona
+ * definitions rather than making every caller restate them.
+ */
+export function bundleFromReport(args: {
+  report: JourneyReport;
+  providerId: string;
+  attemptsPerPersona: number;
+  fix?: FixVerification;
+}): EvidenceBundle {
+  const personas = (Object.keys(args.report.verdicts) as PersonaId[]).map((id) => {
+    const p = PERSONAS[id];
+    const perceives = Object.entries(p.perceive)
+      .filter(([, allowed]) => allowed)
+      .map(([name]) => name);
+    const canDo = Object.entries(p.act)
+      .filter(([, allowed]) => allowed)
+      .map(([name]) => name);
+    return { id, standsFor: p.standsFor, perceives, canDo };
+  });
+
+  return buildEvidenceBundle({
+    report: args.report,
+    providerId: args.providerId,
+    personas,
+    attemptsPerPersona: args.attemptsPerPersona,
+    fix: args.fix,
+  });
 }
 
 /** Object keys, laid out so a bundle is browsable by hand in the console. */

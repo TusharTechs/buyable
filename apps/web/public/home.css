@@ -1,0 +1,81 @@
+/* Landing page only. Shared primitives live in report.css. */
+
+main { padding: 0 0 72px; }
+
+.hero { padding: 56px 20px 40px; }
+.hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+  margin: 0 0 20px;
+}
+.lede { font-size: clamp(17px, 2.2vw, 19px); color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
+
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 0; }
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn:hover { text-decoration: underline; }
+.btn.secondary { background: transparent; color: var(--accent); }
+
+.quote {
+  margin: 24px 0;
+  padding: 18px 22px;
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+.quote p { margin: 0 0 10px; }
+.quote footer { color: var(--muted); font-size: 14px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 20px 0 24px;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.card h3 { margin: 0 0 10px; font-size: 16px; }
+.card p { margin: 0 0 10px; font-size: 15px; }
+.card .src { color: var(--muted); font-size: 13px; margin: 0; }
+
+/* list-style: none removes list semantics in Safari with VoiceOver, so the markup
+   restates role="list". See the comment in index.html. */
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 20px 0 0; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 46px;
+  margin-bottom: 26px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+.steps h3 { margin: 0 0 6px; font-size: 16px; }
+.steps p { margin: 0; color: var(--muted); }

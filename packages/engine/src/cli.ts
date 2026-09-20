@@ -17,6 +17,8 @@ import { createProvider } from "./providers/index.js";
 import { describeBlocker } from "./blocker.js";
 import { verifyFix } from "./verifyFix.js";
 import { loadInfrastructure } from "./config.js";
+import { bundleFromReport, renderSummaryMarkdown } from "./evidence.js";
+import { renderReportHtml } from "./renderReport.js";
 import { PatchRefused } from "./patch.js";
 import { PERSONA_IDS, type PersonaId } from "./types.js";
 
@@ -149,6 +151,8 @@ console.log(`  Model cost:              $${report.costUsd.toFixed(4)}`);
  * on a journey that already completes, and generating a patch for a site that is
  * not broken is how tools earn a reputation for noise.
  * ------------------------------------------------------------------------- */
+let verification: Awaited<ReturnType<typeof verifyFix>> | undefined;
+
 if (arg("fix") !== undefined) {
   const failing = personas
     .map((p) => report.verdicts[p])
@@ -170,7 +174,7 @@ if (arg("fix") !== undefined) {
     console.log(bar);
 
     try {
-      const verification = await verifyFix({
+      verification = await verifyFix({
         region: process.env.AWS_REGION ?? "us-west-2",
         provider,
         journey,
@@ -208,7 +212,9 @@ if (arg("fix") !== undefined) {
       });
 
       console.log(`\n${bar}`);
-      console.log(`  ${failing.persona}: ${Math.round(verification.before.rate * 100)}% -> ${Math.round(verification.after.rate * 100)}%`);
+      console.log(
+        `  ${failing.persona}: ${Math.round(verification.before.rate * 100)}% -> ${Math.round(verification.after.rate * 100)}%`,
+      );
       console.log(`  Fix proven: ${verification.proven ? "YES" : "NO"}`);
       if (!verification.proven) {
         console.log(`  The patch applied but the journey still does not complete, so it is`);
@@ -228,8 +234,43 @@ if (arg("fix") !== undefined) {
   }
 }
 
+/* ---------------------------------------------------------------------------
+ * Outputs.
+ *
+ * The bundle is the artifact that matters. It carries method alongside result, so a
+ * reader can see which provider decided the actions, how many attempts were made and
+ * why the baseline persona is a control, rather than having to take the numbers on
+ * trust. The HTML page is a rendering of that same bundle and never of anything else.
+ * ------------------------------------------------------------------------- */
+const bundle = bundleFromReport({
+  report,
+  providerId: provider.id,
+  attemptsPerPersona: Number(arg("attempts", "1")),
+  fix: verification
+    ? {
+        patch: verification.patch,
+        before: verification.before,
+        after: verification.after,
+        delta: verification.delta,
+        proven: verification.proven,
+      }
+    : undefined,
+});
+
 const out = arg("out");
 if (out) {
-  writeFileSync(out, JSON.stringify(report, null, 2));
+  writeFileSync(out, JSON.stringify({ report, bundle, verification }, null, 2));
   console.log(`\n  Report written to ${out}`);
+}
+
+const html = arg("html");
+if (html) {
+  writeFileSync(html, renderReportHtml(bundle, { cssHref: arg("css") ?? "/report.css" }));
+  console.log(`  Page written to ${html}`);
+}
+
+const markdown = arg("markdown");
+if (markdown) {
+  writeFileSync(markdown, renderSummaryMarkdown(bundle));
+  console.log(`  Summary written to ${markdown}`);
 }

@@ -26,6 +26,21 @@ export class BuyableStack extends cdk.Stack {
     });
 
     /* ---------------------------------------------------------------------
+     * The Buyable web app.
+     *
+     * Static, server-rendered HTML rather than a client-side app. The hackathon
+     * ship gate requires the submission to be reachable by an automated scoring
+     * system as well as by human judges, and a page that renders nothing without
+     * JavaScript is a page that might be scored as empty. A tool that measures
+     * whether pages are readable to assistive technology should also not ship one
+     * that needs a framework to say anything at all.
+     * ------------------------------------------------------------------- */
+    const web = new StaticSite(this, "Web", {
+      sourcePath: path.join(repoRoot, "apps", "web", "public"),
+      comment: "Buyable web app",
+    });
+
+    /* ---------------------------------------------------------------------
      * Shadow builds.
      *
      * A patched copy of a site, published so the same journey can be re-run
@@ -75,6 +90,11 @@ export class BuyableStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
+    new cdk.CfnOutput(this, "WebUrl", {
+      value: web.url,
+      description: "Public URL of the Buyable web app, which is the ship gate target",
+    });
+    new cdk.CfnOutput(this, "WebBucketName", { value: web.bucket.bucketName });
     new cdk.CfnOutput(this, "DemoStoreUrl", {
       value: demoStore.url,
       description: "Public URL of the fixture store under test",

@@ -10,5 +10,7 @@ export * from "./evidence.js";
 export * from "./patch.js";
 export * from "./shadow.js";
 export * from "./verifyFix.js";
+export * from "./renderReport.js";
+export * from "./config.js";
 export * from "./runPersona.js";
 export * from "./runJourney.js";

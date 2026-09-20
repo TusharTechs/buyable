@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buyable, proof that a customer can actually finish</title>
+<meta name="description" content="Buyable attempts a real purchase as a screen reader user, as an AI shopping agent, and as a baseline control, reports whether each one could finish, and opens the pull request that fixes it when they cannot.">
+<link rel="stylesheet" href="/report.css">
+<link rel="stylesheet" href="/home.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Buyable</a>
+    <p class="tagline">Proof that a customer can finish</p>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-heading">
+    <h1 id="hero-heading">Every tool tells you how many rules your site breaks. None of them tell you whether anyone can actually buy.</h1>
+
+    <p class="lede">
+      Buyable takes a real revenue journey, a checkout, a booking, an application, and
+      attempts it three times over: as someone using a screen reader, as an AI shopping
+      agent, and as a sighted customer with a mouse. It reports one number. When a
+      journey cannot be completed, it finds the element responsible, writes the patch,
+      and re-runs the journey against a build containing that patch to prove the fix
+      works.
+    </p>
+
+    <p class="cta-row">
+      <a class="btn" href="/sample-report.html">Read a real report</a>
+      <a class="btn secondary" href="https://github.com/TusharTechs/buyable">Source on GitHub</a>
+    </p>
+  </section>
+
+  <section class="wrap" aria-labelledby="result-heading">
+    <h2 id="result-heading">A worked example</h2>
+
+    <p>
+      This is a real run against a live storefront with one deliberate defect: the pay
+      button is an icon-only button whose only content is an <code>aria-hidden</code>
+      icon, so it has no accessible name. A rule scanner reports it as one
+      low-severity item among dozens. Measured by task completion it is total.
+    </p>
+
+    <table>
+      <caption>Verdict on the checkout journey, completions as a fraction of attempts</caption>
+      <thead>
+        <tr>
+          <th scope="col">Persona</th>
+          <th scope="col" class="num">Completed</th>
+          <th scope="col">Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">baseline<span class="blurb">A sighted customer using a mouse. This is the control.</span></th>
+          <td class="num">1 of 1</td>
+          <td><span class="pill ok">Completed</span></td>
+        </tr>
+        <tr>
+          <th scope="row">assistive<span class="blurb">A customer using a screen reader, or anyone who cannot use a mouse.</span></th>
+          <td class="num">0 of 1</td>
+          <td><span class="pill bad">Never completed</span></td>
+        </tr>
+        <tr>
+          <th scope="row">agent<span class="blurb">An AI shopping agent, which reads the same accessibility tree a screen reader does.</span></th>
+          <td class="num">0 of 1</td>
+          <td><span class="pill bad">Never completed</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="control-note">
+      The baseline control completed this journey every time and the constrained
+      personas never did. <strong>The site is the variable, not the model.</strong>
+      That control is what separates a measurement from an accusation.
+    </p>
+
+    <blockquote class="quote">
+      <p>
+        I am focused on node [33], a button with no accessible name. The button
+        announces nothing to a screen reader user, so I cannot determine what action it
+        performs. I need to know what this button does to proceed with completing the
+        purchase.
+      </p>
+      <footer>The assistive persona, at the payment step, recorded verbatim.</footer>
+    </blockquote>
+
+    <p>
+      Buyable then located the element, proposed
+      <code>aria-label="Confirm payment"</code>, published a patched build, and re-ran
+      the same journey as the same persona against it. Completion moved from
+      <strong>0 percent to 100 percent</strong>. That re-run is the only thing treated
+      as proof: a patch that applies cleanly and changes nothing is reported as
+      unproven.
+    </p>
+  </section>
+
+  <section class="wrap" aria-labelledby="why-heading">
+    <h2 id="why-heading">Why this is two problems, not one</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3>People</h3>
+        <p>
+          55 percent of online shoppers with disabilities have abandoned a purchase
+          because of accessibility barriers. In the UK alone that is 4.3 million
+          shoppers and around 17 billion pounds of spend walking away.
+        </p>
+        <p class="src">Click-Away Pound research</p>
+      </article>
+
+      <article class="card">
+        <h3>Agents</h3>
+        <p>
+          AI agents read the same accessibility tree a screen reader does. A CHI 2026
+          study from UC Berkeley and the University of Michigan measured agent task
+          success falling from 78 percent to 42 percent on sites with a degraded
+          accessibility tree.
+        </p>
+        <p class="src">A11y-CUA, CHI 2026</p>
+      </article>
+
+      <article class="card">
+        <h3>Law</h3>
+        <p>
+          The European Accessibility Act has been enforceable across all 27 member
+          states since June 2025. In June 2026 a French court ordered Carrefour to make
+          its e-commerce site and app accessible within six months.
+        </p>
+        <p class="src">EAA enforcement, 2025 onward</p>
+      </article>
+    </div>
+
+    <p>
+      The same missing attribute blocks both constituencies. One fix, two revenue
+      channels, and a dated record for the regulator.
+    </p>
+  </section>
+
+  <section class="wrap" aria-labelledby="how-heading">
+    <h2 id="how-heading">How it works</h2>
+
+    <!--
+      role="list" is not redundant here. Safari with VoiceOver strips list semantics
+      from any list whose list-style is none, which is exactly what .steps does, and
+      the count of items stops being announced. Restating the role restores it.
+      Caught by running tools/inspect-axtree.mjs against this page.
+    -->
+    <ol class="steps" role="list">
+      <li>
+        <h3>A persona is a constraint, not a prompt</h3>
+        <p>
+          Each persona is a hard limit on what can be perceived and done, enforced in
+          the tool layer. The assistive persona has no code path to a pointer click, so
+          it cannot take one, and the schema it is given never offers the option. A
+          model cannot try harder past a capability it does not have.
+        </p>
+      </li>
+      <li>
+        <h3>Completion is judged independently</h3>
+        <p>
+          Whether the journey finished is checked against the live page, never taken
+          from the model's own claim. A model that says it succeeded without satisfying
+          the assertion is recorded as a false completion, which is a distinct and more
+          interesting outcome than a plain failure.
+        </p>
+      </li>
+      <li>
+        <h3>Results are fractions, never anecdotes</h3>
+        <p>
+          Every persona runs the journey repeatedly and results are reported as
+          completions over attempts. Accusing a real website of excluding disabled
+          customers on the strength of one flaky run would be indefensible.
+        </p>
+      </li>
+      <li>
+        <h3>A fix is only a fix once the number moves</h3>
+        <p>
+          Patches are anchored replacements that must match the source exactly once, or
+          they are refused. The patched build is published and the journey is re-run
+          against it. A plausible diff is a hypothesis; the re-run is the evidence.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="stack-heading">
+    <h2 id="stack-heading">Built on</h2>
+    <p>
+      Amazon Bedrock AgentCore Browser gives every persona its own sandboxed, isolated
+      browser session, driven over the Chrome DevTools Protocol so the accessibility
+      tree arrives with full fidelity. Step Functions fans the personas out in
+      parallel, Lambda runs each step, DynamoDB holds run state, and every report is
+      written to S3 with Object Lock so a record cannot be quietly rewritten later.
+    </p>
+    <p class="fineprint">
+      Buyable measures completion. It does not claim conformance, and it is not a
+      substitute for an audit by people who use assistive technology every day.
+    </p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>
+      Built for the AWS Zero to Shipped 2026 hackathon.
+      <a href="https://github.com/TusharTechs/buyable">Source and architecture notes on GitHub</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

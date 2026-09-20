@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can anyone complete: Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed.</title>
+<meta name="description" content="Journey Completion Rate 33% for Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed., measured by attempting the journey as a screen reader user, an AI agent, and a baseline control.">
+<link rel="stylesheet" href="report.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Buyable</a>
+    <p class="tagline">Proof that a customer can finish</p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <p class="eyebrow">Report 73f1c91f-0424-42ee-9af2-dc5796788deb</p>
+  <h1>Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed.</h1>
+
+  <dl class="subject">
+    <dt>Start URL</dt>
+    <dd><a href="https://d2dvlfc6rcbvw8.cloudfront.net/index.html">https://d2dvlfc6rcbvw8.cloudfront.net/index.html</a></dd>
+    <dt>Goal given to every persona</dt>
+    <dd>Buy the Harrier Trail running shoe in UK size 9 and complete the purchase so that the order is confirmed.</dd>
+    <dt>How completion was proven</dt>
+    <dd>the page contained <q>Order confirmed</q>. This is checked against the live page and never taken from the model's own claim.</dd>
+    <dt>Run at</dt>
+    <dd><time datetime="2026-09-19T20:26:51.916Z">2026-09-19T20:26:51.916Z</time></dd>
+  </dl>
+
+  <section aria-labelledby="verdict-heading">
+    <h2 id="verdict-heading">Verdict</h2>
+
+    <p class="headline">
+      <span class="figure">33%</span>
+      <span class="label">Journey Completion Rate</span>
+    </p>
+
+    <table>
+      <caption>Completions per persona, as a fraction of attempts</caption>
+      <thead>
+        <tr>
+          <th scope="col">Persona</th>
+          <th scope="col" class="num">Completed</th>
+          <th scope="col" class="num">Rate</th>
+          <th scope="col">Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            baseline
+            <span class="blurb">A sighted customer using a mouse. This is the control.</span>
+          </th>
+          <td class="num">1 of 1</td>
+          <td class="num">100%</td>
+          <td><span class="pill ok">Completed</span></td>
+        </tr>
+        <tr>
+          <th scope="row">
+            assistive
+            <span class="blurb">A customer using a screen reader, or anyone who cannot use a mouse.</span>
+          </th>
+          <td class="num">0 of 1</td>
+          <td class="num">0%</td>
+          <td><span class="pill bad">Never completed</span></td>
+        </tr>
+        <tr>
+          <th scope="row">
+            agent
+            <span class="blurb">An AI shopping agent, which reads the same accessibility tree a screen reader does.</span>
+          </th>
+          <td class="num">0 of 1</td>
+          <td class="num">0%</td>
+          <td><span class="pill bad">Never completed</span></td>
+        </tr></tbody>
+    </table>
+
+    <p class="control-note">
+      The baseline control completed this journey every time, and at least one constrained persona never did. <strong>The site is the variable, not the model.</strong>
+    </p>
+  </section>
+
+  <section aria-labelledby="findings-heading">
+    <h2 id="findings-heading">What stopped them</h2>
+    
+      <article class="finding" aria-labelledby="finding-assistive-27">
+        <h3 id="finding-assistive-27">A button announces nothing, so neither a screen reader user nor an AI agent can tell what it does.</h3>
+        <dl class="facts">
+          <dt>Stopped</dt><dd>assistive, at step 27</dd>
+          <dt>Page</dt><dd><a href="https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html">https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html</a></dd>
+          <dt>Element</dt><dd><code>&lt;button&gt;</code> with <strong>no accessible name</strong></dd>
+          <dt>Selector</dt><dd><code>#pay</code></dd>
+          <dt>WCAG</dt><dd>4.1.2, 2.4.6</dd>
+        </dl>
+        <blockquote>
+          <p>I am focused on node [33], a button with no accessible name. The button announces nothing to a screen reader user, so I cannot determine what action it performs. I need to know what this button does (e.g., &quot;Confirm payment&quot;, &quot;Place order&quot;, etc.) to proceed with completing the purchase.</p>
+          <footer>The agent's own account of being stuck, recorded verbatim.</footer>
+        </blockquote>
+      </article>
+      <article class="finding" aria-labelledby="finding-agent-8">
+        <h3 id="finding-agent-8">A button announces nothing, so neither a screen reader user nor an AI agent can tell what it does.</h3>
+        <dl class="facts">
+          <dt>Stopped</dt><dd>agent, at step 8</dd>
+          <dt>Page</dt><dd><a href="https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html">https://d2dvlfc6rcbvw8.cloudfront.net/checkout.html</a></dd>
+          <dt>Element</dt><dd><code>&lt;button&gt;</code> with <strong>no accessible name</strong></dd>
+          <dt>Selector</dt><dd><code>#pay</code></dd>
+          <dt>WCAG</dt><dd>4.1.2, 2.4.6</dd>
+        </dl>
+        <blockquote>
+          <p>I am focused on node [33], a button with no accessible name. I cannot determine what this button does because it announces nothing to a screen reader. I need to know what this button is for (e.g., &quot;Confirm order&quot;, &quot;Place order&quot;, &quot;Submit payment&quot;) to proceed with completing the purchase.</p>
+          <footer>The agent's own account of being stuck, recorded verbatim.</footer>
+        </blockquote>
+      </article>
+  </section>
+
+  
+
+  <section aria-labelledby="method-heading">
+    <h2 id="method-heading">Method</h2>
+    <dl class="facts">
+      <dt>Reasoning</dt><dd><code>anthropic:claude-sonnet-4-5-20250929</code></dd>
+      <dt>Browser</dt><dd>Amazon Bedrock AgentCore Browser (aws.browser.v1)</dd>
+      <dt>Attempts per persona</dt><dd>1</dd>
+      <dt>Duration</dt><dd>129 seconds</dd>
+      <dt>Model cost</dt><dd>$0.3845</dd>
+    </dl>
+    <p>The baseline persona is the control. It perceives the rendered page and uses a pointer. When baseline completes the journey and a constrained persona does not, the site is the variable rather than the model. Runs that failed for infrastructure reasons are excluded from every denominator.</p>
+    <p class="fineprint">Token counts are measured. The dollar figure is those counts multiplied by published list price, so it is arithmetic rather than a billed amount.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Buyable measures whether a journey can be completed, not how many rules a page breaks. Completion is judged against the live page, independently of the model.</p>
+  </div>
+</footer>
+</body>
+</html>
